@@ -12,7 +12,7 @@
   <meta property="og:description" content="LXC comments and impressions">
   <meta name="twitter:description" content="LXC comments and impressions">
   <meta name="author" content="Ricardo Aravena"/>
-  <link href='https://raravena80.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <link href='https://raravena80.github.io/img/favicon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://raravena80.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
@@ -133,10 +133,12 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Over the last couple of years Docker has seen incredible across the industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development.
-In the last month I decided to venture and try something different that has been around even before Docker but in a more primitive form. You see containers have been around before Docker for a long time and even before that with the introduction of chroot in 1979. Containers were first introduced in Solaris in 2005 with the introduction of Solaris Containers, described as &lsquo;chroot&rsquo; on steroids. Then later in 2008 with adoption of the Containers name by LXC. (what Docker was based on initially) and also the inclusion of user namespaces in the Linux Kernel 3.8.
-Enter the current version of LXC introduced with Ubuntu 16.04 LTS, written in Golang and makes use of Linux namespaces available on the later Kernels. It has two components: a client (lxc) and a daemon (lxd). It comes installed as a default in the later Debian and Ubuntu distributions.
-I found LXC very easy to use with the advantage that your containers are persistent even after reboots !
+        <p>Over the last couple of years Docker has seen incredible growth across the tech industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development.
+In the last month I decided to venture and try something different that has been around even before Docker but in a more primitive form. You see containers have been around before Docker for a long time and even before that with the introduction of chroot in 1979. Containers were first introduced in Solaris in 2005 with the introduction of Solaris Containers, described as &lsquo;chroot&rsquo; on steroids. Then later in 2008 with adoption of the Containers name by LXC. (what Docker was based on initially) and also the inclusion of user namespaces in the Linux Kernel 3.8.</p>
+
+<p>Enter the current version of LXC introduced with Ubuntu 16.04 LTS, written in Golang and makes use of Linux namespaces available on the later Kernels. It has two components: a client (lxc) and a daemon (lxd). It comes installed as a default in the later Debian and Ubuntu distributions.</p>
+
+<p>I found LXC very easy to use with the advantage that your containers are persistent even after reboots !
 To create a container you can simply use the &lsquo;launch command&rsquo; with the image that you&rsquo;d like to use:</p>
 
 <pre><code class="language-bash">
@@ -158,8 +160,9 @@ $
 root@pleasant-kite:~#
 </code></pre>
 
-<p>You see LXC feels a bit more like VM than Docker does. In Docker every container is tied to CMD (Command) or ENTRYPOINT. Once that ENTRYPOINT is not there, the container doesn&rsquo;t exists. I&rsquo;m not inferring that ones better than the other but either approach could have its different applications.
-In LXC when you enter the container you see that there&rsquo;s a set a processes including and INIT process. Something that doesn&rsquo;t exist in Docker because process 1 in Docker is your ENTRYPOINT.</p>
+<p>You see LXC feels a bit more like VM than Docker does. In Docker every container is tied to CMD (Command) or ENTRYPOINT. Once that ENTRYPOINT is not there, the container doesn&rsquo;t exists. I&rsquo;m not inferring that ones better than the other but either approach could have its different applications.</p>
+
+<p>In LXC when you enter the container you see that there&rsquo;s a set a processes including and INIT process. Something that doesn&rsquo;t exist in Docker because process 1 in Docker is your ENTRYPOINT.</p>
 
 <pre><code class="language-bash">root@pleasant-kite:~# ps -Af
 UID PID PPID C STIME TTY TIME CMD
