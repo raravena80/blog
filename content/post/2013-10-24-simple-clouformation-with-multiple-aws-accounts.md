@@ -9,7 +9,7 @@ categories:
  - JSON
 keywords: AWS CloudFormation JSON Ricardo Aravena
 description: Simple Clouformation With Multiple AWS Accounts
-slug: 2013-10-24-simple-clouformation-with-multiple-aws-accounts
+slug: simple-clouformation-with-multiple-aws-accounts
 
 ---
 

@@ -5,17 +5,15 @@ tags: [ "haproxy" ]
 lastmod: 2013-10-21
 date: 2013-10-21
 categories:
-  - "haproxy"
+  - haproxy
 slug: "setup-a-simple-haproxy-config"
 
 ---
 
-
-
 Here's simple haproxy configuration to get you started,
 you probably want to stick this under /etc/haproxy/haproxy.cfg
 
-``` plain Simple HAProxy Config
+```plain
 global
 	log 127.0.0.1	local0
 	log 127.0.0.1	local1 notice
@@ -68,7 +66,7 @@ listen http-in
 You also want to setup logging using rsyslog,
 you can syslog-ng or other loggers too as well,
 but the configuration is different.
-``` plain Rsyslog HAproxy config
+```plain
 # put this in /etc/rsyslog.d/49-haproxy.conf:
 local0.* -/var/log/haproxy/haproxy_0.log
 local1.* -/var/log/haproxy/haproxy_1.log
@@ -76,7 +74,7 @@ local1.* -/var/log/haproxy/haproxy_1.log
 ```
 
 Now, setup logrotate (usually under /etc/logrotate.d/haproxy:
-``` plain HAProxy logrotate config
+```plain
 /var/log/haproxy/haproxy*.log
 {
     rotate 7

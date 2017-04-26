@@ -12,9 +12,11 @@ slug: lxc-playing
 
 ---
 
-Over the last couple of years Docker has seen incredible across the industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development.
+Over the last couple of years Docker has seen incredible growth across the tech industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development.
 In the last month I decided to venture and try something different that has been around even before Docker but in a more primitive form. You see containers have been around before Docker for a long time and even before that with the introduction of chroot in 1979. Containers were first introduced in Solaris in 2005 with the introduction of Solaris Containers, described as 'chroot' on steroids. Then later in 2008 with adoption of the Containers name by LXC. (what Docker was based on initially) and also the inclusion of user namespaces in the Linux Kernel 3.8.
+
 Enter the current version of LXC introduced with Ubuntu 16.04 LTS, written in Golang and makes use of Linux namespaces available on the later Kernels. It has two components: a client (lxc) and a daemon (lxd). It comes installed as a default in the later Debian and Ubuntu distributions.
+
 I found LXC very easy to use with the advantage that your containers are persistent even after reboots !
 To create a container you can simply use the 'launch command' with the image that you'd like to use:
 
@@ -40,6 +42,7 @@ root@pleasant-kite:~#
 ```
 
 You see LXC feels a bit more like VM than Docker does. In Docker every container is tied to CMD (Command) or ENTRYPOINT. Once that ENTRYPOINT is not there, the container doesn't exists. I'm not inferring that ones better than the other but either approach could have its different applications.
+
 In LXC when you enter the container you see that there's a set a processes including and INIT process. Something that doesn't exist in Docker because process 1 in Docker is your ENTRYPOINT.
 
 ```bash

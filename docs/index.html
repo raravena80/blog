@@ -263,7 +263,7 @@ It&rsquo;s a follow up to a previous blog describing an Ansible Playbook to setu
             </article>
           
             <article class="post-preview">
-              <a href="https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/">
+              <a href="https://raravena80.github.io/post/simple-clouformation-with-multiple-aws-accounts/">
                 <h2 class="post-title">Simple Clouformation With Multiple AWS Accounts</h2>
                 
               </a>
@@ -277,7 +277,7 @@ It&rsquo;s a follow up to a previous blog describing an Ansible Playbook to setu
               <div class="post-entry">
                 
                   In this post I&rsquo;ll describe how to create a simple AWS CloudFormation template so that we can deploy stack using multiple AWS accounts. In other words a common JSON CloudFormation template that can be use to bring up a stack in multiple accounts. The way we are able to do this is by having exact copies of the EC2 AMIs on all the accounts and regions where we are deploying our stack.
-                  <a href="https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/" class="post-read-more">[Read More]</a>
+                  <a href="https://raravena80.github.io/post/simple-clouformation-with-multiple-aws-accounts/" class="post-read-more">[Read More]</a>
                 
               </div>
 
@@ -396,9 +396,7 @@ If you&rsquo;d like to find out more about Ansible you can read up on it on thei
               <div class="post-entry">
                 
                   Here&rsquo;s simple haproxy configuration to get you started, you probably want to stick this under /etc/haproxy/haproxy.cfg
-``` plain Simple HAProxy Config global log 127.0.0.1 local0 log 127.0.0.1 local1 notice maxconn 4096 user haproxy group haproxy daemon
-defaults log global mode http option httplog option dontlognull retries 3 option redispatch maxconn 4096 contimeout 5000 clitimeout 50000 srvtimeout 50000
-stats enable stats auth admin:password stats uri /monitor stats refresh 5s option httpchk GET /status retries 5 option redispatch errorfile 503 /etc/haproxy/errors/503.
+global log 127.0.0.1	local0 log 127.0.0.1	local1 notice maxconn 4096 user haproxy group haproxy daemon defaults log	global mode	http option	httplog option	dontlognull retries	3 option redispatch maxconn	4096 contimeout	5000 clitimeout	50000 srvtimeout	50000 stats enable stats auth	admin:password stats uri	/monitor stats refresh	5s option httpchk	GET /status retries	5 option redispatch errorfile	503	/etc/haproxy/errors/503.
                   <a href="https://raravena80.github.io/post/setup-a-simple-haproxy-config/" class="post-read-more">[Read More]</a>
                 
               </div>

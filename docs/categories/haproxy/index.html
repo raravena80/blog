@@ -155,9 +155,7 @@ If you&rsquo;d like to find out more about Ansible you can read up on it on thei
               <div class="post-entry">
                 
                   Here&rsquo;s simple haproxy configuration to get you started, you probably want to stick this under /etc/haproxy/haproxy.cfg
-``` plain Simple HAProxy Config global log 127.0.0.1 local0 log 127.0.0.1 local1 notice maxconn 4096 user haproxy group haproxy daemon
-defaults log global mode http option httplog option dontlognull retries 3 option redispatch maxconn 4096 contimeout 5000 clitimeout 50000 srvtimeout 50000
-stats enable stats auth admin:password stats uri /monitor stats refresh 5s option httpchk GET /status retries 5 option redispatch errorfile 503 /etc/haproxy/errors/503.
+global log 127.0.0.1	local0 log 127.0.0.1	local1 notice maxconn 4096 user haproxy group haproxy daemon defaults log	global mode	http option	httplog option	dontlognull retries	3 option redispatch maxconn	4096 contimeout	5000 clitimeout	50000 srvtimeout	50000 stats enable stats auth	admin:password stats uri	/monitor stats refresh	5s option httpchk	GET /status retries	5 option redispatch errorfile	503	/etc/haproxy/errors/503.
                   <a href="https://raravena80.github.io/post/setup-a-simple-haproxy-config/" class="post-read-more">[Read More]</a>
                 
               </div>

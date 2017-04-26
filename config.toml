@@ -12,7 +12,7 @@ publishDir = "docs"
 [Params]
   subtitle = "Blogging for DevOps Nerds"
   logo = "img/avatar-icon.png"
-  favicon = "img/favicon.ico"
+  favicon = "img/favicon.png"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
