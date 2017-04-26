@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Json on Rico&#39;s Blog</title>
+    <link>https://raravena80.github.io/categories/json/</link>
+    <description>Recent content in Json on Rico&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
+    <lastBuildDate>Thu, 24 Oct 2013 16:28:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://raravena80.github.io/categories/json/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simple Clouformation With Multiple AWS Accounts</title>
+      <link>https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/</link>
+      <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/</guid>
+      <description>In this post I&amp;rsquo;ll describe how to create a simple AWS CloudFormation template so that we can deploy stack using multiple AWS accounts. In other words a common JSON CloudFormation template that can be use to bring up a stack in multiple accounts. The way we are able to do this is by having exact copies of the EC2 AMIs on all the accounts and regions where we are deploying our stack.</description>
+    </item>
+    
+  </channel>
+</rss>

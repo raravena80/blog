@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Ansible Playbook for Scout on Ubuntu</title>
+  <meta property="og:title" content="Ansible Playbook for Scout on Ubuntu" />
+  <meta name="twitter:title" content="Ansible Playbook for Scout on Ubuntu" />
+  <meta name="description" content="Ansible Playbook for Scout on Ubuntu">
+  <meta property="og:description" content="Ansible Playbook for Scout on Ubuntu">
+  <meta name="twitter:description" content="Ansible Playbook for Scout on Ubuntu">
+  <meta name="author" content="Ricardo Aravena"/>
+  <link href='https://raravena80.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@raravena80" />
+  <meta name="twitter:creator" content="@raravena80" />
+  <meta property="og:url" content="https://raravena80.github.io/post/ansible-playbook-for-scout-on-ubuntu/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rico&#39;s Blog" />
+
+  <meta name="generator" content="Hugo 0.20.5" />
+  <link rel="canonical" href="https://raravena80.github.io/post/ansible-playbook-for-scout-on-ubuntu/" />
+  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/highlight.min.css" />
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Rico&#39;s Blog" href="https://raravena80.github.io/">
+            <img class="avatar-img" src="https://raravena80.github.io/img/avatar-icon.png" alt="Rico&#39;s Blog" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Ansible Playbook for Scout on Ubuntu</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 22, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>This is a sample Ansible task (<a href="http://www.ansibleworks.com">http://www.ansibleworks.com</a>)
+on how to setup Scout (<a href="https://www.scoutapp.com">https://www.scoutapp.com</a>) on Ubuntu.
+It needs to be included in an ansible playbook.</p>
+
+<p>It&rsquo;s a follow up to a previous
+ <a href="{% post_url 2013-10-21-how-to-create-an-ansible-playbook-to-configure-haproxy %}">blog</a>
+ describing an Ansible Playbook to setup an HAProxy system. This Ansible task can
+ be included in the HAProxy playbook as well as any other playbooks with something
+ like this:</p>
+
+<pre><code class="language-yaml">---
+PLAYBOOK: Install scout on Ubuntu
+---
+- name: scout
+  hosts: all
+  user: user-with-sudo
+  sudo: True
+
+  vars:
+    scout_key: YourScoutAPIKeyFromTheirWebsite
+
+  tasks:
+    - include: tasks/scout.yml
+</code></pre>
+
+<p>We start by defining a &ldquo;task&rdquo; file:</p>
+
+<pre><code class="language-yaml">---
+# TASK: ScoutApp Monitoring (https://scoutapp.com) 
+
+# Separate task to install Ruby
+- include: ruby.yml
+
+- name: Install scout + dependencies
+  shell: &gt;
+    executable=/bin/bash source /etc/profile.d/rvm.sh;
+    gem install scout scout_api --no-rdoc --no-ri
+
+- name: Create scout home directory
+  file: &gt;
+    dest=/root/.scout state=directory
+    owner=root group=root mode=0700
+
+</code></pre>
+
+<p>In the same file add the crontab entry
+and logrotate entry for Scout.</p>
+
+<pre><code class="language-yaml">
+- name: Scout cron script crontab
+  template: &gt;
+    dest=/etc/cron.d/scout
+    src=../packages/templates/scout/scout-crontab.j2
+    owner=root group=root mode=0444
+
+- name: Scout cron script logrotate
+  copy: &gt;
+    dest=/etc/logrotate.d/scout
+    src=../packages/files/scout/scout-logrotate
+    owner=root group=root mode=0444
+</code></pre>
+
+<p>This is what scout-crontab.j2 looks like:</p>
+
+<pre><code class="language-jinja"># crontab for Scout monitoring run by root
+* * * * * root /bin/bash -l -c 'scout -n &quot;{{ ansible_fqdn }}&quot; {{ scout_key }}' &gt;&gt; /var/log/scout.log 2&gt;&amp;1
+</code></pre>
+
+<p>And this is what scout-logrotate looks like:</p>
+
+<pre><code class="language-plain">/var/log/admobius/scout.log
+{
+      rotate 7
+      daily
+      compress
+      delaycompress
+      missingok
+      notifempty
+}
+</code></pre>
+
+<p>Now to install ruby using RVM, if you don&rsquo;t want to use
+the system ruby (most of the times you don&rsquo;t).</p>
+
+<pre><code class="language-yaml">---
+# TASK: Install Ruby on Ubuntu
+
+- name: Install Ruby dependencies
+  apt: pkg=$item state=latest install_recommends=no
+  with_items:
+    - autoconf
+    - automake
+    - bison
+    - build-essential
+    - curl
+    - libc6-dev
+    - libgdbm-dev
+    - libffi-dev
+    - libncurses5-dev
+    - libreadline6
+    - libreadline6-dev
+    - libsqlite3-dev
+    - libssl-dev
+    - libtool
+    - libyaml-dev
+    - libxml2-dev
+    - libxslt1-dev
+    - openssl
+    - pkg-config
+    - sqlite3
+    - subversion
+    - zlib1g
+    - zlib1g-dev
+
+- name: Install RVM
+  shell: curl -L get.rvm.io | bash -s stable
+
+- name: Install Ruby 2.0.0
+  shell: &gt;
+    executable=/bin/bash source /etc/profile.d/rvm.sh;
+    rvm install 2.0.0
+
+- name: Set default ruby version
+  shell: &gt;
+    executable=/bin/bash source /etc/profile.d/rvm.sh;
+    rvm --default use 2.0.0
+</code></pre>
+
+<p>and now run it.</p>
+
+<p><code>ansible-playbook -T 120 scout.yml</code></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://raravena80.github.io/post/upgrade-linux-kernel-on-chromebook/" data-toggle="tooltip" data-placement="top" title="Upgrade Linux Kernel on Chromebook">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/" data-toggle="tooltip" data-placement="top" title="Simple Clouformation With Multiple AWS Accounts">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:raravena80@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;RicardoAravenaV" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/raravena80" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/raravena80" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/raravena" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://raravena80.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Ricardo Aravena
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://raravena80.github.io/js/main.js"></script>
+<script src="https://raravena80.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

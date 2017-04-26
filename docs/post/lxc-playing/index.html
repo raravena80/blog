@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>LXC Playing</title>
+  <meta property="og:title" content="LXC Playing" />
+  <meta name="twitter:title" content="LXC Playing" />
+  <meta name="description" content="LXC comments and impressions">
+  <meta property="og:description" content="LXC comments and impressions">
+  <meta name="twitter:description" content="LXC comments and impressions">
+  <meta name="author" content="Ricardo Aravena"/>
+  <link href='https://raravena80.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@raravena80" />
+  <meta name="twitter:creator" content="@raravena80" />
+  <meta property="og:url" content="https://raravena80.github.io/post/lxc-playing/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rico&#39;s Blog" />
+
+  <meta name="generator" content="Hugo 0.20.5" />
+  <link rel="canonical" href="https://raravena80.github.io/post/lxc-playing/" />
+  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/highlight.min.css" />
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Rico&#39;s Blog" href="https://raravena80.github.io/">
+            <img class="avatar-img" src="https://raravena80.github.io/img/avatar-icon.png" alt="Rico&#39;s Blog" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>LXC Playing</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 29, 2016
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Over the last couple of years Docker has seen incredible across the industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development.
+In the last month I decided to venture and try something different that has been around even before Docker but in a more primitive form. You see containers have been around before Docker for a long time and even before that with the introduction of chroot in 1979. Containers were first introduced in Solaris in 2005 with the introduction of Solaris Containers, described as &lsquo;chroot&rsquo; on steroids. Then later in 2008 with adoption of the Containers name by LXC. (what Docker was based on initially) and also the inclusion of user namespaces in the Linux Kernel 3.8.
+Enter the current version of LXC introduced with Ubuntu 16.04 LTS, written in Golang and makes use of Linux namespaces available on the later Kernels. It has two components: a client (lxc) and a daemon (lxd). It comes installed as a default in the later Debian and Ubuntu distributions.
+I found LXC very easy to use with the advantage that your containers are persistent even after reboots !
+To create a container you can simply use the &lsquo;launch command&rsquo; with the image that you&rsquo;d like to use:</p>
+
+<pre><code class="language-bash">
+$ lxc launch ubuntu:16.04
+Creating pleasant-kite
+Starting pleasant-kite
+$ lxc list
++---------------+---------+---------------------+-----------------------------------------------+------------+-----------+
+| NAME | STATE | IPV4 | IPV6 | TYPE | SNAPSHOTS |
++---------------+---------+---------------------+-----------------------------------------------+------------+-----------+
+| pleasant-kite | RUNNING | 10.94.170.28 (eth0) | fd34:3f6e:9ec5:3b20:216:3eff:fe0f:9bfa (eth0) | PERSISTENT | 0 |
++---------------+---------+---------------------+-----------------------------------------------+------------+-----------+
+$
+</code></pre>
+
+<p>If you want to enter the container you can run the exec command</p>
+
+<pre><code class="language-bash">$ lxc exec pleasant-kite /bin/bash
+root@pleasant-kite:~#
+</code></pre>
+
+<p>You see LXC feels a bit more like VM than Docker does. In Docker every container is tied to CMD (Command) or ENTRYPOINT. Once that ENTRYPOINT is not there, the container doesn&rsquo;t exists. I&rsquo;m not inferring that ones better than the other but either approach could have its different applications.
+In LXC when you enter the container you see that there&rsquo;s a set a processes including and INIT process. Something that doesn&rsquo;t exist in Docker because process 1 in Docker is your ENTRYPOINT.</p>
+
+<pre><code class="language-bash">root@pleasant-kite:~# ps -Af
+UID PID PPID C STIME TTY TIME CMD
+root 1 0 0 18:38 ? 00:00:00 /sbin/init
+root 45 1 0 18:38 ? 00:00:00 /lib/systemd/systemd-journald
+root 48 1 0 18:38 ? 00:00:00 /lib/systemd/systemd-udevd
+message+ 88 1 0 18:38 ? 00:00:00 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+root 89 1 0 18:38 ? 00:00:00 /usr/sbin/cron -f
+root 90 1 0 18:38 ? 00:00:00 /lib/systemd/systemd-logind
+root 92 1 0 18:38 ? 00:00:00 /usr/lib/accountsservice/accounts-daemon
+syslog 93 1 0 18:38 ? 00:00:00 /usr/sbin/rsyslogd -n
+daemon 96 1 0 18:38 ? 00:00:00 /usr/sbin/atd -f
+root 97 1 0 18:38 ? 00:00:00 /usr/lib/snapd/snapd
+root 114 1 0 18:38 ? 00:00:00 /usr/lib/policykit-1/polkitd --no-debug
+root 230 1 0 18:38 ? 00:00:00 /sbin/dhclient -1 -v -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -
+root 313 1 0 18:38 ? 00:00:00 /usr/sbin/sshd -D
+root 347 1 0 18:38 console 00:00:00 /sbin/agetty --noclear --keep-baud console 115200 38400 9600 vt220
+root 409 0 0 18:40 ? 00:00:00 /bin/bash
+root 419 409 0 18:44 ? 00:00:00 ps -Af
+root@pleasant-kite:~#
+</code></pre>
+
+<p>Hey, it looks just like a separate machine !</p>
+
+<p>When you exit the container you still see that those processes are running on the main machine&rsquo;s process namespace.</p>
+
+<pre><code class="language-bash">root@pleasant-kite:~# exit
+exit
+$ ps -Af | grep init
+root 1 0 0 Oct21 ? 00:00:09 /sbin/init
+100000 28653 28634 0 18:38 ? 00:00:00 /sbin/init &lt;-- This is for the container
+ubuntu 29701 24955 0 18:47 pts/2 00:00:00 grep --color=auto init
+$
+</code></pre>
+
+<p>LXC also allows you to name your containers whatever you want</p>
+
+<pre><code class="language-bash">$ lxc launch ubuntu:16.04 my-nice-container
+Creating my-nice-container
+Starting my-nice-container
+$ lxc list
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+| NAME | STATE | IPV4 | IPV6 | TYPE | SNAPSHOTS |
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+| my-nice-container | RUNNING | 10.94.170.109 (eth0) | fd34:3f6e:9ec5:3b20:216:3eff:fe3f:f1d1 (eth0) | PERSISTENT | 0 |
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+| pleasant-kite | RUNNING | 10.94.170.28 (eth0) | fd34:3f6e:9ec5:3b20:216:3eff:fe0f:9bfa (eth0) | PERSISTENT | 0 |
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+$
+</code></pre>
+
+<p>You can even SSH into the container (provided that you have the right credentials)</p>
+
+<pre><code class="language-bash">
+$ ssh ubuntu@10.94.170.109
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &lt;command&gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+ubuntu@my-nice-container:~$
+</code></pre>
+
+<p>Pretty cool heh ?</p>
+
+<p>Keep in mind the the LXD daemon is running all the time</p>
+
+<pre><code class="language-bash">$ ps -Af | grep lxd | grep -v grep
+lxd 1084 1 0 Oct21 ? 00:00:00 dnsmasq -s lxd -S /lxd/ -u lxd --strict-order --bind-interfaces --pid-file=/run/lxd-bridge//dnsmasq.pid --dhcp-no-override --except-interface=lo --interface=lxdbr0 --dhcp-leasefile=/var/lib/lxd-bridge//dnsmasq.lxdbr0.leases --dhcp-authoritative --listen-address 10.94.170.1 --dhcp-range 10.94.170.2,10.94.170.254 --dhcp-lease-max=252 --dhcp-range=fd34:3f6e:9ec5:3b20::1,ra-stateless,ra-names --listen-address fd34:3f6e:9ec5:3b20::1
+root 19164 1 0 Oct21 ? 00:00:53 /usr/bin/lxd --group lxd --logfile=/var/log/lxd/lxd.log
+root 28634 1 0 18:38 ? 00:00:00 [lxc monitor] /var/lib/lxd/containers pleasant-kite
+root 29720 1 0 18:50 ? 00:00:00 [lxc monitor] /var/lib/lxd/containers my-nice-container
+</code></pre>
+
+<p>Let&rsquo;s reboot the server and see what happens. Make sure that your containers are set to autoboot, otherwise they will be in STOPPED state</p>
+
+<pre><code class="language-bash">$ lxc config set my-nice-container boot.autostart true
+$ lxc config set pleasant-kite boot.autostart true
+$ date
+Fri Oct 28 18:56:17 UTC 2016
+$ uptime
+18:56:24 up 7 days, 18:55, 1 user, load average: 0.01, 0.04, 0.01
+$ sudo reboot
+...
+</code></pre>
+
+<p>After reboot:</p>
+
+<pre><code class="language-bash">$ date
+Fri Oct 28 19:14:06 UTC 2016
+$ uptime
+19:14:08 up 0 min, 1 user, load average: 0.58, 0.19, 0.07
+$ date
+Fri Oct 28 19:14:09 UTC 2016
+ubuntu@ip-192-168-1-26:~$ lxc list
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+| NAME | STATE | IPV4 | IPV6 | TYPE | SNAPSHOTS |
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+| my-nice-container | RUNNING | 10.94.170.109 (eth0) | fd34:3f6e:9ec5:3b20:216:3eff:fe3f:f1d1 (eth0) | PERSISTENT | 0 |
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+| pleasant-kite | RUNNING | 10.94.170.28 (eth0) | fd34:3f6e:9ec5:3b20:216:3eff:fe0f:9bfa (eth0) | PERSISTENT | 0 |
++-------------------+---------+----------------------+-----------------------------------------------+------------+-----------+
+</code></pre>
+
+<p>Containers are up and running !</p>
+
+<p>There&rsquo;s also a wide list of different images that LXC supports you can get them by running the images command:</p>
+
+<pre><code class="language-bash">$ lxc image list images:
++---------------------------------+--------------+--------+------------------------------------------+---------+----------+-------------------------------+
+| ALIAS | FINGERPRINT | PUBLIC | DESCRIPTION | ARCH | SIZE | UPLOAD DATE |
++---------------------------------+--------------+--------+------------------------------------------+---------+----------+-------------------------------+
+| alpine/3.1 (3 more) | 585a5cae5e78 | yes | Alpine 3.1 amd64 (20161028_17:50) | x86_64 | 2.32MB | Oct 28, 2016 at 12:00am (UTC) |
++---------------------------------+--------------+--------+------------------------------------------+---------+----------+-------------------------------+
+| alpine/3.1/armhf (1 more) | 28a551b04ff1 | yes | Alpine 3.1 armhf (20161028_17:50) | armv7l | 1.55MB | Oct 28, 2016 at 12:00am (UTC) |
++---------------------------------+--------------+--------+------------------------------------------+---------+----------+-------------------------------+
+</code></pre>
+
+<p>Obviously you can create your own images.</p>
+
+<p>The latest version of LXC is still not supported in Kubernetes, Mesos or other container management tools, but there are plans to
+suppport it: <a href="https://github.com/kubernetes/kubernetes/issues/6862">https://github.com/kubernetes/kubernetes/issues/6862</a></p>
+
+<p>So there you have it. Although LXC is in active development, you can easily see that this a very good alternative to Docker. Having the ability to persist containers and having an init process could work very well for certain applications. i.e. Emulating real servers in test environments. I&rsquo;m excited to see what&rsquo;s next in LXC and how it can help in different ways take advantage of containerized applications and containers themselves.</p>
+
+<p>For more information on LXC you can visit their page and their github pages.
+<a href="https://linuxcontainers.org/">https://linuxcontainers.org/</a></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://raravena80.github.io/post/docker-first-impressions/" data-toggle="tooltip" data-placement="top" title="Docker First Impressions">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://raravena80.github.io/post/cloudnativecon-kubecon-europe/" data-toggle="tooltip" data-placement="top" title="CloudNativeCon KubeCon Europe">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:raravena80@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;RicardoAravenaV" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/raravena80" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/raravena80" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/raravena" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://raravena80.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Ricardo Aravena
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://raravena80.github.io/js/main.js"></script>
+<script src="https://raravena80.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

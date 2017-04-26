@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Simple Clouformation With Multiple AWS Accounts</title>
+  <meta property="og:title" content="Simple Clouformation With Multiple AWS Accounts" />
+  <meta name="twitter:title" content="Simple Clouformation With Multiple AWS Accounts" />
+  <meta name="description" content="Simple Clouformation With Multiple AWS Accounts">
+  <meta property="og:description" content="Simple Clouformation With Multiple AWS Accounts">
+  <meta name="twitter:description" content="Simple Clouformation With Multiple AWS Accounts">
+  <meta name="author" content="Ricardo Aravena"/>
+  <link href='https://raravena80.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@raravena80" />
+  <meta name="twitter:creator" content="@raravena80" />
+  <meta property="og:url" content="https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rico&#39;s Blog" />
+
+  <meta name="generator" content="Hugo 0.20.5" />
+  <link rel="canonical" href="https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/" />
+  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/highlight.min.css" />
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Rico&#39;s Blog" href="https://raravena80.github.io/">
+            <img class="avatar-img" src="https://raravena80.github.io/img/avatar-icon.png" alt="Rico&#39;s Blog" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>Simple Clouformation With Multiple AWS Accounts</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 24, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>In this post I&rsquo;ll describe how to create a simple AWS CloudFormation template
+so that we can deploy stack using multiple AWS accounts.  In other words a common
+JSON CloudFormation template that can be use to bring
+up a stack in multiple accounts. The way we are able to do this is by
+having exact copies of the <a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html">EC2 AMIs</a>
+on all the accounts and regions where we are deploying our stack.</p>
+
+<p>With the new features from AWS including the ability to link multiple accounts,
+many customers are starting to use accounts say for different departments or
+for different purposes say, production, QA, development, sales.  So, the motivation
+behind this script is the need for single JSON format that works
+across all accounts.</p>
+
+<p>For more information on CloudFormation you can visit the <a href="http://aws.amazon.com/cloudformation/">AWS Cloudformation Page</a> as
+well as the <a href="http://aws.amazon.com/documentation/cloudformation/">AWS Cloudformation documentation</a> page.</p>
+
+<p>First we ask for <code>parameters</code> in the CloudFormation template:</p>
+
+<pre><code class="language-json">{
+  &quot;AWSTemplateFormatVersion&quot;:&quot;2010-09-09&quot;,
+  &quot;Description&quot;:&quot;My WebService&quot;,
+  &quot;Parameters&quot;:{
+    &quot;AwsAccount&quot;:{
+      &quot;Description&quot;:&quot;Account: Production, or Dev&quot;,
+      &quot;Type&quot;:&quot;String&quot;,
+      &quot;Default&quot;:&quot;Production&quot;,
+      &quot;MinLength&quot;:&quot;1&quot;,
+      &quot;MaxLength&quot;:&quot;1&quot;,
+      &quot;AllowedValues&quot;:[
+        &quot;Production&quot;,
+        &quot;Dev&quot;
+      ],
+      &quot;ConstraintDescription&quot;:&quot;Must be either 'Production', or 'Dev'&quot;
+    },
+    &quot;InstanceType&quot;:{
+      &quot;Description&quot;:&quot;EC2 instnce type to launch&quot;,
+      &quot;Type&quot;:&quot;String&quot;,
+      &quot;Default&quot;:&quot;m1.large&quot;
+    },
+    &quot;MinGroupSize&quot;:{
+      &quot;Description&quot;:&quot;Minimum number of servers to launch - Must match a multiple of avzones available in region&quot;,
+      &quot;Type&quot;:&quot;Number&quot;,
+      &quot;Default&quot;:&quot;3&quot;
+    },
+    &quot;MaxGroupSize&quot;:{
+      &quot;Description&quot;:&quot;Maximum number of servers to launch - Must match a multiple of avzones available in region&quot;,
+      &quot;Type&quot;:&quot;Number&quot;,
+      &quot;Default&quot;:&quot;30&quot;
+    }
+  },
+</code></pre>
+
+<p>Next up is the mappings definition, we have to define specific parameters for each account.
+Note the accountID variable is a generic one. You have to subsitute with your specific accountIds</p>
+
+<pre><code class="language-json">
+  &quot;Mappings&quot;:{
+    &quot;AWSAccountInfo&quot;:{
+      &quot;Production&quot;:{
+        &quot;accountId&quot;: 123456789012,
+        &quot;hostedZone&quot;:&quot;production.mydomain.com.&quot;,
+        &quot;keypair&quot;:&quot;production&quot;,
+        &quot;envName&quot;:&quot;production&quot;,
+        &quot;name&quot;:&quot;Production&quot;
+      },
+      &quot;Dev&quot;:{
+        &quot;accountId&quot;: 123456789012,
+        &quot;hostedZone&quot;:&quot;dev.mydomain.com.&quot;,
+        &quot;keypair&quot;:&quot;dev&quot;,
+        &quot;envName&quot;:&quot;dev&quot;,
+        &quot;name&quot;:&quot;Dev&quot;
+      }
+    },
+    &quot;Production&quot;:{
+      &quot;us-east-1&quot;:{
+        &quot;ami&quot;:&quot;ami-xxxxxxxx&quot;
+      },
+      &quot;us-west-1&quot;:{
+        &quot;ami&quot;:&quot;ami-xxxxxxxx&quot;
+      },
+      &quot;us-west-2&quot;:{
+        &quot;ami&quot;:&quot;ami-xxxxxxxx&quot;
+      }
+    },
+    &quot;Dev&quot;:{
+      &quot;us-east-1&quot;:{
+        &quot;ami&quot;:&quot;ami-xxxxxxxx&quot;
+      },
+      &quot;us-west-1&quot;:{
+        &quot;ami&quot;:&quot;ami-xxxxxxxx&quot;
+      },
+      &quot;us-west-2&quot;:{
+        &quot;ami&quot;:&quot;ami-xxxxxxxx&quot;
+      }
+    }
+  },
+</code></pre>
+
+<p>Now you want to setup your resources starting with the Autoscaling group.
+Notice how on the notification configuration we specify parameters
+that identify out account.</p>
+
+<pre><code class="language-json">  &quot;Resources&quot;:{
+    &quot;ServerGroup&quot;:{
+      &quot;Type&quot;:&quot;AWS::AutoScaling::AutoScalingGroup&quot;,
+      &quot;Properties&quot;:{
+        &quot;AvailabilityZones&quot;:{
+          &quot;Fn::GetAZs&quot;:&quot;&quot;
+        },
+        &quot;LaunchConfigurationName&quot;:{
+          &quot;Ref&quot;:&quot;LaunchConfig&quot;
+        },
+        &quot;MinSize&quot;:{
+          &quot;Ref&quot;:&quot;MinGroupSize&quot;
+        },
+        &quot;MaxSize&quot;:{
+          &quot;Ref&quot;:&quot;MaxGroupSize&quot;
+        },
+        &quot;LoadBalancerNames&quot;:[
+          {
+            &quot;Ref&quot;:&quot;ElasticLoadBalancer&quot;
+          }
+        ],
+        &quot;Cooldown&quot;:&quot;120&quot;,
+        &quot;Tags&quot;:[
+          {
+            &quot;Key&quot;:&quot;Name&quot;,
+            &quot;Value&quot;:&quot;MyServerType&quot;,
+            &quot;PropagateAtLaunch&quot;:&quot;true&quot;
+          },
+          {
+            &quot;Key&quot;:&quot;User&quot;,
+            &quot;Value&quot;:&quot;Customers&quot;,
+            &quot;PropagateAtLaunch&quot;:&quot;true&quot;
+          }
+        ],
+        &quot;NotificationConfiguration&quot;:{
+          &quot;TopicARN&quot;:{
+            &quot;Fn::Join&quot;:[
+              &quot;:&quot;,
+              [
+                &quot;arn:aws:sns&quot;,
+                {
+                  &quot;Ref&quot;:&quot;AWS::Region&quot;
+                },
+                {
+                  &quot;Fn::FindInMap&quot;:[
+                    &quot;AWSAccountInfo&quot;,
+                    {
+                      &quot;Ref&quot;:&quot;AwsAccount&quot;
+                    },
+                    &quot;accountId&quot;
+                  ]
+                },
+                &quot;notification&quot;
+              ]
+            ]
+          },
+          &quot;NotificationTypes&quot;:[
+            &quot;autoscaling:EC2_INSTANCE_LAUNCH&quot;,
+            &quot;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&quot;,
+            &quot;autoscaling:EC2_INSTANCE_TERMINATE&quot;,
+            &quot;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&quot;
+          ]
+        }
+      }
+    },
+</code></pre>
+
+<p>Next we define our launch configuration for our instance in our autoscaling group.
+Notice how we setup the environment in &ldquo;UserData&rdquo; to the one corresponding to the AWS account
+we are using.</p>
+
+<pre><code class="language-json">    &quot;LaunchConfig&quot;: {
+      &quot;Type&quot;:&quot;AWS::AutoScaling::LaunchConfiguration&quot;,
+      &quot;Properties&quot;: {
+        &quot;KeyName&quot;: {
+          &quot;Fn::FindInMap&quot;: [
+            &quot;AWSAccountInfo&quot;,
+            {
+              &quot;Ref&quot;:&quot;AwsAccount&quot;
+            },
+            &quot;keypair&quot;
+          ]
+        },
+        &quot;ImageId&quot;:{
+          &quot;Fn::FindInMap&quot;:[
+            {
+              &quot;Ref&quot;:&quot;AwsAccount&quot;
+            },
+            {
+              &quot;Ref&quot;:&quot;AWS::Region&quot;
+            },
+            &quot;ami&quot;
+          ]
+        },
+        &quot;SecurityGroups&quot;:[
+          {
+            &quot;Ref&quot;:&quot;InstanceSecurityGroup&quot;
+          }
+        ],
+        &quot;InstanceType&quot;:{
+          &quot;Ref&quot;:&quot;InstanceType&quot;
+        },
+        &quot;IamInstanceProfile&quot;:{
+          &quot;Ref&quot;:&quot;DmpInstanceProfile&quot;
+        },
+        &quot;UserData&quot;: {
+          &quot;Fn::Base64&quot;: {
+             &quot;Fn::Join&quot;: [
+                 &quot;\n&quot;,
+                 [ &quot;#!/bin/bash&quot;,
+                   { &quot;Fn::Join&quot;: [ &quot;&quot;, [ &quot;ENV='&quot;, { &quot;Fn::FindInMap&quot;:[ &quot;AWSAccountInfo&quot;, { &quot;Ref&quot;:&quot;AwsAccount&quot; }, &quot;envName&quot; ] }, &quot;'&quot; ] ] }
+                 ]
+             ]
+          }
+        }
+      }
+    },
+</code></pre>
+
+<p>Next we define the server scale up and scale down policies for AWS Autoscale.</p>
+
+<pre><code class="language-json">    &quot;ServerScaleUpPolicy&quot;:{
+      &quot;Type&quot;:&quot;AWS::AutoScaling::ScalingPolicy&quot;,
+      &quot;Properties&quot;:{
+        &quot;AdjustmentType&quot;:&quot;ChangeInCapacity&quot;,
+        &quot;AutoScalingGroupName&quot;:{
+          &quot;Ref&quot;:&quot;ServerGroup&quot;
+        },
+        &quot;Cooldown&quot;:&quot;60&quot;,
+        &quot;ScalingAdjustment&quot;: {
+          &quot;Fn::Join&quot;:[
+            &quot;&quot;, [
+              {
+                &quot;Ref&quot;:&quot;MinGroupSize&quot;
+              }
+            ]
+          ]
+        }
+      }
+    },
+    &quot;ServerScaleDownPolicy&quot;:{
+      &quot;Type&quot;:&quot;AWS::AutoScaling::ScalingPolicy&quot;,
+      &quot;Properties&quot;:{
+        &quot;AdjustmentType&quot;:&quot;ChangeInCapacity&quot;,
+        &quot;AutoScalingGroupName&quot;:{
+          &quot;Ref&quot;:&quot;ServerGroup&quot;
+        },
+        &quot;Cooldown&quot;:&quot;60&quot;,
+        &quot;ScalingAdjustment&quot;: {
+          &quot;Fn::Join&quot;:[
+            &quot;&quot;, [
+              &quot;-&quot;,
+              {
+                &quot;Ref&quot;:&quot;MinGroupSize&quot;
+              }
+            ]
+          ]
+        }
+      }
+    },
+</code></pre>
+
+<p>Then we define some alarms.</p>
+
+<pre><code class="language-json">    &quot;CPUAlarmHigh&quot;:{
+      &quot;Type&quot;:&quot;AWS::CloudWatch::Alarm&quot;,
+      &quot;Properties&quot;:{
+        &quot;AlarmDescription&quot;:&quot;Scale-up if CPU &gt; 80% for 5 minutes&quot;,
+        &quot;MetricName&quot;:&quot;CPUUtilization&quot;,
+        &quot;Namespace&quot;:&quot;AWS/EC2&quot;,
+        &quot;Statistic&quot;:&quot;Average&quot;,
+        &quot;Period&quot;:&quot;300&quot;,
+        &quot;EvaluationPeriods&quot;:&quot;2&quot;,
+        &quot;Threshold&quot;:&quot;70&quot;,
+        &quot;AlarmActions&quot;:[
+          {
+            &quot;Ref&quot;:&quot;ServerScaleUpPolicy&quot;
+          }
+        ],
+        &quot;Dimensions&quot;:[
+          {
+            &quot;Name&quot;:&quot;AutoScalingGroupName&quot;,
+            &quot;Value&quot;:{
+              &quot;Ref&quot;:&quot;ServerGroup&quot;
+            }
+          }
+        ],
+        &quot;ComparisonOperator&quot;:&quot;GreaterThanThreshold&quot;
+      }
+    },
+    &quot;CPUAlarmLow&quot;:{
+      &quot;Type&quot;:&quot;AWS::CloudWatch::Alarm&quot;,
+      &quot;Properties&quot;:{
+        &quot;AlarmDescription&quot;:&quot;Scale-down if CPU &lt; 20% for 20 minutes&quot;,
+        &quot;MetricName&quot;:&quot;CPUUtilization&quot;,
+        &quot;Namespace&quot;:&quot;AWS/EC2&quot;,
+        &quot;Statistic&quot;:&quot;Average&quot;,
+        &quot;Period&quot;:&quot;300&quot;,
+        &quot;EvaluationPeriods&quot;:&quot;4&quot;,
+        &quot;Threshold&quot;:&quot;20&quot;,
+        &quot;AlarmActions&quot;:[
+          {
+            &quot;Ref&quot;:&quot;ServerScaleDownPolicy&quot;
+          }
+        ],
+        &quot;Dimensions&quot;:[
+          {
+            &quot;Name&quot;:&quot;AutoScalingGroupName&quot;,
+            &quot;Value&quot;:{
+              &quot;Ref&quot;:&quot;ServerGroup&quot;
+            }
+          }
+        ],
+        &quot;ComparisonOperator&quot;:&quot;LessThanThreshold&quot;
+      }
+    },
+</code></pre>
+
+<p>Now we define a Load Balancer.</p>
+
+<pre><code class="language-json">    &quot;ElasticLoadBalancer&quot;:{
+      &quot;Type&quot;:&quot;AWS::ElasticLoadBalancing::LoadBalancer&quot;,
+      &quot;Properties&quot;:{
+        &quot;AvailabilityZones&quot;:{
+          &quot;Fn::GetAZs&quot;:&quot;&quot;
+        },
+        &quot;Listeners&quot;:[
+          {
+            &quot;LoadBalancerPort&quot;:&quot;80&quot;,
+            &quot;InstancePort&quot;:&quot;80&quot;,
+            &quot;Protocol&quot;:&quot;HTTP&quot;
+          }
+        ],
+        &quot;HealthCheck&quot;:{
+          &quot;Target&quot;:&quot;HTTP:80/status&quot;,
+          &quot;HealthyThreshold&quot;:&quot;3&quot;,
+          &quot;UnhealthyThreshold&quot;:&quot;3&quot;,
+          &quot;Interval&quot;:&quot;30&quot;,
+          &quot;Timeout&quot;:&quot;5&quot;
+        }
+      }
+    },
+</code></pre>
+
+<p>Now Security Groups and Security Policies.
+Notice the security group policy for the the
+RDS backend DB.
+An RDS instance can also be added to this template.</p>
+
+<pre><code class="language-json">    &quot;InstanceSecurityGroup&quot;:{
+      &quot;Type&quot;:&quot;AWS::EC2::SecurityGroup&quot;,
+      &quot;Properties&quot;:{
+        &quot;GroupDescription&quot;:&quot;Server access&quot;,
+        &quot;SecurityGroupIngress&quot;:[
+          {
+            &quot;IpProtocol&quot;:&quot;tcp&quot;,
+            &quot;FromPort&quot;:&quot;22&quot;,
+            &quot;ToPort&quot;:&quot;22&quot;,
+            &quot;CidrIp&quot;:&quot;0.0.0.0/0&quot;
+          },
+          {
+            &quot;IpProtocol&quot;:&quot;tcp&quot;,
+            &quot;FromPort&quot;:&quot;80&quot;,
+            &quot;ToPort&quot;:&quot;80&quot;,
+            &quot;SourceSecurityGroupOwnerId&quot;:{
+              &quot;Fn::GetAtt&quot;:[
+                &quot;ElasticLoadBalancer&quot;,
+                &quot;SourceSecurityGroup.OwnerAlias&quot;
+              ]
+            },
+            &quot;SourceSecurityGroupName&quot;:{
+              &quot;Fn::GetAtt&quot;:[
+                &quot;ElasticLoadBalancer&quot;,
+                &quot;SourceSecurityGroup.GroupName&quot;
+              ]
+            }
+          }
+        ]
+      }
+    },
+    &quot;RdsIngress&quot;:{
+      &quot;Type&quot;:&quot;AWS::RDS::DBSecurityGroupIngress&quot;,
+      &quot;Properties&quot;:{
+        &quot;DBSecurityGroupName&quot;:&quot;web-dbbackend&quot;,
+        &quot;EC2SecurityGroupName&quot;:{
+          &quot;Ref&quot;:&quot;InstanceSecurityGroup&quot;
+        }
+      }
+    }
+
+</code></pre>
+
+<p>Finally some outputs.</p>
+
+<pre><code class="language-json">  },
+  &quot;Outputs&quot;:{
+    &quot;URL&quot;:{
+      &quot;Description&quot;:&quot;The URL of the ELB&quot;,
+      &quot;Value&quot;:{
+        &quot;Fn::Join&quot;:[
+          &quot;&quot;,
+          [
+            &quot;http://&quot;,
+            {
+              &quot;Fn::GetAtt&quot;:[
+                &quot;ElasticLoadBalancer&quot;,
+                &quot;DNSName&quot;
+              ]
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
+</code></pre>
+
+<p>To verify that syntax of your JSON script, save the full file to something
+like <code>cf.json</code> and run: <code>cat cf.json | python -mjson.tool</code></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://raravena80.github.io/post/ansible-playbook-for-scout-on-ubuntu/" data-toggle="tooltip" data-placement="top" title="Ansible Playbook for Scout on Ubuntu">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://raravena80.github.io/post/ansible-playbook-for-papertrail-on-ubuntu/" data-toggle="tooltip" data-placement="top" title="Ansible Playbook for PaperTrail on Ubuntu">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:raravena80@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;RicardoAravenaV" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/raravena80" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/raravena80" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/raravena" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://raravena80.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Ricardo Aravena
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://raravena80.github.io/js/main.js"></script>
+<script src="https://raravena80.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

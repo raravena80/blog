@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>How To Create an Ansible Playbook to Configure HAProxy</title>
+  <meta property="og:title" content="How To Create an Ansible Playbook to Configure HAProxy" />
+  <meta name="twitter:title" content="How To Create an Ansible Playbook to Configure HAProxy" />
+  <meta name="description" content="How To Create an Ansible Playbook to Configure HAProxy">
+  <meta property="og:description" content="How To Create an Ansible Playbook to Configure HAProxy">
+  <meta name="twitter:description" content="How To Create an Ansible Playbook to Configure HAProxy">
+  <meta name="author" content="Ricardo Aravena"/>
+  <link href='https://raravena80.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@raravena80" />
+  <meta name="twitter:creator" content="@raravena80" />
+  <meta property="og:url" content="https://raravena80.github.io/post/how-to-create-an-ansible-playbook-to-configure-haproxy/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rico&#39;s Blog" />
+
+  <meta name="generator" content="Hugo 0.20.5" />
+  <link rel="canonical" href="https://raravena80.github.io/post/how-to-create-an-ansible-playbook-to-configure-haproxy/" />
+  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/highlight.min.css" />
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Rico&#39;s Blog" href="https://raravena80.github.io/">
+            <img class="avatar-img" src="https://raravena80.github.io/img/avatar-icon.png" alt="Rico&#39;s Blog" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>How To Create an Ansible Playbook to Configure HAProxy</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on October 21, 2013
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>This is the continuation for <a href="/post/setup-a-simple-haproxy-config/">Setup a simple HAproxy config</a></p>
+
+<p>It explains how to create an Ansible playbook to automate the haproxy
+configuration.</p>
+
+<p>If you&rsquo;d like to find out more about Ansible you can read up on it on
+their website: <a href="http://www.ansible.com">http://www.ansible.com</a></p>
+
+<pre><code class="language-yaml">---
+# Set up and configure an HaProxy server (Ubuntu flavor)
+- name: haproxy
+  hosts: all
+  user: userwithsudoaccess
+  sudo: True
+  tags: haproxy
+
+  vars_files:
+    - &quot;vars/main.yml&quot;
+
+  tasks:
+
+    # haproxy package for Ubuntu
+    - include: tasks/haproxy-apt.yml
+
+    # Specific haproxy tasks follow here
+    - name: Copy haproxy logrotate file
+      action: &gt;
+        copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxy
+        mode=0644 owner=root group=root
+
+    - name: Create haproxy rsyslog configuration
+      action: &gt;
+        copy src=files/haproxy-rsyslog.conf
+        dest=/etc/rsyslog.d/49-haproxy.conf
+        mode=0644 owner=root group=root
+      notify: restart rsyslog
+
+    - name: Configure system rsyslog
+      action: &gt;
+        copy src=files/rsyslog.conf
+        dest=/etc/rsyslog.conf
+        mode=0644 owner=root group=root
+      notify: restart rsyslog
+
+    - name: Create haproxy configuration file
+      action: &gt;
+        template src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg
+        mode=0644 owner=root group=root
+      notify: restart haproxy
+
+</code></pre>
+
+<p>The following file that contains the variables needed for the haproxy playbook
+it should located under vars (vars/main.yml)</p>
+
+<pre><code class="language-yaml">---
+haproxy_port: 8080
+haproxy_servers:
+  - server1.mydomain.com
+  - server2.mydomain.com
+  - server3.mydomain.com
+
+</code></pre>
+
+<p>The following is the task/haproxy-apt.yml file that is used to
+install haproxy on Ubuntu. If you are using CentOS or RedHat
+you can use &lsquo;yum&rsquo; instead of &lsquo;apt&rsquo;</p>
+
+<pre><code class="language-yaml">---
+# TASK: Install and configure HAProxy - Ubuntu style
+#
+
+- name: Install HAProxy
+  action: apt pkg=$item state=latest
+  with_items:
+    - haproxy
+  
+- name: Enable HAProxy service
+  action: service name=haproxy enabled=yes
+  
+- name: Copy Ubuntu default file
+  action: &gt;
+    copy dest=/etc/default/haproxy
+    src=../packages/files/haproxy/default
+    owner=root group=root mode=0444
+  notify: restart haproxy
+  # Note the notify clause is handled by a
+  # Ansible handler (explained below)
+</code></pre>
+
+<p>The content for rsyslog.conf, haproxy.logrotate and 49-haproxy.conf can
+be found in the previous <a href="/post/setup-a-simple-haproxy-config/">blog entry</a></p>
+
+<p>However, this time we are templating haproxy.cfg with jinja2 and the content is:</p>
+
+<pre><code class="language-jinja">global
+	log 127.0.0.1	local0
+	log 127.0.0.1	local1 notice
+	maxconn 4096
+	user haproxy
+	group haproxy
+	daemon
+
+defaults
+	log	global
+	mode	http
+	option	httplog
+	option	dontlognull
+	retries	3
+	option redispatch
+	maxconn	2000
+	contimeout	5000
+	clitimeout	50000
+	srvtimeout	50000
+
+	stats enable
+	stats auth		admin:password
+	stats uri		/monitor
+	stats refresh	5s
+	option httpchk	GET /status
+	retries		5
+	option redispatch
+	errorfile	503	/etc/haproxy/errors/503.http
+	errorfile	400	/etc/haproxy/errors/400.http
+	errorfile	403	/etc/haproxy/errors/403.http
+	errorfile	408	/etc/haproxy/errors/408.http
+	errorfile	500	/etc/haproxy/errors/500.http
+	errorfile	502	/etc/haproxy/errors/502.http
+	errorfile	503	/etc/haproxy/errors/503.http
+	errorfile	504	/etc/haproxy/errors/504.http
+	balance roundrobin	# each server is used in turns, according to assigned weight
+
+listen http-in
+	bind :80
+	monitor-uri   /haproxy  # end point to monitor HAProxy status (returns 200)
+	# option httpclose
+	{% for dmp_server in dmp_servers %}
+	server {{ dmp_server }} {{ dmp_server }}:{{ dmp_port }} weight 1 maxconn 1000 check inter 4000
+	{% endfor %}
+	rspidel ^Set-cookie:\ IP=	# do not let this cookie tell our internal IP address
+</code></pre>
+
+<p>Include handlers at the end of the file:</p>
+
+<pre><code class="language-yaml">  handlers:
+    - include: handlers/main.yml
+</code></pre>
+
+<p>The content of handlers/main.yml looks like this:</p>
+
+<pre><code class="language-yaml">---
+# Ansible Handlers
+
+- name: restart haproxy
+  action: service name=haproxy state=restarted
+  
+- name: restart rsyslog
+  action: service name=rsyslog state=restarted
+</code></pre>
+
+<p><h3>Optional</h3>
+Include Scout (<a href="https://scoutapp.com">https://scoutapp.com</a>) and Papertrail (<a href="https://papertrailapp.com">https://papertrailapp.com</a>)
+More on this later&hellip;</p>
+
+<pre><code class="language-yaml">    # Scout
+    - include: tasks/scout.yml
+      when: env == 'prod'
+
+    # Papertrail for logging
+    - include: tasks/papertrail.yml
+      when: env == 'prod'
+
+</code></pre>
+
+<p>Now run it:</p>
+
+<pre><code class="language-bash">ansible-playbook -T 120 -i &lt;inventory-file&gt; haproxy.yml
+</code></pre>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://raravena80.github.io/post/setup-a-simple-haproxy-config/" data-toggle="tooltip" data-placement="top" title="Setup a Simple HAProxy Config">&larr; Previous Post</a>
+          </li>
+        
+        
+          <li class="next">
+            <a href="https://raravena80.github.io/post/upgrade-linux-kernel-on-chromebook/" data-toggle="tooltip" data-placement="top" title="Upgrade Linux Kernel on Chromebook">Next Post &rarr;</a>
+          </li>
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:raravena80@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.plus.google.com/&#43;RicardoAravenaV" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/raravena80" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/raravena80" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/raravena" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://raravena80.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Ricardo Aravena
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://raravena80.github.io/js/main.js"></script>
+<script src="https://raravena80.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+
+  </body>
+</html>
+

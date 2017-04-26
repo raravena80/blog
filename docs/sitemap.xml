@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://raravena80.github.io/post/cloudnativecon-kubecon-europe/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/page/about/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/lxc-playing/</loc>
+    <lastmod>2016-10-29T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/docker-first-impressions/</loc>
+    <lastmod>2014-03-07T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/ansible-playbook-for-papertrail-on-ubuntu/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/2013-10-24-simple-clouformation-with-multiple-aws-accounts/</loc>
+    <lastmod>2013-10-24T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/ansible-playbook-for-scout-on-ubuntu/</loc>
+    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/upgrade-linux-kernel-on-chromebook/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/how-to-create-an-ansible-playbook-to-configure-haproxy/</loc>
+    <lastmod>2013-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/setup-a-simple-haproxy-config/</loc>
+    <lastmod>2013-10-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/ansible/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/ansible/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/aws/</loc>
+    <lastmod>2013-10-24T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/chromebook/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/chromebook/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/cloudformation/</loc>
+    <lastmod>2013-10-24T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/cloudnative/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/cncf/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/docker/</loc>
+    <lastmod>2014-03-07T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/docker/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/haproxy/</loc>
+    <lastmod>2013-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/haproxy/</loc>
+    <lastmod>2013-10-21T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/json/</loc>
+    <lastmod>2013-10-24T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/kernel/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/kernel/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/kubecon/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/kubernetes/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/linux/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/linux/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/logging/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/logging/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/lxc/</loc>
+    <lastmod>2016-10-29T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/lxc/</loc>
+    <lastmod>2016-10-29T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/page/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/papertrailapp/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/papertrailapp/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/post/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/</loc>
+    <lastmod>2017-04-25T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/scout/</loc>
+    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/categories/scout/</loc>
+    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/ubuntu/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

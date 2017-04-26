@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Rico&#39;s Blog</title>
+    <link>https://raravena80.github.io/categories/</link>
+    <description>Recent content in Categories on Rico&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
+    <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://raravena80.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ansible</title>
+      <link>https://raravena80.github.io/categories/ansible/</link>
+      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/ansible/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aws</title>
+      <link>https://raravena80.github.io/categories/aws/</link>
+      <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chromebook</title>
+      <link>https://raravena80.github.io/categories/chromebook/</link>
+      <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/chromebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cloudformation</title>
+      <link>https://raravena80.github.io/categories/cloudformation/</link>
+      <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/cloudformation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://raravena80.github.io/categories/docker/</link>
+      <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haproxy</title>
+      <link>https://raravena80.github.io/categories/haproxy/</link>
+      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/haproxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Json</title>
+      <link>https://raravena80.github.io/categories/json/</link>
+      <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kernel</title>
+      <link>https://raravena80.github.io/categories/kernel/</link>
+      <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://raravena80.github.io/categories/linux/</link>
+      <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>https://raravena80.github.io/categories/logging/</link>
+      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lxc</title>
+      <link>https://raravena80.github.io/categories/lxc/</link>
+      <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/lxc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Papertrailapp</title>
+      <link>https://raravena80.github.io/categories/papertrailapp/</link>
+      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/papertrailapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scout</title>
+      <link>https://raravena80.github.io/categories/scout/</link>
+      <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/scout/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
