@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>DC/OS in GCP</title>
-  <meta property="og:title" content="DC/OS in GCP" />
-  <meta name="twitter:title" content="DC/OS in GCP" />
+  <title>DC/OS on GCP</title>
+  <meta property="og:title" content="DC/OS on GCP" />
+  <meta name="twitter:title" content="DC/OS on GCP" />
   <meta name="description" content="Installing DC/OS in GCP">
   <meta property="og:description" content="Installing DC/OS in GCP">
   <meta name="twitter:description" content="Installing DC/OS in GCP">
@@ -110,7 +110,7 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              <h1>DC/OS in GCP</h1>
+              <h1>DC/OS on GCP</h1>
                 
                 
                   <span class="post-meta">
@@ -176,18 +176,27 @@ dcos_bootstrap_container: dcosinstaller
 <pre><code>ansible-playbook -i hosts install.yml
 </code></pre>
 
+<p><img src="/img/2017-05-11-dcos-on-gcp/master.jpg" alt="master" title="Master GCP" /></p>
+
 <p>and to create the agents or slaves I ran (for public facing ones):</p>
 
 <pre><code>ansible-playbook -i hosts add_agents.yml --extra-vars &quot;start_id=0001 end_id=0002 agent_type=public&quot;
-
-If you want to create private agents or slaves you can run something like:
-
 </code></pre>
 
-<p>ansible-playbook -i hosts add_agents.yml &ndash;extra-vars &ldquo;start_id=0001 end_id=0002 agent_type=private&rdquo;
-```</p>
+<p><img src="/img/2017-05-11-dcos-on-gcp/agent.jpg" alt="agent" title="Agent GCP" /></p>
+
+<p>If you want to create private agents or slaves you can run something like:</p>
+
+<pre><code>ansible-playbook -i hosts add_agents.yml --extra-vars &quot;start_id=0001 end_id=0002 agent_type=private&quot;
+</code></pre>
 
 <p>Easy&hellip;</p>
+
+<p>Then you can hit the DC/OS UI with the master&rsquo;s IP address over HTTPS (Make sure you open up port 443 to your IP address).</p>
+
+<p><img src="/img/2017-05-11-dcos-on-gcp/dcosui.jpg" alt="dcosui" title="DC/OS UI" /></p>
+
+<p>More to come&hellip;</p>
 
       </article>
 
@@ -207,7 +216,7 @@ If you want to create private agents or slaves you can run something like:
 <script type="text/javascript">
     var disqus_shortname = 'raravena80';
     var disqus_identifier = 'https:\/\/raravena80.github.io\/post\/dcos-on-gcp\/';
-    var disqus_title = 'DC\/OS in GCP';
+    var disqus_title = 'DC\/OS on GCP';
     var disqus_url = 'https:\/\/raravena80.github.io\/post\/dcos-on-gcp\/';
 
     (function() {
