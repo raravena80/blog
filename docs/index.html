@@ -133,6 +133,76 @@
           
           
             <article class="post-preview">
+              <a href="https://raravena80.github.io/post/dcos-on-gcp/">
+                <h2 class="post-title">DC/OS in GCP</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on May 11, 2017
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  DC/OS is the commercialized Mesos distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box Ansible scripts provided by Mesosphere.
+For starters I followed everything described in the README.
+Then, I had to modify the group_vars/all file in the playbook
+--- project: &lt;my-gcp-project-id&gt; subnet: default login_name: &lt;my-gcp-login-id-with-no-email&gt; bootstrap_public_ip: 10.128.0.10 # This IP need to match the network in the zone zone: us-central1-c master_boot_disk_size: 200 # 200 is the recommended in GCP as of 05-2017 master_machine_type: n1-standard-1 master_boot_disk_type: pd-standard agent_boot_disk_size: 200 agent_machine_type: n1-standard-1 agent_boot_disk_type: pd-standard agent_instance_type: &quot;MIGRATE&quot; agent_type: private start_id: 0001 end_id: 0001 gcloudbin: gcloud image: 'centos-7-v20161027' image_project: 'centos-cloud' bootstrap_public_port: 8080 cluster_name: cluster_name scopes: &quot;default=https://www.
+                  <a href="https://raravena80.github.io/post/dcos-on-gcp/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/gcp">gcp</a>&nbsp;
+                
+                  #<a href="/tags/dcos">dcos</a>&nbsp;
+                
+                  #<a href="/tags/mesos">mesos</a>&nbsp;
+                
+                  #<a href="/tags/google">google</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/">
+                <h2 class="post-title">Parsing Deeply Nested JSON in Go</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on April 28, 2017
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Parsing deeply nested json in Go is a bit challenging due to the fact that the language doesn&rsquo;t provide many helpers to do so. If you do that in Ruby or Python it&rsquo;s pretty straight forward running some like this in Python j = json.load(jsonstring) or in Ruby j = JSON.load(jsonstring).
+In go generally you have to prefine your structs and run through an Unmarshal function which means that most of the times you need to know ahead of time what the nest level and structure of your target json is to parse it.
+                  <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/json">json</a>&nbsp;
+                
+                  #<a href="/tags/gjson">gjson</a>&nbsp;
+                
+                  #<a href="/tags/go">go</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
               <a href="https://raravena80.github.io/post/cloudnativecon-kubecon-europe/">
                 <h2 class="post-title">CloudNativeCon KubeCon Europe</h2>
                 
@@ -381,37 +451,17 @@ If you&rsquo;d like to find out more about Ansible you can read up on it on thei
               
             </article>
           
-            <article class="post-preview">
-              <a href="https://raravena80.github.io/post/setup-a-simple-haproxy-config/">
-                <h2 class="post-title">Setup a Simple HAProxy Config</h2>
-                
-              </a>
-
-              <span class="post-meta">
-  Posted on October 21, 2013
-  
-</span>
-
-
-              <div class="post-entry">
-                
-                  Here&rsquo;s simple haproxy configuration to get you started, you probably want to stick this under /etc/haproxy/haproxy.cfg
-global log 127.0.0.1	local0 log 127.0.0.1	local1 notice maxconn 4096 user haproxy group haproxy daemon defaults log	global mode	http option	httplog option	dontlognull retries	3 option redispatch maxconn	4096 contimeout	5000 clitimeout	50000 srvtimeout	50000 stats enable stats auth	admin:password stats uri	/monitor stats refresh	5s option httpchk	GET /status retries	5 option redispatch errorfile	503	/etc/haproxy/errors/503.
-                  <a href="https://raravena80.github.io/post/setup-a-simple-haproxy-config/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                
-                  #<a href="/tags/haproxy">haproxy</a>&nbsp;
-                
-                </span>
-              
-            </article>
-          
         </div>
 
+        
+          <ul class="pager main-pager">
+            
+            
+              <li class="next">
+                <a href="/page/2">Older Posts &rarr;</a>
+              </li>
+            
+          </ul>
         
       </div>
     </div>

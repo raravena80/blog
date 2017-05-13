@@ -49,11 +49,56 @@
     </item>
     
     <item>
+      <title>Dcos</title>
+      <link>https://raravena80.github.io/categories/dcos/</link>
+      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/dcos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://raravena80.github.io/categories/docker/</link>
       <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gcp</title>
+      <link>https://raravena80.github.io/categories/gcp/</link>
+      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gjson</title>
+      <link>https://raravena80.github.io/categories/gjson/</link>
+      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/gjson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://raravena80.github.io/categories/go/</link>
+      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google</title>
+      <link>https://raravena80.github.io/categories/google/</link>
+      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/google/</guid>
       <description></description>
     </item>
     
@@ -69,7 +114,7 @@
     <item>
       <title>Json</title>
       <link>https://raravena80.github.io/categories/json/</link>
-      <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
+      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/categories/json/</guid>
       <description></description>
@@ -108,6 +153,15 @@
       <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/categories/lxc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mesos</title>
+      <link>https://raravena80.github.io/categories/mesos/</link>
+      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/mesos/</guid>
       <description></description>
     </item>
     

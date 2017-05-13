@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>DC/OS in GCP</title>
+  <meta property="og:title" content="DC/OS in GCP" />
+  <meta name="twitter:title" content="DC/OS in GCP" />
+  <meta name="description" content="Installing DC/OS in GCP">
+  <meta property="og:description" content="Installing DC/OS in GCP">
+  <meta name="twitter:description" content="Installing DC/OS in GCP">
+  <meta name="author" content="Ricardo Aravena"/>
+  <link href='https://raravena80.github.io/img/favicon.png' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://raravena80.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@raravena80" />
+  <meta name="twitter:creator" content="@raravena80" />
+  <meta property="og:url" content="https://raravena80.github.io/post/dcos-on-gcp/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rico&#39;s Blog" />
+
+  <meta name="generator" content="Hugo 0.20.5" />
+  <link rel="canonical" href="https://raravena80.github.io/post/dcos-on-gcp/" />
+  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/highlight.min.css" />
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="Rico&#39;s Blog" href="https://raravena80.github.io/">
+            <img class="avatar-img" src="https://raravena80.github.io/img/avatar-icon.png" alt="Rico&#39;s Blog" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              <h1>DC/OS in GCP</h1>
+                
+                
+                  <span class="post-meta">
+  Posted on May 11, 2017
+  
+</span>
+
+
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>DC/OS is the commercialized <a href="http://mesos.apache.org/">Mesos</a> distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box <a href="https://github.com/raravena80/dcos-gce">Ansible scripts</a> provided by Mesosphere.</p>
+
+<p>For starters I followed everything described in the <a href="https://github.com/raravena80/dcos-gce/blob/master/README.md">README</a>.</p>
+
+<p>Then, I had to modify the <code>group_vars/all</code> file in the playbook</p>
+
+<pre><code>---
+project: &lt;my-gcp-project-id&gt;
+subnet: default
+login_name: &lt;my-gcp-login-id-with-no-email&gt;
+bootstrap_public_ip: 10.128.0.10 # This IP need to match the network in the zone
+zone: us-central1-c
+
+master_boot_disk_size: 200 # 200 is the recommended in GCP as of 05-2017
+master_machine_type: n1-standard-1
+master_boot_disk_type: pd-standard
+
+agent_boot_disk_size: 200
+agent_machine_type: n1-standard-1
+agent_boot_disk_type: pd-standard
+agent_instance_type: &quot;MIGRATE&quot;
+agent_type: private
+start_id: 0001
+end_id: 0001
+
+gcloudbin: gcloud
+image: 'centos-7-v20161027'
+image_project: 'centos-cloud'
+bootstrap_public_port: 8080
+cluster_name: cluster_name
+scopes: &quot;default=https://www.googleapis.com/auth/cloud-platform&quot;
+dcos_installer_filename: dcos_generate_config.sh
+dcos_installer_download_path: &quot;https://downloads.dcos.io/dcos/stable/{{ dcos_installer_filename }}&quot;
+home_directory: &quot;/home/{{ login_name }}&quot;
+downloads_from_bootstrap: 2
+dcos_bootstrap_container: dcosinstaller
+</code></pre>
+
+<p>Then to create the master I ran:</p>
+
+<pre><code>ansible-playbook -i hosts install.yml
+</code></pre>
+
+<p>and to create the agents or slaves I ran (for public facing ones):</p>
+
+<pre><code>ansible-playbook -i hosts add_agents.yml --extra-vars &quot;start_id=0001 end_id=0002 agent_type=public&quot;
+
+If you want to create private agents or slaves you can run something like:
+
+</code></pre>
+
+<p>ansible-playbook -i hosts add_agents.yml &ndash;extra-vars &ldquo;start_id=0001 end_id=0002 agent_type=private&rdquo;
+```</p>
+
+<p>Easy&hellip;</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/" data-toggle="tooltip" data-placement="top" title="Parsing Deeply Nested JSON in Go">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
+      
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'raravena80';
+    var disqus_identifier = 'https:\/\/raravena80.github.io\/post\/dcos-on-gcp\/';
+    var disqus_title = 'DC\/OS in GCP';
+    var disqus_url = 'https:\/\/raravena80.github.io\/post\/dcos-on-gcp\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:raravena80@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/&#43;RicardoAravenaV" title="Google&#43;">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/raravena80" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/raravena80" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/raravena" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://raravena80.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Ricardo Aravena
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://raravena80.github.io/js/main.js"></script>
+<script src="https://raravena80.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+
+
+  </body>
+</html>
+
