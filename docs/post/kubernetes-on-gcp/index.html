@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Tags</title>
-  <meta property="og:title" content="Tags" />
-  <meta name="twitter:title" content="Tags" />
+  <title>Kubernetes on GCP</title>
+  <meta property="og:title" content="Kubernetes on GCP" />
+  <meta name="twitter:title" content="Kubernetes on GCP" />
+  <meta name="description" content="Installing Kubernetes on GCP">
+  <meta property="og:description" content="Installing Kubernetes on GCP">
+  <meta name="twitter:description" content="Installing Kubernetes on GCP">
   <meta name="author" content="Ricardo Aravena"/>
   <link href='https://raravena80.github.io/img/favicon.png' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://raravena80.github.io/img/avatar-icon.png" />
@@ -15,12 +18,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
-  <meta property="og:url" content="https://raravena80.github.io/tags/" />
+  <meta property="og:url" content="https://raravena80.github.io/post/kubernetes-on-gcp/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rico&#39;s Blog" />
 
   <meta name="generator" content="Hugo 0.20.5" />
-  <link rel="canonical" href="https://raravena80.github.io/tags/" />
+  <link rel="canonical" href="https://raravena80.github.io/post/kubernetes-on-gcp/" />
   <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -106,9 +109,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              <h1>Tags</h1>
+            <div class="post-heading">
+              <h1>Kubernetes on GCP</h1>
                 
+                
+                  <span class="post-meta">
+  Posted on May 13, 2017
+  
+</span>
+
+
                 
             </div>
           </div>
@@ -119,80 +129,139 @@
 
 
     
-  
-  <div class="container" role="main">
-    <article class="post-preview">
-      <div class="list-group col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Kubernetes has come a long way over the last 2 years and I was so excited to learn about during <a href="/post/cloudnativecon-kubecon-europe/">CloudNativeCon/Kubecon Berlin</a> this year.</p>
+
+<p>As of Today <a href="https://github.com/kubernetes/kops">Kops</a> the standard tool for installing Kubernetes on AWS doesn&rsquo;t support GCP yet (it&rsquo;s in the works). However you can still setup your cluster using good old <a href="https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh">kube-up.sh</a>. There&rsquo;s also a pretty good explanation on the <a href="https://kubernetes.io/docs/getting-started-guides/gce/">k8s docs</a>. Make sure you install the <a href="https://cloud.google.com/sdk/">Google Cloud SDK</a> with gcloud and all their utils.</p>
+
+<p>First download the kube tar.gz release of your choice from here: <a href="https://github.com/kubernetes/kubernetes/releases">https://github.com/kubernetes/kubernetes/releases</a>. For example:</p>
+
+<pre><code>curl -0 https://github.com/kubernetes/kubernetes/releases/download/v1.6.3/kubernetes.tar.gz | tar -zx
+</code></pre>
+
+<p>Then go to the <code>kubernetes/cluster/gce</code> directory. You&rsquo;ll see a bunch of files there:</p>
+
+<pre><code>$ ls
+BUILD              config-test.sh   cos                                gci                upgrade.sh
+config-common.sh   configure-vm.sh  debian                             list-resources.sh  util.sh
+config-default.sh  container-linux  delete-stranded-load-balancers.sh  OWNERS
+</code></pre>
+
+<p>The file you&rsquo;ll want to change is <code>config-default.sh</code>. I mofified mine like this (just a couple of changes):</p>
+
+<pre><code># Copyright 2014 The Kubernetes Authors.
+#
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# TODO(jbeda): Provide a way to override project
+# gcloud multiplexing for shared GCE/GKE tests.
+KUBE_ROOT=$(dirname &quot;${BASH_SOURCE}&quot;)/../..
+source &quot;${KUBE_ROOT}/cluster/gce/config-common.sh&quot;
+
+GCLOUD=gcloud
+ZONE=${KUBE_GCE_ZONE:-us-central1-b}
+REGION=${ZONE%-*}
+RELEASE_REGION_FALLBACK=${RELEASE_REGION_FALLBACK:-false}
+REGIONAL_KUBE_ADDONS=${REGIONAL_KUBE_ADDONS:-true}
+NODE_SIZE=${NODE_SIZE:-n1-standard-1} # &lt;- HERE
+NUM_NODES=${NUM_NODES:-2}  # &lt;- HERE
+MASTER_SIZE=${MASTER_SIZE:-n1-standard-$(get-master-size)}
+MASTER_DISK_TYPE=pd-ssd
+MASTER_DISK_SIZE=${MASTER_DISK_SIZE:-20GB}
+NODE_DISK_TYPE=${NODE_DISK_TYPE:-pd-standard}
+NODE_DISK_SIZE=${NODE_DISK_SIZE:-100GB}
+REGISTER_MASTER_KUBELET=${REGISTER_MASTER:-true}
+PREEMPTIBLE_NODE=${PREEMPTIBLE_NODE:-false}
+PREEMPTIBLE_MASTER=${PREEMPTIBLE_MASTER:-false}
+KUBE_DELETE_NODES=${KUBE_DELETE_NODES:-true}
+KUBE_DELETE_NETWORK=${KUBE_DELETE_NETWORK:-false}
+...
+</code></pre>
+
+<p>Then:</p>
+
+<pre><code>$ cd kubernetes/cluster &amp;&amp; ./kube-up.sh
+</code></pre>
+
+<p>and voilà:</p>
+
+<p><img src="/img/2017-05-13-kubernetes-on-gcp/gcp_kubernetes.jpg" alt="gcp_kubernetes" title="Kubernetes on GCP" /></p>
+
+<p>Then you can install <code>kubectl</code> (Cube Cuttle). The config will already be setup by <code>kube-up.sh</code>. But you can inspect if if you like under <code>~/.kube/</code></p>
+
+<pre><code>gcloud components install kubectl
+</code></pre>
+
+<p>After that you can do all the good stuff, like run apps: <code>kubectl run &lt;app&gt;</code> or create/expose services <code>kubectl expose svc &lt;service-name&gt;</code>, etc.</p>
+
+<pre><code>$ kubectl get pods
+NAME                                      READY     STATUS    RESTARTS   AGE
+hello-world-4125299140-gk334              1/1       Running   0          3d
+hello-world-4125299140-hpcr3              1/1       Running   0          3d
+hello-world-4125299140-j3nd7              1/1       Running   0          3d
+jittery-platypus-mysql-3943010769-pbq45   1/1       Running   0          2d
+my-nginx-858393261-fgjzl                  1/1       Running   0          2d
+my-nginx-858393261-s49dl                  1/1       Running   0          2d
+$ kubectl get svc
+NAME                     CLUSTER-IP     EXTERNAL-IP     PORT(S)        AGE
+hello-world-4125299140   10.0.177.91    104.155.161.3   80:32569/TCP   3d
+jittery-platypus-mysql   10.0.123.233   &lt;none&gt;          3306/TCP       2d
+kubernetes               10.0.0.1       &lt;none&gt;          443/TCP        5d
+my-nginx                 10.0.190.149   &lt;none&gt;          80/TCP         4d
+my-nginx-858393261       10.0.129.225   35.188.28.43    80:31120/TCP   4d
+</code></pre>
+
+<p><img src="/img/2017-05-13-kubernetes-on-gcp/nginx.jpg" alt="nginx" title="Nginx" /></p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+          <li class="previous">
+            <a href="https://raravena80.github.io/post/dcos-on-gcp/" data-toggle="tooltip" data-placement="top" title="DC/OS on GCP">&larr; Previous Post</a>
+          </li>
+        
+        
+      </ul>
+
       
-      <a href="/tags/ansible" class="list-group-item">
-          ansible<span class="badge">2</span></a>
+        
+          <div class="disqus-comments">
+            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'raravena80';
+    var disqus_identifier = 'https:\/\/raravena80.github.io\/post\/kubernetes-on-gcp\/';
+    var disqus_title = 'Kubernetes on GCP';
+    var disqus_url = 'https:\/\/raravena80.github.io\/post\/kubernetes-on-gcp\/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+          </div>
+        
       
-      <a href="/tags/cloudnative" class="list-group-item">
-          cloudnative<span class="badge">2</span></a>
-      
-      <a href="/tags/gcp" class="list-group-item">
-          gcp<span class="badge">2</span></a>
-      
-      <a href="/tags/google" class="list-group-item">
-          google<span class="badge">2</span></a>
-      
-      <a href="/tags/haproxy" class="list-group-item">
-          haproxy<span class="badge">2</span></a>
-      
-      <a href="/tags/kubernetes" class="list-group-item">
-          kubernetes<span class="badge">2</span></a>
-      
-      <a href="/tags/chromebook" class="list-group-item">
-          chromebook<span class="badge">1</span></a>
-      
-      <a href="/tags/cncf" class="list-group-item">
-          cncf<span class="badge">1</span></a>
-      
-      <a href="/tags/dcos" class="list-group-item">
-          dcos<span class="badge">1</span></a>
-      
-      <a href="/tags/docker" class="list-group-item">
-          docker<span class="badge">1</span></a>
-      
-      <a href="/tags/gjson" class="list-group-item">
-          gjson<span class="badge">1</span></a>
-      
-      <a href="/tags/go" class="list-group-item">
-          go<span class="badge">1</span></a>
-      
-      <a href="/tags/json" class="list-group-item">
-          json<span class="badge">1</span></a>
-      
-      <a href="/tags/kernel" class="list-group-item">
-          kernel<span class="badge">1</span></a>
-      
-      <a href="/tags/kubecon" class="list-group-item">
-          kubecon<span class="badge">1</span></a>
-      
-      <a href="/tags/linux" class="list-group-item">
-          linux<span class="badge">1</span></a>
-      
-      <a href="/tags/logging" class="list-group-item">
-          logging<span class="badge">1</span></a>
-      
-      <a href="/tags/lxc" class="list-group-item">
-          lxc<span class="badge">1</span></a>
-      
-      <a href="/tags/mesos" class="list-group-item">
-          mesos<span class="badge">1</span></a>
-      
-      <a href="/tags/papertrailapp" class="list-group-item">
-          papertrailapp<span class="badge">1</span></a>
-      
-      <a href="/tags/scout" class="list-group-item">
-          scout<span class="badge">1</span></a>
-      
-      <a href="/tags/ubuntu" class="list-group-item">
-          ubuntu<span class="badge">1</span></a>
-      
-      </div>
-    </article>
+
+    </div>
   </div>
+</div>
 
     <footer>
   <div class="container">

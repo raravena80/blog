@@ -69,7 +69,7 @@
     <item>
       <title>Gcp</title>
       <link>https://raravena80.github.io/categories/gcp/</link>
-      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
+      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/categories/gcp/</guid>
       <description></description>
@@ -96,7 +96,7 @@
     <item>
       <title>Google</title>
       <link>https://raravena80.github.io/categories/google/</link>
-      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
+      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/categories/google/</guid>
       <description></description>
@@ -126,6 +126,15 @@
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/categories/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>https://raravena80.github.io/categories/kubernetes/</link>
+      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/categories/kubernetes/</guid>
       <description></description>
     </item>
     

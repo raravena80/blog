@@ -133,6 +133,37 @@
           
           
             <article class="post-preview">
+              <a href="https://raravena80.github.io/post/how-to-create-an-ansible-playbook-to-configure-haproxy/">
+                <h2 class="post-title">How To Create an Ansible Playbook to Configure HAProxy</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on October 21, 2013
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  This is the continuation for Setup a simple HAproxy config
+It explains how to create an Ansible playbook to automate the haproxy configuration.
+If you&rsquo;d like to find out more about Ansible you can read up on it on their website: http://www.ansible.com
+--- # Set up and configure an HaProxy server (Ubuntu flavor) - name: haproxy hosts: all user: userwithsudoaccess sudo: True tags: haproxy vars_files: - &quot;vars/main.yml&quot; tasks: # haproxy package for Ubuntu - include: tasks/haproxy-apt.
+                  <a href="https://raravena80.github.io/post/how-to-create-an-ansible-playbook-to-configure-haproxy/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/haproxy">haproxy</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
               <a href="https://raravena80.github.io/post/setup-a-simple-haproxy-config/">
                 <h2 class="post-title">Setup a Simple HAProxy Config</h2>
                 

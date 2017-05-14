@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Thu, 11 May 2017 16:28:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 May 2017 16:28:29 +0000</lastBuildDate>
     
 	<atom:link href="https://raravena80.github.io/categories/google/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes on GCP</title>
+      <link>https://raravena80.github.io/post/kubernetes-on-gcp/</link>
+      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/kubernetes-on-gcp/</guid>
+      <description>Kubernetes has come a long way over the last 2 years and I was so excited to learn about during CloudNativeCon/Kubecon Berlin this year.
+As of Today Kops the standard tool for installing Kubernetes on AWS doesn&amp;rsquo;t support GCP yet (it&amp;rsquo;s in the works). However you can still setup your cluster using good old kube-up.sh. There&amp;rsquo;s also a pretty good explanation on the k8s docs. Make sure you install the Google Cloud SDK with gcloud and all their utils.</description>
+    </item>
     
     <item>
       <title>DC/OS on GCP</title>
