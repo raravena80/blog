@@ -127,9 +127,9 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>It has been about 4 years since Docker exploded into the scene of Cloud Infrasctructure.
+        <p>It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure.
 With that came a shift in cloud applications from monolithic to microservices. Containers
-made it easy for developer to deploy directly to production mostly caring about the scope of
+made it easy for developers to deploy directly to production mostly caring about the scope of
 her/his microservice.</p>
 
 <p>Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which
@@ -137,16 +137,16 @@ allow cloud operations to manage containers at scale. Setup these tools with a r
 quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your
 containers up and down depending on demand.</p>
 
-<p>This introduced another challenge where organizations have been trying to fogure out what is the best way
-to run their individual workloads in these container orchestration tools. Docker has been the default for
+<p>This introduced another challenge where organizations have been trying to figure out what is the best way
+to run their workloads in these container orchestration tools. Docker has been the default for
 years but then came runtimes like rkt that tried to create a simpler approach. Then came OCI to try to
-standarize the future of runtimes started initially from the same Docker/Rkt folks.</p>
+standardize the future of runtimes started initially from the same Docker/Rkt folks.</p>
 
-<p>Furthermore,  Kubernetes had to add support for rkt because of priorities and the request from the community.
-Afterwards, they figured that they didn&rsquo;t want to add specific support for a new oontainer runtime so they created the CRI
-(Container Runtime Interface) to talk to OCI compliant runtimes</p>
+<p>Furthermore, Kubernetes had to add support for rkt because of priorities and the request from the community.
+Afterward, they figured that they didn&rsquo;t want to add specific support for a new container runtime so they created the CRI
+(Container Runtime Interface) to talk to OCI compliant runtimes.</p>
 
-<p>This has fueled the creation of more OCI compliant runtimes as seen in <a href="http://events17.linuxfoundation.org/events/kubecon-and-cloudnativecon-north-america">KubeCon/CloudNativeCon North America 2017</a> In particular <a href="http://cri-o.io/">CRIO</a>, <a href="https://katacontainers.io/">Kata containers</a> and <a href="https://github.com/giuseppe/crun">crun</a> each with their unique capabilities, advantages and disadvantages.</p>
+<p>This has fueled the creation of more OCI compliant runtimes as seen in <a href="http://events17.linuxfoundation.org/events/kubecon-and-cloudnativecon-north-america">KubeCon/CloudNativeCon North America 2017</a>. In particular, <a href="http://cri-o.io/">CRIO</a>, <a href="https://katacontainers.io/">Kata containers</a> and <a href="https://github.com/giuseppe/crun">crun</a> each with their unique capabilities, advantages and disadvantages.</p>
 
 <p>Hear more about the different containers in <a href="https://kccnceu18.sched.com/event/Dqtw/whats-up-with-all-the-different-container-runtimes-ricardo-aravena-branch-metrics-intermediate-skill-level">my talk</a> at <a href="https://events.linuxfoundation.org/events/kubecon-and-cloudnativecon-europe">KubeCon/CloudNaticeCon EU</a> next month.</p>
 
