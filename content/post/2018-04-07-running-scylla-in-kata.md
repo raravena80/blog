@@ -178,7 +178,7 @@ Total operation time      : 00:05:55
 ![99thlatency](https://user-images.githubusercontent.com/7659560/38460171-92dd7064-3a69-11e8-8196-eb9774e18238.png)
 
 
-Results show that for Op rate having our 2 node Scylla cluster on the same machine running on 2 Kata containers is about 40% slower for writes and 80% slower for reads than running Scylla on 2 containers on bare metal. Other metrics such as latency show similar patterns in where it's higher for Kata containers. This makes sense since Virtualization adds an extra layer.
+If we look at Ops per second, results show that our 2 node Scylla cluster on the same machine running in 2 Kata containers is about 40% slower for writes and 80% slower for reads than running Scylla on 2 containers on bare metal. Other metrics such as latency show similar patterns in where it's higher for Kata containers. This makes sense since Virtualization adds an extra layer.
 
 Read performance overall is slower in both cases since Scylla was not started with any tuning and both nodes are running on the same machine. What is more interesting is that the read performance is slower for Kata by a higher percentage than writes. I can't make a definitive conclusion on why this is the case, but I guess is that the I/O between the client and the VM is going through the kata-shim which is adding extra overhead.
 
