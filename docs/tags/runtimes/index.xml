@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Runtimes on Rico&#39;s Blog</title>
+    <link>https://raravena80.github.io/tags/runtimes/</link>
+    <description>Recent content in Runtimes on Rico&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
+    <lastBuildDate>Sat, 07 Apr 2018 14:17:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://raravena80.github.io/tags/runtimes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running Scylla in Kata Containers</title>
+      <link>https://raravena80.github.io/post/scylla-in-kata-containers/</link>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/scylla-in-kata-containers/</guid>
+      <description>The Kata community has been busy getting the first release out the door.
+Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage.</description>
+    </item>
+    
+    <item>
+      <title>The Boom of Container Runtimes</title>
+      <link>https://raravena80.github.io/post/container-runtimes-cncf/</link>
+      <pubDate>Sun, 04 Mar 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/container-runtimes-cncf/</guid>
+      <description>It has been about 4 years since Docker exploded into the scene of Cloud Infrasctructure. With that came a shift in cloud applications from monolithic to microservices. Containers made it easy for developer to deploy directly to production mostly caring about the scope of her/his microservice.
+Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your containers up and down depending on demand.</description>
+    </item>
+    
+  </channel>
+</rss>
