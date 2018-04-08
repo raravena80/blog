@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Sat, 13 May 2017 16:28:29 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Apr 2018 14:17:00 +0000</lastBuildDate>
     
 	<atom:link href="https://raravena80.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Running Scylla in Kata Containers</title>
+      <link>https://raravena80.github.io/post/scylla-in-kata-containers/</link>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/scylla-in-kata-containers/</guid>
+      <description>The Kata community has been busy getting the first release out the door.
+Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage.</description>
+    </item>
+    
+    <item>
+      <title>The Boom of Container Runtimes</title>
+      <link>https://raravena80.github.io/post/container-runtimes-cncf/</link>
+      <pubDate>Sun, 04 Mar 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/container-runtimes-cncf/</guid>
+      <description>It has been about 4 years since Docker exploded into the scene of Cloud Infrasctructure. With that came a shift in cloud applications from monolithic to microservices. Containers made it easy for developer to deploy directly to production mostly caring about the scope of her/his microservice.
+Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your containers up and down depending on demand.</description>
+    </item>
+    
+    <item>
+      <title>Working At Branch</title>
+      <link>https://raravena80.github.io/post/working-at-branch/</link>
+      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/working-at-branch/</guid>
+      <description>It has been about 4 months since I started working at Branch and wanted to reflect on what it&amp;rsquo;s been like.
+I can truly say that I&amp;rsquo;m enjoying everything about it. The environment is fantastic, my co-workers are awesome, and we all come from various backgrounds.
+I like the fact that the company takes their values seriously and the founding team is focused on making working at Branch the best experience you&amp;rsquo;ve ever had in your career.</description>
+    </item>
     
     <item>
       <title>Kubernetes on GCP</title>

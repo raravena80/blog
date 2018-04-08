@@ -19,7 +19,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rico&#39;s Blog" />
 
-  <meta name="generator" content="Hugo 0.23" />
+  <meta name="generator" content="Hugo 0.37.1" />
   <link rel="canonical" href="https://raravena80.github.io/post/" />
   <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -111,6 +111,91 @@
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         
         <div class="posts-list">
+          
+            <article class="post-preview">
+              <a href="https://raravena80.github.io/post/simple-clouformation-with-multiple-aws-accounts/">
+                <h2 class="post-title">Simple Clouformation With Multiple AWS Accounts</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on October 24, 2013
+              </p>
+              <div class="post-entry">
+                
+                  In this post I&rsquo;ll describe how to create a simple AWS CloudFormation template so that we can deploy stack using multiple AWS accounts. In other words a common JSON CloudFormation template that can be use to bring up a stack in multiple accounts. The way we are able to do this is by having exact copies of the EC2 AMIs on all the accounts and regions where we are deploying our stack.
+                  <a href="https://raravena80.github.io/post/simple-clouformation-with-multiple-aws-accounts/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://raravena80.github.io/post/ansible-playbook-for-scout-on-ubuntu/">
+                <h2 class="post-title">Ansible Playbook for Scout on Ubuntu</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on October 22, 2013
+              </p>
+              <div class="post-entry">
+                
+                  This is a sample Ansible task (http://www.ansibleworks.com) on how to setup Scout (https://www.scoutapp.com) on Ubuntu. It needs to be included in an ansible playbook.
+It&rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
+--- PLAYBOOK: Install scout on Ubuntu --- - name: scout hosts: all user: user-with-sudo sudo: True vars: scout_key: YourScoutAPIKeyFromTheirWebsite tasks: - include: tasks/scout.
+                  <a href="https://raravena80.github.io/post/ansible-playbook-for-scout-on-ubuntu/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/ansible">ansible</a>&nbsp;
+                  
+                    #<a href="/tags/scout">scout</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://raravena80.github.io/post/upgrade-linux-kernel-on-chromebook/">
+                <h2 class="post-title">Upgrade Linux Kernel on Chromebook</h2>
+    
+                
+              </a>
+    
+              <p class="post-meta">
+                Posted on October 21, 2013
+              </p>
+              <div class="post-entry">
+                
+                  So after installing ChrUbuntu on my Acer C7 Chromebook, I&rsquo;m very pleased that with the help of this blog I was able to upgrade the Linux Kernel to 3.8.11
+raravena@chromebook:~/git/blog-src$ uname -a Linux chromebook 3.8.11 #3 SMP Thu Oct 17 07:41:20 PDT 2013 x86_64 x86_64 x86_64 GNU/Linux  These are the modified steps:
+#!/bin/bash set -x # # Grab verified boot utilities from ChromeOS. # mkdir -p /usr/share/vboot mount -o ro /dev/sda3 /mnt cp /mnt/usr/bin/vbutil_* /usr/bin mkdir -p /usr/bin/old_bins cp /mnt/usr/bin/old_bins/vbutil_* /usr/bin/old_bins/.
+                  <a href="https://raravena80.github.io/post/upgrade-linux-kernel-on-chromebook/" class="post-read-more">[Read More]</a>
+                
+              </div>
+    
+              
+                <span class="post-meta">
+                  
+                    #<a href="/tags/linux">linux</a>&nbsp;
+                  
+                    #<a href="/tags/kernel">kernel</a>&nbsp;
+                  
+                    #<a href="/tags/chromebook">chromebook</a>&nbsp;
+                  
+                </span>
+              
+    
+            </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/how-to-create-an-ansible-playbook-to-configure-haproxy/">
@@ -269,7 +354,7 @@ global log 127.0.0.1	local0 log 127.0.0.1	local1 notice maxconn 4096 user haprox
         <p class="credits copyright text-muted">
           Ricardo Aravena
           &nbsp;&bull;&nbsp;
-          2017
+          2018
 
           
             &nbsp;&bull;&nbsp;

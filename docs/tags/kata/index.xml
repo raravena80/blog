@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kata on Rico&#39;s Blog</title>
+    <link>https://raravena80.github.io/tags/kata/</link>
+    <description>Recent content in Kata on Rico&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
+    <lastBuildDate>Sat, 07 Apr 2018 14:17:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://raravena80.github.io/tags/kata/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running Scylla in Kata Containers</title>
+      <link>https://raravena80.github.io/post/scylla-in-kata-containers/</link>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/scylla-in-kata-containers/</guid>
+      <description>The Kata community has been busy getting the first release out the door.
+Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage.</description>
+    </item>
+    
+  </channel>
+</rss>

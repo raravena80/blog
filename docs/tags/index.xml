@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Branch</title>
+      <link>https://raravena80.github.io/tags/branch/</link>
+      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/tags/branch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Chromebook</title>
       <link>https://raravena80.github.io/tags/chromebook/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
@@ -42,9 +51,27 @@
     <item>
       <title>Cncf</title>
       <link>https://raravena80.github.io/tags/cncf/</link>
-      <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/tags/cncf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Containers</title>
+      <link>https://raravena80.github.io/tags/containers/</link>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/tags/containers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data</title>
+      <link>https://raravena80.github.io/tags/data/</link>
+      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/tags/data/</guid>
       <description></description>
     </item>
     
@@ -112,11 +139,29 @@
     </item>
     
     <item>
+      <title>Infrastructure</title>
+      <link>https://raravena80.github.io/tags/infrastructure/</link>
+      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Json</title>
       <link>https://raravena80.github.io/tags/json/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/tags/json/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kata</title>
+      <link>https://raravena80.github.io/tags/kata/</link>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/tags/kata/</guid>
       <description></description>
     </item>
     
@@ -189,6 +234,15 @@
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://raravena80.github.io/tags/papertrailapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Runtimes</title>
+      <link>https://raravena80.github.io/tags/runtimes/</link>
+      <pubDate>Sat, 07 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/tags/runtimes/</guid>
       <description></description>
     </item>
     
