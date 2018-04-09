@@ -189,3 +189,5 @@ Due to privacy concerns, compliance requirements such as [GDPR](https://en.wikip
 It's worth mentioning that there's also another interesting [blog](https://www.scylladb.com/2018/03/29/scylla-kubernetes-overview/) explaining how to run Scylla in Kubernetes. So you can also run Scylla in Kata Containers on top of Kubernetes using Stateful sets.
 
 Go Kata!
+
+For more information about the Kata Containers project you can visit https://katacontainers.io.
