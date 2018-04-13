@@ -174,7 +174,7 @@ Total operation time      : 00:05:55
 ```
 
 ![oprate](https://user-images.githubusercontent.com/7659560/38760120-62c86ac2-3f2e-11e8-9013-30e17695ce66.png)
-![meanlatency](https://user-images.githubusercontent.com/7659560/38760126-68416b66-3f2e-11e8-90f8-8fccb4ed1357.png)
+![meanlatency](https://user-images.githubusercontent.com/7659560/38760803-fa10540e-3f32-11e8-99a2-f0be37bd0eab.png)
 ![99thlatency](https://user-images.githubusercontent.com/7659560/38760128-6c4bd37c-3f2e-11e8-996b-810ed3220a80.png)
 
 
