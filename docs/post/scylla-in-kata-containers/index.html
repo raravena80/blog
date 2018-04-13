@@ -280,7 +280,7 @@ Total operation time      : 00:05:55
 </code></pre>
 
 <p><img src="https://user-images.githubusercontent.com/7659560/38760120-62c86ac2-3f2e-11e8-9013-30e17695ce66.png" alt="oprate" />
-<img src="https://user-images.githubusercontent.com/7659560/38760126-68416b66-3f2e-11e8-90f8-8fccb4ed1357.png" alt="meanlatency" />
+<img src="https://user-images.githubusercontent.com/7659560/38760803-fa10540e-3f32-11e8-99a2-f0be37bd0eab.png" alt="meanlatency" />
 <img src="https://user-images.githubusercontent.com/7659560/38760128-6c4bd37c-3f2e-11e8-996b-810ed3220a80.png" alt="99thlatency" /></p>
 
 <p>If we look at Ops per second, results show that our 2 node Scylla cluster on the same machine running in 2 Kata containers is about 40% slower for writes and 80% slower for reads than running Scylla on 2 containers on bare metal. Other metrics such as latency show similar patterns in where it&rsquo;s higher for Kata containers. This makes sense since Virtualization adds an extra layer.</p>
