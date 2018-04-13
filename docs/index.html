@@ -127,6 +127,43 @@
           
           
             <article class="post-preview">
+              <a href="https://raravena80.github.io/post/scylla-in-kata-containers-part-2/">
+                <h2 class="post-title">Running Scylla in Kata Containers Part 2</h2>
+                
+              </a>
+
+              <span class="post-meta">
+  Posted on April 13, 2018
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  Following up on Part 1 for my previous blog and recommendations from Archana Shinde and Graham Whaley. I made a few tweaks to the /usr/share/defaults/kata-containers/configuration.toml configs.
+The machine specs are the same:
+ C2S bare metal machine from ScaleWay 4 Dedicated x86 64bit Cores 8GB Memory 50GB SSD Disk  These are the changes in the configs (from the default)
+default_vcpus = 4 default_memory = 3072 enable_iothreads = true  I also changed the number of operations from 2500000 to 500000 and first I ran the tests using the devicemapper configs in Docker with an external /var/lib/scylla volume.
+                  <a href="https://raravena80.github.io/post/scylla-in-kata-containers-part-2/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="/tags/containers">containers</a>&nbsp;
+                
+                  #<a href="/tags/runtimes">runtimes</a>&nbsp;
+                
+                  #<a href="/tags/cncf">cncf</a>&nbsp;
+                
+                  #<a href="/tags/kata">kata</a>&nbsp;
+                
+                </span>
+              
+            </article>
+          
+            <article class="post-preview">
               <a href="https://raravena80.github.io/post/scylla-in-kata-containers/">
                 <h2 class="post-title">Running Scylla in Kata Containers</h2>
                 
@@ -420,42 +457,6 @@ Just a little bit of background, for those of you not familiar with LXC containe
                 <span class="post-meta">
                 
                   #<a href="/tags/docker">docker</a>&nbsp;
-                
-                </span>
-              
-            </article>
-          
-            <article class="post-preview">
-              <a href="https://raravena80.github.io/post/ansible-playbook-for-papertrail-on-ubuntu/">
-                <h2 class="post-title">Ansible Playbook for PaperTrail on Ubuntu</h2>
-                
-              </a>
-
-              <span class="post-meta">
-  Posted on October 29, 2013
-  
-</span>
-
-
-              <div class="post-entry">
-                
-                  This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
-It&rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
---- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &lt;user-with-sudo&gt; sudo: True tasks: - include: tasks/papertrail.
-                  <a href="https://raravena80.github.io/post/ansible-playbook-for-papertrail-on-ubuntu/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <span class="post-meta">
-                
-                  #<a href="/tags/ansible">ansible</a>&nbsp;
-                
-                  #<a href="/tags/papertrailapp">papertrailapp</a>&nbsp;
-                
-                  #<a href="/tags/logging">logging</a>&nbsp;
-                
-                  #<a href="/tags/ubuntu">ubuntu</a>&nbsp;
                 
                 </span>
               

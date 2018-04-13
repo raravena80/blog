@@ -279,9 +279,9 @@ StdDev GC time            :    0.0 ms
 Total operation time      : 00:05:55
 </code></pre>
 
-<p><img src="https://user-images.githubusercontent.com/7659560/38460160-7ec376b4-3a69-11e8-8d99-a882b088e05b.png" alt="oprate" />
-<img src="https://user-images.githubusercontent.com/7659560/38460170-907f8a96-3a69-11e8-866c-b476f930effc.png" alt="meanlatency" />
-<img src="https://user-images.githubusercontent.com/7659560/38460171-92dd7064-3a69-11e8-8196-eb9774e18238.png" alt="99thlatency" /></p>
+<p><img src="https://user-images.githubusercontent.com/7659560/38760120-62c86ac2-3f2e-11e8-9013-30e17695ce66.png" alt="oprate" />
+<img src="https://user-images.githubusercontent.com/7659560/38760126-68416b66-3f2e-11e8-90f8-8fccb4ed1357.png" alt="meanlatency" />
+<img src="https://user-images.githubusercontent.com/7659560/38760128-6c4bd37c-3f2e-11e8-996b-810ed3220a80.png" alt="99thlatency" /></p>
 
 <p>If we look at Ops per second, results show that our 2 node Scylla cluster on the same machine running in 2 Kata containers is about 40% slower for writes and 80% slower for reads than running Scylla on 2 containers on bare metal. Other metrics such as latency show similar patterns in where it&rsquo;s higher for Kata containers. This makes sense since Virtualization adds an extra layer.</p>
 
@@ -297,6 +297,8 @@ Total operation time      : 00:05:55
 
 <p>For more information about the Kata Containers project you can visit <a href="https://katacontainers.io">https://katacontainers.io</a>.</p>
 
+<p><a href="/post/scylla-in-kata-containers-part-2/">Part 2</a></p>
+
       </article>
 
       <ul class="pager blog-pager">
@@ -305,6 +307,10 @@ Total operation time      : 00:05:55
             <a href="https://raravena80.github.io/post/container-runtimes-cncf/" data-toggle="tooltip" data-placement="top" title="The Boom of Container Runtimes">&larr; Previous Post</a>
           </li>
         
+        
+          <li class="next">
+            <a href="https://raravena80.github.io/post/scylla-in-kata-containers-part-2/" data-toggle="tooltip" data-placement="top" title="Running Scylla in Kata Containers Part 2">Next Post &rarr;</a>
+          </li>
         
       </ul>
 

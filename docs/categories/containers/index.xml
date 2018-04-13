@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Sat, 07 Apr 2018 14:17:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Apr 2018 14:17:00 +0000</lastBuildDate>
     
 	<atom:link href="https://raravena80.github.io/categories/containers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Running Scylla in Kata Containers Part 2</title>
+      <link>https://raravena80.github.io/post/scylla-in-kata-containers-part-2/</link>
+      <pubDate>Fri, 13 Apr 2018 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://raravena80.github.io/post/scylla-in-kata-containers-part-2/</guid>
+      <description>Following up on Part 1 for my previous blog and recommendations from Archana Shinde and Graham Whaley. I made a few tweaks to the /usr/share/defaults/kata-containers/configuration.toml configs.
+The machine specs are the same:
+ C2S bare metal machine from ScaleWay 4 Dedicated x86 64bit Cores 8GB Memory 50GB SSD Disk  These are the changes in the configs (from the default)
+default_vcpus = 4 default_memory = 3072 enable_iothreads = true  I also changed the number of operations from 2500000 to 500000 and first I ran the tests using the devicemapper configs in Docker with an external /var/lib/scylla volume.</description>
+    </item>
     
     <item>
       <title>Running Scylla in Kata Containers</title>
