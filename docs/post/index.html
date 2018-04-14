@@ -19,15 +19,64 @@
 
   <meta name="generator" content="Hugo 0.37.1" />
   <link rel="canonical" href="https://raravena80.github.io/post/" />
-  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="alternate" href="https://raravena80.github.io/post/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
-  <link rel="stylesheet" href="https://raravena80.github.io/css/pygment_highlights.css" />
-  <link rel="stylesheet" href="https://raravena80.github.io/css/highlight.min.css" />
+  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://raravena80.github.io/css/syntax.css" /><link rel="stylesheet" href="https://raravena80.github.io/css/codeblock.css" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
 </head>
 
   <body>
@@ -40,7 +89,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+      <a class="navbar-brand" href="https://raravena80.github.io">Rico&#39;s Blog</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -109,12 +158,21 @@
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/scylla-in-kata-containers-part-2/">
                 <h2 class="post-title">Running Scylla in Kata Containers Part 2</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on April 13, 2018
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on April 13, 2018
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -125,32 +183,41 @@ default_vcpus = 4 default_memory = 3072 enable_iothreads = true  I also changed 
                   <a href="https://raravena80.github.io/post/scylla-in-kata-containers-part-2/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/containers">containers</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/containers/">containers</a>&nbsp;
                   
-                    #<a href="/tags/runtimes">runtimes</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/runtimes/">runtimes</a>&nbsp;
                   
-                    #<a href="/tags/cncf">cncf</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/cncf/">cncf</a>&nbsp;
                   
-                    #<a href="/tags/kata">kata</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/kata/">kata</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/scylla-in-kata-containers/">
                 <h2 class="post-title">Running Scylla in Kata Containers</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on April 7, 2018
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on April 7, 2018
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -159,32 +226,41 @@ Virtual Machines have been around in the industry for over 20 years. One of the 
                   <a href="https://raravena80.github.io/post/scylla-in-kata-containers/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/containers">containers</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/containers/">containers</a>&nbsp;
                   
-                    #<a href="/tags/runtimes">runtimes</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/runtimes/">runtimes</a>&nbsp;
                   
-                    #<a href="/tags/cncf">cncf</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/cncf/">cncf</a>&nbsp;
                   
-                    #<a href="/tags/kata">kata</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/kata/">kata</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/container-runtimes-cncf/">
                 <h2 class="post-title">The Boom of Container Runtimes</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on March 4, 2018
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on March 4, 2018
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -193,30 +269,39 @@ Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azu
                   <a href="https://raravena80.github.io/post/container-runtimes-cncf/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/containers">containers</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/containers/">containers</a>&nbsp;
                   
-                    #<a href="/tags/runtimes">runtimes</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/runtimes/">runtimes</a>&nbsp;
                   
-                    #<a href="/tags/cncf">cncf</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/cncf/">cncf</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/working-at-branch/">
                 <h2 class="post-title">Working At Branch</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on October 4, 2017
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 4, 2017
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -226,30 +311,39 @@ I like the fact that the company takes their values seriously and the founding t
                   <a href="https://raravena80.github.io/post/working-at-branch/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/branch">branch</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/branch/">branch</a>&nbsp;
                   
-                    #<a href="/tags/data">data</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/data/">data</a>&nbsp;
                   
-                    #<a href="/tags/infrastructure">infrastructure</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/infrastructure/">infrastructure</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/kubernetes-on-gcp/">
                 <h2 class="post-title">Kubernetes on GCP</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on May 13, 2017
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on May 13, 2017
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -258,30 +352,39 @@ As of Today Kops the standard tool for installing Kubernetes on AWS doesn&rsquo;
                   <a href="https://raravena80.github.io/post/kubernetes-on-gcp/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/gcp">gcp</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/gcp/">gcp</a>&nbsp;
                   
-                    #<a href="/tags/kubernetes">kubernetes</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
                   
-                    #<a href="/tags/google">google</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/google/">google</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/dcos-on-gcp/">
                 <h2 class="post-title">DC/OS on GCP</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on May 11, 2017
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on May 11, 2017
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -292,32 +395,41 @@ Then, I had to modify the group_vars/all file in the playbook
                   <a href="https://raravena80.github.io/post/dcos-on-gcp/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/gcp">gcp</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/gcp/">gcp</a>&nbsp;
                   
-                    #<a href="/tags/dcos">dcos</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/dcos/">dcos</a>&nbsp;
                   
-                    #<a href="/tags/mesos">mesos</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/mesos/">mesos</a>&nbsp;
                   
-                    #<a href="/tags/google">google</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/google/">google</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/">
                 <h2 class="post-title">Parsing Deeply Nested JSON in Go</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on April 28, 2017
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on April 28, 2017
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -326,30 +438,39 @@ In go generally you have to prefine your structs and run through an Unmarshal fu
                   <a href="https://raravena80.github.io/post/parsing-nested-json-in-go/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/json">json</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/json/">json</a>&nbsp;
                   
-                    #<a href="/tags/gjson">gjson</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/gjson/">gjson</a>&nbsp;
                   
-                    #<a href="/tags/go">go</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/go/">go</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/cloudnativecon-kubecon-europe/">
                 <h2 class="post-title">CloudNativeCon KubeCon Europe</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on April 25, 2017
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on April 25, 2017
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -358,32 +479,41 @@ I’ve attended many conferences before, but I was happy to get the diversity sc
                   <a href="https://raravena80.github.io/post/cloudnativecon-kubecon-europe/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/cloudnative">cloudnative</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/cloudnative/">cloudnative</a>&nbsp;
                   
-                    #<a href="/tags/kubecon">kubecon</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/kubecon/">kubecon</a>&nbsp;
                   
-                    #<a href="/tags/kubernetes">kubernetes</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/kubernetes/">kubernetes</a>&nbsp;
                   
-                    #<a href="/tags/cncf">cncf</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/cncf/">cncf</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/lxc-playing/">
                 <h2 class="post-title">LXC Playing</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on October 29, 2016
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 29, 2016
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -391,28 +521,37 @@ I’ve attended many conferences before, but I was happy to get the diversity sc
                   <a href="https://raravena80.github.io/post/lxc-playing/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/cloudnative">cloudnative</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/cloudnative/">cloudnative</a>&nbsp;
                   
-                    #<a href="/tags/lxc">lxc</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/lxc/">lxc</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
             <article class="post-preview">
               <a href="https://raravena80.github.io/post/docker-first-impressions/">
                 <h2 class="post-title">Docker First Impressions</h2>
-    
+
                 
               </a>
-    
+
               <p class="post-meta">
-                Posted on March 7, 2014
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on March 7, 2014
+  
+  
+  
+</span>
+
+
               </p>
               <div class="post-entry">
                 
@@ -421,15 +560,15 @@ Just a little bit of background, for those of you not familiar with LXC containe
                   <a href="https://raravena80.github.io/post/docker-first-impressions/" class="post-read-more">[Read More]</a>
                 
               </div>
-    
+
               
                 <span class="post-meta">
                   
-                    #<a href="/tags/docker">docker</a>&nbsp;
+                    #<a href="https://raravena80.github.io/tags/docker/">docker</a>&nbsp;
                   
                 </span>
               
-    
+
             </article>
           
         </div>
@@ -438,7 +577,7 @@ Just a little bit of background, for those of you not familiar with LXC containe
             
             
               <li class="next">
-                <a href="/post/page/2">Older Posts &rarr;</a>
+                <a href="/post/page/2/">Older Posts &rarr;</a>
               </li>
             
           </ul>
@@ -519,7 +658,9 @@ Just a little bit of background, for those of you not familiar with LXC containe
               </li>
           
           <li>
-            <a href="https://raravena80.github.io/index.xml" title="RSS">
+            
+            <a href="https://raravena80.github.io/post/index.xml" title="RSS">
+            
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
@@ -529,18 +670,23 @@ Just a little bit of background, for those of you not familiar with LXC containe
           
         </ul>
         <p class="credits copyright text-muted">
-          Ricardo Aravena
+          
+            
+              Ricardo Aravena
+            
+          
+
           &nbsp;&bull;&nbsp;
           2018
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://raravena80.github.io/">Rico&#39;s Blog</a>
+            <a href="https://raravena80.github.io">Rico&#39;s Blog</a>
           
         </p>
         
         <p class="credits theme-by text-muted">
-          
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
           
         </p>
       </div>
@@ -552,11 +698,10 @@ Just a little bit of background, for those of you not familiar with LXC containe
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://raravena80.github.io/js/main.js"></script>
-<script src="https://raravena80.github.io/js/highlight.min.js"></script>
-<script> hljs.initHighlightingOnLoad(); </script>
-<script> renderMathInElement(document.body); </script>
-
+<script src="https://raravena80.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://raravena80.github.io/js/load-photoswipe.js"></script>
 
 
 
