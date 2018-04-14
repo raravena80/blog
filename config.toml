@@ -2,6 +2,7 @@ baseurl = "https://raravena80.github.io"
 DefaultContentLanguage = "en"
 title = "Rico's Blog"
 theme = "beautifulhugo"
+#theme = "hugo_theme_pickles"
 metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
@@ -10,7 +11,7 @@ disqusShortname = "raravena80"
 publishDir = "docs"
 
 [Params]
-  subtitle = "Blogging for DevOps Nerds"
+  #subtitle = "Blogging for DevOps Nerds"
   #logo = "img/avatar-icon.png"
   favicon = "img/favicon.png"
   dateFormat = "January 2, 2006"
