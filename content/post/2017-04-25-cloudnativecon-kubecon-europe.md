@@ -47,19 +47,19 @@ https://github.com/weaveworks-experiments/loki
 
 I learned about Loki is a Zipkin-compatible distributed tracer written in Go. It uses Prometheus’ service discovery to find about the services and examine them.
 * * *
-![CoffeeTalk](https://www.cncf.io/wp-content/uploads/sites/2/2017/04/1-768x512.png)
+![CoffeeTalk](https://user-images.githubusercontent.com/7659560/38763265-98f0ad94-3f4c-11e8-93ad-3f2d25b3af00.png)
 
 As a Latino leader (originally from Chile), I enjoyed the diversity talk very much as well. It was an interesting conversation led by Sarah Conway from the Linux Foundation with a variety of different attendees including Kris Nova, a previous diversity scholarship recipient. The general consensus is that the industry still needs to continue to do more.  I hope they keep on having these talks in future conferences since this is topic that is not very openly talked about, for fear or whatever reasons, but I believe part of the culture of open source is being ‘Open’ and talk about all the different issues and challenges in industry when it comes to being more inclusive.
 
 Specifically for example, when it comes to companies hiring, there are just a few that are doing things to make it truly more inclusive, there are those that say that they are doing things (but not practicing) and there is the large majority that is not doing anything at all.
 
-![CoffeeImage](https://www.cncf.io/wp-content/uploads/sites/2/2017/04/2-768x512.png)
+![CoffeeImage](https://user-images.githubusercontent.com/7659560/38763266-9bc57aea-3f4c-11e8-9c3b-64e6d2d83b40.png)
 
 The environment and event were great overall. From participating in the morning run around Berlin with some fellow conference attendees to the closing party with the great food and drinks :-). What a great way to start and end your day.
 
-![MorningRun](https://www.cncf.io/wp-content/uploads/sites/2/2017/04/3-768x576.png)
+![MorningRun](https://user-images.githubusercontent.com/7659560/38763267-9ee3ef5e-3f4c-11e8-877d-a1c6301332a5.png)
 
-![Party](https://www.cncf.io/wp-content/uploads/sites/2/2017/04/33778292226_d70ec7994c_b-768x512.jpg)
+![Party](https://user-images.githubusercontent.com/7659560/38763262-915b6fe2-3f4c-11e8-9cd2-56736d2b6207.jpg)
 
 Thanks for the fantastic experience and looking forward to next the CloudNativeCon + KubeCon North America 2017 in Austin. Consider applying for a scholarship to the North America event. Applications can be found here and are due October 13th.
 
