@@ -3,13 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://raravena80.github.io/post/scylla-in-kata-containers-part-2/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://raravena80.github.io/post/scylla-in-kata-containers/</loc>
-    <lastmod>2018-04-07T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
@@ -88,13 +83,13 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/ansible/</loc>
+    <loc>https://raravena80.github.io/categories/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/categories/ansible/</loc>
+    <loc>https://raravena80.github.io/tags/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -106,13 +101,13 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/branch/</loc>
+    <loc>https://raravena80.github.io/categories/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/categories/branch/</loc>
+    <loc>https://raravena80.github.io/tags/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -124,13 +119,13 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/chromebook/</loc>
+    <loc>https://raravena80.github.io/categories/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/categories/chromebook/</loc>
+    <loc>https://raravena80.github.io/tags/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -148,32 +143,26 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/cncf/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://raravena80.github.io/categories/cncf/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/containers/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/cncf/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://raravena80.github.io/categories/containers/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/data/</loc>
-    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/containers/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -184,8 +173,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/dcos/</loc>
-    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/data/</loc>
+    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,8 +185,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/docker/</loc>
-    <lastmod>2014-03-07T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/dcos/</loc>
+    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -208,8 +197,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/gcp/</loc>
-    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/docker/</loc>
+    <lastmod>2014-03-07T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -220,8 +209,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/gjson/</loc>
-    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/gcp/</loc>
+    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -232,7 +221,7 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/go/</loc>
+    <loc>https://raravena80.github.io/tags/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -244,8 +233,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/google/</loc>
-    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/go/</loc>
+    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -256,8 +245,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/haproxy/</loc>
-    <lastmod>2013-10-21T00:00:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/google/</loc>
+    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -268,8 +257,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/infrastructure/</loc>
-    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/haproxy/</loc>
+    <lastmod>2013-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -280,8 +269,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/json/</loc>
-    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/infrastructure/</loc>
+    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -292,25 +281,31 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/kata/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/json/</loc>
+    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://raravena80.github.io/categories/kata/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/kernel/</loc>
-    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/kata/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://raravena80.github.io/categories/kernel/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/kernel/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -322,20 +317,14 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/kubernetes/</loc>
-    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://raravena80.github.io/categories/kubernetes/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/linux/</loc>
-    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/kubernetes/</loc>
+    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -346,8 +335,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/logging/</loc>
-    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/linux/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -358,8 +347,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/lxc/</loc>
-    <lastmod>2016-10-29T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/logging/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -370,8 +359,8 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/mesos/</loc>
-    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/lxc/</loc>
+    <lastmod>2016-10-29T16:28:29+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -382,8 +371,14 @@
   </url>
   
   <url>
+    <loc>https://raravena80.github.io/tags/mesos/</loc>
+    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://raravena80.github.io/categories/oci/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -394,49 +389,49 @@
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/papertrailapp/</loc>
-    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://raravena80.github.io/categories/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://raravena80.github.io/tags/papertrailapp/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://raravena80.github.io/post/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://raravena80.github.io/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://raravena80.github.io/tags/runtimes/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://raravena80.github.io/categories/runtimes/</loc>
-    <lastmod>2018-04-13T14:17:00+00:00</lastmod>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://raravena80.github.io/tags/scout/</loc>
-    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
+    <loc>https://raravena80.github.io/tags/runtimes/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://raravena80.github.io/categories/scout/</loc>
+    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://raravena80.github.io/tags/scout/</loc>
     <lastmod>2013-10-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
