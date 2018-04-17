@@ -43,7 +43,7 @@ One minor change that I had to make was the configuration for qemu under `/usr/s
 # to this
 path = "/usr/bin/qemu-lite-system-x86_64"
 ```
-Then I ran some performance benchmarks that were previously run with Scylla by the IBM folks. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are simply to establish a baseline and demonstrate that we can run Scylla in Kata containers. The idea is to get some baseline and see how Scylla performs in Kata.
+Then I ran some performance benchmarks that were previously run with Scylla by the IBM team. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are simply to establish a baseline and demonstrate that we can run Scylla in Kata containers. The idea is to get some baseline and see how Scylla performs in Kata.
 
 You can read more about the IBM tests [here](https://www.ibm.com/developerworks/library/l-performance-scylla/)
 
