@@ -196,7 +196,7 @@ enable_iothreads = true
 
 Also changing the number of operations from `2500000` to `500000` and using
 the devicemapper configs in Docker with an external `/var/lib/scylla` volume
- where the file system traffic goes stil goes through 9pfs.
+ where the file system traffic stil goes through 9pfs.
 
 Results:
 
@@ -305,7 +305,7 @@ Charting and comparing the op rate and the mean latency for each run:
 
 We see that the Op rate is slightly better for a local filesystem compared to a filesystem going through 9p.
 Similar behavior for latency, in this case, the latency is lower for the local fs compared to a filesystem
-going through 9p. Overall, we see less discrepancy between reads and writes compared
+going through 9p. Overall, we see less discrepancy between reads and writes compared to
 what we saw initially without tuning. This is mainly attributed to change in VM CPUs and default memory.
 
 We conclude that tweaking the VM settings in terms of CPUs and memory can give better performance with Kata. In the case of raw containers we still see the better performance but this is also partly given that in the raw container case each container has access to all the machine resources and has more direct access to the machine's hardware.
