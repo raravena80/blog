@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data on Rico&#39;s Blog</title>
-    <link>https://raravena80.github.io/tags/data/</link>
+    <link>https://blog.serverbooter.com/tags/data/</link>
     <description>Recent content in Data on Rico&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Wed, 04 Oct 2017 14:17:00 +0000</lastBuildDate>
     
-	<atom:link href="https://raravena80.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/tags/data/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Working At Branch</title>
-      <link>https://raravena80.github.io/post/working-at-branch/</link>
+      <link>https://blog.serverbooter.com/post/working-at-branch/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/working-at-branch/</guid>
+      <guid>https://blog.serverbooter.com/post/working-at-branch/</guid>
       <description>It has been about 4 months since I started working at Branch and wanted to reflect on what it&amp;rsquo;s been like.
 I can truly say that I&amp;rsquo;m enjoying everything about it. The environment is fantastic, my co-workers are awesome, and we all come from various backgrounds.
 I like the fact that the company takes their values seriously and the founding team is focused on making working at Branch the best experience you&amp;rsquo;ve ever had in your career.</description>

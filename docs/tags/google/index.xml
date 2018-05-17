@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on Rico&#39;s Blog</title>
-    <link>https://raravena80.github.io/tags/google/</link>
+    <link>https://blog.serverbooter.com/tags/google/</link>
     <description>Recent content in Google on Rico&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Sat, 13 May 2017 16:28:29 +0000</lastBuildDate>
     
-	<atom:link href="https://raravena80.github.io/tags/google/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kubernetes on GCP</title>
-      <link>https://raravena80.github.io/post/kubernetes-on-gcp/</link>
+      <link>https://blog.serverbooter.com/post/kubernetes-on-gcp/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/kubernetes-on-gcp/</guid>
+      <guid>https://blog.serverbooter.com/post/kubernetes-on-gcp/</guid>
       <description>Kubernetes has come a long way over the last 2 years and I was so excited to learn about during CloudNativeCon/Kubecon Berlin this year.
 As of Today Kops the standard tool for installing Kubernetes on AWS doesn&amp;rsquo;t support GCP yet (it&amp;rsquo;s in the works). However you can still setup your cluster using good old kube-up.sh. There&amp;rsquo;s also a pretty good explanation on the k8s docs. Make sure you install the Google Cloud SDK with gcloud and all their utils.</description>
     </item>
     
     <item>
       <title>DC/OS on GCP</title>
-      <link>https://raravena80.github.io/post/dcos-on-gcp/</link>
+      <link>https://blog.serverbooter.com/post/dcos-on-gcp/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/dcos-on-gcp/</guid>
+      <guid>https://blog.serverbooter.com/post/dcos-on-gcp/</guid>
       <description>DC/OS is the commercialized Mesos distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box Ansible scripts provided by Mesosphere.
 For starters I followed everything described in the README.
 Then, I had to modify the group_vars/all file in the playbook

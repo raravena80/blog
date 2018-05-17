@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Rico&#39;s Blog</title>
-    <link>https://raravena80.github.io/categories/docker/</link>
+    <link>https://blog.serverbooter.com/categories/docker/</link>
     <description>Recent content in Docker on Rico&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Tue, 25 Apr 2017 16:28:29 +0000</lastBuildDate>
     
-	<atom:link href="https://raravena80.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>CloudNativeCon KubeCon Europe</title>
-      <link>https://raravena80.github.io/post/cloudnativecon-kubecon-europe/</link>
+      <link>https://blog.serverbooter.com/post/cloudnativecon-kubecon-europe/</link>
       <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/cloudnativecon-kubecon-europe/</guid>
+      <guid>https://blog.serverbooter.com/post/cloudnativecon-kubecon-europe/</guid>
       <description>This same blog entry is here. Thanks to the cncf folks who helped me put this together.
 I’ve attended many conferences before, but I was happy to get the diversity scholarship to attend CloudNativeCon + KubeCon Europe 2017 in Berlin as there is always so much more to learn. It was my first time attending an event organized by the Linux Foundation, and I hope to attend more in the future.</description>
     </item>
     
     <item>
       <title>LXC Playing</title>
-      <link>https://raravena80.github.io/post/lxc-playing/</link>
+      <link>https://blog.serverbooter.com/post/lxc-playing/</link>
       <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/lxc-playing/</guid>
+      <guid>https://blog.serverbooter.com/post/lxc-playing/</guid>
       <description>Over the last couple of years Docker has seen incredible growth across the tech industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development. In the last month I decided to venture and try something different that has been around even before Docker but in a more primitive form. You see containers have been around before Docker for a long time and even before that with the introduction of chroot in 1979.</description>
     </item>
     
     <item>
       <title>Docker First Impressions</title>
-      <link>https://raravena80.github.io/post/docker-first-impressions/</link>
+      <link>https://blog.serverbooter.com/post/docker-first-impressions/</link>
       <pubDate>Fri, 07 Mar 2014 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/docker-first-impressions/</guid>
+      <guid>https://blog.serverbooter.com/post/docker-first-impressions/</guid>
       <description>For the last few days I&amp;rsquo;ve been taking at crack at using the recent Docker container deployment tool that I&amp;rsquo;ve been hearing a lot buzz about. In essence, it&amp;rsquo;s a wrapper on top of Linux LXC containers, writen in the new friendly and not so popular yet Go language developed at Google.
 Just a little bit of background, for those of you not familiar with LXC containers, they are pretty much defined as chroot on steroids.</description>
     </item>

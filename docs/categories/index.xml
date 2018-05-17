@@ -2,265 +2,265 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Rico&#39;s Blog</title>
-    <link>https://raravena80.github.io/categories/</link>
+    <link>https://blog.serverbooter.com/categories/</link>
     <description>Recent content in Categories on Rico&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate>
     
-	<atom:link href="https://raravena80.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ansible</title>
-      <link>https://raravena80.github.io/categories/ansible/</link>
+      <link>https://blog.serverbooter.com/categories/ansible/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/ansible/</guid>
+      <guid>https://blog.serverbooter.com/categories/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Aws</title>
-      <link>https://raravena80.github.io/categories/aws/</link>
+      <link>https://blog.serverbooter.com/categories/aws/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/aws/</guid>
+      <guid>https://blog.serverbooter.com/categories/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Branch</title>
-      <link>https://raravena80.github.io/categories/branch/</link>
+      <link>https://blog.serverbooter.com/categories/branch/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/branch/</guid>
+      <guid>https://blog.serverbooter.com/categories/branch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Chromebook</title>
-      <link>https://raravena80.github.io/categories/chromebook/</link>
+      <link>https://blog.serverbooter.com/categories/chromebook/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/chromebook/</guid>
+      <guid>https://blog.serverbooter.com/categories/chromebook/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cloudformation</title>
-      <link>https://raravena80.github.io/categories/cloudformation/</link>
+      <link>https://blog.serverbooter.com/categories/cloudformation/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/cloudformation/</guid>
+      <guid>https://blog.serverbooter.com/categories/cloudformation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cncf</title>
-      <link>https://raravena80.github.io/categories/cncf/</link>
+      <link>https://blog.serverbooter.com/categories/cncf/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/cncf/</guid>
+      <guid>https://blog.serverbooter.com/categories/cncf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Containers</title>
-      <link>https://raravena80.github.io/categories/containers/</link>
+      <link>https://blog.serverbooter.com/categories/containers/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/containers/</guid>
+      <guid>https://blog.serverbooter.com/categories/containers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data</title>
-      <link>https://raravena80.github.io/categories/data/</link>
+      <link>https://blog.serverbooter.com/categories/data/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/data/</guid>
+      <guid>https://blog.serverbooter.com/categories/data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Dcos</title>
-      <link>https://raravena80.github.io/categories/dcos/</link>
+      <link>https://blog.serverbooter.com/categories/dcos/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/dcos/</guid>
+      <guid>https://blog.serverbooter.com/categories/dcos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://raravena80.github.io/categories/docker/</link>
+      <link>https://blog.serverbooter.com/categories/docker/</link>
       <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/docker/</guid>
+      <guid>https://blog.serverbooter.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gcp</title>
-      <link>https://raravena80.github.io/categories/gcp/</link>
+      <link>https://blog.serverbooter.com/categories/gcp/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/gcp/</guid>
+      <guid>https://blog.serverbooter.com/categories/gcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gjson</title>
-      <link>https://raravena80.github.io/categories/gjson/</link>
+      <link>https://blog.serverbooter.com/categories/gjson/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/gjson/</guid>
+      <guid>https://blog.serverbooter.com/categories/gjson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go</title>
-      <link>https://raravena80.github.io/categories/go/</link>
+      <link>https://blog.serverbooter.com/categories/go/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/go/</guid>
+      <guid>https://blog.serverbooter.com/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Google</title>
-      <link>https://raravena80.github.io/categories/google/</link>
+      <link>https://blog.serverbooter.com/categories/google/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/google/</guid>
+      <guid>https://blog.serverbooter.com/categories/google/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Haproxy</title>
-      <link>https://raravena80.github.io/categories/haproxy/</link>
+      <link>https://blog.serverbooter.com/categories/haproxy/</link>
       <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/haproxy/</guid>
+      <guid>https://blog.serverbooter.com/categories/haproxy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Infrastructure</title>
-      <link>https://raravena80.github.io/categories/infrastructure/</link>
+      <link>https://blog.serverbooter.com/categories/infrastructure/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/infrastructure/</guid>
+      <guid>https://blog.serverbooter.com/categories/infrastructure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Json</title>
-      <link>https://raravena80.github.io/categories/json/</link>
+      <link>https://blog.serverbooter.com/categories/json/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/json/</guid>
+      <guid>https://blog.serverbooter.com/categories/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kata</title>
-      <link>https://raravena80.github.io/categories/kata/</link>
+      <link>https://blog.serverbooter.com/categories/kata/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/kata/</guid>
+      <guid>https://blog.serverbooter.com/categories/kata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kernel</title>
-      <link>https://raravena80.github.io/categories/kernel/</link>
+      <link>https://blog.serverbooter.com/categories/kernel/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/kernel/</guid>
+      <guid>https://blog.serverbooter.com/categories/kernel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://raravena80.github.io/categories/kubernetes/</link>
+      <link>https://blog.serverbooter.com/categories/kubernetes/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/kubernetes/</guid>
+      <guid>https://blog.serverbooter.com/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://raravena80.github.io/categories/linux/</link>
+      <link>https://blog.serverbooter.com/categories/linux/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/linux/</guid>
+      <guid>https://blog.serverbooter.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Logging</title>
-      <link>https://raravena80.github.io/categories/logging/</link>
+      <link>https://blog.serverbooter.com/categories/logging/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/logging/</guid>
+      <guid>https://blog.serverbooter.com/categories/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Lxc</title>
-      <link>https://raravena80.github.io/categories/lxc/</link>
+      <link>https://blog.serverbooter.com/categories/lxc/</link>
       <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/lxc/</guid>
+      <guid>https://blog.serverbooter.com/categories/lxc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mesos</title>
-      <link>https://raravena80.github.io/categories/mesos/</link>
+      <link>https://blog.serverbooter.com/categories/mesos/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/mesos/</guid>
+      <guid>https://blog.serverbooter.com/categories/mesos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oci</title>
-      <link>https://raravena80.github.io/categories/oci/</link>
+      <link>https://blog.serverbooter.com/categories/oci/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/oci/</guid>
+      <guid>https://blog.serverbooter.com/categories/oci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Papertrailapp</title>
-      <link>https://raravena80.github.io/categories/papertrailapp/</link>
+      <link>https://blog.serverbooter.com/categories/papertrailapp/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/papertrailapp/</guid>
+      <guid>https://blog.serverbooter.com/categories/papertrailapp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Runtimes</title>
-      <link>https://raravena80.github.io/categories/runtimes/</link>
+      <link>https://blog.serverbooter.com/categories/runtimes/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/runtimes/</guid>
+      <guid>https://blog.serverbooter.com/categories/runtimes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scout</title>
-      <link>https://raravena80.github.io/categories/scout/</link>
+      <link>https://blog.serverbooter.com/categories/scout/</link>
       <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/categories/scout/</guid>
+      <guid>https://blog.serverbooter.com/categories/scout/</guid>
       <description></description>
     </item>
     

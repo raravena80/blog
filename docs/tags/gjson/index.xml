@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gjson on Rico&#39;s Blog</title>
-    <link>https://raravena80.github.io/tags/gjson/</link>
+    <link>https://blog.serverbooter.com/tags/gjson/</link>
     <description>Recent content in Gjson on Rico&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Fri, 28 Apr 2017 16:28:29 +0000</lastBuildDate>
     
-	<atom:link href="https://raravena80.github.io/tags/gjson/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/tags/gjson/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parsing Deeply Nested JSON in Go</title>
-      <link>https://raravena80.github.io/post/parsing-nested-json-in-go/</link>
+      <link>https://blog.serverbooter.com/post/parsing-nested-json-in-go/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/parsing-nested-json-in-go/</guid>
+      <guid>https://blog.serverbooter.com/post/parsing-nested-json-in-go/</guid>
       <description>Parsing deeply nested json in Go is a bit challenging due to the fact that the language doesn&amp;rsquo;t provide many helpers to do so. If you do that in Ruby or Python it&amp;rsquo;s pretty straight forward running some like this in Python j = json.load(jsonstring) or in Ruby j = JSON.load(jsonstring).
 In go generally you have to prefine your structs and run through an Unmarshal function which means that most of the times you need to know ahead of time what the nest level and structure of your target json is to parse it.</description>
     </item>
