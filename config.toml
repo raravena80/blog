@@ -1,4 +1,4 @@
-baseurl = "https://raravena80.github.io"
+baseurl = "https://blog.serverbooter.com"
 DefaultContentLanguage = "en"
 title = "Rico's Blog"
 theme = "beautifulhugo"

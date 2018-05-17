@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on Rico&#39;s Blog</title>
-    <link>https://raravena80.github.io/tags/ubuntu/</link>
+    <link>https://blog.serverbooter.com/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Rico&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate>
     
-	<atom:link href="https://raravena80.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ansible Playbook for PaperTrail on Ubuntu</title>
-      <link>https://raravena80.github.io/post/ansible-playbook-for-papertrail-on-ubuntu/</link>
+      <link>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://raravena80.github.io/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
+      <guid>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
       <description>This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
 It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
 --- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &amp;lt;user-with-sudo&amp;gt; sudo: True tasks: - include: tasks/papertrail.</description>

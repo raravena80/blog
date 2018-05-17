@@ -12,22 +12,22 @@
   <meta property="og:description" content="Running Scylla in Kata Containers with some benchmarks">
   <meta name="twitter:description" content="Running Scylla in Kata Containers with some benchmarks">
   <meta name="author" content="Ricardo Aravena"/>
-  <link href='https://raravena80.github.io/img/favicon.png' rel='icon' type='image/x-icon'/>
+  <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
-  <meta property="og:url" content="https://raravena80.github.io/post/scylla-in-kata-containers/" />
+  <meta property="og:url" content="https://blog.serverbooter.com/post/scylla-in-kata-containers/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rico&#39;s Blog" />
 
   <meta name="generator" content="Hugo 0.38.2" />
-  <link rel="canonical" href="https://raravena80.github.io/post/scylla-in-kata-containers/" />
-  <link rel="alternate" href="https://raravena80.github.io/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
+  <link rel="canonical" href="https://blog.serverbooter.com/post/scylla-in-kata-containers/" />
+  <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://raravena80.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://raravena80.github.io/css/syntax.css" /><link rel="stylesheet" href="https://raravena80.github.io/css/codeblock.css" />
+  <link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://blog.serverbooter.com/css/syntax.css" /><link rel="stylesheet" href="https://blog.serverbooter.com/css/codeblock.css" />
 
 
 
@@ -92,7 +92,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="https://raravena80.github.io">Rico&#39;s Blog</a>
+      <a class="navbar-brand" href="https://blog.serverbooter.com">Rico&#39;s Blog</a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -353,7 +353,7 @@ enable_iothreads = true
 
 <p>Also changing the number of operations from <code>2500000</code> to <code>500000</code> and using
 the devicemapper configs in Docker with an external <code>/var/lib/scylla</code> volume
- where the file system traffic goes stil goes through 9pfs.</p>
+ where the file system traffic stil goes through 9pfs.</p>
 
 <p>Results:</p>
 
@@ -461,7 +461,7 @@ cmd: read no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3
 
 <p>We see that the Op rate is slightly better for a local filesystem compared to a filesystem going through 9p.
 Similar behavior for latency, in this case, the latency is lower for the local fs compared to a filesystem
-going through 9p. Overall, we see less discrepancy between reads and writes compared
+going through 9p. Overall, we see less discrepancy between reads and writes compared to
 what we saw initially without tuning. This is mainly attributed to change in VM CPUs and default memory.</p>
 
 <p>We conclude that tweaking the VM settings in terms of CPUs and memory can give better performance with Kata. In the case of raw containers we still see the better performance but this is also partly given that in the raw container case each container has access to all the machine resources and has more direct access to the machine&rsquo;s hardware.</p>
@@ -483,7 +483,7 @@ what we saw initially without tuning. This is mainly attributed to change in VM 
         <ul class="pager blog-pager">
           
             <li class="previous">
-              <a href="https://raravena80.github.io/post/container-runtimes-cncf/" data-toggle="tooltip" data-placement="top" title="The Boom of Container Runtimes">&larr; Previous Post</a>
+              <a href="https://blog.serverbooter.com/post/container-runtimes-cncf/" data-toggle="tooltip" data-placement="top" title="The Boom of Container Runtimes">&larr; Previous Post</a>
             </li>
           
           
@@ -596,7 +596,7 @@ what we saw initially without tuning. This is mainly attributed to change in VM 
           
           <li>
             
-            <a href="https://raravena80.github.io/index.xml" title="RSS">
+            <a href="https://blog.serverbooter.com/index.xml" title="RSS">
             
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -618,7 +618,7 @@ what we saw initially without tuning. This is mainly attributed to change in VM 
 
           
             &nbsp;&bull;&nbsp;
-            <a href="https://raravena80.github.io">Rico&#39;s Blog</a>
+            <a href="https://blog.serverbooter.com">Rico&#39;s Blog</a>
           
         </p>
       </div>
@@ -630,10 +630,10 @@ what we saw initially without tuning. This is mainly attributed to change in VM 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script src="https://raravena80.github.io/js/main.js"></script><script> renderMathInElement(document.body); </script>
+<script src="https://blog.serverbooter.com/js/main.js"></script><script> renderMathInElement(document.body); </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
-<script src="https://raravena80.github.io/js/load-photoswipe.js"></script>
+<script src="https://blog.serverbooter.com/js/load-photoswipe.js"></script>
 
 
 
