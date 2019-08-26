@@ -17,7 +17,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Rico&#39;s Blog" />
 
-  <meta name="generator" content="Hugo 0.38.2" />
+  <meta name="generator" content="Hugo 0.56.3" />
   <link rel="canonical" href="https://blog.serverbooter.com/" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title="Rico&#39;s Blog">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
@@ -150,6 +150,47 @@
 
         <div class="posts-list">
           
+          
+            <article class="post-preview">
+              <a href="https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/">
+                <h2 class="post-title">Ansible Playbook for PaperTrail on Ubuntu</h2>
+                
+                
+              </a>
+
+              <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 29, 2013
+  
+  
+  
+</span>
+
+
+              <div class="post-entry">
+                
+                  This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
+It&rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
+--- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &lt;user-with-sudo&gt; sudo: True tasks: - include: tasks/papertrail.
+                  <a href="https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <span class="post-meta">
+                
+                  #<a href="https://blog.serverbooter.com/tags/ansible/">ansible</a>&nbsp;
+                
+                  #<a href="https://blog.serverbooter.com/tags/papertrailapp/">papertrailapp</a>&nbsp;
+                
+                  #<a href="https://blog.serverbooter.com/tags/logging/">logging</a>&nbsp;
+                
+                  #<a href="https://blog.serverbooter.com/tags/ubuntu/">ubuntu</a>&nbsp;
+                
+                </span>
+              
+            </article>
           
             <article class="post-preview">
               <a href="https://blog.serverbooter.com/post/simple-clouformation-with-multiple-aws-accounts/">
@@ -431,7 +472,7 @@ global log 127.0.0.1	local0 log 127.0.0.1	local1 notice maxconn 4096 user haprox
           
 
           &nbsp;&bull;&nbsp;
-          2018
+          2019
 
           
             &nbsp;&bull;&nbsp;
