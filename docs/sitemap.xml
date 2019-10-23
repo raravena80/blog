@@ -38,12 +38,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/talks/</loc>
+    <loc>https://blog.serverbooter.com/tags/talks/</loc>
     <lastmod>2019-08-05T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/talks/</loc>
+    <loc>https://blog.serverbooter.com/categories/talks/</loc>
     <lastmod>2019-08-05T14:17:00+00:00</lastmod>
   </url>
   
@@ -68,12 +68,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/containers/</loc>
+    <loc>https://blog.serverbooter.com/tags/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/containers/</loc>
+    <loc>https://blog.serverbooter.com/categories/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
@@ -218,22 +218,22 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/go/</loc>
-    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/tags/go/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/json/</loc>
+    <loc>https://blog.serverbooter.com/categories/go/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/json/</loc>
+    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/json/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -273,12 +273,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/lxc/</loc>
+    <loc>https://blog.serverbooter.com/categories/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/lxc/</loc>
+    <loc>https://blog.serverbooter.com/tags/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url>
   
@@ -298,12 +298,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/ansible/</loc>
+    <loc>https://blog.serverbooter.com/tags/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/ansible/</loc>
+    <loc>https://blog.serverbooter.com/categories/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
@@ -323,12 +323,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
+    <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
+    <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
@@ -368,17 +368,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/chromebook/</loc>
-    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/categories/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/kernel/</loc>
+    <loc>https://blog.serverbooter.com/tags/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
@@ -388,7 +383,7 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/linux/</loc>
+    <loc>https://blog.serverbooter.com/categories/kernel/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
@@ -398,17 +393,22 @@
   </url>
   
   <url>
+    <loc>https://blog.serverbooter.com/categories/linux/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blog.serverbooter.com/post/upgrade-linux-kernel-on-chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
