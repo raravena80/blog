@@ -1,6 +1,6 @@
 baseurl = "https://blog.serverbooter.com"
 DefaultContentLanguage = "en"
-title = "Rico's Blog"
+#title = "Rico's Blog"
 theme = "beautifulhugo"
 #theme = "hugo_theme_pickles"
 metaDataFormat = "yaml"
