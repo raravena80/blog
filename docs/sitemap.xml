@@ -23,12 +23,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/speaking/</loc>
+    <loc>https://blog.serverbooter.com/tags/speaking/</loc>
     <lastmod>2019-08-05T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/speaking/</loc>
+    <loc>https://blog.serverbooter.com/categories/speaking/</loc>
     <lastmod>2019-08-05T14:17:00+00:00</lastmod>
   </url>
   
@@ -208,17 +208,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
-    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/categories/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/go/</loc>
+    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -228,12 +223,17 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/json/</loc>
+    <loc>https://blog.serverbooter.com/tags/go/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/json/</loc>
+    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/tags/json/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -273,12 +273,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/lxc/</loc>
+    <loc>https://blog.serverbooter.com/tags/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/lxc/</loc>
+    <loc>https://blog.serverbooter.com/categories/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url>
   
@@ -313,22 +313,22 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/logging/</loc>
-    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/categories/logging/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
+    <loc>https://blog.serverbooter.com/tags/logging/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
@@ -368,22 +368,22 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/chromebook/</loc>
-    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/tags/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/kernel/</loc>
+    <loc>https://blog.serverbooter.com/categories/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/kernel/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/tags/kernel/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
