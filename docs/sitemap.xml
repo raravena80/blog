@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -78,12 +78,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/kata/</loc>
+    <loc>https://blog.serverbooter.com/categories/kata/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/kata/</loc>
+    <loc>https://blog.serverbooter.com/tags/kata/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
@@ -98,12 +98,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/runtimes/</loc>
+    <loc>https://blog.serverbooter.com/categories/runtimes/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/runtimes/</loc>
+    <loc>https://blog.serverbooter.com/tags/runtimes/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
@@ -133,12 +133,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/infrastructure/</loc>
+    <loc>https://blog.serverbooter.com/tags/infrastructure/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/infrastructure/</loc>
+    <loc>https://blog.serverbooter.com/categories/infrastructure/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
@@ -158,22 +158,22 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/google/</loc>
-    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/categories/google/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/kubernetes/</loc>
+    <loc>https://blog.serverbooter.com/tags/google/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/kubernetes/</loc>
+    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/kubernetes/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url>
   
@@ -208,12 +208,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
+    <loc>https://blog.serverbooter.com/categories/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/gjson/</loc>
+    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -298,12 +298,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/ansible/</loc>
+    <loc>https://blog.serverbooter.com/tags/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/ansible/</loc>
+    <loc>https://blog.serverbooter.com/categories/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
@@ -313,22 +313,22 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/logging/</loc>
-    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/tags/logging/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
+    <loc>https://blog.serverbooter.com/categories/logging/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
@@ -403,12 +403,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
