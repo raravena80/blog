@@ -23,12 +23,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/speaking/</loc>
+    <loc>https://blog.serverbooter.com/categories/speaking/</loc>
     <lastmod>2019-11-30T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/speaking/</loc>
+    <loc>https://blog.serverbooter.com/tags/speaking/</loc>
     <lastmod>2019-11-30T14:17:00+00:00</lastmod>
   </url>
   
@@ -38,12 +38,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/talks/</loc>
+    <loc>https://blog.serverbooter.com/tags/talks/</loc>
     <lastmod>2019-11-30T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/talks/</loc>
+    <loc>https://blog.serverbooter.com/categories/talks/</loc>
     <lastmod>2019-11-30T14:17:00+00:00</lastmod>
   </url>
   
@@ -68,22 +68,22 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/containers/</loc>
-    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/tags/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/kata/</loc>
+    <loc>https://blog.serverbooter.com/categories/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/kata/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/tags/kata/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
@@ -113,17 +113,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/branch/</loc>
-    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/categories/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/data/</loc>
+    <loc>https://blog.serverbooter.com/tags/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
@@ -133,12 +128,17 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/infrastructure/</loc>
+    <loc>https://blog.serverbooter.com/tags/data/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/infrastructure/</loc>
+    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/infrastructure/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
@@ -198,18 +198,13 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/mesos/</loc>
-    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/tags/mesos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
-    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+    <loc>https://blog.serverbooter.com/categories/mesos/</loc>
+    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url>
   
   <url>
@@ -218,7 +213,7 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/go/</loc>
+    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -228,12 +223,17 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/json/</loc>
+    <loc>https://blog.serverbooter.com/tags/go/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/json/</loc>
+    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/json/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -273,12 +273,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/lxc/</loc>
+    <loc>https://blog.serverbooter.com/categories/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/lxc/</loc>
+    <loc>https://blog.serverbooter.com/tags/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url>
   
@@ -358,18 +358,13 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/scout/</loc>
-    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blog.serverbooter.com/tags/scout/</loc>
     <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/chromebook/</loc>
-    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <loc>https://blog.serverbooter.com/categories/scout/</loc>
+    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -378,12 +373,17 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/kernel/</loc>
+    <loc>https://blog.serverbooter.com/tags/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/kernel/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/kernel/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
@@ -403,12 +403,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
