@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>kubernetes on </title>
-    <link>https://blog.serverbooter.com/categories/kubernetes/</link>
-    <description>Recent content in kubernetes on </description>
+    <title>forum on </title>
+    <link>https://blog.serverbooter.com/tags/forum/</link>
+    <description>Recent content in forum on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blog.serverbooter.com/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.serverbooter.com/tags/forum/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <guid>https://blog.serverbooter.com/post/kubernetes-forum-seoul-sydney/</guid>
       <description>Hello everyone! I&amp;rsquo;m excited to write this post about my experience at the Kubernetes Forum Seoul and Sydney 2019. My journey started in San Francisco on Friday evening December 6th, 2019, on a flight to Seoul.
 I arrived in Seoul on Sunday, December 8th in the morning and had plenty of time during the day to rest in the hotel at the venue, The Seoul Dragon City. As speakers we were invited along with the organizers and community leaders to an event dinner in the Goguryeo room.</description>
-    </item>
-    
-    <item>
-      <title>Kubernetes on GCP</title>
-      <link>https://blog.serverbooter.com/post/kubernetes-on-gcp/</link>
-      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/kubernetes-on-gcp/</guid>
-      <description>Kubernetes has come a long way over the last 2 years and I was so excited to learn about during CloudNativeCon/Kubecon Berlin this year.
-As of Today Kops the standard tool for installing Kubernetes on AWS doesn&amp;rsquo;t support GCP yet (it&amp;rsquo;s in the works). However you can still setup your cluster using good old kube-up.sh. There&amp;rsquo;s also a pretty good explanation on the k8s docs. Make sure you install the Google Cloud SDK with gcloud and all their utils.</description>
     </item>
     
   </channel>
