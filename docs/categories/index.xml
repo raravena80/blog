@@ -7,17 +7,44 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Sat, 30 Nov 2019 14:17:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.serverbooter.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>conferences</title>
+      <link>https://blog.serverbooter.com/categories/conferences/</link>
+      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://blog.serverbooter.com/categories/conferences/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://blog.serverbooter.com/categories/kubernetes/</link>
+      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://blog.serverbooter.com/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>speaking</title>
       <link>https://blog.serverbooter.com/categories/speaking/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
+      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/categories/speaking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://blog.serverbooter.com/categories/technology/</link>
+      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://blog.serverbooter.com/categories/technology/</guid>
       <description></description>
     </item>
     
@@ -27,15 +54,6 @@
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/categories/talks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>technology</title>
-      <link>https://blog.serverbooter.com/categories/technology/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/technology/</guid>
       <description></description>
     </item>
     
@@ -126,15 +144,6 @@
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/categories/google/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://blog.serverbooter.com/categories/kubernetes/</link>
-      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/kubernetes/</guid>
       <description></description>
     </item>
     

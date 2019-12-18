@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Sat, 13 May 2017 16:28:29 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blog.serverbooter.com/tags/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Fun Times at The Kubernetes Forum Seoul and Sydney 2019</title>
+      <link>https://blog.serverbooter.com/post/kubernetes-forum-seoul-sydney/</link>
+      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://blog.serverbooter.com/post/kubernetes-forum-seoul-sydney/</guid>
+      <description>Hello everyone! I&amp;rsquo;m excited to write this post about my experience at the Kubernetes Forum Seoul and Sydney 2019. My journey started in San Francisco on Friday evening December 6th, 2019, on a flight to Seoul.
+I arrived in Seoul on Sunday, December 8th in the morning and had plenty of time during the day to rest in the hotel at the venue, The Seoul Dragon City. As speakers we were invited along with the organizers and community leaders to an event dinner in the Goguryeo room.</description>
+    </item>
     
     <item>
       <title>Kubernetes on GCP</title>
