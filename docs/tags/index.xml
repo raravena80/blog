@@ -31,15 +31,6 @@
     </item>
     
     <item>
-      <title>technologies</title>
-      <link>https://blog.serverbooter.com/tags/technologies/</link>
-      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/tags/technologies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>speaking</title>
       <link>https://blog.serverbooter.com/tags/speaking/</link>
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
@@ -54,6 +45,15 @@
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/tags/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technologies</title>
+      <link>https://blog.serverbooter.com/tags/technologies/</link>
+      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://blog.serverbooter.com/tags/technologies/</guid>
       <description></description>
     </item>
     
