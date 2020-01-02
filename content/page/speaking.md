@@ -1,0 +1,70 @@
+---
+title: "Speaking"
+date: 2019-11-30T14:17:00Z
+lastmod: 2020-01-01T16:24:50Z
+comments: false
+categories:
+ - talks
+ - speaking
+ - technology
+tags: [ "speaking", "talks", "technologies" ]
+keywords: containers cncf Ricardo Aravena kata speaking
+description: Talks that I've given
+slug: speaking
+
+---
+
+This is a list of the talks I've given 2018-2019
+
+
+__What's Up With All The Different Container Runtimes?__  
+KubeCon/CloudNativeCon EU Copenhagen Denmark 2018  
+[Video](https://youtu.be/lHv0LVEIPk8)  
+[Link](https://sched.co/Dqtw)  
+[Slides](https://static.sched.com/hosted_files/kccnceu18/08/What%E2%80%99s%20Up%20With%20All%20the%20Container%20Runtimes.pdf)  
+
+__Spice Up Your Workloads with Kata Containers__  
+Open Source Summit NA Vancouver Canada 2018  
+[Link](https://sched.co/FAP8)  
+[Slides](https://static.sched.com/hosted_files/ossna18/56/Spice%20Up%20Your%20Workloads%20With%20Kata%20Containers.pdf)  
+
+__Container Security & Multi-Tenancy Tales from Kata & Nabla__  
+KubeCon/CloudNativeCon NA Seattle Washington 2018  
+[Video](https://youtu.be/AgHMRJ16RAA)  
+[Link](https://sched.co/GrZH)  
+[Slides](https://static.sched.com/hosted_files/kccna18/20/Container%20Security%20and%20Multi-Tenancy%20Tales%20from%20Kata%20and%20Nabla.pdf)  
+
+__Kubernetes and The GitOps Face-Off__  
+KubeCon/CloudNativeCon NA Seattle Washington 2018  
+[Video](https://youtu.be/9qGqx_jdxQg)  
+[Link](https://sched.co/GrSe)  
+[Slides](https://static.sched.com/hosted_files/kccna18/74/KubeCon-2018.pdf)  
+
+__Enhancing Your Workload Security with Kata Containers__  
+Container World Santa Clara California 2019  
+[Link](https://tmt.knect365.com/container-world/speakers/ricardo-aravena#security_enhancing-your-workload-security-with-kata-containers)  
+[Slides](https://docs.google.com/presentation/d/12yQFigHChzjXyRVflZsE8e4dC7Jy-cbudys5W7BLahU/edit?usp=sharing)  
+
+__Untrusted? No problem: A story on the latest Kubernetes container sandbox mechanisms__  
+O'Reilly Velocity San Jose California 2019  
+[Video](https://learning.oreilly.com/videos/oreilly-velocity-conference/9781492050582/9781492050582-video325766) (Need access to https://learning.oreilly.com)  
+[Slides](https://bit.ly/2MMq6bi)  
+
+__It's Time to Jump on the Secure GitOps Bandwagon__  
+Open Source Summit + Embedded Linux Conference NA San Diego California 2019  
+[Link](https://sched.co/PUQt)  
+[Slides](https://static.sched.com/hosted_files/ossna19/1d/It%27s%20Time%20to%20Jump%20on%20the%20Secure%20GitOps%20Bandwagon.pdf)
+
+__Let Your Software Supply Chain Ride with Kubernetes CI/CD__  
+LISA 2019 Portland Oregon 2019  
+[Video](https://youtu.be/6m3WdKKAsuo)  
+[Link](https://www.usenix.org/conference/lisa19/presentation/aravena)  
+[Slides](https://docs.google.com/presentation/d/1CZwk9VVmo0idiZfJLzTSLyCTSSfH2XVgmJ0ptuT3Zbg)  
+
+__Adventures in Production with GitOps, Secure Pipelines and Compliance__  
+Kubernetes Forum Seoul & Sydney 2019  
+[Video 1](https://youtu.be/Js9LfXl6oBg)  
+[Video 2](https://youtu.be/aAb-n6GFOQo)  
+[Link 1](https://sched.co/WIQh)  
+[Link 2](https://sched.co/WKgk)  
+[Slides](https://static.sched.com/hosted_files/k8sforumseoul19eng/f6/Adventures%20in%20Production%20with%20GitOps%2C%20Secure%20Pipelines%20and%20Compliance.pdf)  

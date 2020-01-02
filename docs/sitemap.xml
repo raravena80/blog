@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://blog.serverbooter.com/</loc>
-    <lastmod>2019-12-18T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/</loc>
-    <lastmod>2019-12-18T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
@@ -28,12 +28,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/kubernetes/</loc>
+    <loc>https://blog.serverbooter.com/categories/kubernetes/</loc>
     <lastmod>2019-12-18T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/kubernetes/</loc>
+    <loc>https://blog.serverbooter.com/tags/kubernetes/</loc>
     <lastmod>2019-12-18T14:17:00+00:00</lastmod>
   </url>
   
@@ -44,17 +44,27 @@
   
   <url>
     <loc>https://blog.serverbooter.com/categories/speaking/</loc>
-    <lastmod>2019-12-18T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/</loc>
-    <lastmod>2019-12-18T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/technology/</loc>
-    <lastmod>2019-12-18T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/page/</loc>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/page/speaking/</loc>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
@@ -64,31 +74,31 @@
   
   <url>
     <loc>https://blog.serverbooter.com/tags/speaking/</loc>
-    <lastmod>2019-11-30T14:17:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.serverbooter.com/categories/talks/</loc>
-    <lastmod>2019-11-30T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/talks/</loc>
-    <lastmod>2019-11-30T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/talks/</loc>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/technologies/</loc>
-    <lastmod>2019-11-30T14:17:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.serverbooter.com/categories/cncf/</loc>
-    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/cncf/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/cncf/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
@@ -138,12 +148,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/branch/</loc>
+    <loc>https://blog.serverbooter.com/categories/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/branch/</loc>
+    <loc>https://blog.serverbooter.com/tags/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
@@ -173,12 +183,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/gcp/</loc>
+    <loc>https://blog.serverbooter.com/categories/gcp/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/gcp/</loc>
+    <loc>https://blog.serverbooter.com/tags/gcp/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url>
   
@@ -203,12 +213,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/dcos/</loc>
+    <loc>https://blog.serverbooter.com/tags/dcos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/dcos/</loc>
+    <loc>https://blog.serverbooter.com/categories/dcos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url>
   
@@ -223,12 +233,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
+    <loc>https://blog.serverbooter.com/categories/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/gjson/</loc>
+    <loc>https://blog.serverbooter.com/tags/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url>
   
@@ -279,12 +289,7 @@
   
   <url>
     <loc>https://blog.serverbooter.com/page/about/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.serverbooter.com/page/</loc>
-    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url>
   
   <url>
@@ -373,12 +378,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/scout/</loc>
+    <loc>https://blog.serverbooter.com/tags/scout/</loc>
     <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/scout/</loc>
+    <loc>https://blog.serverbooter.com/categories/scout/</loc>
     <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -403,12 +408,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/linux/</loc>
+    <loc>https://blog.serverbooter.com/categories/linux/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/linux/</loc>
+    <loc>https://blog.serverbooter.com/tags/linux/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
@@ -418,12 +423,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/haproxy/</loc>
+    <loc>https://blog.serverbooter.com/categories/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url>
   
