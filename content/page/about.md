@@ -1,8 +1,8 @@
 ---
-title: "About Rico"
-description: "About Rico"
-lastmod: 2017-04-26
-date: 2017-04-25
+title: "About Me"
+description: "About Ricardo"
+lastmod: 2020-01-01T16:24:50Z
+date: 2017-04-25T16:24:50Z
 comments: false
 
 ---

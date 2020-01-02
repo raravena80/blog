@@ -24,10 +24,10 @@ I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of tim
     
     <item>
       <title>Speaking</title>
-      <link>https://blog.serverbooter.com/post/speaking/</link>
+      <link>https://blog.serverbooter.com/page/speaking/</link>
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/speaking/</guid>
+      <guid>https://blog.serverbooter.com/page/speaking/</guid>
       <description>This is a list of the talks I&amp;rsquo;ve given 2018-2019
 What&amp;rsquo;s Up With All The Different Container Runtimes?
 KubeCon/CloudNativeCon EU Copenhagen Denmark 2018
@@ -46,6 +46,15 @@ Slides
 Kubernetes and The GitOps Face-Off
 KubeCon/CloudNativeCon NA Seattle Washington 2018
 Video</description>
+    </item>
+    
+    <item>
+      <title>Speaking</title>
+      <link>https://blog.serverbooter.com/post/speaking/</link>
+      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
+      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://blog.serverbooter.com/post/speaking/</guid>
+      <description>This page has been moved</description>
     </item>
     
     <item>
@@ -122,9 +131,9 @@ I’ve attended many conferences before, but I was happy to get the diversity sc
     </item>
     
     <item>
-      <title>About Rico</title>
+      <title>About Me</title>
       <link>https://blog.serverbooter.com/page/about/</link>
-      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 25 Apr 2017 16:24:50 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/page/about/</guid>
       <description>[Resume](https://www.dropbox.com/s/m9k64agrhgnbgri/ricardos_resume___n.pdf?dl=0)  -- </description>
