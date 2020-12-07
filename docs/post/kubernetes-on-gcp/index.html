@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -258,24 +258,15 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Kubernetes has come a long way over the last 2 years and I was so excited to learn about during <a href="/post/cloudnativecon-kubecon-europe/">CloudNativeCon/Kubecon Berlin</a> this year.</p>
-
 <p>As of Today <a href="https://github.com/kubernetes/kops">Kops</a> the standard tool for installing Kubernetes on AWS doesn&rsquo;t support GCP yet (it&rsquo;s in the works). However you can still setup your cluster using good old <a href="https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh">kube-up.sh</a>. There&rsquo;s also a pretty good explanation on the <a href="https://kubernetes.io/docs/getting-started-guides/gce/">k8s docs</a>. Make sure you install the <a href="https://cloud.google.com/sdk/">Google Cloud SDK</a> with gcloud and all their utils.</p>
-
 <p>First download the kube tar.gz release of your choice from here: <a href="https://github.com/kubernetes/kubernetes/releases">https://github.com/kubernetes/kubernetes/releases</a>. For example:</p>
-
 <pre><code>curl -0 https://github.com/kubernetes/kubernetes/releases/download/v1.6.3/kubernetes.tar.gz | tar -zx
-</code></pre>
-
-<p>Then go to the <code>kubernetes/cluster/gce</code> directory. You&rsquo;ll see a bunch of files there:</p>
-
+</code></pre><p>Then go to the <code>kubernetes/cluster/gce</code> directory. You&rsquo;ll see a bunch of files there:</p>
 <pre><code>$ ls
 BUILD              config-test.sh   cos                                gci                upgrade.sh
 config-common.sh   configure-vm.sh  debian                             list-resources.sh  util.sh
 config-default.sh  container-linux  delete-stranded-load-balancers.sh  OWNERS
-</code></pre>
-
-<p>The file you&rsquo;ll want to change is <code>config-default.sh</code>. I mofified mine like this (just a couple of changes):</p>
-
+</code></pre><p>The file you&rsquo;ll want to change is <code>config-default.sh</code>. I mofified mine like this (just a couple of changes):</p>
 <pre><code># Copyright 2014 The Kubernetes Authors.
 #
 # Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -313,24 +304,13 @@ PREEMPTIBLE_MASTER=${PREEMPTIBLE_MASTER:-false}
 KUBE_DELETE_NODES=${KUBE_DELETE_NODES:-true}
 KUBE_DELETE_NETWORK=${KUBE_DELETE_NETWORK:-false}
 ...
-</code></pre>
-
-<p>Then:</p>
-
+</code></pre><p>Then:</p>
 <pre><code>$ cd kubernetes/cluster &amp;&amp; ./kube-up.sh
-</code></pre>
-
-<p>and voilà:</p>
-
-<p><img src="/img/2017-05-13-kubernetes-on-gcp/gcp_kubernetes.jpg" alt="gcp_kubernetes" title="Kubernetes on GCP" /></p>
-
+</code></pre><p>and voilà:</p>
+<p><img src="/img/2017-05-13-kubernetes-on-gcp/gcp_kubernetes.jpg" alt="gcp_kubernetes" title="Kubernetes on GCP"></p>
 <p>Then you can install <code>kubectl</code> (Cube Cuttle). The config will already be setup by <code>kube-up.sh</code>. But you can inspect if if you like under <code>~/.kube/</code></p>
-
 <pre><code>gcloud components install kubectl
-</code></pre>
-
-<p>After that you can do all the good stuff, like run apps: <code>kubectl run &lt;app&gt;</code> or create/expose services <code>kubectl expose svc &lt;service-name&gt;</code>, etc.</p>
-
+</code></pre><p>After that you can do all the good stuff, like run apps: <code>kubectl run &lt;app&gt;</code> or create/expose services <code>kubectl expose svc &lt;service-name&gt;</code>, etc.</p>
 <pre><code>$ kubectl get pods
 NAME                                      READY     STATUS    RESTARTS   AGE
 hello-world-4125299140-gk334              1/1       Running   0          3d
@@ -346,9 +326,7 @@ jittery-platypus-mysql   10.0.123.233   &lt;none&gt;          3306/TCP       2d
 kubernetes               10.0.0.1       &lt;none&gt;          443/TCP        5d
 my-nginx                 10.0.190.149   &lt;none&gt;          80/TCP         4d
 my-nginx-858393261       10.0.129.225   35.188.28.43    80:31120/TCP   4d
-</code></pre>
-
-<p><img src="/img/2017-05-13-kubernetes-on-gcp/nginx.jpg" alt="nginx" title="Nginx" /></p>
+</code></pre><p><img src="/img/2017-05-13-kubernetes-on-gcp/nginx.jpg" alt="nginx" title="Nginx"></p>
 
 
         

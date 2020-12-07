@@ -20,7 +20,7 @@
       <guid>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
       <description>This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
 It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
---- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &amp;lt;user-with-sudo&amp;gt; sudo: True tasks: - include: tasks/papertrail.</description>
+---PLAYBOOK:InstallpapertrailonUbuntu---- name:scouthosts:alluser:&amp;lt;user-with-sudo&amp;gt; sudo: Truetasks:- include:tasks/papertrail.ymlNext, we define the task that includes installing the dependencies rsyslog and libssl-dev.</description>
     </item>
     
   </channel>

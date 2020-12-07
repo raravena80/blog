@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -257,88 +257,56 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>For the last few days I&rsquo;ve been taking at crack at using the recent <a href="https://www.docker.io/">Docker</a> container deployment tool that I&rsquo;ve been
+        <p>For the last few days I&rsquo;ve been taking at crack at using the recent <a href="https://www.docker.io/">Docker</a> container deployment tool that I&rsquo;ve been
 hearing a lot buzz about.
 In essence, it&rsquo;s a wrapper on top of Linux <a href="https://linuxcontainers.org/">LXC containers</a>,  writen in the new friendly and not so popular yet <a href="http://golang.org/">Go</a> language developed at Google.</p>
-
 <p>Just a little bit of background, for those of you not familiar with LXC containers,
 they are pretty much defined as <code>chroot</code> on steroids. Basically, you can run isolated virtual
 environments in a single Linux machine and make it look like that they are different machines.
 These environments give you the advantage of being isalated and at the same they are able to use
 the same Linux exectutables and memory space to improve speed and footprint size.</p>
-
 <p>Docker is pretty easy to try from its <a href="https://www.docker.io/">website</a>, you can just click on the <a href="https://www.docker.io/gettingstarted/">Get Started</a>
 link and a UI terminal shows up where you can type Docker commands. It&rsquo;s CLI feels a lot like a CLI writen in Python or Ruby, yet it still doesn&rsquo;t
 have the nice subtleties such as using a <code>?</code> to get help. To get help you simply type <code>docker help</code> or <code>docker command help</code></p>
-
 <p>Setup varies depending on your platform. It can be a bit confusing if you work with multiple say, Linux platforms but from personal experience
 most people stick to a more <code>favorite</code> Linux platform. Docker is also available for MacOS and Windows, but in reality
 it doesn&rsquo;t run over either one since <code>LXC</code> is only available for Linux. They way they mention that it can be run on MacOS or Windows is by running
 it on a lightweght VM.</p>
-
 <p>As of this writing there&rsquo;s a message on each one of the platform installation pages that says: <code>Docker is still under heavy development! We don’t recommend using it in production yet, but we’re getting closer with each release. Please see our blog post, “Getting to Docker 1.0”</code></p>
-
 <p>For me, it wasn&rsquo;t that difficult to setup, I just followed the steps on the Wiki. I don&rsquo;t think the steps
 are that difficult but it just requires basic knowledge of the Linux command line.
 Docker requires the Linux 3.8 kernel and in my case, I tried Docker on Ubuntu 13.10 so I didn&rsquo;t have to install an extra kernel package.</p>
-
 <p>However, if you are running say Ubuntu 12.04 LTS (Precise) you are going to have to install the update kernel packages and reboot the machine
 before you can use Docker:</p>
-
-<pre><code class="language-bash">$ # install the backported kernel from raring
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="c1"># install the backported kernel from raring</span>
 $ sudo apt-get update
 $ sudo apt-get install linux-image-generic-lts-raring linux-headers-generic-lts-raring
 $ sudo reboot
-</code></pre>
-
-<p>In my case, for Ubuntu 13.10 it says that if you want AUFS (AnotherUnionFS) support you need to install the <code>linux-image-extra</code> package:</p>
-
-<pre><code class="language-bash">$ sudo apt-get update
-$ sudo apt-get install linux-image-extra-\`uname -r\`
-</code></pre>
-
-<p>It turns out that my Ubuntu 13.10 already had the <code>linux-image-extra</code> package, so I didn&rsquo;t have to make any changes.</p>
-
+</code></pre></div><p>In my case, for Ubuntu 13.10 it says that if you want AUFS (AnotherUnionFS) support you need to install the <code>linux-image-extra</code> package:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get update
+$ sudo apt-get install linux-image-extra-<span class="se">\`</span>uname -r<span class="se">\`</span>
+</code></pre></div><p>It turns out that my Ubuntu 13.10 already had the <code>linux-image-extra</code> package, so I didn&rsquo;t have to make any changes.</p>
 <p>Next I had to run:</p>
-
-<pre><code class="language-bash">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
-$ sudo sh -c &quot;echo deb http://get.docker.io/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list&quot;
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
+$ sudo sh -c <span class="s2">&#34;echo deb http://get.docker.io/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list&#34;</span>
 $ sudo apt-get update
 $ sudo apt-get install lxc-docker
-</code></pre>
-
-<p>But if you prefer,  there&rsquo;s also a curl script that simplifies the previous steps.</p>
-
-<pre><code class="language-bash">$ curl -s https://get.docker.io/ubuntu/ | sudo sh
-</code></pre>
-
-<p>All in all pretty easy.  One last thing is that if you have the Ubuntu Firewall enabled (ufw) you need
+</code></pre></div><p>But if you prefer,  there&rsquo;s also a curl script that simplifies the previous steps.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ curl -s https://get.docker.io/ubuntu/ <span class="p">|</span> sudo sh
+</code></pre></div><p>All in all pretty easy.  One last thing is that if you have the Ubuntu Firewall enabled (ufw) you need
 to allow it to forward traffic in the <code>/etc/default/ufw</code> file:</p>
-
 <pre><code># Change:
 # DEFAULT_FORWARD_POLICY=&quot;DROP&quot;
 # to
 DEFAULT_FORWARD_POLICY=&quot;ACCEPT&quot;
-</code></pre>
-
-<p>and then run:</p>
-
-<pre><code class="language-bash">$ sudo ufw allow 4243/tcp
-</code></pre>
-
-<p>Now we are all dandy and ready to try Docker commands. The first one that you want to run is
+</code></pre><p>and then run:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo ufw allow 4243/tcp
+</code></pre></div><p>Now we are all dandy and ready to try Docker commands. The first one that you want to run is
 the one to create a container:</p>
-
-<pre><code class="language-bash">$ sudo docker run -i -t ubuntu /bin/bash
-</code></pre>
-
-<p>This command will automatically download all the default ubuntu container images that you can use to run your Ubuntu container. It does take a while but then again it&rsquo;s downloading full container images each about 60Mb compressed. Keep in mind that the <code>-i</code> option means &ldquo;interactive&rdquo; and the <code>-t</code> means allocate a pseudo tty.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo docker run -i -t ubuntu /bin/bash
+</code></pre></div><p>This command will automatically download all the default ubuntu container images that you can use to run your Ubuntu container. It does take a while but then again it&rsquo;s downloading full container images each about 60Mb compressed. Keep in mind that the <code>-i</code> option means &ldquo;interactive&rdquo; and the <code>-t</code> means allocate a pseudo tty.</p>
 <p>This the output of the command:</p>
-
-<pre><code class="language-text">Unable to find image 'ubuntu' locally
+<div class="highlight"><pre class="chroma"><code class="language-text" data-lang="text">Unable to find image &#39;ubuntu&#39; locally
 Pulling repository ubuntu
 5ac751e8d623: Download complete
 9cd978db300e: Download complete
@@ -351,60 +319,36 @@ f323cf34fd77: Download complete
 1c7f181e78b9: Download complete
 6170bb7b0ad1: Download complete
 321f7f4200f4: Download complete
-</code></pre>
-
-<p>After it&rsquo;s complete, it will display a <code>bash</code> shell in the container with the prompt displaying the container hash id. For example, <code>root@3b667578ce4f:/#</code>. You can run almost any linux command that your Ubuntu distro supports, including something like: <code>apt-get update; apt-get install apache2</code>.</p>
-
+</code></pre></div><p>After it&rsquo;s complete, it will display a <code>bash</code> shell in the container with the prompt displaying the container hash id. For example, <code>root@3b667578ce4f:/#</code>. You can run almost any linux command that your Ubuntu distro supports, including something like: <code>apt-get update; apt-get install apache2</code>.</p>
 <p>I ran <code>apt-get upgrade</code> and somehow it couldn&rsquo;t finish the installation saying some of the packages were missing dependencies, so in essence I fried the container.</p>
-
 <p>I said no problem, I&rsquo;ll just get rid of it. First hit the <code>ctrl-p ctrl-q</code> keys to detach from the container. Then, run these Docker commands to find out the container id (if you somehow don&rsquo;t remember it), stop the container and then delete the container.</p>
-
-<pre><code class="language-bash">$ docker ps
-</code></pre>
-
-<p>then:</p>
-
-<pre><code class="language-bash">$ docker stop 3b667578ce4f
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker ps
+</code></pre></div><p>then:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker stop 3b667578ce4f
 $ docker rm 3b667578ce4f
-</code></pre>
-
-<p>and we are back to square one so we can start with a clean sheet. You can notice the all the containers will be stored here: <code>/var/lib/docker/containers</code> in a directory that matches the container&rsquo;s specific hash id. You&rsquo;ll also notice that after you run the <code>docker rm</code> command the directory for the specific container is deleted.</p>
-
+</code></pre></div><p>and we are back to square one so we can start with a clean sheet. You can notice the all the containers will be stored here: <code>/var/lib/docker/containers</code> in a directory that matches the container&rsquo;s specific hash id. You&rsquo;ll also notice that after you run the <code>docker rm</code> command the directory for the specific container is deleted.</p>
 <p>There are other command that are useful. For example:</p>
-
-<pre><code class="language-bash">$ docker images
-</code></pre>
-
-<p>will display all the downloaded images that can be used as a container. In my case, it&rsquo;s a list of Ubuntu distros:</p>
-
-<pre><code class="language-bash">root@host:~# docker images
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker images
+</code></pre></div><p>will display all the downloaded images that can be used as a container. In my case, it&rsquo;s a list of Ubuntu distros:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">root@host:~# docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-ubuntu              saucy               9f676bd305a4        4 weeks ago         182.1 MB
-ubuntu              13.10               9f676bd305a4        4 weeks ago         182.1 MB
-ubuntu              13.04               eb601b8965b8        4 weeks ago         170.2 MB
-ubuntu              raring              eb601b8965b8        4 weeks ago         170.2 MB
-ubuntu              12.10               5ac751e8d623        4 weeks ago         161.4 MB
-ubuntu              quantal             5ac751e8d623        4 weeks ago         161.4 MB
-ubuntu              10.04               9cc9ea5ea540        4 weeks ago         183 MB
-ubuntu              lucid               9cc9ea5ea540        4 weeks ago         183 MB
-ubuntu              12.04               9cd978db300e        4 weeks ago         204.7 MB
-ubuntu              latest              9cd978db300e        4 weeks ago         204.7 MB
-ubuntu              precise             9cd978db300e        4 weeks ago         204.7 MB
-</code></pre>
-
-<p>So now let&rsquo;s say you want to use the <code>quantal</code> image you can run:</p>
-
-<pre><code class="language-bash">$ docker run -t -i ubuntu:5ac751e8d623 /bin/bash
-</code></pre>
-
-<p>Although, out of the scope of this specific post, there are many other features that you can use including creating images and publishing them to a public repository.</p>
-
-<h3 id="conclusion">Conclusion</h3>
-
+ubuntu              saucy               9f676bd305a4        <span class="m">4</span> weeks ago         182.1 MB
+ubuntu              13.10               9f676bd305a4        <span class="m">4</span> weeks ago         182.1 MB
+ubuntu              13.04               eb601b8965b8        <span class="m">4</span> weeks ago         170.2 MB
+ubuntu              raring              eb601b8965b8        <span class="m">4</span> weeks ago         170.2 MB
+ubuntu              12.10               5ac751e8d623        <span class="m">4</span> weeks ago         161.4 MB
+ubuntu              quantal             5ac751e8d623        <span class="m">4</span> weeks ago         161.4 MB
+ubuntu              10.04               9cc9ea5ea540        <span class="m">4</span> weeks ago         <span class="m">183</span> MB
+ubuntu              lucid               9cc9ea5ea540        <span class="m">4</span> weeks ago         <span class="m">183</span> MB
+ubuntu              12.04               9cd978db300e        <span class="m">4</span> weeks ago         204.7 MB
+ubuntu              latest              9cd978db300e        <span class="m">4</span> weeks ago         204.7 MB
+ubuntu              precise             9cd978db300e        <span class="m">4</span> weeks ago         204.7 MB
+</code></pre></div><p>So now let&rsquo;s say you want to use the <code>quantal</code> image you can run:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ docker run -t -i ubuntu:5ac751e8d623 /bin/bash
+</code></pre></div><p>Although, out of the scope of this specific post, there are many other features that you can use including creating images and publishing them to a public repository.</p>
+<h3 id="conclusion-">Conclusion</h3>
 <p>Docker is a very useful tool for people wanting to deploy application in an isolated way so that it doesn&rsquo;t interfere with the major functions of a particular server. It allows for easy creation an deletion of containers in case something goes wrong or simply when ops guys are trying to deploy something quickly already prebaked into a Docker image. You can even deploy Docker containers in AWS EC2 instances to even further compartamentalize your application.</p>
-
 <p>However, if you are concerned about Docker being in its early development stage (as of this writing) and if you don&rsquo;t care about costs to a certain extent, the Docker/LXC approach is not very different from say using Amazon EC2 prebaked AMIs. LXC containers are pretty light weight but whatever it is that you are running will still be CPU, Disk I/O and Network contrained on the same physical or virtualized machine.</p>
-
 <p>Also, there are also several tools available to create AMIs including the infamous <a href="https://github.com/Netflix/aminator">Aminator</a> developed at Neflix. And if you happen to be a fan of <a href="http://www.ansible.com/home">Ansible</a> like me, you can use the <a href="https://github.com/Answers4AWS/netflixoss-ansible/">Ansible Aminator playbook</a> from <a href="http://answersforaws.com/">AnSwers</a>.</p>
 
 

@@ -59,7 +59,7 @@
   "headline": "Ansible Playbook for Scout on Ubuntu",
   "description" : "Ansible Playbook for Scout on Ubuntu",
   "inLanguage" : "en",
-  "wordCount":  358 ,
+  "wordCount":  226 ,
   "datePublished" : "2013-10-22T00:00:00",
   "dateModified" : "2013-10-22T00:00:00",
   "image" : "https:\/\/blog.serverbooter.com",
@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -260,74 +260,60 @@
         <p>This is a sample Ansible task (<a href="http://www.ansibleworks.com">http://www.ansibleworks.com</a>)
 on how to setup Scout (<a href="https://www.scoutapp.com">https://www.scoutapp.com</a>) on Ubuntu.
 It needs to be included in an ansible playbook.</p>
-
 <p>It&rsquo;s a follow up to a previous
- <a href="{% post_url 2013-10-21-how-to-create-an-ansible-playbook-to-configure-haproxy %}">blog</a>
- describing an Ansible Playbook to setup an HAProxy system. This Ansible task can
- be included in the HAProxy playbook as well as any other playbooks with something
- like this:</p>
-
-<pre><code class="language-yaml">---
-PLAYBOOK: Install scout on Ubuntu
----
-- name: scout
-  hosts: all
-  user: user-with-sudo
-  sudo: True
-
-  vars:
-    scout_key: YourScoutAPIKeyFromTheirWebsite
-
-  tasks:
-    - include: tasks/scout.yml
-</code></pre>
-
-<p>We start by defining a &ldquo;task&rdquo; file:</p>
-
-<pre><code class="language-yaml">---
-# TASK: ScoutApp Monitoring (https://scoutapp.com) 
-
-# Separate task to install Ruby
-- include: ruby.yml
-
-- name: Install scout + dependencies
-  shell: &gt;
-    executable=/bin/bash source /etc/profile.d/rvm.sh;
-    gem install scout scout_api --no-rdoc --no-ri
-
-- name: Create scout home directory
-  file: &gt;
-    dest=/root/.scout state=directory
-    owner=root group=root mode=0700
-
-</code></pre>
-
-<p>In the same file add the crontab entry
+[blog]({% post_url 2013-10-21-how-to-create-an-ansible-playbook-to-configure-haproxy %})
+describing an Ansible Playbook to setup an HAProxy system. This Ansible task can
+be included in the HAProxy playbook as well as any other playbooks with something
+like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="k">PLAYBOOK</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>scout<span class="w"> </span>on<span class="w"> </span>Ubuntu<span class="w">
+</span><span class="w"></span>---<span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>scout<span class="w">
+</span><span class="w">  </span><span class="k">hosts</span><span class="p">:</span><span class="w"> </span>all<span class="w">
+</span><span class="w">  </span><span class="k">user</span><span class="p">:</span><span class="w"> </span>user-with-sudo<span class="w">
+</span><span class="w">  </span><span class="k">sudo</span><span class="p">:</span><span class="w"> </span>True<span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">vars</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">scout_key</span><span class="p">:</span><span class="w"> </span>YourScoutAPIKeyFromTheirWebsite<span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">tasks</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>tasks/scout.yml<span class="w">
+</span></code></pre></div><p>We start by defining a &ldquo;task&rdquo; file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># TASK: ScoutApp Monitoring (https://scoutapp.com) </span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># Separate task to install Ruby</span><span class="w">
+</span><span class="w"></span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>ruby.yml<span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>scout<span class="w"> </span>+<span class="w"> </span>dependencies<span class="w">
+</span><span class="w">  </span><span class="k">shell</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;</span><span class="w">
+</span><span class="w">    </span>gem<span class="w"> </span>install<span class="w"> </span>scout<span class="w"> </span>scout_api<span class="w"> </span>--no-rdoc<span class="w"> </span>--no-ri<span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Create<span class="w"> </span>scout<span class="w"> </span>home<span class="w"> </span>directory<span class="w">
+</span><span class="w">  </span><span class="k">file</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    dest=/root/.scout state=directory</span><span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0700</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><p>In the same file add the crontab entry
 and logrotate entry for Scout.</p>
-
-<pre><code class="language-yaml">
-- name: Scout cron script crontab
-  template: &gt;
-    dest=/etc/cron.d/scout
-    src=../packages/templates/scout/scout-crontab.j2
-    owner=root group=root mode=0444
-
-- name: Scout cron script logrotate
-  copy: &gt;
-    dest=/etc/logrotate.d/scout
-    src=../packages/files/scout/scout-logrotate
-    owner=root group=root mode=0444
-</code></pre>
-
-<p>This is what scout-crontab.j2 looks like:</p>
-
-<pre><code class="language-jinja"># crontab for Scout monitoring run by root
-* * * * * root /bin/bash -l -c 'scout -n &quot;{{ ansible_fqdn }}&quot; {{ scout_key }}' &gt;&gt; /var/log/scout.log 2&gt;&amp;1
-</code></pre>
-
-<p>And this is what scout-logrotate looks like:</p>
-
-<pre><code class="language-plain">/var/log/admobius/scout.log
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Scout<span class="w"> </span>cron<span class="w"> </span>script<span class="w"> </span>crontab<span class="w">
+</span><span class="w">  </span><span class="k">template</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    dest=/etc/cron.d/scout</span><span class="w">
+</span><span class="w">    </span>src=../packages/templates/scout/scout-crontab.j2<span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0444</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Scout<span class="w"> </span>cron<span class="w"> </span>script<span class="w"> </span>logrotate<span class="w">
+</span><span class="w">  </span><span class="k">copy</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    dest=/etc/logrotate.d/scout</span><span class="w">
+</span><span class="w">    </span>src=../packages/files/scout/scout-logrotate<span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0444</span><span class="w">
+</span></code></pre></div><p>This is what scout-crontab.j2 looks like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-jinja" data-lang="jinja"><span class="x"># crontab for Scout monitoring run by root
+</span><span class="x">* * * * * root /bin/bash -l -c &#39;scout -n &#34;</span><span class="cp">{{</span> <span class="nv">ansible_fqdn</span> <span class="cp">}}</span><span class="x">&#34; </span><span class="cp">{{</span> <span class="nv">scout_key</span> <span class="cp">}}</span><span class="x">&#39; &gt;&gt; /var/log/scout.log 2&gt;&amp;1
+</span></code></pre></div><p>And this is what scout-logrotate looks like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-plain" data-lang="plain">/var/log/admobius/scout.log
 {
       rotate 7
       daily
@@ -336,57 +322,51 @@ and logrotate entry for Scout.</p>
       missingok
       notifempty
 }
-</code></pre>
-
-<p>Now to install ruby using RVM, if you don&rsquo;t want to use
+</code></pre></div><p>Now to install ruby using RVM, if you don&rsquo;t want to use
 the system ruby (most of the times you don&rsquo;t).</p>
-
-<pre><code class="language-yaml">---
-# TASK: Install Ruby on Ubuntu
-
-- name: Install Ruby dependencies
-  apt: pkg=$item state=latest install_recommends=no
-  with_items:
-    - autoconf
-    - automake
-    - bison
-    - build-essential
-    - curl
-    - libc6-dev
-    - libgdbm-dev
-    - libffi-dev
-    - libncurses5-dev
-    - libreadline6
-    - libreadline6-dev
-    - libsqlite3-dev
-    - libssl-dev
-    - libtool
-    - libyaml-dev
-    - libxml2-dev
-    - libxslt1-dev
-    - openssl
-    - pkg-config
-    - sqlite3
-    - subversion
-    - zlib1g
-    - zlib1g-dev
-
-- name: Install RVM
-  shell: curl -L get.rvm.io | bash -s stable
-
-- name: Install Ruby 2.0.0
-  shell: &gt;
-    executable=/bin/bash source /etc/profile.d/rvm.sh;
-    rvm install 2.0.0
-
-- name: Set default ruby version
-  shell: &gt;
-    executable=/bin/bash source /etc/profile.d/rvm.sh;
-    rvm --default use 2.0.0
-</code></pre>
-
-<p>and now run it.</p>
-
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># TASK: Install Ruby on Ubuntu</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>Ruby<span class="w"> </span>dependencies<span class="w">
+</span><span class="w">  </span><span class="k">apt</span><span class="p">:</span><span class="w"> </span>pkg=$item<span class="w"> </span>state=latest<span class="w"> </span>install_recommends=no<span class="w">
+</span><span class="w">  </span><span class="k">with_items</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- autoconf<span class="w">
+</span><span class="w">    </span>- automake<span class="w">
+</span><span class="w">    </span>- bison<span class="w">
+</span><span class="w">    </span>- build-essential<span class="w">
+</span><span class="w">    </span>- curl<span class="w">
+</span><span class="w">    </span>- libc6-dev<span class="w">
+</span><span class="w">    </span>- libgdbm-dev<span class="w">
+</span><span class="w">    </span>- libffi-dev<span class="w">
+</span><span class="w">    </span>- libncurses5-dev<span class="w">
+</span><span class="w">    </span>- libreadline6<span class="w">
+</span><span class="w">    </span>- libreadline6-dev<span class="w">
+</span><span class="w">    </span>- libsqlite3-dev<span class="w">
+</span><span class="w">    </span>- libssl-dev<span class="w">
+</span><span class="w">    </span>- libtool<span class="w">
+</span><span class="w">    </span>- libyaml-dev<span class="w">
+</span><span class="w">    </span>- libxml2-dev<span class="w">
+</span><span class="w">    </span>- libxslt1-dev<span class="w">
+</span><span class="w">    </span>- openssl<span class="w">
+</span><span class="w">    </span>- pkg-config<span class="w">
+</span><span class="w">    </span>- sqlite3<span class="w">
+</span><span class="w">    </span>- subversion<span class="w">
+</span><span class="w">    </span>- zlib1g<span class="w">
+</span><span class="w">    </span>- zlib1g-dev<span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>RVM<span class="w">
+</span><span class="w">  </span><span class="k">shell</span><span class="p">:</span><span class="w"> </span>curl<span class="w"> </span>-L<span class="w"> </span>get.rvm.io<span class="w"> </span>|<span class="w"> </span>bash<span class="w"> </span>-s<span class="w"> </span>stable<span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>Ruby<span class="w"> </span><span class="m">2.0.0</span><span class="w">
+</span><span class="w">  </span><span class="k">shell</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;</span><span class="w">
+</span><span class="w">    </span>rvm<span class="w"> </span>install<span class="w"> </span><span class="m">2.0.0</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Set<span class="w"> </span>default<span class="w"> </span>ruby<span class="w"> </span>version<span class="w">
+</span><span class="w">  </span><span class="k">shell</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;</span><span class="w">
+</span><span class="w">    </span>rvm<span class="w"> </span>--default<span class="w"> </span>use<span class="w"> </span><span class="m">2.0.0</span><span class="w">
+</span></code></pre></div><p>and now run it.</p>
 <p><code>ansible-playbook -T 120 scout.yml</code></p>
 
 

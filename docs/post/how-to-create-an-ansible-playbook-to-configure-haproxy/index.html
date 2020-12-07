@@ -59,7 +59,7 @@
   "headline": "How To Create an Ansible Playbook to Configure HAProxy",
   "description" : "How To Create an Ansible Playbook to Configure HAProxy",
   "inLanguage" : "en",
-  "wordCount":  520 ,
+  "wordCount":  360 ,
   "datePublished" : "2013-10-21T00:00:00",
   "dateModified" : "2013-10-21T00:00:00",
   "image" : "https:\/\/blog.serverbooter.com",
@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -258,184 +258,156 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>This is the continuation for <a href="/post/setup-a-simple-haproxy-config/">Setup a simple HAproxy config</a></p>
-
 <p>It explains how to create an Ansible playbook to automate the haproxy
 configuration.</p>
-
 <p>If you&rsquo;d like to find out more about Ansible you can read up on it on
 their website: <a href="http://www.ansible.com">http://www.ansible.com</a></p>
-
-<pre><code class="language-yaml">---
-# Set up and configure an HaProxy server (Ubuntu flavor)
-- name: haproxy
-  hosts: all
-  user: userwithsudoaccess
-  sudo: True
-  tags: haproxy
-
-  vars_files:
-    - &quot;vars/main.yml&quot;
-
-  tasks:
-
-    # haproxy package for Ubuntu
-    - include: tasks/haproxy-apt.yml
-
-    # Specific haproxy tasks follow here
-    - name: Copy haproxy logrotate file
-      action: &gt;
-        copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxy
-        mode=0644 owner=root group=root
-
-    - name: Create haproxy rsyslog configuration
-      action: &gt;
-        copy src=files/haproxy-rsyslog.conf
-        dest=/etc/rsyslog.d/49-haproxy.conf
-        mode=0644 owner=root group=root
-      notify: restart rsyslog
-
-    - name: Configure system rsyslog
-      action: &gt;
-        copy src=files/rsyslog.conf
-        dest=/etc/rsyslog.conf
-        mode=0644 owner=root group=root
-      notify: restart rsyslog
-
-    - name: Create haproxy configuration file
-      action: &gt;
-        template src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg
-        mode=0644 owner=root group=root
-      notify: restart haproxy
-
-</code></pre>
-
-<p>The following file that contains the variables needed for the haproxy playbook
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># Set up and configure an HaProxy server (Ubuntu flavor)</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>haproxy<span class="w">
+</span><span class="w">  </span><span class="k">hosts</span><span class="p">:</span><span class="w"> </span>all<span class="w">
+</span><span class="w">  </span><span class="k">user</span><span class="p">:</span><span class="w"> </span>userwithsudoaccess<span class="w">
+</span><span class="w">  </span><span class="k">sudo</span><span class="p">:</span><span class="w"> </span>True<span class="w">
+</span><span class="w">  </span><span class="k">tags</span><span class="p">:</span><span class="w"> </span>haproxy<span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">vars_files</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="s2">&#34;vars/main.yml&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">tasks</span><span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="c"># haproxy package for Ubuntu</span><span class="w">
+</span><span class="w">    </span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>tasks/haproxy-apt.yml<span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="c"># Specific haproxy tasks follow here</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Copy<span class="w"> </span>haproxy<span class="w"> </span>logrotate<span class="w"> </span>file<span class="w">
+</span><span class="w">      </span><span class="k">action</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">        copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxy</span><span class="w">
+</span><span class="w">        </span>mode=<span class="m">0644</span><span class="w"> </span>owner=root<span class="w"> </span>group=root<span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Create<span class="w"> </span>haproxy<span class="w"> </span>rsyslog<span class="w"> </span>configuration<span class="w">
+</span><span class="w">      </span><span class="k">action</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">        copy src=files/haproxy-rsyslog.conf</span><span class="w">
+</span><span class="w">        </span>dest=/etc/rsyslog.d/<span class="m">49</span>-haproxy.conf<span class="w">
+</span><span class="w">        </span>mode=<span class="m">0644</span><span class="w"> </span>owner=root<span class="w"> </span>group=root<span class="w">
+</span><span class="w">      </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Configure<span class="w"> </span>system<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">      </span><span class="k">action</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">        copy src=files/rsyslog.conf</span><span class="w">
+</span><span class="w">        </span>dest=/etc/rsyslog.conf<span class="w">
+</span><span class="w">        </span>mode=<span class="m">0644</span><span class="w"> </span>owner=root<span class="w"> </span>group=root<span class="w">
+</span><span class="w">      </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">
+</span><span class="w">    </span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Create<span class="w"> </span>haproxy<span class="w"> </span>configuration<span class="w"> </span>file<span class="w">
+</span><span class="w">      </span><span class="k">action</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">        template src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg</span><span class="w">
+</span><span class="w">        </span>mode=<span class="m">0644</span><span class="w"> </span>owner=root<span class="w"> </span>group=root<span class="w">
+</span><span class="w">      </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>haproxy<span class="w">
+</span><span class="w">
+</span></code></pre></div><p>The following file that contains the variables needed for the haproxy playbook
 it should located under vars (vars/main.yml)</p>
-
-<pre><code class="language-yaml">---
-haproxy_port: 8080
-haproxy_servers:
-  - server1.mydomain.com
-  - server2.mydomain.com
-  - server3.mydomain.com
-
-</code></pre>
-
-<p>The following is the task/haproxy-apt.yml file that is used to
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="k">haproxy_port</span><span class="p">:</span><span class="w"> </span><span class="m">8080</span><span class="w">
+</span><span class="w"></span><span class="k">haproxy_servers</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span>- server1.mydomain.com<span class="w">
+</span><span class="w">  </span>- server2.mydomain.com<span class="w">
+</span><span class="w">  </span>- server3.mydomain.com<span class="w">
+</span><span class="w">
+</span></code></pre></div><p>The following is the task/haproxy-apt.yml file that is used to
 install haproxy on Ubuntu. If you are using CentOS or RedHat
 you can use &lsquo;yum&rsquo; instead of &lsquo;apt&rsquo;</p>
-
-<pre><code class="language-yaml">---
-# TASK: Install and configure HAProxy - Ubuntu style
-#
-
-- name: Install HAProxy
-  action: apt pkg=$item state=latest
-  with_items:
-    - haproxy
-  
-- name: Enable HAProxy service
-  action: service name=haproxy enabled=yes
-  
-- name: Copy Ubuntu default file
-  action: &gt;
-    copy dest=/etc/default/haproxy
-    src=../packages/files/haproxy/default
-    owner=root group=root mode=0444
-  notify: restart haproxy
-  # Note the notify clause is handled by a
-  # Ansible handler (explained below)
-</code></pre>
-
-<p>The content for rsyslog.conf, haproxy.logrotate and 49-haproxy.conf can
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># TASK: Install and configure HAProxy - Ubuntu style</span><span class="w">
+</span><span class="w"></span><span class="c">#</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>HAProxy<span class="w">
+</span><span class="w">  </span><span class="k">action</span><span class="p">:</span><span class="w"> </span>apt<span class="w"> </span>pkg=$item<span class="w"> </span>state=latest<span class="w">
+</span><span class="w">  </span><span class="k">with_items</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- haproxy<span class="w">
+</span><span class="w">  
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Enable<span class="w"> </span>HAProxy<span class="w"> </span>service<span class="w">
+</span><span class="w">  </span><span class="k">action</span><span class="p">:</span><span class="w"> </span>service<span class="w"> </span>name=haproxy<span class="w"> </span>enabled=yes<span class="w">
+</span><span class="w">  
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Copy<span class="w"> </span>Ubuntu<span class="w"> </span>default<span class="w"> </span>file<span class="w">
+</span><span class="w">  </span><span class="k">action</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    copy dest=/etc/default/haproxy</span><span class="w">
+</span><span class="w">    </span>src=../packages/files/haproxy/default<span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0444</span><span class="w">
+</span><span class="w">  </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>haproxy<span class="w">
+</span><span class="w">  </span><span class="c"># Note the notify clause is handled by a</span><span class="w">
+</span><span class="w">  </span><span class="c"># Ansible handler (explained below)</span><span class="w">
+</span></code></pre></div><p>The content for rsyslog.conf, haproxy.logrotate and 49-haproxy.conf can
 be found in the previous <a href="/post/setup-a-simple-haproxy-config/">blog entry</a></p>
-
 <p>However, this time we are templating haproxy.cfg with jinja2 and the content is:</p>
-
-<pre><code class="language-jinja">global
-	log 127.0.0.1	local0
-	log 127.0.0.1	local1 notice
-	maxconn 4096
-	user haproxy
-	group haproxy
-	daemon
-
-defaults
-	log	global
-	mode	http
-	option	httplog
-	option	dontlognull
-	retries	3
-	option redispatch
-	maxconn	2000
-	contimeout	5000
-	clitimeout	50000
-	srvtimeout	50000
-
-	stats enable
-	stats auth		admin:password
-	stats uri		/monitor
-	stats refresh	5s
-	option httpchk	GET /status
-	retries		5
-	option redispatch
-	errorfile	503	/etc/haproxy/errors/503.http
-	errorfile	400	/etc/haproxy/errors/400.http
-	errorfile	403	/etc/haproxy/errors/403.http
-	errorfile	408	/etc/haproxy/errors/408.http
-	errorfile	500	/etc/haproxy/errors/500.http
-	errorfile	502	/etc/haproxy/errors/502.http
-	errorfile	503	/etc/haproxy/errors/503.http
-	errorfile	504	/etc/haproxy/errors/504.http
-	balance roundrobin	# each server is used in turns, according to assigned weight
-
-listen http-in
-	bind :80
-	monitor-uri   /haproxy  # end point to monitor HAProxy status (returns 200)
-	# option httpclose
-	{% for dmp_server in dmp_servers %}
-	server {{ dmp_server }} {{ dmp_server }}:{{ dmp_port }} weight 1 maxconn 1000 check inter 4000
-	{% endfor %}
-	rspidel ^Set-cookie:\ IP=	# do not let this cookie tell our internal IP address
-</code></pre>
-
-<p>Include handlers at the end of the file:</p>
-
-<pre><code class="language-yaml">  handlers:
-    - include: handlers/main.yml
-</code></pre>
-
-<p>The content of handlers/main.yml looks like this:</p>
-
-<pre><code class="language-yaml">---
-# Ansible Handlers
-
-- name: restart haproxy
-  action: service name=haproxy state=restarted
-  
-- name: restart rsyslog
-  action: service name=rsyslog state=restarted
-</code></pre>
-
-<p><h3>Optional</h3>
-Include Scout (<a href="https://scoutapp.com">https://scoutapp.com</a>) and Papertrail (<a href="https://papertrailapp.com">https://papertrailapp.com</a>)
-More on this later&hellip;</p>
-
-<pre><code class="language-yaml">    # Scout
-    - include: tasks/scout.yml
-      when: env == 'prod'
-
-    # Papertrail for logging
-    - include: tasks/papertrail.yml
-      when: env == 'prod'
-
-</code></pre>
-
-<p>Now run it:</p>
-
-<pre><code class="language-bash">ansible-playbook -T 120 -i &lt;inventory-file&gt; haproxy.yml
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-jinja" data-lang="jinja"><span class="x">global
+</span><span class="x">	log 127.0.0.1	local0
+</span><span class="x">	log 127.0.0.1	local1 notice
+</span><span class="x">	maxconn 4096
+</span><span class="x">	user haproxy
+</span><span class="x">	group haproxy
+</span><span class="x">	daemon
+</span><span class="x">
+</span><span class="x">defaults
+</span><span class="x">	log	global
+</span><span class="x">	mode	http
+</span><span class="x">	option	httplog
+</span><span class="x">	option	dontlognull
+</span><span class="x">	retries	3
+</span><span class="x">	option redispatch
+</span><span class="x">	maxconn	2000
+</span><span class="x">	contimeout	5000
+</span><span class="x">	clitimeout	50000
+</span><span class="x">	srvtimeout	50000
+</span><span class="x">
+</span><span class="x">	stats enable
+</span><span class="x">	stats auth		admin:password
+</span><span class="x">	stats uri		/monitor
+</span><span class="x">	stats refresh	5s
+</span><span class="x">	option httpchk	GET /status
+</span><span class="x">	retries		5
+</span><span class="x">	option redispatch
+</span><span class="x">	errorfile	503	/etc/haproxy/errors/503.http
+</span><span class="x">	errorfile	400	/etc/haproxy/errors/400.http
+</span><span class="x">	errorfile	403	/etc/haproxy/errors/403.http
+</span><span class="x">	errorfile	408	/etc/haproxy/errors/408.http
+</span><span class="x">	errorfile	500	/etc/haproxy/errors/500.http
+</span><span class="x">	errorfile	502	/etc/haproxy/errors/502.http
+</span><span class="x">	errorfile	503	/etc/haproxy/errors/503.http
+</span><span class="x">	errorfile	504	/etc/haproxy/errors/504.http
+</span><span class="x">	balance roundrobin	# each server is used in turns, according to assigned weight
+</span><span class="x">
+</span><span class="x">listen http-in
+</span><span class="x">	bind :80
+</span><span class="x">	monitor-uri   /haproxy  # end point to monitor HAProxy status (returns 200)
+</span><span class="x">	# option httpclose
+</span><span class="x">	</span><span class="cp">{%</span> <span class="k">for</span> <span class="nv">dmp_server</span> <span class="k">in</span> <span class="nv">dmp_servers</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">	server </span><span class="cp">{{</span> <span class="nv">dmp_server</span> <span class="cp">}}</span><span class="x"> </span><span class="cp">{{</span> <span class="nv">dmp_server</span> <span class="cp">}}</span><span class="x">:</span><span class="cp">{{</span> <span class="nv">dmp_port</span> <span class="cp">}}</span><span class="x"> weight 1 maxconn 1000 check inter 4000
+</span><span class="x">	</span><span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span><span class="x">
+</span><span class="x">	rspidel ^Set-cookie:\ IP=	# do not let this cookie tell our internal IP address
+</span></code></pre></div><p>Include handlers at the end of the file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">  </span><span class="k">handlers</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>handlers/main.yml<span class="w">
+</span></code></pre></div><p>The content of handlers/main.yml looks like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># Ansible Handlers</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>haproxy<span class="w">
+</span><span class="w">  </span><span class="k">action</span><span class="p">:</span><span class="w"> </span>service<span class="w"> </span>name=haproxy<span class="w"> </span>state=restarted<span class="w">
+</span><span class="w">  
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">  </span><span class="k">action</span><span class="p">:</span><span class="w"> </span>service<span class="w"> </span>name=rsyslog<span class="w"> </span>state=restarted<span class="w">
+</span></code></pre></div><!-- raw HTML omitted -->
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span><span class="c"># Scout</span><span class="w">
+</span><span class="w">    </span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>tasks/scout.yml<span class="w">
+</span><span class="w">      </span><span class="k">when</span><span class="p">:</span><span class="w"> </span>env<span class="w"> </span>==<span class="w"> </span><span class="s1">&#39;prod&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="c"># Papertrail for logging</span><span class="w">
+</span><span class="w">    </span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>tasks/papertrail.yml<span class="w">
+</span><span class="w">      </span><span class="k">when</span><span class="p">:</span><span class="w"> </span>env<span class="w"> </span>==<span class="w"> </span><span class="s1">&#39;prod&#39;</span><span class="w">
+</span><span class="w">
+</span></code></pre></div><p>Now run it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ansible-playbook -T <span class="m">120</span> -i &lt;inventory-file&gt; haproxy.yml
+</code></pre></div>
 
         
           <div class="blog-tags">
