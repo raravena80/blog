@@ -59,7 +59,7 @@
   "headline": "Ansible Playbook for PaperTrail on Ubuntu",
   "description" : "Ansible Playbook for PaperTrail on Ubuntu",
   "inLanguage" : "en",
-  "wordCount":  277 ,
+  "wordCount":  197 ,
   "datePublished" : "2013-10-29T11:54:00",
   "dateModified" : "2013-10-29T11:54:00",
   "image" : "https:\/\/blog.serverbooter.com",
@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -260,98 +260,76 @@
         <p>This posts describes how to create a simple
 <a href="http://www.ansible.com">Ansible</a> task
 on how to setup <a href="https://www.papertrailapp.com">PaperTrail</a> on Ubuntu.</p>
-
 <p>It&rsquo;s a follow up to a previous
 <a href="/post/how-to-create-an-ansible-playbook-to-configure-haproxy/">blog</a>
- describing an Ansible Playbook to setup an HAProxy system. This Ansible <code>task</code> can
- be included in the HAProxy playbook as well as any other playbooks with something
- like this:</p>
-
-<pre><code class="language-yaml">---
-PLAYBOOK: Install papertrail on Ubuntu
----
-- name: scout
-  hosts: all
-  user: &lt;user-with-sudo&gt;
-  sudo: True
-
-  tasks:
-    - include: tasks/papertrail.yml
-</code></pre>
-
-<p>Next, we define the <code>task</code> that includes installing the dependencies
+describing an Ansible Playbook to setup an HAProxy system. This Ansible <code>task</code> can
+be included in the HAProxy playbook as well as any other playbooks with something
+like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="k">PLAYBOOK</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>papertrail<span class="w"> </span>on<span class="w"> </span>Ubuntu<span class="w">
+</span><span class="w"></span>---<span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>scout<span class="w">
+</span><span class="w">  </span><span class="k">hosts</span><span class="p">:</span><span class="w"> </span>all<span class="w">
+</span><span class="w">  </span><span class="k">user</span><span class="p">:</span><span class="w"> </span>&lt;user-with-sudo<span class="sd">&gt;
+</span><span class="sd">  sudo: True</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">tasks</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- <span class="k">include</span><span class="p">:</span><span class="w"> </span>tasks/papertrail.yml<span class="w">
+</span></code></pre></div><p>Next, we define the <code>task</code> that includes installing the dependencies
 rsyslog and libssl-dev. Also we copy a specific rsyslog configuration
 for papertrail.</p>
-
-<pre><code class="language-yaml">---
-# TASK: Papertrail log aggregation
-
-- name: Install dependencies for Papertrail
-  apt: pkg=$item state=latest
-  with_items:
-    - libssl-dev
-    - rsyslog-gnutls
-
-- name: Copy rsyslog.conf
-  copy: &gt; 
-    src=files/rsyslog.conf
-    dest=/etc/rsyslog.conf
-    owner=root group=root mode=0444
-  notify: restart rsyslog
-
-</code></pre>
-
-<p>And here&rsquo;s the content of rsyslog.conf:</p>
-
-<script
-  src="https://gist.github.com/raravena80/7221713.js?file=rsyslog.conf">
-</script>
-
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">---<span class="w">
+</span><span class="w"></span><span class="c"># TASK: Papertrail log aggregation</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>dependencies<span class="w"> </span>for<span class="w"> </span>Papertrail<span class="w">
+</span><span class="w">  </span><span class="k">apt</span><span class="p">:</span><span class="w"> </span>pkg=$item<span class="w"> </span>state=latest<span class="w">
+</span><span class="w">  </span><span class="k">with_items</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span>- libssl-dev<span class="w">
+</span><span class="w">    </span>- rsyslog-gnutls<span class="w">
+</span><span class="w">
+</span><span class="w"></span>- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Copy<span class="w"> </span>rsyslog.conf<span class="w">
+</span><span class="w">  </span><span class="k">copy</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt; 
+</span><span class="sd">    src=files/rsyslog.conf</span><span class="w">
+</span><span class="w">    </span>dest=/etc/rsyslog.conf<span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0444</span><span class="w">
+</span><span class="w">  </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">
+</span></code></pre></div><p>And here&rsquo;s the content of rsyslog.conf:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Next you need to include the papertrail cerfiticate file if you want
 to encrypt your connection from rsyslog to PaperTrail.
 The link to the certificate file is
 <a href="https://papertrailapp.com/tools/syslog.papertrail.crt">here</a>.
 You also need to tell Ansible to restart rsyslog when it installs
 this file using the <code>notify</code> keyword.</p>
-
-<pre><code class="language-yaml">- name: Papertrail certificate
-  copy: &gt;
-    src=files/syslog.papertrail.crt
-    dest=/etc/syslog.papertrail.crt
-    owner=root group=root mode=0444
-  notify: restart rsyslog
-
-</code></pre>
-
-<p>Here you include the specific papertrail configuration
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Papertrail<span class="w"> </span>certificate<span class="w">
+</span><span class="w">  </span><span class="k">copy</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    src=files/syslog.papertrail.crt</span><span class="w">
+</span><span class="w">    </span>dest=/etc/syslog.papertrail.crt<span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0444</span><span class="w">
+</span><span class="w">  </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">
+</span></code></pre></div><p>Here you include the specific papertrail configuration
 for rsyslog.</p>
-
-<pre><code class="language-yaml">- name: Papertrail rsyslog config file
-  copy: &gt;
-    src=files/papertrail.conf
-    dest=/etc/rsyslog.d/70-papertrail.conf
-    owner=root group=root mode=0444
-  notify: restart rsyslog
-
-</code></pre>
-
-<p>The papertrail.conf file can be seen here:</p>
-
-<script
-  src="https://gist.github.com/raravena80/7221713.js?file=papertrail.conf">
-</script>
-
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Papertrail<span class="w"> </span>rsyslog<span class="w"> </span>config<span class="w"> </span>file<span class="w">
+</span><span class="w">  </span><span class="k">copy</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    src=files/papertrail.conf</span><span class="w">
+</span><span class="w">    </span>dest=/etc/rsyslog.d/<span class="m">70</span>-papertrail.conf<span class="w">
+</span><span class="w">    </span>owner=root<span class="w"> </span>group=root<span class="w"> </span>mode=<span class="m">0444</span><span class="w">
+</span><span class="w">  </span><span class="k">notify</span><span class="p">:</span><span class="w"> </span>restart<span class="w"> </span>rsyslog<span class="w">
+</span><span class="w">
+</span></code></pre></div><p>The papertrail.conf file can be seen here:</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>Optionally you can install the Ruby papertrail remote
 syslog in case you&rsquo;d like to send random logs from the machine
 to PaperTrail.</p>
-
-<pre><code class="language-yaml">- name: Install Papertrail remote file logger
-  shell: &gt;
-    executable=/bin/bash source /etc/profile.d/rvm.sh;
-    gem install remote_syslog --no-ri --no-rdoc
-</code></pre>
-
-<p>Finally just run it: <code>ansible-playbook -T 120 -i inventory-file papertrail.yml</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">- <span class="k">name</span><span class="p">:</span><span class="w"> </span>Install<span class="w"> </span>Papertrail<span class="w"> </span>remote<span class="w"> </span>file<span class="w"> </span>logger<span class="w">
+</span><span class="w">  </span><span class="k">shell</span><span class="p">:</span><span class="w"> </span><span class="sd">&gt;
+</span><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;</span><span class="w">
+</span><span class="w">    </span>gem<span class="w"> </span>install<span class="w"> </span>remote_syslog<span class="w"> </span>--no-ri<span class="w"> </span>--no-rdoc<span class="w">
+</span></code></pre></div><p>Finally just run it: <code>ansible-playbook -T 120 -i inventory-file papertrail.yml</code></p>
 
 
         

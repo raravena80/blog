@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://blog.serverbooter.com/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
@@ -28,12 +28,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/kubernetes/</loc>
+    <loc>https://blog.serverbooter.com/tags/kubernetes/</loc>
     <lastmod>2019-12-18T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/kubernetes/</loc>
+    <loc>https://blog.serverbooter.com/categories/kubernetes/</loc>
     <lastmod>2019-12-18T14:17:00+00:00</lastmod>
   </url>
   
@@ -44,27 +44,27 @@
   
   <url>
     <loc>https://blog.serverbooter.com/categories/speaking/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/categories/technology/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/page/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/page/speaking/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
@@ -74,27 +74,22 @@
   
   <url>
     <loc>https://blog.serverbooter.com/tags/speaking/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.serverbooter.com/categories/talks/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/talks/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/talks/</loc>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/technologies/</loc>
-    <lastmod>2020-01-01T16:24:50+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blog.serverbooter.com/categories/cncf/</loc>
-    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+    <lastmod>2020-12-06T16:24:50+00:00</lastmod>
   </url>
   
   <url>
@@ -103,12 +98,17 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/containers/</loc>
+    <loc>https://blog.serverbooter.com/categories/cncf/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blog.serverbooter.com/tags/containers/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blog.serverbooter.com/categories/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url>
   
@@ -158,12 +158,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/data/</loc>
+    <loc>https://blog.serverbooter.com/tags/data/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/data/</loc>
+    <loc>https://blog.serverbooter.com/categories/data/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url>
   
@@ -223,12 +223,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/mesos/</loc>
+    <loc>https://blog.serverbooter.com/tags/mesos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/mesos/</loc>
+    <loc>https://blog.serverbooter.com/categories/mesos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url>
   
@@ -343,12 +343,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
+    <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/papertrailapp/</loc>
+    <loc>https://blog.serverbooter.com/categories/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url>
   
@@ -408,12 +408,12 @@
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/categories/linux/</loc>
+    <loc>https://blog.serverbooter.com/tags/linux/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blog.serverbooter.com/tags/linux/</loc>
+    <loc>https://blog.serverbooter.com/categories/linux/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url>
   

@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -258,241 +258,220 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>Parsing deeply nested json in Go is a bit challenging due to the fact that the language doesn&rsquo;t provide many helpers to do so. If you do that in Ruby or Python it&rsquo;s pretty straight forward running some like this in Python <code>j = json.load(jsonstring)</code> or in Ruby <code>j = JSON.load(jsonstring)</code>.</p>
-
 <p>In go generally you have to prefine your structs and run through an <code>Unmarshal</code> function which means that most of the times you need to know ahead of time what the nest level and structure of your target json is to parse it. For example:</p>
-
 <p><a href="https://play.golang.org/p/Q4IHjBVSfY">https://play.golang.org/p/Q4IHjBVSfY</a></p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<pre><code class="language-go">package main
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;encoding/json&#34;</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;log&#34;</span>
+<span class="p">)</span>
 
-import (
-	&quot;encoding/json&quot;
-	&quot;fmt&quot;
-	&quot;log&quot;
-)
+<span class="kd">var</span> <span class="nx">data</span> <span class="p">=</span> <span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">`
+</span><span class="s">    {
+</span><span class="s">        &#34;client&#34;: {
+</span><span class="s">                &#34;id&#34;: &#34;2212fw&#34;,
+</span><span class="s">                &#34;name&#34;: &#34;Papupapa Hernandez&#34;,
+</span><span class="s">                &#34;email&#34;: &#34;papupapa@gmail.com&#34;,
+</span><span class="s">                &#34;phones&#34;: [&#34;554-223-2311&#34;, &#34;332-232-2123&#34;]
+</span><span class="s">        }
+</span><span class="s">    }
+</span><span class="s">`</span><span class="p">)</span>
 
-var data = []byte(`
-    {
-        &quot;client&quot;: {
-                &quot;id&quot;: &quot;2212fw&quot;,
-                &quot;name&quot;: &quot;Papupapa Hernandez&quot;,
-                &quot;email&quot;: &quot;papupapa@gmail.com&quot;,
-                &quot;phones&quot;: [&quot;554-223-2311&quot;, &quot;332-232-2123&quot;]
-        }
-    }
-`)
+<span class="kd">type</span> <span class="nx">Client</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Id</span>     <span class="kt">string</span>   <span class="s">`json:&#34;id&#34;`</span>
+	<span class="nx">Name</span>   <span class="kt">string</span>   <span class="s">`json:&#34;name&#34;`</span>
+	<span class="nx">Email</span>  <span class="kt">string</span>   <span class="s">`json:&#34;email&#34;`</span>
+	<span class="nx">Phones</span> <span class="p">[]</span><span class="kt">string</span> <span class="s">`json:&#34;phones&#34;`</span>
+<span class="p">}</span>
 
-type Client struct {
-	Id     string   `json:&quot;id&quot;`
-	Name   string   `json:&quot;name&quot;`
-	Email  string   `json:&quot;email&quot;`
-	Phones []string `json:&quot;phones&quot;`
-}
+<span class="kd">type</span> <span class="nx">Info</span> <span class="kd">struct</span> <span class="p">{</span>
+	<span class="nx">Key</span> <span class="nx">Client</span> <span class="s">`json:&#34;client&#34;`</span>
+<span class="p">}</span>
 
-type Info struct {
-	Key Client `json:&quot;client&quot;`
-}
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-func main() {
+	<span class="kd">var</span> <span class="nx">info</span> <span class="nx">Info</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Unmarshal</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="nx">info</span><span class="p">);</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;%+v\n&#34;</span><span class="p">,</span> <span class="nx">info</span><span class="p">)</span>
 
-	var info Info
-	if err := json.Unmarshal(data, &amp;info); err != nil {
-		log.Fatal(err)
-	}
-	fmt.Printf(&quot;%+v\n&quot;, info)
+<span class="p">}</span>
+</code></pre></div><p>When you have deeply nested JSON this becomes a pain in the butt. Enter <a href="https://github.com/tidwall/gjson">gjson</a>, with this library thanks to <a href="https://github.com/tidwall">@tidwall</a> we can parse n-level nested JSON that has hashes and arrays. This came in handy when parsing for example the following JSON:</p>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+    <span class="nt">&#34;i$tems&#34;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&#34;it$em&#34;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&#34;batt$ers&#34;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="nt">&#34;ba$tter&#34;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="p">{</span>
+                            <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;1001&#34;</span><span class="p">,</span>
+                            <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Regular&#34;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;1002&#34;</span><span class="p">,</span>
+                            <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;Chocolate&#34;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;1003&#34;</span><span class="p">,</span>
+                            <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Blueberry&#34;</span>
+                        <span class="p">},</span>
+                        <span class="p">{</span>
+                            <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;1004&#34;</span><span class="p">,</span>
+                            <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Devil&#39;s Food&#34;</span>
+                        <span class="p">}</span>
+                    <span class="p">]</span>
+                <span class="p">},</span>
+                <span class="nt">&#34;$id&#34;</span><span class="p">:</span> <span class="s2">&#34;0001&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;$name&#34;</span><span class="p">:</span> <span class="s2">&#34;Cake&#34;</span><span class="p">,</span>
+                <span class="nt">&#34;$ppu&#34;</span><span class="p">:</span> <span class="mf">0.55</span><span class="p">,</span>
+                <span class="nt">&#34;$topping&#34;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5001&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;None&#34;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5002&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Glazed&#34;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5005&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Sugar&#34;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5007&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Powdered Sugar&#34;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5006&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Chocolate with Sprinkles&#34;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5003&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Chocolate&#34;</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nt">&#34;i$d&#34;</span><span class="p">:</span> <span class="s2">&#34;5004&#34;</span><span class="p">,</span>
+                        <span class="nt">&#34;t$ype&#34;</span><span class="p">:</span> <span class="s2">&#34;Maple&#34;</span>
+                    <span class="p">}</span>
+                <span class="p">],</span>
+                <span class="nt">&#34;ty$pe&#34;</span><span class="p">:</span> <span class="s2">&#34;donut&#34;</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><p>You can have something like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-}
-</code></pre>
+<span class="kn">import</span> <span class="p">(</span>
+        <span class="s">&#34;encoding/json&#34;</span>
+        <span class="s">&#34;fmt&#34;</span>
+        <span class="s">&#34;github.com/tidwall/gjson&#34;</span>
+        <span class="s">&#34;io/ioutil&#34;</span>
+        <span class="s">&#34;os&#34;</span>
+<span class="p">)</span>
 
-<p>When you have deeply nested JSON this becomes a pain in the butt. Enter <a href="https://github.com/tidwall/gjson">gjson</a>, with this library thanks to <a href="https://github.com/tidwall">@tidwall</a> we can parse n-level nested JSON that has hashes and arrays. This came in handy when parsing for example the following JSON:</p>
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-<p><a name="jsonparse"></a></p>
+        <span class="nx">file</span><span class="p">,</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadFile</span><span class="p">(</span><span class="s">&#34;./nested.json&#34;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nx">e</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;File error: %v\n&#34;</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span>
+                <span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">myJson</span> <span class="o">:=</span> <span class="nb">string</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span>
+        <span class="nx">m</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">gjson</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="nx">myJson</span><span class="p">).</span><span class="nf">Value</span><span class="p">().(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{})</span>
+        <span class="k">if</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">)</span>
+        <span class="p">}</span>
 
-<pre><code class="language-json">{
-    &quot;i$tems&quot;: {
-        &quot;it$em&quot;: [
-            {
-                &quot;batt$ers&quot;: {
-                    &quot;ba$tter&quot;: [
-                        {
-                            &quot;i$d&quot;: &quot;1001&quot;,
-                            &quot;t$ype&quot;: &quot;Regular&quot;
-                        },
-                        {
-                            &quot;i$d&quot;: &quot;1002&quot;,
-                            &quot;type&quot;: &quot;Chocolate&quot;
-                        },
-                        {
-                            &quot;i$d&quot;: &quot;1003&quot;,
-                            &quot;t$ype&quot;: &quot;Blueberry&quot;
-                        },
-                        {
-                            &quot;i$d&quot;: &quot;1004&quot;,
-                            &quot;t$ype&quot;: &quot;Devil's Food&quot;
-                        }
-                    ]
-                },
-                &quot;$id&quot;: &quot;0001&quot;,
-                &quot;$name&quot;: &quot;Cake&quot;,
-                &quot;$ppu&quot;: 0.55,
-                &quot;$topping&quot;: [
-                    {
-                        &quot;i$d&quot;: &quot;5001&quot;,
-                        &quot;t$ype&quot;: &quot;None&quot;
-                    },
-                    {
-                        &quot;i$d&quot;: &quot;5002&quot;,
-                        &quot;t$ype&quot;: &quot;Glazed&quot;
-                    },
-                    {
-                        &quot;i$d&quot;: &quot;5005&quot;,
-                        &quot;t$ype&quot;: &quot;Sugar&quot;
-                    },
-                    {
-                        &quot;i$d&quot;: &quot;5007&quot;,
-                        &quot;t$ype&quot;: &quot;Powdered Sugar&quot;
-                    },
-                    {
-                        &quot;i$d&quot;: &quot;5006&quot;,
-                        &quot;t$ype&quot;: &quot;Chocolate with Sprinkles&quot;
-                    },
-                    {
-                        &quot;i$d&quot;: &quot;5003&quot;,
-                        &quot;t$ype&quot;: &quot;Chocolate&quot;
-                    },
-                    {
-                        &quot;i$d&quot;: &quot;5004&quot;,
-                        &quot;t$ype&quot;: &quot;Maple&quot;
-                    }
-                ],
-                &quot;ty$pe&quot;: &quot;donut&quot;
-            }
-        ]
-    }
-}
-</code></pre>
-
-<p>You can have something like this:</p>
-
-<pre><code class="language-go">package main
-
-import (
-        &quot;encoding/json&quot;
-        &quot;fmt&quot;
-        &quot;github.com/tidwall/gjson&quot;
-        &quot;io/ioutil&quot;
-        &quot;os&quot;
-)
-
-func main() {
-
-        file, e := ioutil.ReadFile(&quot;./nested.json&quot;)
-        if e != nil {
-                fmt.Printf(&quot;File error: %v\n&quot;, e)
-                os.Exit(1)
-        }
-        myJson := string(file)
-        m, ok := gjson.Parse(myJson).Value().(map[string]interface{})
-        if !ok {
-                fmt.Println(&quot;Error&quot;)
-        }
-
-        jsonBytes, err := json.Marshal(m)
-        if err != nil {
-                fmt.Println(err)
-        }
-        fmt.Println(string(jsonBytes))
-}
-</code></pre>
-
-<p>So the <a href="https://github.com/tidwall/gjson">gjson</a> library allows you to Marshall to a bunch of empty interface{} types (at compile type) that at run time the basically become the &lsquo;maps&rsquo; and &lsquo;slices&rsquo; in a JSON structure.</p>
-
+        <span class="nx">jsonBytes</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">jsonBytes</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><p>So the <a href="https://github.com/tidwall/gjson">gjson</a> library allows you to Marshall to a bunch of empty interface{} types (at compile type) that at run time the basically become the &lsquo;maps&rsquo; and &lsquo;slices&rsquo; in a JSON structure.</p>
 <p>Running the above code outputs:</p>
-
-<pre><code class="language-json">{&quot;i$tems&quot;:{&quot;it$em&quot;:[{&quot;$id&quot;:&quot;0001&quot;,&quot;$name&quot;:&quot;Cake&quot;,&quot;$ppu&quot;:0.55,&quot;$topping&quot;:[{&quot;i$d&quot;:&quot;5001&quot;,&quot;t$ype&quot;:&quot;None&quot;},{&quot;i$d&quot;:&quot;5002&quot;,&quot;t$ype&quot;:&quot;Glazed&quot;},{&quot;i$d&quot;:&quot;5005&quot;,&quot;t$ype&quot;:&quot;Sugar&quot;},{&quot;i$d&quot;:&quot;5007&quot;,&quot;t$ype&quot;:&quot;Powdered Sugar&quot;},{&quot;i$d&quot;:&quot;5006&quot;,&quot;t$ype&quot;:&quot;Chocolate with Sprinkles&quot;},{&quot;i$d&quot;:&quot;5003&quot;,&quot;t$ype&quot;:&quot;Chocolate&quot;},{&quot;i$d&quot;:&quot;5004&quot;,&quot;t$ype&quot;:&quot;Maple&quot;}],&quot;batt$ers&quot;:{&quot;ba$tter&quot;:[{&quot;i$d&quot;:&quot;1001&quot;,&quot;t$ype&quot;:&quot;Regular&quot;},{&quot;i$d&quot;:&quot;1002&quot;,&quot;type&quot;:&quot;Chocolate&quot;},{&quot;i$d&quot;:&quot;1003&quot;,&quot;t$ype&quot;:&quot;Blueberry&quot;},{&quot;i$d&quot;:&quot;1004&quot;,&quot;t$ype&quot;:&quot;Devil's Food&quot;}]},&quot;ty$pe&quot;:&quot;donut&quot;}]}}
-</code></pre>
-
-<p>The issue now is how to access all these structures recursively. Enter the <a href="https://golang.org/pkg/reflect/">reflect</a> package in Go. This package allows you to do things similar to in Ruby like <code>variable.is_a?(Hash)</code> or <code>variable.is_a?(Array)</code></p>
-
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;i$tems&#34;</span><span class="p">:{</span><span class="nt">&#34;it$em&#34;</span><span class="p">:[{</span><span class="nt">&#34;$id&#34;</span><span class="p">:</span><span class="s2">&#34;0001&#34;</span><span class="p">,</span><span class="nt">&#34;$name&#34;</span><span class="p">:</span><span class="s2">&#34;Cake&#34;</span><span class="p">,</span><span class="nt">&#34;$ppu&#34;</span><span class="p">:</span><span class="mf">0.55</span><span class="p">,</span><span class="nt">&#34;$topping&#34;</span><span class="p">:[{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5001&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;None&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5002&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Glazed&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5005&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Sugar&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5007&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Powdered Sugar&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5006&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Chocolate with Sprinkles&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5003&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Chocolate&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;5004&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Maple&#34;</span><span class="p">}],</span><span class="nt">&#34;batt$ers&#34;</span><span class="p">:{</span><span class="nt">&#34;ba$tter&#34;</span><span class="p">:[{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;1001&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Regular&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;1002&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;Chocolate&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;1003&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Blueberry&#34;</span><span class="p">},{</span><span class="nt">&#34;i$d&#34;</span><span class="p">:</span><span class="s2">&#34;1004&#34;</span><span class="p">,</span><span class="nt">&#34;t$ype&#34;</span><span class="p">:</span><span class="s2">&#34;Devil&#39;s Food&#34;</span><span class="p">}]},</span><span class="nt">&#34;ty$pe&#34;</span><span class="p">:</span><span class="s2">&#34;donut&#34;</span><span class="p">}]}}</span>
+</code></pre></div><p>The issue now is how to access all these structures recursively. Enter the <a href="https://golang.org/pkg/reflect/">reflect</a> package in Go. This package allows you to do things similar to in Ruby like <code>variable.is_a?(Hash)</code> or <code>variable.is_a?(Array)</code></p>
 <p>To solve the original problem with the <a href="#jsonparse">JSON</a> above I had to write a little bit of code. So the problem is remove the <code>$</code> character from all the keys in the nested JSON structure. So now I have:</p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="kn">package</span> <span class="nx">main</span>
 
-<pre><code class="language-go">package main
+<span class="kn">import</span> <span class="p">(</span>
+        <span class="s">&#34;encoding/json&#34;</span>
+        <span class="s">&#34;fmt&#34;</span>
+        <span class="s">&#34;github.com/tidwall/gjson&#34;</span>
+        <span class="s">&#34;io/ioutil&#34;</span>
+        <span class="s">&#34;os&#34;</span>
+        <span class="s">&#34;reflect&#34;</span>
+        <span class="s">&#34;regexp&#34;</span>
+        <span class="s">&#34;strings&#34;</span>
+<span class="p">)</span>
 
-import (
-        &quot;encoding/json&quot;
-        &quot;fmt&quot;
-        &quot;github.com/tidwall/gjson&quot;
-        &quot;io/ioutil&quot;
-        &quot;os&quot;
-        &quot;reflect&quot;
-        &quot;regexp&quot;
-        &quot;strings&quot;
-)
+<span class="kd">func</span> <span class="nf">iterate</span><span class="p">(</span><span class="nx">data</span> <span class="kd">interface</span><span class="p">{})</span> <span class="kd">interface</span><span class="p">{}</span> <span class="p">{</span>
 
-func iterate(data interface{}) interface{} {
+        <span class="k">if</span> <span class="nx">reflect</span><span class="p">.</span><span class="nf">ValueOf</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nf">Kind</span><span class="p">()</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Slice</span> <span class="p">{</span>
+                <span class="nx">d</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nf">ValueOf</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+                <span class="nx">tmpData</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">interface</span><span class="p">{},</span> <span class="nx">d</span><span class="p">.</span><span class="nf">Len</span><span class="p">())</span>
+                <span class="nx">returnSlice</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kd">interface</span><span class="p">{},</span> <span class="nx">d</span><span class="p">.</span><span class="nf">Len</span><span class="p">())</span>
+                <span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">d</span><span class="p">.</span><span class="nf">Len</span><span class="p">();</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+                        <span class="nx">tmpData</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nx">d</span><span class="p">.</span><span class="nf">Index</span><span class="p">(</span><span class="nx">i</span><span class="p">).</span><span class="nf">Interface</span><span class="p">()</span>
+                <span class="p">}</span>
+                <span class="k">for</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">tmpData</span> <span class="p">{</span>
+                        <span class="nx">returnSlice</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="nf">iterate</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="nx">returnSlice</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="nx">reflect</span><span class="p">.</span><span class="nf">ValueOf</span><span class="p">(</span><span class="nx">data</span><span class="p">).</span><span class="nf">Kind</span><span class="p">()</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Map</span> <span class="p">{</span>
+                <span class="nx">d</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nf">ValueOf</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+                <span class="nx">tmpData</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{})</span>
+                <span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">k</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">d</span><span class="p">.</span><span class="nf">MapKeys</span><span class="p">()</span> <span class="p">{</span>
+                        <span class="nx">match</span><span class="p">,</span> <span class="nx">_</span> <span class="o">:=</span> <span class="nx">regexp</span><span class="p">.</span><span class="nf">MatchString</span><span class="p">(</span><span class="s">&#34;$&#34;</span><span class="p">,</span> <span class="nx">k</span><span class="p">.</span><span class="nf">String</span><span class="p">())</span>
+                        <span class="nx">typeOfValue</span> <span class="o">:=</span> <span class="nx">reflect</span><span class="p">.</span><span class="nf">TypeOf</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nf">MapIndex</span><span class="p">(</span><span class="nx">k</span><span class="p">).</span><span class="nf">Interface</span><span class="p">()).</span><span class="nf">Kind</span><span class="p">()</span>
+                        <span class="k">if</span> <span class="nx">match</span> <span class="p">{</span>
+                                <span class="nx">new_key</span> <span class="o">:=</span> <span class="nx">strings</span><span class="p">.</span><span class="nf">Replace</span><span class="p">(</span><span class="nx">k</span><span class="p">.</span><span class="nf">String</span><span class="p">(),</span> <span class="s">&#34;$&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+                                <span class="k">if</span> <span class="nx">typeOfValue</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Map</span> <span class="o">||</span> <span class="nx">typeOfValue</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Slice</span> <span class="p">{</span>
+                                        <span class="nx">tmpData</span><span class="p">[</span><span class="nx">new_key</span><span class="p">]</span> <span class="p">=</span> <span class="nf">iterate</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nf">MapIndex</span><span class="p">(</span><span class="nx">k</span><span class="p">).</span><span class="nf">Interface</span><span class="p">())</span>
+                                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                                        <span class="nx">tmpData</span><span class="p">[</span><span class="nx">new_key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">d</span><span class="p">.</span><span class="nf">MapIndex</span><span class="p">(</span><span class="nx">k</span><span class="p">).</span><span class="nf">Interface</span><span class="p">()</span>
+                                <span class="p">}</span>
+                        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;debug&#34;</span><span class="p">)</span>
+                                <span class="k">if</span> <span class="nx">typeOfValue</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Map</span> <span class="o">||</span> <span class="nx">typeOfValue</span> <span class="o">==</span> <span class="nx">reflect</span><span class="p">.</span><span class="nx">Slice</span> <span class="p">{</span>
+                                        <span class="nx">tmpData</span><span class="p">[</span><span class="nx">k</span><span class="p">.</span><span class="nf">String</span><span class="p">()]</span> <span class="p">=</span> <span class="nf">iterate</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nf">MapIndex</span><span class="p">(</span><span class="nx">k</span><span class="p">).</span><span class="nf">Interface</span><span class="p">())</span>
+                                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                                        <span class="nx">tmpData</span><span class="p">[</span><span class="nx">k</span><span class="p">.</span><span class="nf">String</span><span class="p">()]</span> <span class="p">=</span> <span class="nx">d</span><span class="p">.</span><span class="nf">MapIndex</span><span class="p">(</span><span class="nx">k</span><span class="p">).</span><span class="nf">Interface</span><span class="p">()</span>
+                                <span class="p">}</span>
+                        <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="nx">tmpData</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nx">data</span>
+<span class="p">}</span>
 
-        if reflect.ValueOf(data).Kind() == reflect.Slice {
-                d := reflect.ValueOf(data)
-                tmpData := make([]interface{}, d.Len())
-                returnSlice := make([]interface{}, d.Len())
-                for i := 0; i &lt; d.Len(); i++ {
-                        tmpData[i] = d.Index(i).Interface()
-                }
-                for i, v := range tmpData {
-                        returnSlice[i] = iterate(v)
-                }
-                return returnSlice
-        } else if reflect.ValueOf(data).Kind() == reflect.Map {
-                d := reflect.ValueOf(data)
-                tmpData := make(map[string]interface{})
-                for _, k := range d.MapKeys() {
-                        match, _ := regexp.MatchString(&quot;$&quot;, k.String())
-                        typeOfValue := reflect.TypeOf(d.MapIndex(k).Interface()).Kind()
-                        if match {
-                                new_key := strings.Replace(k.String(), &quot;$&quot;, &quot;&quot;, -1)
-                                if typeOfValue == reflect.Map || typeOfValue == reflect.Slice {
-                                        tmpData[new_key] = iterate(d.MapIndex(k).Interface())
-                                } else {
-                                        tmpData[new_key] = d.MapIndex(k).Interface()
-                                }
-                        } else {
-                                fmt.Println(&quot;debug&quot;)
-                                if typeOfValue == reflect.Map || typeOfValue == reflect.Slice {
-                                        tmpData[k.String()] = iterate(d.MapIndex(k).Interface())
-                                } else {
-                                        tmpData[k.String()] = d.MapIndex(k).Interface()
-                                }
-                        }
-                }
-                return tmpData
-        }
-        return data
-}
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 
-func main() {
+        <span class="nx">file</span><span class="p">,</span> <span class="nx">e</span> <span class="o">:=</span> <span class="nx">ioutil</span><span class="p">.</span><span class="nf">ReadFile</span><span class="p">(</span><span class="s">&#34;./nested.json&#34;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nx">e</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Printf</span><span class="p">(</span><span class="s">&#34;File error: %v\n&#34;</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span>
+                <span class="nx">os</span><span class="p">.</span><span class="nf">Exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">myJson</span> <span class="o">:=</span> <span class="nb">string</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span>
+        <span class="nx">m</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">gjson</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="nx">myJson</span><span class="p">).</span><span class="nf">Value</span><span class="p">().(</span><span class="kd">map</span><span class="p">[</span><span class="kt">string</span><span class="p">]</span><span class="kd">interface</span><span class="p">{})</span>
+        <span class="k">if</span> <span class="p">!</span><span class="nx">ok</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Error&#34;</span><span class="p">)</span>
+        <span class="p">}</span>
 
-        file, e := ioutil.ReadFile(&quot;./nested.json&quot;)
-        if e != nil {
-                fmt.Printf(&quot;File error: %v\n&quot;, e)
-                os.Exit(1)
-        }
-        myJson := string(file)
-        m, ok := gjson.Parse(myJson).Value().(map[string]interface{})
-        if !ok {
-                fmt.Println(&quot;Error&quot;)
-        }
-
-        newM := iterate(m)
-        jsonBytes, err := json.Marshal(newM)
-        if err != nil {
-                fmt.Println(err)
-        }
-        fmt.Println(string(jsonBytes))
-}
-</code></pre>
-
-<p>which outputs (in prettified json):</p>
-
+        <span class="nx">newM</span> <span class="o">:=</span> <span class="nf">iterate</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span>
+        <span class="nx">jsonBytes</span><span class="p">,</span> <span class="nx">err</span> <span class="o">:=</span> <span class="nx">json</span><span class="p">.</span><span class="nf">Marshal</span><span class="p">(</span><span class="nx">newM</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+                <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nb">string</span><span class="p">(</span><span class="nx">jsonBytes</span><span class="p">))</span>
+<span class="p">}</span>
+</code></pre></div><p>which outputs (in prettified json):</p>
 <pre><code>{
     &quot;items&quot;: {
         &quot;item&quot;: [
@@ -555,10 +534,7 @@ func main() {
         ]
     }
 }
-</code></pre>
-
-<p>So there we have it. We were able to parse nested JSON using <a href="https://github.com/tidwall/gjson">gjson</a> and then modify the keys for the structure so that none of them have the <code>$</code> sign.</p>
-
+</code></pre><p>So there we have it. We were able to parse nested JSON using <a href="https://github.com/tidwall/gjson">gjson</a> and then modify the keys for the structure so that none of them have the <code>$</code> sign.</p>
 <p>Full code is available here: <a href="https://github.com/raravena80/carabobo/blob/master/jsonkeys/jsonkeys.go">https://github.com/raravena80/carabobo/blob/master/jsonkeys/jsonkeys.go</a></p>
 
 

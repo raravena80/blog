@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -257,50 +257,31 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>The Kata community has been busy getting the first release out the door.</p>
-
+        <p>The Kata community has been busy getting the first release out the door.</p>
 <p>Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. VMware takes this step even further by providing things like Storage VMotion.</p>
-
 <p>With that, I set about running a two node ScyllaDB cluster in Kata Containers and running some simple benchmarks. Scylla is a high-performance Cassandra clone written from scratch in C++. The folks that started ScyllaDB are the same folks that started the KVM project that eventually made it into the Linux Kernel.</p>
-
 <p>I used a single C2S bare metal machine from <a href="https://www.scaleway.com">ScaleWay</a></p>
-
 <p>The specs are these:</p>
-
 <ul>
 <li>4 Dedicated x86 64bit Cores</li>
 <li>8GB Memory</li>
 <li>50GB SSD Disk</li>
 </ul>
-
 <p>I started with the Kata developer instructions <a href="https://github.com/kata-containers/documentation/blob/master/Developer-Guide.md">here</a></p>
-
 <p>One minor change that I had to make was the configuration for QEMU under <code>/usr/share/defaults/kata-containers/configuration.toml</code>. Instead of QEMU, Kata runs under <a href="https://github.com/intel/qemu-lite">qemu-lite</a> which is part of the <a href="https://clearlinux.org/documentation/clear-containers/architecture-overview">Clear Containers</a> project at Intel</p>
-
 <pre><code># /usr/share/defaults/kata-containers/configuration.toml
 [hypervisor.qemu]
 # Change this
 # path = &quot;/usr/bin/qemu-system-x86_64&quot;
 # to this
 path = &quot;/usr/bin/qemu-lite-system-x86_64&quot;
-</code></pre>
-
-<p>Then I ran some performance benchmarks that were previously run with Scylla by the IBM team. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are simply to establish a baseline and demonstrate that we can run Scylla in Kata Containers. The idea is to get some baseline and see how Scylla performs in Kata.</p>
-
+</code></pre><p>Then I ran some performance benchmarks that were previously run with Scylla by the IBM team. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are simply to establish a baseline and demonstrate that we can run Scylla in Kata Containers. The idea is to get some baseline and see how Scylla performs in Kata.</p>
 <p>You can read more about the IBM tests <a href="https://www.ibm.com/developerworks/library/l-performance-scylla/">here</a></p>
-
 <p>In this case, each node is running in its Kata container (running in separate qemu-lite VMs). I followed some of the instructions in the <a href="https://hub.docker.com/r/scylladb/scylla/">docker hub Scylla page to setup my cluster</a>. I just provided the <code>--runtime kata-runtime</code> parameter for each container and the <code>-p 9042:9042</code> parameter so that I could connect to Scylla from my bare-metal machine.</p>
-
 <p>My commands:</p>
-
 <pre><code># docker run --runtime kata-runtime --name my-scylla -p 9042:9042 -d scylladb/scylla
 # docker run --runtime kata-runtime --name my-scylla2 -d scylladb/scylla --seeds=&quot;$(docker inspect --format='{{ .NetworkSettings.IPAddress }}' my-scylla)&quot;
-</code></pre>
-
-<p>Checked the Scylla cluster:</p>
-
+</code></pre><p>Checked the Scylla cluster:</p>
 <pre><code># docker exec -it my-scylla nodetool status
 Datacenter: datacenter1
 =======================
@@ -311,12 +292,8 @@ UN  172.17.0.3  110.42 KB  256          100.0%            22fec874-49e2-4a1f-b1b
 UN  172.17.0.2  117.56 KB  256          100.0%            7ee27713-194b-4cef-a8ca-ac47c7c90063  rack1
 
 #
-</code></pre>
-
-<p>Then I ran the <code>cassandra-stress</code> test provided in the <a href="http://cassandra.apache.org/download/">cassandra distribution</a>:</p>
-
+</code></pre><p>Then I ran the <code>cassandra-stress</code> test provided in the <a href="http://cassandra.apache.org/download/">cassandra distribution</a>:</p>
 <p>Write test:</p>
-
 <pre><code># cassandra-stress write no-warmup n=2500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX
 ...
 Results:
@@ -337,10 +314,7 @@ Total GC time             :    0.0 seconds
 Avg GC time               :    NaN ms
 StdDev GC time            :    0.0 ms
 Total operation time      : 00:11:35
-</code></pre>
-
-<p>Read test:</p>
-
+</code></pre><p>Read test:</p>
 <pre><code># cassandra-stress read no-warmup n=2500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX
 ...
 Results:
@@ -361,12 +335,8 @@ Total GC time             :    0.0 seconds
 Avg GC time               :    NaN ms
 StdDev GC time            :    0.0 ms
 Total operation time      : 00:28:40
-</code></pre>
-
-<p>Then I ran the same tests on the same machine without Kata Containers.</p>
-
+</code></pre><p>Then I ran the same tests on the same machine without Kata Containers.</p>
 <p>Write test:</p>
-
 <pre><code>...
 Results:
 Op rate                   :    8,793 op/s  [WRITE: 8,824 op/s]
@@ -386,10 +356,7 @@ Total GC time             :    0.0 seconds
 Avg GC time               :    NaN ms
 StdDev GC time            :    0.0 ms
 Total operation time      : 00:04:44
-</code></pre>
-
-<p>Read test:</p>
-
+</code></pre><p>Read test:</p>
 <pre><code>...
 Results:
 Op rate                   :    7,039 op/s  [READ: 7,059 op/s]
@@ -409,31 +376,20 @@ Total GC time             :    0.0 seconds
 Avg GC time               :    NaN ms
 StdDev GC time            :    0.0 ms
 Total operation time      : 00:05:55
-</code></pre>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38760120-62c86ac2-3f2e-11e8-9013-30e17695ce66.png" alt="oprate" />
-<img src="https://user-images.githubusercontent.com/7659560/38760803-fa10540e-3f32-11e8-99a2-f0be37bd0eab.png" alt="meanlatency" />
-<img src="https://user-images.githubusercontent.com/7659560/38760128-6c4bd37c-3f2e-11e8-996b-810ed3220a80.png" alt="99thlatency" /></p>
-
+</code></pre><p><img src="https://user-images.githubusercontent.com/7659560/38760120-62c86ac2-3f2e-11e8-9013-30e17695ce66.png" alt="oprate">
+<img src="https://user-images.githubusercontent.com/7659560/38760803-fa10540e-3f32-11e8-99a2-f0be37bd0eab.png" alt="meanlatency">
+<img src="https://user-images.githubusercontent.com/7659560/38760128-6c4bd37c-3f2e-11e8-996b-810ed3220a80.png" alt="99thlatency"></p>
 <p>If we look at Ops per second, results show that our 2 node Scylla cluster on the same machine running in 2 Kata Containers is about 40% slower for writes and 80% slower for reads than running Scylla on 2 containers on bare metal. Other metrics such as latency show similar patterns in where it&rsquo;s higher for Kata Containers. This makes sense since virtualization adds an extra layer and the filesystem I/O is going through the 9p protocol between the host and VM.</p>
-
 <p>Read performance overall is slower in both cases since Scylla was not started with any tuning and both nodes are running on the same machine.</p>
-
 <h2 id="tuning">Tuning</h2>
-
 <p>If we tune the following parameters in the <code>/usr/share/defaults/kata-containers/configuration.toml</code> Kata config file:</p>
-
 <pre><code>default_vcpus = 4
 default_memory = 3072
 enable_iothreads = true
-</code></pre>
-
-<p>Also changing the number of operations from <code>2500000</code> to <code>500000</code> and using
+</code></pre><p>Also changing the number of operations from <code>2500000</code> to <code>500000</code> and using
 the devicemapper configs in Docker with an external <code>/var/lib/scylla</code> volume
- where the file system traffic stil goes through 9pfs.</p>
-
+where the file system traffic stil goes through 9pfs.</p>
 <p>Results:</p>
-
 <pre><code>kata_write_9pfs
 ---------------------------------------
 op rate                    : 3,335 op/s [WRITE: 3,358 op/s]
@@ -452,10 +408,7 @@ avg gc time                : NaN ms
 stddev gc time             : 0.0 ms
 Total operation time       : 00:02:29
 cmd: write no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile revision=kata_write_9pfs title=Kata_Write_9pfs
-</code></pre>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38696326-b4bcedbc-3e43-11e8-95d2-22177e2e1a60.png" alt="screen shot 2018-04-12 at 11 20 51 am" /></p>
-
+</code></pre><p><img src="https://user-images.githubusercontent.com/7659560/38696326-b4bcedbc-3e43-11e8-95d2-22177e2e1a60.png" alt="screen shot 2018-04-12 at 11 20 51 am"></p>
 <pre><code>kata_read_9pfs
 ---------------------------------------
 op rate                    : 2,704 op/s [READ: 2,704 op/s]
@@ -474,17 +427,11 @@ avg gc time                : NaN ms
 stddev gc time             : 0.0 ms
 Total operation time       : 00:03:04
 cmd: read no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile revision=kata_read_9pfs title=Kata_9pfs
-</code></pre>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38696345-bc22321a-3e43-11e8-92e1-ef3fb640a353.png" alt="screen shot 2018-04-12 at 11 20 37 am" /></p>
-
+</code></pre><p><img src="https://user-images.githubusercontent.com/7659560/38696345-bc22321a-3e43-11e8-92e1-ef3fb640a353.png" alt="screen shot 2018-04-12 at 11 20 37 am"></p>
 <p>Complete results can be downloaded <a href="https://github.com/kata-containers/runtime/files/1904448/graphfile_9pfs.gz">here</a>. (gunzip and open on your browser)</p>
-
 <p>Now with an internal /var/lib/scylla which is running in the VM and the traffic doesn&rsquo;t go through
 9pfs.</p>
-
 <p>Results:</p>
-
 <pre><code>kata_write_local
 ---------------------------------------
 op rate                    : 3,336 op/s [WRITE: 3,336 op/s]
@@ -503,10 +450,7 @@ avg gc time                : NaN ms
 stddev gc time             : 0.0 ms
 Total operation time       : 00:02:29
 cmd: write no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile_local revision=kata_write_local title=Kata_Local
-</code></pre>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38699536-2068404e-3e4d-11e8-9aed-f28f32821160.png" alt="screen shot 2018-04-12 at 12 28 42 pm" /></p>
-
+</code></pre><p><img src="https://user-images.githubusercontent.com/7659560/38699536-2068404e-3e4d-11e8-9aed-f28f32821160.png" alt="screen shot 2018-04-12 at 12 28 42 pm"></p>
 <pre><code>kata_read_local
 ---------------------------------------
 op rate                    : 2,864 op/s [READ: 2,864 op/s]
@@ -525,32 +469,20 @@ avg gc time                : NaN ms
 stddev gc time             : 0.0 ms
 Total operation time       : 00:02:54
 cmd: read no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile_local revision=kata_read_local title=Kata_Local
-</code></pre>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38699541-249224a0-3e4d-11e8-85d9-f07118ec161b.png" alt="screen shot 2018-04-12 at 12 28 56 pm" /></p>
-
+</code></pre><p><img src="https://user-images.githubusercontent.com/7659560/38699541-249224a0-3e4d-11e8-85d9-f07118ec161b.png" alt="screen shot 2018-04-12 at 12 28 56 pm"></p>
 <p>Complete results can be downloaded <a href="https://github.com/kata-containers/runtime/files/1904676/graphfile_local.gz">here</a>. (gunzip and open on your browser)</p>
-
 <p>Charting and comparing the op rate and the mean latency for each run:</p>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38758081-41353c5a-3f24-11e8-9f98-8942054287c8.png" alt="oprate" />
-<img src="https://user-images.githubusercontent.com/7659560/38758087-4465f068-3f24-11e8-9b4f-5e91326685fd.png" alt="latency" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/7659560/38758081-41353c5a-3f24-11e8-9f98-8942054287c8.png" alt="oprate">
+<img src="https://user-images.githubusercontent.com/7659560/38758087-4465f068-3f24-11e8-9b4f-5e91326685fd.png" alt="latency"></p>
 <p>We see that the Op rate is slightly better for a local filesystem compared to a filesystem going through 9p.
 Similar behavior for latency, in this case, the latency is lower for the local fs compared to a filesystem
 going through 9p. Overall, we see less discrepancy between reads and writes compared to
 what we saw initially without tuning. This is mainly attributed to change in VM CPUs and default memory.</p>
-
 <p>We conclude that tweaking the VM settings in terms of CPUs and memory can give better performance with Kata. In the case of raw containers we still see the better performance but this is also partly given that in the raw container case each container has access to all the machine resources and has more direct access to the machine&rsquo;s hardware.</p>
-
 <p>I expect these numbers to get better as the Kata team continues to tune the QEMU parameters and establishes best practices for Kata Containers as well as some of the vendors making it easier to improve performance and security such as Intel and AMD. For example, in real-world applications, you would make sure that your VM is talking directly to the hardware and in most cases, you would want to run your Scylla nodes on separate metal.</p>
-
 <p>Due to privacy concerns, compliance requirements such as <a href="https://en.wikipedia.org/wiki/General_Data_Protection_Regulation">GDPR</a>, and bugs such as <a href="https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)">Spectre</a> and <a href="https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)">Meltdown</a>, more organizations will continue to adopt running containers in a secure way.  Although we are very early in the Kata project, I&rsquo;m pretty excited about its ability to run reliable and secure workloads. The performance will only get better with support for more applications with different types of memory, storage and networking requirements. Also, as the team continues to add resources we&rsquo;ll be doing more benchmarks with hardware and more machines in different cluster configurations, so stay tuned.</p>
-
 <p>It&rsquo;s worth mentioning that there&rsquo;s also another interesting <a href="https://www.scylladb.com/2018/03/29/scylla-kubernetes-overview/">blog</a> explaining how to run Scylla in Kubernetes. So you can also run Scylla in Kata Containers on top of Kubernetes using Stateful sets.</p>
-
 <p>Go Kata!</p>
-
 <p>For more information about the Kata Containers project you can visit <a href="https://katacontainers.io">https://katacontainers.io</a>.</p>
 
 

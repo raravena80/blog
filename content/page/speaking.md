@@ -1,7 +1,7 @@
 ---
 title: "Speaking"
 date: 2019-11-30T14:17:00Z
-lastmod: 2020-01-01T16:24:50Z
+lastmod: 2020-12-06T16:24:50Z
 comments: false
 categories:
  - talks
@@ -14,7 +14,7 @@ slug: speaking
 
 ---
 
-This is a list of the talks I've given 2018-2019
+This is a list of the talks I've given 2018-2020
 
 
 __What's Up With All The Different Container Runtimes?__  
@@ -68,3 +68,29 @@ Kubernetes Forum Seoul & Sydney 2019
 [Link 1](https://sched.co/WIQh)  
 [Link 2](https://sched.co/WKgk)  
 [Slides](https://static.sched.com/hosted_files/k8sforumseoul19eng/f6/Adventures%20in%20Production%20with%20GitOps%2C%20Secure%20Pipelines%20and%20Compliance.pdf)  
+
+__Store This and That: The Case for Serverless Datastores__  
+Open Source NA 2020  
+[Video](https://youtu.be/Qjt4I9Q19QM)  
+[Link](https://sched.co/c3P7)  
+[Slides](https://static.sched.com/hosted_files/ossna2020/b0/Store%20This%20and%20That_%20The%20Case%20for%20Serverless%20Datastores.pdf)  
+
+__In-place Upgrade Noway! Blue/Green Your Way to a New Kubernetes Version__  
+KubeCon/CloudNativeCon EU Virtual 2020  
+[Video](https://youtu.be/UFanjXXOsVA)  
+[Link](ihttps://sched.co/Zek9)  
+[Slides](https://static.sched.com/hosted_files/kccnceu20/27/In-place%20Upgrade%20Noway%21%20Blue_Green%20Your%20Way%20to%20a%20New%20Kubernetes%20Version.pdf)  
+
+__End-Users Won't Even Notice, Painless Kubernetes Upgrades__  
+All Things Open Virtual 2020  
+[Video](https://youtu.be/Ec3JtiTamiQ)  
+[Link](https://2020.allthingsopen.org/sessions/end-users-wont-even-notice-painless-kubernetes-upgrades/)  
+[Slides](https://drive.google.com/file/d/1jw7BCI1o1tgd5Fhnexl3lUPPv7Ho4qxt/view?usp=sharing)  
+
+__Intro: CNCF SIG-Runtime__
+KubeCon/CloudNativeCon NA Virtual 2020  
+[Video](https://youtu.be/Amn7ajmYeWs)  
+[Link](https://sched.co/ekG6)  
+[Slides](https://static.sched.com/hosted_files/kccncna20/6b/Intro%20SIG-Runtime.pdf)  
+  
+  

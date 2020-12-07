@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -258,11 +258,8 @@
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
         <p>DC/OS is the commercialized <a href="http://mesos.apache.org/">Mesos</a> distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box <a href="https://github.com/raravena80/dcos-gce">Ansible scripts</a> provided by Mesosphere.</p>
-
 <p>For starters I followed everything described in the <a href="https://github.com/raravena80/dcos-gce/blob/master/README.md">README</a>.</p>
-
 <p>Then, I had to modify the <code>group_vars/all</code> file in the playbook</p>
-
 <pre><code>---
 project: &lt;my-gcp-project-id&gt;
 subnet: default
@@ -293,33 +290,17 @@ dcos_installer_download_path: &quot;https://downloads.dcos.io/dcos/stable/{{ dco
 home_directory: &quot;/home/{{ login_name }}&quot;
 downloads_from_bootstrap: 2
 dcos_bootstrap_container: dcosinstaller
-</code></pre>
-
-<p>Then to create the master I ran:</p>
-
+</code></pre><p>Then to create the master I ran:</p>
 <pre><code>ansible-playbook -i hosts install.yml
-</code></pre>
-
-<p><img src="/img/2017-05-11-dcos-on-gcp/master.jpg" alt="master" title="Master GCP" /></p>
-
+</code></pre><p><img src="/img/2017-05-11-dcos-on-gcp/master.jpg" alt="master" title="Master GCP"></p>
 <p>and to create the agents or slaves I ran (for public facing ones):</p>
-
 <pre><code>ansible-playbook -i hosts add_agents.yml --extra-vars &quot;start_id=0001 end_id=0002 agent_type=public&quot;
-</code></pre>
-
-<p><img src="/img/2017-05-11-dcos-on-gcp/agent.jpg" alt="agent" title="Agent GCP" /></p>
-
+</code></pre><p><img src="/img/2017-05-11-dcos-on-gcp/agent.jpg" alt="agent" title="Agent GCP"></p>
 <p>If you want to create private agents or slaves you can run something like:</p>
-
 <pre><code>ansible-playbook -i hosts add_agents.yml --extra-vars &quot;start_id=0001 end_id=0002 agent_type=private&quot;
-</code></pre>
-
-<p>Easy&hellip;</p>
-
+</code></pre><p>Easy&hellip;</p>
 <p>Then you can hit the DC/OS UI with the master&rsquo;s IP address over HTTPS (Make sure you open up port 443 to your IP address).</p>
-
-<p><img src="/img/2017-05-11-dcos-on-gcp/dcosui.jpg" alt="dcosui" title="DC/OS UI" /></p>
-
+<p><img src="/img/2017-05-11-dcos-on-gcp/dcosui.jpg" alt="dcosui" title="DC/OS UI"></p>
 <p>More to come&hellip;</p>
 
 

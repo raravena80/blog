@@ -28,7 +28,7 @@ I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of tim
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/page/speaking/</guid>
-      <description>This is a list of the talks I&amp;rsquo;ve given 2018-2019
+      <description>This is a list of the talks I&amp;rsquo;ve given 2018-2020
 What&amp;rsquo;s Up With All The Different Container Runtimes?
 KubeCon/CloudNativeCon EU Copenhagen Denmark 2018
 Video
@@ -127,7 +127,7 @@ In go generally you have to prefine your structs and run through an Unmarshal fu
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/post/cloudnativecon-kubecon-europe/</guid>
       <description>This same blog entry is here. Thanks to the cncf folks who helped me put this together.
-I’ve attended many conferences before, but I was happy to get the diversity scholarship to attend CloudNativeCon + KubeCon Europe 2017 in Berlin as there is always so much more to learn. It was my first time attending an event organized by the Linux Foundation, and I hope to attend more in the future.</description>
+ I’ve attended many conferences before, but I was happy to get the diversity scholarship to attend CloudNativeCon + KubeCon Europe 2017 in Berlin as there is always so much more to learn. It was my first time attending an event organized by the Linux Foundation, and I hope to attend more in the future.</description>
     </item>
     
     <item>
@@ -136,7 +136,7 @@ I’ve attended many conferences before, but I was happy to get the diversity sc
       <pubDate>Tue, 25 Apr 2017 16:24:50 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/page/about/</guid>
-      <description>[Resume](https://www.dropbox.com/s/m9k64agrhgnbgri/ricardos_resume___n.pdf?dl=0)  -- </description>
+      <description></description>
     </item>
     
     <item>
@@ -166,7 +166,7 @@ Just a little bit of background, for those of you not familiar with LXC containe
       <guid>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
       <description>This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
 It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
---- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &amp;lt;user-with-sudo&amp;gt; sudo: True tasks: - include: tasks/papertrail.</description>
+---PLAYBOOK:InstallpapertrailonUbuntu---- name:scouthosts:alluser:&amp;lt;user-with-sudo&amp;gt; sudo: Truetasks:- include:tasks/papertrail.ymlNext, we define the task that includes installing the dependencies rsyslog and libssl-dev.</description>
     </item>
     
     <item>
@@ -185,8 +185,8 @@ It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to 
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</guid>
       <description>This is a sample Ansible task (http://www.ansibleworks.com) on how to setup Scout (https://www.scoutapp.com) on Ubuntu. It needs to be included in an ansible playbook.
-It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
---- PLAYBOOK: Install scout on Ubuntu --- - name: scout hosts: all user: user-with-sudo sudo: True vars: scout_key: YourScoutAPIKeyFromTheirWebsite tasks: - include: tasks/scout.</description>
+It&amp;rsquo;s a follow up to a previous [blog]({% post_url 2013-10-21-how-to-create-an-ansible-playbook-to-configure-haproxy %}) describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
+---PLAYBOOK:InstallscoutonUbuntu---- name:scouthosts:alluser:user-with-sudosudo:Truevars:scout_key:YourScoutAPIKeyFromTheirWebsitetasks:- include:tasks/scout.ymlWe start by defining a &amp;ldquo;task&amp;rdquo; file:</description>
     </item>
     
     <item>
@@ -195,9 +195,9 @@ It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to 
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://blog.serverbooter.com/post/upgrade-linux-kernel-on-chromebook/</guid>
-      <description>So after installing ChrUbuntu on my Acer C7 Chromebook, I&amp;rsquo;m very pleased that with the help of this blog I was able to upgrade the Linux Kernel to 3.8.11
-raravena@chromebook:~/git/blog-src$ uname -a Linux chromebook 3.8.11 #3 SMP Thu Oct 17 07:41:20 PDT 2013 x86_64 x86_64 x86_64 GNU/Linux  These are the modified steps:
-#!/bin/bash set -x # # Grab verified boot utilities from ChromeOS. # mkdir -p /usr/share/vboot mount -o ro /dev/sda3 /mnt cp /mnt/usr/bin/vbutil_* /usr/bin mkdir -p /usr/bin/old_bins cp /mnt/usr/bin/old_bins/vbutil_* /usr/bin/old_bins/.</description>
+      <description>So after installing ChrUbuntu on my Acer C7 Chromebook, I&amp;rsquo;m very pleased that with the help of this blogI was able to upgrade the Linux Kernel to 3.8.11
+raravena@chromebook:~/git/blog-src$ uname -a Linux chromebook 3.8.11 #3 SMP Thu Oct 17 07:41:20 PDT 2013 x86_64 x86_64 x86_64 GNU/Linux These are the modified steps:
+#!/bin/bash  set -x # # Grab verified boot utilities from ChromeOS. # mkdir -p /usr/share/vboot mount -o ro /dev/sda3 /mnt cp /mnt/usr/bin/vbutil_* /usr/bin mkdir -p /usr/bin/old_bins cp /mnt/usr/bin/old_bins/vbutil_* /usr/bin/old_bins/.</description>
     </item>
     
     <item>
@@ -209,7 +209,7 @@ raravena@chromebook:~/git/blog-src$ uname -a Linux chromebook 3.8.11 #3 SMP Thu 
       <description>This is the continuation for Setup a simple HAproxy config
 It explains how to create an Ansible playbook to automate the haproxy configuration.
 If you&amp;rsquo;d like to find out more about Ansible you can read up on it on their website: http://www.ansible.com
---- # Set up and configure an HaProxy server (Ubuntu flavor) - name: haproxy hosts: all user: userwithsudoaccess sudo: True tags: haproxy vars_files: - &amp;quot;vars/main.yml&amp;quot; tasks: # haproxy package for Ubuntu - include: tasks/haproxy-apt.</description>
+---# Set up and configure an HaProxy server (Ubuntu flavor)- name:haproxyhosts:alluser:userwithsudoaccesssudo:Truetags:haproxyvars_files:- &amp;#34;vars/main.yml&amp;#34;tasks:# haproxy package for Ubuntu- include:tasks/haproxy-apt.yml# Specific haproxy tasks follow here- name:Copyhaproxylogrotatefileaction:&amp;gt; copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxymode=0644owner=rootgroup=root- name:Createhaproxyrsyslogconfigurationaction:&amp;gt; copy src=files/haproxy-rsyslog.</description>
     </item>
     
     <item>

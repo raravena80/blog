@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://blog.serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.73.0" />
   <link rel="alternate" href="https://blog.serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://blog.serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -257,60 +257,34 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>This same blog entry is <a href="https://www.cncf.io/blog/2017/04/18/diversity-scholarship-series-berlin-eyes-cloud-infrastructure-fanatic/">here</a>. Thanks to the cncf folks who helped me put this together.</p>
-
-<hr />
-
+        <p>This same blog entry is <a href="https://www.cncf.io/blog/2017/04/18/diversity-scholarship-series-berlin-eyes-cloud-infrastructure-fanatic/">here</a>. Thanks to the cncf folks who helped me put this together.</p>
+<hr>
 <p>I’ve attended many conferences before, but I was happy to get the diversity scholarship to attend CloudNativeCon + KubeCon Europe 2017 in Berlin as there is always so much more to learn. It was my first time attending an event organized by the Linux Foundation, and I hope to attend more in the future.
 I loved all the insights and advances that I obtained through all of the highlighted Cloud Native projects including Kubernetes, gRPC, OpenTracing, Prometheus, Linkerd, Fluentd and OpenDNS from the variety of industry leaders.  The keynotes were quite memorable as well, including the Kubernetes 1.6 updates by Aparna Sinha (Google), Federation from Kelsey Hightower (Google), Kubernetes Security Updates from Clayton Coleman (Red Hat), Helm from Michelle Noorali (Deis), Scaling Kubernetes from Joe Beda (Heptio) and Quay from Brandon Phillips (CoreOS).</p>
-
 <p>There were many sessions, and they overlapped so anybody can just come out with something new learned. Some highlights from some of the sessions I attended (not in order):</p>
-
-<hr />
-
-<h4 id="how-we-run-kubernetes-in-kubernetes-aka-kubeception-timo-derstappen-giant-swarm">How We Run Kubernetes in Kubernetes, aka Kubeception – Timo Derstappen, Giant Swarm</h4>
-
+<hr>
+<h4 id="how-we-run-kubernetes-in-kubernetes-aka-kubeception--timo-derstappen-giant-swarm">How We Run Kubernetes in Kubernetes, aka Kubeception – Timo Derstappen, Giant Swarm</h4>
 <p>Learned how Giant Swarm uses Kubernetes to deploy encrypted and isolated clusters of Kubernetes. They treat these clusters as TPSs (Third Party Resources)
 Explained how they use a “mother” Kubernetes to deploy and manage fully-isolated and encrypted Kubernetes clusters for different customers or teams.
 <a href="https://github.com/giantswarm">https://github.com/giantswarm</a></p>
-
-<h4 id="life-of-a-packet-in-kubernetes-michael-rubin-senior-staff-engineer-tlm-google">Life of a Packet in Kubernetes – Michael Rubin Senior Staff Engineer &amp; TLM, Google</h4>
-
+<h4 id="life-of-a-packet-in-kubernetes--michael-rubin-senior-staff-engineer--tlm-google">Life of a Packet in Kubernetes – Michael Rubin Senior Staff Engineer &amp; TLM, Google</h4>
 <p>I learned about where an IP packet goes to in Kubernetes within one pod, multiple pods, and different servers. Also how it fits together with flannel. <a href="https://github.com/coreos/flannel">https://github.com/coreos/flannel</a></p>
-
-<h4 id="programming-kubernetes-with-the-kubernetes-go-sdk-aaron-schlesinger-sr-software-engineer-deis">Programming Kubernetes with the Kubernetes Go SDK – Aaron Schlesinger Sr. Software Engineer, Deis</h4>
-
+<h4 id="programming-kubernetes-with-the-kubernetes-go-sdk--aaron-schlesinger-sr-software-engineer-deis">Programming Kubernetes with the Kubernetes Go SDK – Aaron Schlesinger Sr. Software Engineer, Deis</h4>
 <p>I learned how to use the Kubernetes go client library to build TPS Third party services. Including a coding example and demo
 <a href="https://github.com/arschles/2017-KubeCon-EU">https://github.com/arschles/2017-KubeCon-EU</a></p>
-
-<h4 id="go-microservices-go-kit-peter-bourgon-go-kit-weaveworks">Go + Microservices = Go Kit – Peter Bourgon, Go Kit/Weaveworks</h4>
-
+<h4 id="go--microservices--go-kit--peter-bourgon-go-kitweaveworks">Go + Microservices = Go Kit – Peter Bourgon, Go Kit/Weaveworks</h4>
 <p>This specific session was a great talk that showed how to build go microservices using Go Kit. What was also interesting was that the kit allows you to implement your microservice using standard rest or if in the future you want to start using gRPC you can also do so. Also, this is the perfect type of microservice that you can deploy to a Kubernetes cluster.</p>
-
-<h4 id="loki-an-opensource-zipkin-prometheus-mashup-written-in-go-tom-wilkie-director-of-software-engineering-weaveworks">Loki: An OpenSource Zipkin / Prometheus Mashup, Written in Go Tom Wilkie – Director of Software Engineering, Weaveworks</h4>
-
+<h4 id="loki-an-opensource-zipkin--prometheus-mashup-written-in-go-tom-wilkie--director-of-software-engineering-weaveworks">Loki: An OpenSource Zipkin / Prometheus Mashup, Written in Go Tom Wilkie – Director of Software Engineering, Weaveworks</h4>
 <p><a href="https://github.com/weaveworks-experiments/loki">https://github.com/weaveworks-experiments/loki</a></p>
-
 <p>I learned about Loki is a Zipkin-compatible distributed tracer written in Go. It uses Prometheus’ service discovery to find about the services and examine them.</p>
-
-<hr />
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38763265-98f0ad94-3f4c-11e8-93ad-3f2d25b3af00.png" alt="CoffeeTalk" /></p>
-
+<hr>
+<p><img src="https://user-images.githubusercontent.com/7659560/38763265-98f0ad94-3f4c-11e8-93ad-3f2d25b3af00.png" alt="CoffeeTalk"></p>
 <p>As a Latino leader (originally from Chile), I enjoyed the diversity talk very much as well. It was an interesting conversation led by Sarah Conway from the Linux Foundation with a variety of different attendees including Kris Nova, a previous diversity scholarship recipient. The general consensus is that the industry still needs to continue to do more.  I hope they keep on having these talks in future conferences since this is topic that is not very openly talked about, for fear or whatever reasons, but I believe part of the culture of open source is being ‘Open’ and talk about all the different issues and challenges in industry when it comes to being more inclusive.</p>
-
 <p>Specifically for example, when it comes to companies hiring, there are just a few that are doing things to make it truly more inclusive, there are those that say that they are doing things (but not practicing) and there is the large majority that is not doing anything at all.</p>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38763266-9bc57aea-3f4c-11e8-9c3b-64e6d2d83b40.png" alt="CoffeeImage" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/7659560/38763266-9bc57aea-3f4c-11e8-9c3b-64e6d2d83b40.png" alt="CoffeeImage"></p>
 <p>The environment and event were great overall. From participating in the morning run around Berlin with some fellow conference attendees to the closing party with the great food and drinks :-). What a great way to start and end your day.</p>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38763267-9ee3ef5e-3f4c-11e8-877d-a1c6301332a5.png" alt="MorningRun" /></p>
-
-<p><img src="https://user-images.githubusercontent.com/7659560/38763262-915b6fe2-3f4c-11e8-9cd2-56736d2b6207.jpg" alt="Party" /></p>
-
+<p><img src="https://user-images.githubusercontent.com/7659560/38763267-9ee3ef5e-3f4c-11e8-877d-a1c6301332a5.png" alt="MorningRun"></p>
+<p><img src="https://user-images.githubusercontent.com/7659560/38763262-915b6fe2-3f4c-11e8-9cd2-56736d2b6207.jpg" alt="Party"></p>
 <p>Thanks for the fantastic experience and looking forward to next the CloudNativeCon + KubeCon North America 2017 in Austin. Consider applying for a scholarship to the North America event. Applications can be found here and are due October 13th.</p>
 
 

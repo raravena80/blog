@@ -21,7 +21,7 @@
       <description>This is the continuation for Setup a simple HAproxy config
 It explains how to create an Ansible playbook to automate the haproxy configuration.
 If you&amp;rsquo;d like to find out more about Ansible you can read up on it on their website: http://www.ansible.com
---- # Set up and configure an HaProxy server (Ubuntu flavor) - name: haproxy hosts: all user: userwithsudoaccess sudo: True tags: haproxy vars_files: - &amp;quot;vars/main.yml&amp;quot; tasks: # haproxy package for Ubuntu - include: tasks/haproxy-apt.</description>
+---# Set up and configure an HaProxy server (Ubuntu flavor)- name:haproxyhosts:alluser:userwithsudoaccesssudo:Truetags:haproxyvars_files:- &amp;#34;vars/main.yml&amp;#34;tasks:# haproxy package for Ubuntu- include:tasks/haproxy-apt.yml# Specific haproxy tasks follow here- name:Copyhaproxylogrotatefileaction:&amp;gt; copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxymode=0644owner=rootgroup=root- name:Createhaproxyrsyslogconfigurationaction:&amp;gt; copy src=files/haproxy-rsyslog.</description>
     </item>
     
     <item>
