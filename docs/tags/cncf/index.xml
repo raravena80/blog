@@ -2,44 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cncf on </title>
-    <link>https://blog.serverbooter.com/tags/cncf/</link>
+    <link>https://serverbooter.com/tags/cncf/</link>
     <description>Recent content in cncf on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Mon, 16 Apr 2018 14:17:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.serverbooter.com/tags/cncf/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 16 Apr 2018 14:17:00 +0000</lastBuildDate><atom:link href="https://serverbooter.com/tags/cncf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running Scylla in Kata Containers</title>
-      <link>https://blog.serverbooter.com/post/scylla-in-kata-containers/</link>
+      <link>https://serverbooter.com/post/scylla-in-kata-containers/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/scylla-in-kata-containers/</guid>
+      <guid>https://serverbooter.com/post/scylla-in-kata-containers/</guid>
       <description>The Kata community has been busy getting the first release out the door.
 Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage.</description>
     </item>
     
     <item>
       <title>The Boom of Container Runtimes</title>
-      <link>https://blog.serverbooter.com/post/container-runtimes-cncf/</link>
+      <link>https://serverbooter.com/post/container-runtimes-cncf/</link>
       <pubDate>Sun, 04 Mar 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/container-runtimes-cncf/</guid>
+      <guid>https://serverbooter.com/post/container-runtimes-cncf/</guid>
       <description>It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure. With that came a shift in cloud applications from monolithic to microservices. Containers made it easy for developers to deploy directly to production mostly caring about the scope of her/his microservice.
 Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your containers up and down depending on demand.</description>
     </item>
     
     <item>
       <title>CloudNativeCon KubeCon Europe</title>
-      <link>https://blog.serverbooter.com/post/cloudnativecon-kubecon-europe/</link>
+      <link>https://serverbooter.com/post/cloudnativecon-kubecon-europe/</link>
       <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/cloudnativecon-kubecon-europe/</guid>
+      <guid>https://serverbooter.com/post/cloudnativecon-kubecon-europe/</guid>
       <description>This same blog entry is here. Thanks to the cncf folks who helped me put this together.
- I’ve attended many conferences before, but I was happy to get the diversity scholarship to attend CloudNativeCon + KubeCon Europe 2017 in Berlin as there is always so much more to learn. It was my first time attending an event organized by the Linux Foundation, and I hope to attend more in the future.</description>
+I’ve attended many conferences before, but I was happy to get the diversity scholarship to attend CloudNativeCon + KubeCon Europe 2017 in Berlin as there is always so much more to learn. It was my first time attending an event organized by the Linux Foundation, and I hope to attend more in the future.</description>
     </item>
     
   </channel>

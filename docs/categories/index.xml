@@ -2,301 +2,297 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>https://blog.serverbooter.com/categories/</link>
+    <link>https://serverbooter.com/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.serverbooter.com/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate><atom:link href="https://serverbooter.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>conferences</title>
-      <link>https://blog.serverbooter.com/categories/conferences/</link>
+      <link>https://serverbooter.com/categories/conferences/</link>
       <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/conferences/</guid>
+      <guid>https://serverbooter.com/categories/conferences/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
-      <link>https://blog.serverbooter.com/categories/kubernetes/</link>
+      <link>https://serverbooter.com/categories/kubernetes/</link>
       <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/kubernetes/</guid>
+      <guid>https://serverbooter.com/categories/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>speaking</title>
-      <link>https://blog.serverbooter.com/categories/speaking/</link>
+      <link>https://serverbooter.com/categories/speaking/</link>
       <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/speaking/</guid>
+      <guid>https://serverbooter.com/categories/speaking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>technology</title>
-      <link>https://blog.serverbooter.com/categories/technology/</link>
+      <link>https://serverbooter.com/categories/technology/</link>
       <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/technology/</guid>
+      <guid>https://serverbooter.com/categories/technology/</guid>
       <description></description>
     </item>
     
     <item>
       <title>talks</title>
-      <link>https://blog.serverbooter.com/categories/talks/</link>
+      <link>https://serverbooter.com/categories/talks/</link>
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/talks/</guid>
+      <guid>https://serverbooter.com/categories/talks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cncf</title>
-      <link>https://blog.serverbooter.com/categories/cncf/</link>
+      <link>https://serverbooter.com/categories/cncf/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/cncf/</guid>
+      <guid>https://serverbooter.com/categories/cncf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>containers</title>
-      <link>https://blog.serverbooter.com/categories/containers/</link>
+      <link>https://serverbooter.com/categories/containers/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/containers/</guid>
+      <guid>https://serverbooter.com/categories/containers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kata</title>
-      <link>https://blog.serverbooter.com/categories/kata/</link>
+      <link>https://serverbooter.com/categories/kata/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/kata/</guid>
+      <guid>https://serverbooter.com/categories/kata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>oci</title>
-      <link>https://blog.serverbooter.com/categories/oci/</link>
+      <link>https://serverbooter.com/categories/oci/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/oci/</guid>
+      <guid>https://serverbooter.com/categories/oci/</guid>
       <description></description>
     </item>
     
     <item>
       <title>runtimes</title>
-      <link>https://blog.serverbooter.com/categories/runtimes/</link>
+      <link>https://serverbooter.com/categories/runtimes/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/runtimes/</guid>
+      <guid>https://serverbooter.com/categories/runtimes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>branch</title>
-      <link>https://blog.serverbooter.com/categories/branch/</link>
+      <link>https://serverbooter.com/categories/branch/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/branch/</guid>
+      <guid>https://serverbooter.com/categories/branch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data</title>
-      <link>https://blog.serverbooter.com/categories/data/</link>
+      <link>https://serverbooter.com/categories/data/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/data/</guid>
+      <guid>https://serverbooter.com/categories/data/</guid>
       <description></description>
     </item>
     
     <item>
       <title>infrastructure</title>
-      <link>https://blog.serverbooter.com/categories/infrastructure/</link>
+      <link>https://serverbooter.com/categories/infrastructure/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/infrastructure/</guid>
+      <guid>https://serverbooter.com/categories/infrastructure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gcp</title>
-      <link>https://blog.serverbooter.com/categories/gcp/</link>
+      <link>https://serverbooter.com/categories/gcp/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/gcp/</guid>
+      <guid>https://serverbooter.com/categories/gcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>google</title>
-      <link>https://blog.serverbooter.com/categories/google/</link>
+      <link>https://serverbooter.com/categories/google/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/google/</guid>
+      <guid>https://serverbooter.com/categories/google/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dcos</title>
-      <link>https://blog.serverbooter.com/categories/dcos/</link>
+      <link>https://serverbooter.com/categories/dcos/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/dcos/</guid>
+      <guid>https://serverbooter.com/categories/dcos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mesos</title>
-      <link>https://blog.serverbooter.com/categories/mesos/</link>
+      <link>https://serverbooter.com/categories/mesos/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/mesos/</guid>
+      <guid>https://serverbooter.com/categories/mesos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gjson</title>
-      <link>https://blog.serverbooter.com/categories/gjson/</link>
+      <link>https://serverbooter.com/categories/gjson/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/gjson/</guid>
+      <guid>https://serverbooter.com/categories/gjson/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>https://blog.serverbooter.com/categories/go/</link>
+      <link>https://serverbooter.com/categories/go/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/go/</guid>
+      <guid>https://serverbooter.com/categories/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JSON</title>
-      <link>https://blog.serverbooter.com/categories/json/</link>
+      <link>https://serverbooter.com/categories/json/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/json/</guid>
+      <guid>https://serverbooter.com/categories/json/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>https://blog.serverbooter.com/categories/docker/</link>
+      <link>https://serverbooter.com/categories/docker/</link>
       <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/docker/</guid>
+      <guid>https://serverbooter.com/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>lxc</title>
-      <link>https://blog.serverbooter.com/categories/lxc/</link>
+      <link>https://serverbooter.com/categories/lxc/</link>
       <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/lxc/</guid>
+      <guid>https://serverbooter.com/categories/lxc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ansible</title>
-      <link>https://blog.serverbooter.com/categories/ansible/</link>
+      <link>https://serverbooter.com/categories/ansible/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/ansible/</guid>
+      <guid>https://serverbooter.com/categories/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>logging</title>
-      <link>https://blog.serverbooter.com/categories/logging/</link>
+      <link>https://serverbooter.com/categories/logging/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/logging/</guid>
+      <guid>https://serverbooter.com/categories/logging/</guid>
       <description></description>
     </item>
     
     <item>
       <title>papertrailapp</title>
-      <link>https://blog.serverbooter.com/categories/papertrailapp/</link>
+      <link>https://serverbooter.com/categories/papertrailapp/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/papertrailapp/</guid>
+      <guid>https://serverbooter.com/categories/papertrailapp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AWS</title>
-      <link>https://blog.serverbooter.com/categories/aws/</link>
+      <link>https://serverbooter.com/categories/aws/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/aws/</guid>
+      <guid>https://serverbooter.com/categories/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CloudFormation</title>
-      <link>https://blog.serverbooter.com/categories/cloudformation/</link>
+      <link>https://serverbooter.com/categories/cloudformation/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/cloudformation/</guid>
+      <guid>https://serverbooter.com/categories/cloudformation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>scout</title>
-      <link>https://blog.serverbooter.com/categories/scout/</link>
+      <link>https://serverbooter.com/categories/scout/</link>
       <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/scout/</guid>
+      <guid>https://serverbooter.com/categories/scout/</guid>
       <description></description>
     </item>
     
     <item>
       <title>chromebook</title>
-      <link>https://blog.serverbooter.com/categories/chromebook/</link>
+      <link>https://serverbooter.com/categories/chromebook/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/chromebook/</guid>
+      <guid>https://serverbooter.com/categories/chromebook/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kernel</title>
-      <link>https://blog.serverbooter.com/categories/kernel/</link>
+      <link>https://serverbooter.com/categories/kernel/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/kernel/</guid>
+      <guid>https://serverbooter.com/categories/kernel/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>https://blog.serverbooter.com/categories/linux/</link>
+      <link>https://serverbooter.com/categories/linux/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/linux/</guid>
+      <guid>https://serverbooter.com/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>haproxy</title>
-      <link>https://blog.serverbooter.com/categories/haproxy/</link>
+      <link>https://serverbooter.com/categories/haproxy/</link>
       <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/categories/haproxy/</guid>
+      <guid>https://serverbooter.com/categories/haproxy/</guid>
       <description></description>
     </item>
     

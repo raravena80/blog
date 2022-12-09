@@ -1,4 +1,4 @@
-baseurl = "https://blog.serverbooter.com"
+baseurl = "https://serverbooter.com"
 DefaultContentLanguage = "en"
 #title = "Rico's Blog"
 theme = "beautifulhugo"

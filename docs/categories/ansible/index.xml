@@ -2,36 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ansible on </title>
-    <link>https://blog.serverbooter.com/categories/ansible/</link>
+    <link>https://serverbooter.com/categories/ansible/</link>
     <description>Recent content in ansible on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.serverbooter.com/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate><atom:link href="https://serverbooter.com/categories/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible Playbook for PaperTrail on Ubuntu</title>
-      <link>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</link>
+      <link>https://serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
+      <guid>https://serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
       <description>This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
 It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
----PLAYBOOK:InstallpapertrailonUbuntu---- name:scouthosts:alluser:&amp;lt;user-with-sudo&amp;gt; sudo: Truetasks:- include:tasks/papertrail.ymlNext, we define the task that includes installing the dependencies rsyslog and libssl-dev.</description>
+--- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &amp;lt;user-with-sudo&amp;gt; sudo: True tasks: - include: tasks/papertrail.</description>
     </item>
     
     <item>
       <title>Ansible Playbook for Scout on Ubuntu</title>
-      <link>https://blog.serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</link>
+      <link>https://serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</link>
       <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</guid>
+      <guid>https://serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</guid>
       <description>This is a sample Ansible task (http://www.ansibleworks.com) on how to setup Scout (https://www.scoutapp.com) on Ubuntu. It needs to be included in an ansible playbook.
 It&amp;rsquo;s a follow up to a previous [blog]({% post_url 2013-10-21-how-to-create-an-ansible-playbook-to-configure-haproxy %}) describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
----PLAYBOOK:InstallscoutonUbuntu---- name:scouthosts:alluser:user-with-sudosudo:Truevars:scout_key:YourScoutAPIKeyFromTheirWebsitetasks:- include:tasks/scout.ymlWe start by defining a &amp;ldquo;task&amp;rdquo; file:</description>
+--- PLAYBOOK: Install scout on Ubuntu --- - name: scout hosts: all user: user-with-sudo sudo: True vars: scout_key: YourScoutAPIKeyFromTheirWebsite tasks: - include: tasks/scout.</description>
     </item>
     
   </channel>

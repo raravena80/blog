@@ -2,25 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>papertrailapp on </title>
-    <link>https://blog.serverbooter.com/tags/papertrailapp/</link>
+    <link>https://serverbooter.com/tags/papertrailapp/</link>
     <description>Recent content in papertrailapp on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.serverbooter.com/tags/papertrailapp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 29 Oct 2013 11:54:00 +0000</lastBuildDate><atom:link href="https://serverbooter.com/tags/papertrailapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible Playbook for PaperTrail on Ubuntu</title>
-      <link>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</link>
+      <link>https://serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
+      <guid>https://serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</guid>
       <description>This posts describes how to create a simple Ansible task on how to setup PaperTrail on Ubuntu.
 It&amp;rsquo;s a follow up to a previous blog describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:
----PLAYBOOK:InstallpapertrailonUbuntu---- name:scouthosts:alluser:&amp;lt;user-with-sudo&amp;gt; sudo: Truetasks:- include:tasks/papertrail.ymlNext, we define the task that includes installing the dependencies rsyslog and libssl-dev.</description>
+--- PLAYBOOK: Install papertrail on Ubuntu --- - name: scout hosts: all user: &amp;lt;user-with-sudo&amp;gt; sudo: True tasks: - include: tasks/papertrail.</description>
     </item>
     
   </channel>

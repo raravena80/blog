@@ -2,22 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>lxc on </title>
-    <link>https://blog.serverbooter.com/categories/lxc/</link>
+    <link>https://serverbooter.com/categories/lxc/</link>
     <description>Recent content in lxc on </description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Sat, 29 Oct 2016 16:28:29 +0000</lastBuildDate>
-    
-	<atom:link href="https://blog.serverbooter.com/categories/lxc/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 29 Oct 2016 16:28:29 +0000</lastBuildDate><atom:link href="https://serverbooter.com/categories/lxc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LXC Playing</title>
-      <link>https://blog.serverbooter.com/post/lxc-playing/</link>
+      <link>https://serverbooter.com/post/lxc-playing/</link>
       <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
       <author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://blog.serverbooter.com/post/lxc-playing/</guid>
+      <guid>https://serverbooter.com/post/lxc-playing/</guid>
       <description>Over the last couple of years Docker has seen incredible growth across the tech industry. Its use ties together with deployment of Microservices in most Cloud based companies. Docker is easy to use and its in constant development. In the last month I decided to venture and try something different that has been around even before Docker but in a more primitive form. You see containers have been around before Docker for a long time and even before that with the introduction of chroot in 1979.</description>
     </item>
     
