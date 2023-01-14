@@ -1,7 +1,7 @@
 ---
 title: "Speaking"
 date: 2019-11-30T14:17:00Z
-lastmod: 2020-12-06T16:24:50Z
+lastmod: 2023-01-13T16:24:50Z
 comments: false
 categories:
  - talks
@@ -87,10 +87,32 @@ All Things Open Virtual 2020
 [Link](https://2020.allthingsopen.org/sessions/end-users-wont-even-notice-painless-kubernetes-upgrades/)  
 [Slides](https://drive.google.com/file/d/1jw7BCI1o1tgd5Fhnexl3lUPPv7Ho4qxt/view?usp=sharing)  
 
-__Intro: CNCF SIG-Runtime__
+__Intro: CNCF SIG-Runtime__  
 KubeCon/CloudNativeCon NA Virtual 2020  
 [Video](https://youtu.be/Amn7ajmYeWs)  
 [Link](https://sched.co/ekG6)  
 [Slides](https://static.sched.com/hosted_files/kccncna20/6b/Intro%20SIG-Runtime.pdf)  
   
-  
+__CNCF SIG-Runtime: The Cloud Native Runtimes Outlook__  
+KubeCon/CloudNativeCon EU Virtual 2021  
+[Video](https://youtu.be/YEtV9k25IUY)  
+[Link](https://sched.co/iE7z)  
+[Slides](https://static.sched.com/hosted_files/kccnceu2021/f2/CNCF%20SIG-Runtime_%20The%20Cloud%20Native%20Runtimes%20Outlook.pdf)  
+
+__CNCF TAG-Runtime: What's Next in Cloud Native Workloads?__  
+KubeCon/CloudNativeCon NA 2021 Los Angeles California  
+[Video](https://youtu.be/Fjytrt5M7jg)  
+[Link](https://sched.co/lV8j)  
+[Slides](https://static.sched.com/hosted_files/kccncna2021/6e/CNCF%20TAG-Runtime_%20What%27s%20Next%20in%20Cloud%20Native%20Workloads_.pdf)  
+
+__Simplify Your Postmortems and Focus on Scaling__  
+Leaddev New York 2022  
+[Video](https://leaddev.com/new-york/video/simplify-your-postmortems-and-focus-scaling)  
+
+__CNCF TAG-Runtime: Cloud Native Open Source Core Components__  
+KubeCon/CloudNativeCon EU 2022 Valencia Spain  
+Panel Discussion  
+[Video](https://www.youtube.com/watch?v=aKEFMrp1GJ0)  
+[Link](https://sched.co/ytsE)  
+[Slides](https://static.sched.com/hosted_files/kccnceu2022/60/CNCF%20TAG-Runtime_%20Cloud%20Native%20Open%20Source%20Core%20Components.pdf)  
+
