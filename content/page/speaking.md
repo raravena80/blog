@@ -1,7 +1,7 @@
 ---
 title: "Speaking"
 date: 2019-11-30T14:17:00Z
-lastmod: 2023-01-13T16:24:50Z
+lastmod: 2024-04-26T16:24:50Z
 comments: false
 categories:
  - talks
@@ -14,7 +14,7 @@ slug: speaking
 
 ---
 
-This is a list of the talks I've given 2018-2022
+This is a list of the talks I've given 2018-2024
 
 
 __What's Up With All The Different Container Runtimes?__  
@@ -115,4 +115,34 @@ Panel Discussion
 [Video](https://www.youtube.com/watch?v=aKEFMrp1GJ0)  
 [Link](https://sched.co/ytsE)  
 [Slides](https://static.sched.com/hosted_files/kccnceu2022/60/CNCF%20TAG-Runtime_%20Cloud%20Native%20Open%20Source%20Core%20Components.pdf)  
+
+__Walk, Jog and Run with Cloud Native and the CNCF TAG-Runtime__  
+KubeCon/CloudNativeCon EU 2023 Amsterdam Netherlands  
+[Video](https://youtu.be/rKFJU95XZr0)  
+[Link](https://sched.co/1HzdI)  
+
+__Keynote: Hot Dog! The Technical Oversight Committee is on a Roll!__ 
+KubeCon/CloudNativeCon NA 2023 Chicago Illinois  
+[Video](https://youtu.be/OvLHzfMig-k)  
+[Link](https://sched.co/1R4bz)  
+
+__The Cloud-Native Workloads Journey Through the CNCF Tag-Runtime__ 
+KubeCon/CloudNativeCon NA 2023 Chicago Illinois  
+[Video](https://youtu.be/-7TLM_Ec6IM)  
+[Link](https://sched.co/1R2ox)  
+
+__The Power of RAG at Scale: A Year of Explosive Growth and Observability Challenges__ 
+AI_dev NA 2023 San Jose California  
+[Video](https://youtu.be/5SZp_AIv_o4)  
+[Link](https://sched.co/1VRv2)  
+
+__Panel: Beyond the Clouds: Charting the Course for AI in the CloudNative World__ 
+KubeCon/CloudNativeCon EU 2024 Paris France  
+[Video](https://youtu.be/FN3zXTWBUyQ)  
+[Link](https://sched.co/1YFgN)  
+
+__Unlocking the TAG-Runtime Magic: Where Cloud-Native, Workloads, and AI Join Forces!__  
+KubeCon/CloudNativeCon EU 2024 Paris France  
+[Video](https://youtu.be/8kXwAGZ8Iu0)  
+[Link](https://sched.co/1Yhhq)  
 

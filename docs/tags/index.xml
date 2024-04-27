@@ -4,297 +4,235 @@
     <title>Tags on </title>
     <link>https://serverbooter.com/tags/</link>
     <description>Recent content in Tags on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
+    <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate><atom:link href="https://serverbooter.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Apr 2024 16:24:50 +0000</lastBuildDate>
+    <atom:link href="https://serverbooter.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>forum</title>
+      <title>Forum</title>
       <link>https://serverbooter.com/tags/forum/</link>
-      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/forum/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kubernetes</title>
+      <title>Kubernetes</title>
       <link>https://serverbooter.com/tags/kubernetes/</link>
-      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/kubernetes/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>speaking</title>
+      <title>Speaking</title>
       <link>https://serverbooter.com/tags/speaking/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/speaking/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>talks</title>
+      <title>Talks</title>
       <link>https://serverbooter.com/tags/talks/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/talks/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>technologies</title>
+      <title>Technologies</title>
       <link>https://serverbooter.com/tags/technologies/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/technologies/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cncf</title>
+      <title>Cncf</title>
       <link>https://serverbooter.com/tags/cncf/</link>
-      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/cncf/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>containers</title>
+      <title>Containers</title>
       <link>https://serverbooter.com/tags/containers/</link>
-      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/containers/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kata</title>
+      <title>Kata</title>
       <link>https://serverbooter.com/tags/kata/</link>
-      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/kata/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>runtimes</title>
+      <title>Runtimes</title>
       <link>https://serverbooter.com/tags/runtimes/</link>
-      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/runtimes/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>branch</title>
+      <title>Branch</title>
       <link>https://serverbooter.com/tags/branch/</link>
-      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/branch/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>data</title>
+      <title>Data</title>
       <link>https://serverbooter.com/tags/data/</link>
-      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/data/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>infrastructure</title>
+      <title>Infrastructure</title>
       <link>https://serverbooter.com/tags/infrastructure/</link>
-      <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/infrastructure/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gcp</title>
+      <title>Gcp</title>
       <link>https://serverbooter.com/tags/gcp/</link>
-      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/gcp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>google</title>
+      <title>Google</title>
       <link>https://serverbooter.com/tags/google/</link>
-      <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/google/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>dcos</title>
+      <title>Dcos</title>
       <link>https://serverbooter.com/tags/dcos/</link>
-      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/dcos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mesos</title>
+      <title>Mesos</title>
       <link>https://serverbooter.com/tags/mesos/</link>
-      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/mesos/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>gjson</title>
+      <title>Gjson</title>
       <link>https://serverbooter.com/tags/gjson/</link>
-      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/gjson/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>go</title>
+      <title>Go</title>
       <link>https://serverbooter.com/tags/go/</link>
-      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/go/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>json</title>
+      <title>Json</title>
       <link>https://serverbooter.com/tags/json/</link>
-      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/json/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cloudnative</title>
+      <title>Cloudnative</title>
       <link>https://serverbooter.com/tags/cloudnative/</link>
-      <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/cloudnative/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kubecon</title>
+      <title>Kubecon</title>
       <link>https://serverbooter.com/tags/kubecon/</link>
-      <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/kubecon/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>lxc</title>
+      <title>Lxc</title>
       <link>https://serverbooter.com/tags/lxc/</link>
-      <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/lxc/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>docker</title>
+      <title>Docker</title>
       <link>https://serverbooter.com/tags/docker/</link>
-      <pubDate>Fri, 07 Mar 2014 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ansible</title>
+      <title>Ansible</title>
       <link>https://serverbooter.com/tags/ansible/</link>
-      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/ansible/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>logging</title>
+      <title>Logging</title>
       <link>https://serverbooter.com/tags/logging/</link>
-      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/logging/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>papertrailapp</title>
+      <title>Papertrailapp</title>
       <link>https://serverbooter.com/tags/papertrailapp/</link>
-      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/papertrailapp/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ubuntu</title>
+      <title>Ubuntu</title>
       <link>https://serverbooter.com/tags/ubuntu/</link>
-      <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/ubuntu/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>scout</title>
+      <title>Scout</title>
       <link>https://serverbooter.com/tags/scout/</link>
-      <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/scout/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>chromebook</title>
+      <title>Chromebook</title>
       <link>https://serverbooter.com/tags/chromebook/</link>
-      <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/chromebook/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>kernel</title>
+      <title>Kernel</title>
       <link>https://serverbooter.com/tags/kernel/</link>
-      <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/kernel/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>linux</title>
+      <title>Linux</title>
       <link>https://serverbooter.com/tags/linux/</link>
-      <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>haproxy</title>
+      <title>Haproxy</title>
       <link>https://serverbooter.com/tags/haproxy/</link>
-      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/tags/haproxy/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>dcos on </title>
+    <title>Dcos on </title>
     <link>https://serverbooter.com/categories/dcos/</link>
-    <description>Recent content in dcos on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Dcos on </description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Thu, 11 May 2017 16:28:29 +0000</lastBuildDate><atom:link href="https://serverbooter.com/categories/dcos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 May 2017 16:28:29 +0000</lastBuildDate>
+    <atom:link href="https://serverbooter.com/categories/dcos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DC/OS on GCP</title>
       <link>https://serverbooter.com/post/dcos-on-gcp/</link>
-      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate>
-      <author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/post/dcos-on-gcp/</guid>
-      <description>DC/OS is the commercialized Mesos distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box Ansible scripts provided by Mesosphere.
-For starters I followed everything described in the README.
-Then, I had to modify the group_vars/all file in the playbook
---- project: &amp;lt;my-gcp-project-id&amp;gt; subnet: default login_name: &amp;lt;my-gcp-login-id-with-no-email&amp;gt; bootstrap_public_ip: 10.128.0.10 # This IP need to match the network in the zone zone: us-central1-c master_boot_disk_size: 200 # 200 is the recommended in GCP as of 05-2017 master_machine_type: n1-standard-1 master_boot_disk_type: pd-standard agent_boot_disk_size: 200 agent_machine_type: n1-standard-1 agent_boot_disk_type: pd-standard agent_instance_type: &amp;#34;MIGRATE&amp;#34; agent_type: private start_id: 0001 end_id: 0001 gcloudbin: gcloud image: &amp;#39;centos-7-v20161027&amp;#39; image_project: &amp;#39;centos-cloud&amp;#39; bootstrap_public_port: 8080 cluster_name: cluster_name scopes: &amp;#34;default=https://www.</description>
+      <description>DC/OS is the commercialized Mesos distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box Ansible scripts provided by Mesosphere.&#xA;For starters I followed everything described in the README.&#xA;Then, I had to modify the group_vars/all file in the playbook&#xA;--- project: &amp;lt;my-gcp-project-id&amp;gt; subnet: default login_name: &amp;lt;my-gcp-login-id-with-no-email&amp;gt; bootstrap_public_ip: 10.128.0.10 # This IP need to match the network in the zone zone: us-central1-c master_boot_disk_size: 200 # 200 is the recommended in GCP as of 05-2017 master_machine_type: n1-standard-1 master_boot_disk_type: pd-standard agent_boot_disk_size: 200 agent_machine_type: n1-standard-1 agent_boot_disk_type: pd-standard agent_instance_type: &amp;#34;MIGRATE&amp;#34; agent_type: private start_id: 0001 end_id: 0001 gcloudbin: gcloud image: &amp;#39;centos-7-v20161027&amp;#39; image_project: &amp;#39;centos-cloud&amp;#39; bootstrap_public_port: 8080 cluster_name: cluster_name scopes: &amp;#34;default=https://www.</description>
     </item>
-    
   </channel>
 </rss>

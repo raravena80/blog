@@ -1,5 +1,6 @@
 baseurl = "https://serverbooter.com"
-DefaultContentLanguage = "en"
+#languageCode = 'en-us'
+DefaultContentLanguage = "en-us"
 #title = "Rico's Blog"
 theme = "beautifulhugo"
 #theme = "hugo_theme_pickles"
@@ -30,24 +31,20 @@ publishDir = "docs"
 #  src = "img/hexagon.jpg"
 #  desc = "Hexagon"
 
+  [params.author]
+    email = 'raravena80@gmail.com'
+    name = 'Ricado Aravena'
+
+
 [Author]
   name = "Ricardo Aravena"
   email = "raravena80@gmail.com"
   facebook = "raravena80"
-  #googleplus = "+RicardoAravenaV" # or xxxxxxxxxxxxxxxxxxxxx
   github = "raravena80"
   twitter = "raravena80"
-  #reddit = "username"
   linkedin = "raravena"
-  #xing = "username"
   stackoverflow = "users/2989261/rico"
-  #snapchat = "username"
   instagram = "raravena80"
-  #youtube = "user/username" # or channel/channelname
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
 
 [[menu.main]]
     name = "Blog"
