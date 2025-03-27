@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Opensource on </title>
+    <link>https://serverbooter.com/tags/opensource/</link>
+    <description>Recent content in Opensource on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
+    <lastBuildDate>Thu, 27 Mar 2025 14:17:00 +0000</lastBuildDate>
+    <atom:link href="https://serverbooter.com/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CNCF Cloud Native AI Working Group: Innovation from Edge to Core!</title>
+      <link>https://serverbooter.com/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/</link>
+      <pubDate>Thu, 27 Mar 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>https://serverbooter.com/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/</guid>
+      <description>Over the past six months, the Cloud Native Computing Foundation&amp;rsquo;s (CNCF) Cloud Native AI (CNAI) Working Group has been at the forefront of integrating artificial intelligence (AI) and machine learning (ML) with cloud-native technologies. This is a moment to discuss the working group&amp;rsquo;s initiatives and opportunities for contributors and enthusiasts as we prepare for KubeCon Europe 2025 in London.&#xA;The group has been making strides in galvanizing the community around the needs of AI/ML workloads on top of cloud native environments.</description>
+    </item>
+  </channel>
+</rss>
