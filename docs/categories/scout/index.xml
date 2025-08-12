@@ -6,14 +6,12 @@
     <description>Recent content in Scout on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
-    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Tue, 22 Oct 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://serverbooter.com/categories/scout/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ansible Playbook for Scout on Ubuntu</title>
       <link>https://serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</link>
-      <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate>
       <guid>https://serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</guid>
       <description>This is a sample Ansible task (http://www.ansibleworks.com) on how to setup Scout (https://www.scoutapp.com) on Ubuntu. It needs to be included in an ansible playbook.&#xA;It&amp;rsquo;s a follow up to a previous [blog]({% post_url 2013-10-21-how-to-create-an-ansible-playbook-to-configure-haproxy %}) describing an Ansible Playbook to setup an HAProxy system. This Ansible task can be included in the HAProxy playbook as well as any other playbooks with something like this:&#xA;--- PLAYBOOK: Install scout on Ubuntu --- - name: scout hosts: all user: user-with-sudo sudo: True vars: scout_key: YourScoutAPIKeyFromTheirWebsite tasks: - include: tasks/scout.</description>
     </item>

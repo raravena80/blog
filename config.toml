@@ -33,18 +33,8 @@ publishDir = "docs"
 
   [params.author]
     email = 'raravena80@gmail.com'
-    name = 'Ricado Aravena'
+    name = 'Ricardo Aravena'
 
-
-[Author]
-  name = "Ricardo Aravena"
-  email = "raravena80@gmail.com"
-  facebook = "raravena80"
-  github = "raravena80"
-  twitter = "raravena80"
-  linkedin = "raravena"
-  stackoverflow = "users/2989261/rico"
-  instagram = "raravena80"
 
 [[menu.main]]
     name = "Blog"

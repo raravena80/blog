@@ -6,21 +6,19 @@
     <description>Recent content in Haproxy on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
-    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Mon, 21 Oct 2013 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://serverbooter.com/tags/haproxy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How To Create an Ansible Playbook to Configure HAProxy</title>
       <link>https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/</link>
-      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
       <guid>https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/</guid>
       <description>This is the continuation for Setup a simple HAproxy config&#xA;It explains how to create an Ansible playbook to automate the haproxy configuration.&#xA;If you&amp;rsquo;d like to find out more about Ansible you can read up on it on their website: http://www.ansible.com&#xA;--- # Set up and configure an HaProxy server (Ubuntu flavor) - name: haproxy hosts: all user: userwithsudoaccess sudo: True tags: haproxy vars_files: - &amp;#34;vars/main.yml&amp;#34; tasks: # haproxy package for Ubuntu - include: tasks/haproxy-apt.</description>
     </item>
     <item>
       <title>Setup a Simple HAProxy Config</title>
       <link>https://serverbooter.com/post/setup-a-simple-haproxy-config/</link>
-      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate>
       <guid>https://serverbooter.com/post/setup-a-simple-haproxy-config/</guid>
       <description>Here&amp;rsquo;s simple haproxy configuration to get you started, you probably want to stick this under /etc/haproxy/haproxy.cfg&#xA;global log 127.0.0.1&#x9;local0 log 127.0.0.1&#x9;local1 notice maxconn 4096 user haproxy group haproxy daemon defaults log&#x9;global mode&#x9;http option&#x9;httplog option&#x9;dontlognull retries&#x9;3 option redispatch maxconn&#x9;4096 contimeout&#x9;5000 clitimeout&#x9;50000 srvtimeout&#x9;50000 stats enable stats auth&#x9;admin:password stats uri&#x9;/monitor stats refresh&#x9;5s option httpchk&#x9;GET /status retries&#x9;5 option redispatch errorfile&#x9;503&#x9;/etc/haproxy/errors/503.</description>
     </item>

@@ -6,14 +6,12 @@
     <description>Recent content in Kata on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
-    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Mon, 16 Apr 2018 14:17:00 +0000</lastBuildDate>
     <atom:link href="https://serverbooter.com/categories/kata/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running Scylla in Kata Containers</title>
       <link>https://serverbooter.com/post/scylla-in-kata-containers/</link>
-      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate>
       <guid>https://serverbooter.com/post/scylla-in-kata-containers/</guid>
       <description>The Kata community has been busy getting the first release out the door.&#xA;Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage.</description>
     </item>
