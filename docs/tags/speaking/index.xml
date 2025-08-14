@@ -2,25 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Speaking on </title>
-    <link>https://serverbooter.com/tags/speaking/</link>
+    <link>http://localhost:1313/tags/speaking/</link>
     <description>Recent content in Speaking on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Fri, 26 Apr 2024 16:24:50 +0000</lastBuildDate>
-    <atom:link href="https://serverbooter.com/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/speaking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Speaking</title>
-      <link>https://serverbooter.com/page/speaking/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
-      <guid>https://serverbooter.com/page/speaking/</guid>
-      <description>This is a list of the talks I&amp;rsquo;ve given 2018-2024&#xA;What&amp;rsquo;s Up With All The Different Container Runtimes?&#xA;KubeCon/CloudNativeCon EU Copenhagen Denmark 2018&#xA;Video&#xA;Link&#xA;Slides&#xA;Spice Up Your Workloads with Kata Containers&#xA;Open Source Summit NA Vancouver Canada 2018&#xA;Link&#xA;Slides&#xA;Container Security &amp;amp; Multi-Tenancy Tales from Kata &amp;amp; Nabla&#xA;KubeCon/CloudNativeCon NA Seattle Washington 2018&#xA;Video&#xA;Link&#xA;Slides&#xA;Kubernetes and The GitOps Face-Off&#xA;KubeCon/CloudNativeCon NA Seattle Washington 2018&#xA;Video</description>
+      <link>http://localhost:1313/page/speaking/</link>
+      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>http://localhost:1313/page/speaking/</guid>
+      <description>&lt;p&gt;This is a list of the talks I&amp;rsquo;ve given 2018-2024&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;What&amp;rsquo;s Up With All The Different Container Runtimes?&lt;/strong&gt;&#xA;KubeCon/CloudNativeCon EU Copenhagen Denmark 2018&#xA;&lt;a href=&#34;https://youtu.be/lHv0LVEIPk8&#34;&gt;Video&lt;/a&gt;&#xA;&lt;a href=&#34;https://sched.co/Dqtw&#34;&gt;Link&lt;/a&gt;&#xA;&lt;a href=&#34;https://static.sched.com/hosted_files/kccnceu18/08/What%E2%80%99s%20Up%20With%20All%20the%20Container%20Runtimes.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Spice Up Your Workloads with Kata Containers&lt;/strong&gt;&#xA;Open Source Summit NA Vancouver Canada 2018&#xA;&lt;a href=&#34;https://sched.co/FAP8&#34;&gt;Link&lt;/a&gt;&#xA;&lt;a href=&#34;https://static.sched.com/hosted_files/ossna18/56/Spice%20Up%20Your%20Workloads%20With%20Kata%20Containers.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Container Security &amp;amp; Multi-Tenancy Tales from Kata &amp;amp; Nabla&lt;/strong&gt;&#xA;KubeCon/CloudNativeCon NA Seattle Washington 2018&#xA;&lt;a href=&#34;https://youtu.be/AgHMRJ16RAA&#34;&gt;Video&lt;/a&gt;&#xA;&lt;a href=&#34;https://sched.co/GrZH&#34;&gt;Link&lt;/a&gt;&#xA;&lt;a href=&#34;https://static.sched.com/hosted_files/kccna18/20/Container%20Security%20and%20Multi-Tenancy%20Tales%20from%20Kata%20and%20Nabla.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Kubernetes and The GitOps Face-Off&lt;/strong&gt;&#xA;KubeCon/CloudNativeCon NA Seattle Washington 2018&#xA;&lt;a href=&#34;https://youtu.be/9qGqx_jdxQg&#34;&gt;Video&lt;/a&gt;&#xA;&lt;a href=&#34;https://sched.co/GrSe&#34;&gt;Link&lt;/a&gt;&#xA;&lt;a href=&#34;https://static.sched.com/hosted_files/kccna18/74/KubeCon-2018.pdf&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Enhancing Your Workload Security with Kata Containers&lt;/strong&gt;&#xA;Container World Santa Clara California 2019&#xA;&lt;a href=&#34;https://tmt.knect365.com/container-world/speakers/ricardo-aravena#security_enhancing-your-workload-security-with-kata-containers&#34;&gt;Link&lt;/a&gt;&#xA;&lt;a href=&#34;https://docs.google.com/presentation/d/12yQFigHChzjXyRVflZsE8e4dC7Jy-cbudys5W7BLahU/edit?usp=sharing&#34;&gt;Slides&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Speaking</title>
-      <link>https://serverbooter.com/post/speaking/</link>
-      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate>
-      <guid>https://serverbooter.com/post/speaking/</guid>
-      <description>This page has been moved</description>
+      <link>http://localhost:1313/post/speaking/</link>
+      <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>http://localhost:1313/post/speaking/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/page/speaking/&#34;&gt;This page has been moved&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

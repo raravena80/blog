@@ -3,7 +3,7 @@ title: "CloudNativeCon KubeCon Europe"
 date: 2017-04-25T16:28:29Z
 lastmod: 2017-04-25T16:28:29Z
 comments: true
-categories: 
+categories:
  - docker
 tags: [ "cloudnative", "kubecon", "kubernetes", "cncf" ]
 keywords: cloudnative kubecon kubernetes Ricardo Aravena

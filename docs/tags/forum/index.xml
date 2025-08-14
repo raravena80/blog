@@ -2,18 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Forum on </title>
-    <link>https://serverbooter.com/tags/forum/</link>
+    <link>http://localhost:1313/tags/forum/</link>
     <description>Recent content in Forum on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
+    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
+    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Wed, 18 Dec 2019 14:17:00 +0000</lastBuildDate>
-    <atom:link href="https://serverbooter.com/tags/forum/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/forum/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fun Times at The Kubernetes Forum Seoul and Sydney 2019</title>
-      <link>https://serverbooter.com/post/kubernetes-forum-seoul-sydney/</link>
-      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate>
-      <guid>https://serverbooter.com/post/kubernetes-forum-seoul-sydney/</guid>
-      <description>Hello everyone! I&amp;rsquo;m excited to write this post about my experience at the Kubernetes Forum Seoul and Sydney 2019. My journey started in San Francisco on Friday evening, December 6th, 2019, on a flight to Seoul.&#xA;I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of time during the day to rest in the hotel at the venue, The Seoul Dragon City. As speakers, we were invited along with the organizers and community leaders to an event dinner in the Goguryeo room.</description>
+      <link>http://localhost:1313/post/kubernetes-forum-seoul-sydney/</link>
+      <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
+      <guid>http://localhost:1313/post/kubernetes-forum-seoul-sydney/</guid>
+      <description>&lt;p&gt;Hello everyone! I&amp;rsquo;m excited to write this post about my experience at the Kubernetes Forum Seoul and Sydney 2019. My journey started in San Francisco on Friday evening, December 6th, 2019, on a flight to Seoul.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/7659560/71111562-8f2e6600-217e-11ea-82b8-b5b0bad78d14.jpg&#34; alt=&#34;SFO-ICN&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/7659560/71111890-3b704c80-217f-11ea-89b3-2214675f29c3.jpg&#34; alt=&#34;SFO-ICN-Map&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of time during the day to rest in the hotel at the venue, &lt;a href=&#34;https://www.seouldragoncity.com/&#34;&gt;The Seoul Dragon City&lt;/a&gt;. As speakers, we were invited along with the organizers and community leaders to an event dinner in the &lt;a href=&#34;https://sdc-club.com/en/convention/room-goguryeo.php&#34;&gt;Goguryeo room&lt;/a&gt;. During that time, we had a great start networking with fellow industry leaders with an opportunity to connect. In my opinion, the number of people was just right to talk to most of the guests at dinner.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

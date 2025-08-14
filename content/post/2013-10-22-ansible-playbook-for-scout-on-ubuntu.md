@@ -4,7 +4,7 @@ date: 2013-10-22
 lastmod: 2013-10-22
 comments: true
 tags: [ "ansible", "scout" ]
-categories: 
+categories:
  - scout
  - ansible
 keywords: ansible scout ubuntu
@@ -13,7 +13,7 @@ slug: ansible-playbook-for-scout-on-ubuntu
 
 ---
 
-This is a sample Ansible task (http://www.ansibleworks.com) 
+This is a sample Ansible task (http://www.ansibleworks.com)
 on how to setup Scout (https://www.scoutapp.com) on Ubuntu.
 It needs to be included in an ansible playbook.
 
@@ -43,7 +43,7 @@ We start by defining a "task" file:
 
 ```yaml
 ---
-# TASK: ScoutApp Monitoring (https://scoutapp.com) 
+# TASK: ScoutApp Monitoring (https://scoutapp.com)
 
 # Separate task to install Ruby
 - include: ruby.yml

@@ -8,6 +8,7 @@ metaDataFormat = "yaml"
 pygmentsUseClasses = true
 pygmentCodeFences = true
 disqusShortname = "raravena80"
+ignoreLogs = ['warning-goldmark-raw-html']
 #googleAnalytics = "XXX"
 publishDir = "docs"
 
@@ -21,6 +22,15 @@ publishDir = "docs"
   comments = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
+[Params.Author]
+  name = "Ricardo Aravena"
+  email = "raravena80@gmail.com"
+  github = "raravena80"
+  twitter = "raravena80"
+  linkedin = "raravena"
+  facebook = ""
+  instagram = ""
+
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
 #  desc = "Triangle"
@@ -30,10 +40,6 @@ publishDir = "docs"
 #[[Params.bigimg]]
 #  src = "img/hexagon.jpg"
 #  desc = "Hexagon"
-
-  [params.author]
-    email = 'raravena80@gmail.com'
-    name = 'Ricardo Aravena'
 
 
 [[menu.main]]

@@ -52,7 +52,7 @@ for papertrail.
     - rsyslog-gnutls
 
 - name: Copy rsyslog.conf
-  copy: > 
+  copy: >
     src=files/rsyslog.conf
     dest=/etc/rsyslog.conf
     owner=root group=root mode=0444
@@ -67,8 +67,8 @@ And here's the content of rsyslog.conf:
 </script>
 
 Next you need to include the papertrail cerfiticate file if you want
-to encrypt your connection from rsyslog to PaperTrail. 
-The link to the certificate file is 
+to encrypt your connection from rsyslog to PaperTrail.
+The link to the certificate file is
 [here](https://papertrailapp.com/tools/syslog.papertrail.crt).
 You also need to tell Ansible to restart rsyslog when it installs
 this file using the `notify` keyword.

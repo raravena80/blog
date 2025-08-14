@@ -2,7 +2,7 @@
 title: "LXC Playing"
 date: 2016-10-29T16:28:29Z
 lastmod: 2016-10-29T16:28:29Z
-categories: 
+categories:
  - docker
  - lxc
 tags: [ "cloudnative", "lxc" ]

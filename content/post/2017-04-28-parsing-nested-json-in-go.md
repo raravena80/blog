@@ -3,7 +3,7 @@ title: "Parsing Deeply Nested JSON in Go"
 date: 2017-04-28T16:28:29Z
 lastmod: 2017-04-28T16:28:29Z
 comments: true
-categories: 
+categories:
  - go
  - json
  - gjson

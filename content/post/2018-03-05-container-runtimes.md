@@ -10,7 +10,7 @@ categories:
  - containers
 tags: [ "containers", "runtimes", "cncf" ]
 keywords: runtimes containers cncf Ricardo Aravena
-description: The boom of container runtimes 
+description: The boom of container runtimes
 slug: container-runtimes-cncf
 
 ---
@@ -18,11 +18,11 @@ slug: container-runtimes-cncf
 It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure.
 With that came a shift in cloud applications from monolithic to microservices. Containers
 made it easy for developers to deploy directly to production mostly caring about the scope of
-her/his microservice. 
+her/his microservice.
 
 Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which
 allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as
-quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your 
+quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your
 containers up and down depending on demand.
 
 This introduced another challenge where organizations have been trying to figure out what is the best way

@@ -191,7 +191,7 @@ If we tune the following parameters in the `/usr/share/defaults/kata-containers/
 default_vcpus = 4
 default_memory = 3072
 enable_iothreads = true
-``` 
+```
 
 
 Also changing the number of operations from `2500000` to `500000` and using
