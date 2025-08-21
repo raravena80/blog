@@ -1,21 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Gjson on </title>
-    <link>https://serverbooter.com/categories/gjson/</link>
-    <description>Recent content in Gjson on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
-    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Fri, 28 Apr 2017 16:28:29 +0000</lastBuildDate>
-    <atom:link href="https://serverbooter.com/categories/gjson/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Parsing Deeply Nested JSON in Go</title>
-      <link>https://serverbooter.com/post/parsing-nested-json-in-go/</link>
-      <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://serverbooter.com/post/parsing-nested-json-in-go/</guid>
-      <description>&lt;p&gt;Parsing deeply nested json in Go is a bit challenging due to the fact that the language doesn&amp;rsquo;t provide many helpers to do so. If you do that in Ruby or Python it&amp;rsquo;s pretty straight forward running some like this in Python &lt;code&gt;j = json.load(jsonstring)&lt;/code&gt; or in Ruby &lt;code&gt;j = JSON.load(jsonstring)&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In go generally you have to prefine your structs and run through an &lt;code&gt;Unmarshal&lt;/code&gt; function which means that most of the times you need to know ahead of time what the nest level and structure of your target json is to parse it. For example:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Gjson on</title><link>https://serverbooter.com/categories/gjson/</link><description>Recent content in Gjson on</description><generator>Hugo</generator><language>en-us</language><managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor><webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster><lastBuildDate>Thu, 14 Aug 2025 09:50:14 -1000</lastBuildDate><atom:link href="https://serverbooter.com/categories/gjson/index.xml" rel="self" type="application/rss+xml"/><item><title>Parsing Deeply Nested JSON in Go</title><link>https://serverbooter.com/post/parsing-nested-json-in-go/</link><pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/post/parsing-nested-json-in-go/</guid><description>&lt;p>Parsing deeply nested json in Go is a bit challenging due to the fact that the language doesn&amp;rsquo;t provide many helpers to do so. If you do that in Ruby or Python it&amp;rsquo;s pretty straight forward running some like this in Python &lt;code>j = json.load(jsonstring)&lt;/code> or in Ruby &lt;code>j = JSON.load(jsonstring)&lt;/code>.&lt;/p>
+&lt;p>In go generally you have to prefine your structs and run through an &lt;code>Unmarshal&lt;/code> function which means that most of the times you need to know ahead of time what the nest level and structure of your target json is to parse it. For example:&lt;/p></description></item></channel></rss>

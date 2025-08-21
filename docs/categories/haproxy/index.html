@@ -1,491 +1,116 @@
-<!DOCTYPE html>
-<html lang="en-us" itemscope itemtype="http://schema.org/WebPage">
-  <head>
-
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-  <title>Haproxy - </title>
-  <meta name="author" content="Ricardo Aravena"/><script type="application/ld+json">
-{
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "name": "",
-
-    "url": "https:\/\/serverbooter.com\/"
-}
-</script><script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "",
-  "url": "https:\/\/serverbooter.com\/"
-
-
-
-
-}
-</script>
-
-<meta property="og:title" content="Haproxy" />
-<meta property="og:url" content="https://serverbooter.com/categories/haproxy/" />
-<meta property="og:type" content="website" />
-<meta property="og:site_name" content="" />
-
-  <meta name="twitter:title" content="Haproxy" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@raravena80" />
-  <meta name="twitter:creator" content="@raravena80" />
-  <link href='https://serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.148.2">
-  <link rel="alternate" href="https://serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="https://serverbooter.com/css/syntax.css" /><link rel="stylesheet" href="https://serverbooter.com/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
-
-
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
-        <span class="sr-only"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="https://serverbooter.com/"></a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="main-navbar">
-      <ul class="nav navbar-nav navbar-right">
-
-
-            <li>
-              <a title="Blog" href="/">Blog</a>
-            </li>
-
-
-
-            <li>
-              <a title="Speaking" href="/page/speaking/">Speaking</a>
-            </li>
-
-
-
-            <li>
-              <a title="About" href="/page/about/">About</a>
-            </li>
-
-
-
-            <li>
-              <a title="Tags" href="/tags">Tags</a>
-            </li>
-
-
-
-
-
-
-      </ul>
-    </div>
-
-
-
-  </div>
-</nav>
-
-
-
-
-
-
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-<div class="pswp__bg"></div>
-
-<div class="pswp__scroll-wrap">
-
-    <div class="pswp__container">
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-      <div class="pswp__item"></div>
-    </div>
-
-    <div class="pswp__ui pswp__ui--hidden">
-    <div class="pswp__top-bar">
-
-      <div class="pswp__counter"></div>
-      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-      <button class="pswp__button pswp__button--share" title="Share"></button>
-      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-
-      <div class="pswp__preloader">
-        <div class="pswp__preloader__icn">
-          <div class="pswp__preloader__cut">
-            <div class="pswp__preloader__donut"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-      <div class="pswp__share-tooltip"></div>
-    </div>
-    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-    </button>
-    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-    </button>
-    <div class="pswp__caption">
-      <div class="pswp__caption__center"></div>
-    </div>
-    </div>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <header class="header-section ">
-
-    <div class="intro-header no-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="categories-heading">
-
-                <h1>Haproxy</h1>
-
-
-                <hr class="small">
-
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-
-
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
-        <div class="posts-list">
-
-            <article class="post-preview">
-    <a href="https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/">
-        <h2 class="post-title">How To Create an Ansible Playbook to Configure HAProxy</h2>
-
-
-
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-
-
-  <i class="fas fa-calendar"></i>&nbsp;
-
-
-
-
-
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena
-
-
-
-</span>
-
-
-    </p>
-    <div class="post-entry">
-
-        <p>This is the continuation for <a href="/post/setup-a-simple-haproxy-config/">Setup a simple HAproxy config</a></p>
-<p>It explains how to create an Ansible playbook to automate the haproxy
-configuration.</p>
-<p>If you&rsquo;d like to find out more about Ansible you can read up on it on
-their website: <a href="http://www.ansible.com">http://www.ansible.com</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set up and configure an HaProxy server (Ubuntu flavor)</span>
-</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">haproxy</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hosts</span>: <span style="color:#ae81ff">all</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">user</span>: <span style="color:#ae81ff">userwithsudoaccess</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">sudo</span>: <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tags</span>: <span style="color:#ae81ff">haproxy</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">vars_files</span>:
-</span></span><span style="display:flex;"><span>    - <span style="color:#e6db74">&#34;vars/main.yml&#34;</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tasks</span>:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># haproxy package for Ubuntu</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">include</span>: <span style="color:#ae81ff">tasks/haproxy-apt.yml</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Specific haproxy tasks follow here</span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Copy haproxy logrotate file</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">action</span>: &gt;<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxy
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mode=0644 owner=root group=root</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Create haproxy rsyslog configuration</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">action</span>: &gt;<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        copy src=files/haproxy-rsyslog.conf
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        dest=/etc/rsyslog.d/49-haproxy.conf
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mode=0644 owner=root group=root</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">notify</span>: <span style="color:#ae81ff">restart rsyslog</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Configure system rsyslog</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">action</span>: &gt;<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        copy src=files/rsyslog.conf
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        dest=/etc/rsyslog.conf
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mode=0644 owner=root group=root</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">notify</span>: <span style="color:#ae81ff">restart rsyslog</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Create haproxy configuration file</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">action</span>: &gt;<span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        template src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        mode=0644 owner=root group=root</span>
-</span></span><span style="display:flex;"><span>      <span style="color:#f92672">notify</span>: <span style="color:#ae81ff">restart haproxy</span>
+<!doctype html><html lang=en-us itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Haproxy -</title><meta name=author content="Ricardo Aravena"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"","url":"https:\/\/serverbooter.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/serverbooter.com\/"}</script><meta property="og:title" content="Haproxy"><meta property="og:url" content="https://serverbooter.com/categories/haproxy/"><meta property="og:type" content="website"><meta property="og:site_name" content><meta name=twitter:title content="Haproxy"><meta name=twitter:card content="summary"><meta name=twitter:site content="@raravena80"><meta name=twitter:creator content="@raravena80"><link href=https://serverbooter.com/img/favicon.png rel=icon type=image/x-icon><meta name=generator content="Hugo 0.148.2"><link rel=alternate href=https://serverbooter.com/index.xml type=application/rss+xml title><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css integrity=sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.5.0/css/all.css integrity=sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU crossorigin=anonymous><link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous><link rel=stylesheet href=https://serverbooter.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://serverbooter.com/css/syntax.css><link rel=stylesheet href=https://serverbooter.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://serverbooter.com/></a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=Blog href=/>Blog</a></li><li><a title=Speaking href=/page/speaking/>Speaking</a></li><li><a title=About href=/page/about/>About</a></li><li><a title=Tags href=/tags>Tags</a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=categories-heading><h1>Haproxy</h1><hr class=small></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=posts-list><article class=post-preview><a href=https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/><h2 class=post-title>How To Create an Ansible Playbook to Configure HAProxy</h2></a><p class=post-meta><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;October 21, 2013
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena</span></p><div class=post-entry><p>This is the continuation for <a href=/post/setup-a-simple-haproxy-config/>Setup a simple HAproxy config</a></p><p>It explains how to create an Ansible playbook to automate the haproxy
+configuration.</p><p>If you&rsquo;d like to find out more about Ansible you can read up on it on
+their website: <a href=http://www.ansible.com>http://www.ansible.com</a></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>---
+</span></span><span style=display:flex><span><span style=color:#75715e># Set up and configure an HaProxy server (Ubuntu flavor)</span>
+</span></span><span style=display:flex><span>- <span style=color:#f92672>name</span>: <span style=color:#ae81ff>haproxy</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>hosts</span>: <span style=color:#ae81ff>all</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>user</span>: <span style=color:#ae81ff>userwithsudoaccess</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>sudo</span>: <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>tags</span>: <span style=color:#ae81ff>haproxy</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>vars_files</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#e6db74>&#34;vars/main.yml&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>tasks</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># haproxy package for Ubuntu</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>include</span>: <span style=color:#ae81ff>tasks/haproxy-apt.yml</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Specific haproxy tasks follow here</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Copy haproxy logrotate file</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>action</span>: &gt;<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        copy src=files/haproxy.logrotate dest=/etc/logrotate.d/haproxy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mode=0644 owner=root group=root</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Create haproxy rsyslog configuration</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>action</span>: &gt;<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        copy src=files/haproxy-rsyslog.conf
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        dest=/etc/rsyslog.d/49-haproxy.conf
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mode=0644 owner=root group=root</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>notify</span>: <span style=color:#ae81ff>restart rsyslog</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Configure system rsyslog</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>action</span>: &gt;<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        copy src=files/rsyslog.conf
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        dest=/etc/rsyslog.conf
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mode=0644 owner=root group=root</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>notify</span>: <span style=color:#ae81ff>restart rsyslog</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Create haproxy configuration file</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>action</span>: &gt;<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        template src=templates/haproxy.cfg.j2 dest=/etc/haproxy/haproxy.cfg
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>        mode=0644 owner=root group=root</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>notify</span>: <span style=color:#ae81ff>restart haproxy</span>
 </span></span></code></pre></div><p>The following file that contains the variables needed for the haproxy playbook
-it should located under vars (vars/main.yml)</p>
-        <a href="https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/" class="post-read-more">[]</a>
-
-    </div>
-
-
-    <div class="blog-tags">
-
-        <a href="https://serverbooter.com//tags/haproxy/">haproxy</a>&nbsp;
-
-    </div>
-
-
-</article>
-
-            <article class="post-preview">
-    <a href="https://serverbooter.com/post/setup-a-simple-haproxy-config/">
-        <h2 class="post-title">Setup a Simple HAProxy Config</h2>
-
-
-
-    </a>
-
-    <p class="post-meta">
-        <span class="post-meta">
-
-
-  <i class="fas fa-calendar"></i>&nbsp;
-
-
-
-
-
-      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena
-
-
-
-</span>
-
-
-    </p>
-    <div class="post-entry">
-
-        <p>Here&rsquo;s simple haproxy configuration to get you started,
-you probably want to stick this under /etc/haproxy/haproxy.cfg</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>global
-</span></span><span style="display:flex;"><span>	log 127.0.0.1	local0
-</span></span><span style="display:flex;"><span>	log 127.0.0.1	local1 notice
-</span></span><span style="display:flex;"><span>	maxconn 4096
-</span></span><span style="display:flex;"><span>	user haproxy
-</span></span><span style="display:flex;"><span>	group haproxy
-</span></span><span style="display:flex;"><span>	daemon
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>defaults
-</span></span><span style="display:flex;"><span>	log	global
-</span></span><span style="display:flex;"><span>	mode	http
-</span></span><span style="display:flex;"><span>	option	httplog
-</span></span><span style="display:flex;"><span>	option	dontlognull
-</span></span><span style="display:flex;"><span>	retries	3
-</span></span><span style="display:flex;"><span>	option redispatch
-</span></span><span style="display:flex;"><span>	maxconn	4096
-</span></span><span style="display:flex;"><span>	contimeout	5000
-</span></span><span style="display:flex;"><span>	clitimeout	50000
-</span></span><span style="display:flex;"><span>	srvtimeout	50000
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	stats enable
-</span></span><span style="display:flex;"><span>	stats auth		admin:password
-</span></span><span style="display:flex;"><span>	stats uri		/monitor
-</span></span><span style="display:flex;"><span>	stats refresh	5s
-</span></span><span style="display:flex;"><span>	option httpchk	GET /status
-</span></span><span style="display:flex;"><span>	retries		5
-</span></span><span style="display:flex;"><span>	option redispatch
-</span></span><span style="display:flex;"><span>	errorfile	503	/etc/haproxy/errors/503.http
-</span></span><span style="display:flex;"><span>	errorfile	400	/etc/haproxy/errors/400.http
-</span></span><span style="display:flex;"><span>	errorfile	403	/etc/haproxy/errors/403.http
-</span></span><span style="display:flex;"><span>	errorfile	408	/etc/haproxy/errors/408.http
-</span></span><span style="display:flex;"><span>	errorfile	500	/etc/haproxy/errors/500.http
-</span></span><span style="display:flex;"><span>	errorfile	502	/etc/haproxy/errors/502.http
-</span></span><span style="display:flex;"><span>	errorfile	503	/etc/haproxy/errors/503.http
-</span></span><span style="display:flex;"><span>	errorfile	504	/etc/haproxy/errors/504.http
-</span></span><span style="display:flex;"><span>	balance roundrobin	# each server is used in turns, according to assigned weight
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>listen http-in
-</span></span><span style="display:flex;"><span>    bind :80
-</span></span><span style="display:flex;"><span>    monitor-uri   /haproxy  # end point to monitor HAProxy status (returns 200)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    # option httpclose
-</span></span><span style="display:flex;"><span>    server server1 server1.mydomain.com:8080 weight 1 maxconn 2000 check inter 4000
-</span></span><span style="display:flex;"><span>    server server2 server2.mydomain.com:8080 weight 1 maxconn 2000 check inter 4000
-</span></span><span style="display:flex;"><span>    server server3 server3.mydomain.com:8080 weight 1 maxconn 2000 check inter 4000
-</span></span><span style="display:flex;"><span>    rspidel ^Set-cookie:\ IP=	# do not let this cookie tell our internal IP address
+it should located under vars (vars/main.yml)</p><a href=https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/ class=post-read-more>[]</a></div><div class=blog-tags><a href=https://serverbooter.com//tags/haproxy/>haproxy</a>&nbsp;</div></article><article class=post-preview><a href=https://serverbooter.com/post/setup-a-simple-haproxy-config/><h2 class=post-title>Setup a Simple HAProxy Config</h2></a><p class=post-meta><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;October 21, 2013
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena</span></p><div class=post-entry><p>Here&rsquo;s simple haproxy configuration to get you started,
+you probably want to stick this under /etc/haproxy/haproxy.cfg</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-plain data-lang=plain><span style=display:flex><span>global
+</span></span><span style=display:flex><span>	log 127.0.0.1	local0
+</span></span><span style=display:flex><span>	log 127.0.0.1	local1 notice
+</span></span><span style=display:flex><span>	maxconn 4096
+</span></span><span style=display:flex><span>	user haproxy
+</span></span><span style=display:flex><span>	group haproxy
+</span></span><span style=display:flex><span>	daemon
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>defaults
+</span></span><span style=display:flex><span>	log	global
+</span></span><span style=display:flex><span>	mode	http
+</span></span><span style=display:flex><span>	option	httplog
+</span></span><span style=display:flex><span>	option	dontlognull
+</span></span><span style=display:flex><span>	retries	3
+</span></span><span style=display:flex><span>	option redispatch
+</span></span><span style=display:flex><span>	maxconn	4096
+</span></span><span style=display:flex><span>	contimeout	5000
+</span></span><span style=display:flex><span>	clitimeout	50000
+</span></span><span style=display:flex><span>	srvtimeout	50000
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	stats enable
+</span></span><span style=display:flex><span>	stats auth		admin:password
+</span></span><span style=display:flex><span>	stats uri		/monitor
+</span></span><span style=display:flex><span>	stats refresh	5s
+</span></span><span style=display:flex><span>	option httpchk	GET /status
+</span></span><span style=display:flex><span>	retries		5
+</span></span><span style=display:flex><span>	option redispatch
+</span></span><span style=display:flex><span>	errorfile	503	/etc/haproxy/errors/503.http
+</span></span><span style=display:flex><span>	errorfile	400	/etc/haproxy/errors/400.http
+</span></span><span style=display:flex><span>	errorfile	403	/etc/haproxy/errors/403.http
+</span></span><span style=display:flex><span>	errorfile	408	/etc/haproxy/errors/408.http
+</span></span><span style=display:flex><span>	errorfile	500	/etc/haproxy/errors/500.http
+</span></span><span style=display:flex><span>	errorfile	502	/etc/haproxy/errors/502.http
+</span></span><span style=display:flex><span>	errorfile	503	/etc/haproxy/errors/503.http
+</span></span><span style=display:flex><span>	errorfile	504	/etc/haproxy/errors/504.http
+</span></span><span style=display:flex><span>	balance roundrobin	# each server is used in turns, according to assigned weight
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>listen http-in
+</span></span><span style=display:flex><span>    bind :80
+</span></span><span style=display:flex><span>    monitor-uri   /haproxy  # end point to monitor HAProxy status (returns 200)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    # option httpclose
+</span></span><span style=display:flex><span>    server server1 server1.mydomain.com:8080 weight 1 maxconn 2000 check inter 4000
+</span></span><span style=display:flex><span>    server server2 server2.mydomain.com:8080 weight 1 maxconn 2000 check inter 4000
+</span></span><span style=display:flex><span>    server server3 server3.mydomain.com:8080 weight 1 maxconn 2000 check inter 4000
+</span></span><span style=display:flex><span>    rspidel ^Set-cookie:\ IP=	# do not let this cookie tell our internal IP address
 </span></span></code></pre></div><p>You also want to setup logging using rsyslog,
 you can syslog-ng or other loggers too as well,
-but the configuration is different.</p>
-        <a href="https://serverbooter.com/post/setup-a-simple-haproxy-config/" class="post-read-more">[]</a>
-
-    </div>
-
-
-    <div class="blog-tags">
-
-        <a href="https://serverbooter.com//tags/haproxy/">haproxy</a>&nbsp;
-
-    </div>
-
-
-</article>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        <ul class="list-inline text-center footer-links">
-
-              <li>
-                <a href="mailto:raravena80@gmail.com" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com/" title="Facebook">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/raravena80" title="GitHub">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/raravena80" title="Twitter">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/raravena" title="LinkedIn">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/" title="Instagram">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-
-          <li>
-            <a href="/categories/haproxy/index.xml" title="RSS">
-              <span class="fa-stack fa-lg">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
-
-        </ul>
-        <p class="credits copyright text-muted">
-
-
-              Ricardo Aravena
-
-
-
-          &nbsp;&bull;&nbsp;&copy;
-
-            2025
-
-
-
-        </p>
-
-        <p class="credits theme-by text-muted">
-
-
-        </p>
-      </div>
-    </div>
-  </div>
-</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<script src="https://serverbooter.com/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://serverbooter.com/js/load-photoswipe.js"></script>
-
-
-
-
-
-
-
-
-
-
-  </body>
-</html>
-
+but the configuration is different.</p><a href=https://serverbooter.com/post/setup-a-simple-haproxy-config/ class=post-read-more>[]</a></div><div class=blog-tags><a href=https://serverbooter.com//tags/haproxy/>haproxy</a>&nbsp;</div></article></div></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=mailto:raravena80@gmail.com title="Email me"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://www.facebook.com/ title=Facebook><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://github.com/raravena80 title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/raravena80 title=Twitter><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://linkedin.com/in/raravena title=LinkedIn><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://www.instagram.com/ title=Instagram><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-instagram fa-stack-1x fa-inverse"></i></span></a></li><li><a href=/categories/haproxy/index.xml title=RSS><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-rss fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="credits copyright text-muted">Ricardo Aravena
+&nbsp;&bull;&nbsp;&copy;
+2025</p><p class="credits theme-by text-muted"></p></div></div></div></footer><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js integrity=sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js integrity=sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe crossorigin=anonymous></script><script src=https://code.jquery.com/jquery-1.12.4.min.js integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin=anonymous></script><script src=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js integrity=sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa crossorigin=anonymous></script><script src=https://serverbooter.com/js/main.js></script><script>renderMathInElement(document.body)</script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://serverbooter.com/js/load-photoswipe.js></script></body></html>

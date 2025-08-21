@@ -2,8 +2,8 @@
 title: "Setup a Simple HAProxy Config"
 description: "Setup a Simple HAProxy Config"
 tags: [ "haproxy" ]
-lastmod: 2013-10-21
-date: 2013-10-21
+lastmod: 2013-10-21T00:00:00Z
+date: 2013-10-21T00:00:00Z
 categories:
   - haproxy
 slug: "setup-a-simple-haproxy-config"

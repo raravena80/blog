@@ -12,11 +12,32 @@ ignoreLogs = ['warning-goldmark-raw-html']
 #googleAnalytics = "XXX"
 publishDir = "docs"
 
+# Enable automatic lastmod dates for better SEO
+enableGitInfo = true
+
+# Minify output to remove whitespace
+[minify]
+  disableHTML = false
+  disableCSS = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepDefaultAttrVals = false
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+      keepWhitespace = false
+
 [Params]
   #subtitle = "Blogging for DevOps Nerds"
   #logo = "img/avatar-icon.png"
   favicon = "img/favicon.png"
   dateFormat = "January 2, 2006"
+  dateformat = "January 2, 2006"
   commit = false
   rss = true
   comments = true

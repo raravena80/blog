@@ -1,28 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Cncf on </title>
-    <link>https://serverbooter.com/categories/cncf/</link>
-    <description>Recent content in Cncf on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
-    <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
-    <lastBuildDate>Mon, 16 Apr 2018 14:17:00 +0000</lastBuildDate>
-    <atom:link href="https://serverbooter.com/categories/cncf/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Running Scylla in Kata Containers</title>
-      <link>https://serverbooter.com/post/scylla-in-kata-containers/</link>
-      <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://serverbooter.com/post/scylla-in-kata-containers/</guid>
-      <description>&lt;p&gt;The Kata community has been busy getting the first release out the door.&lt;/p&gt;&#xA;&lt;p&gt;Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. VMware takes this step even further by providing things like Storage VMotion.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>The Boom of Container Runtimes</title>
-      <link>https://serverbooter.com/post/container-runtimes-cncf/</link>
-      <pubDate>Sun, 04 Mar 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>https://serverbooter.com/post/container-runtimes-cncf/</guid>
-      <description>&lt;p&gt;It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure.&#xA;With that came a shift in cloud applications from monolithic to microservices. Containers&#xA;made it easy for developers to deploy directly to production mostly caring about the scope of&#xA;her/his microservice.&lt;/p&gt;&#xA;&lt;p&gt;Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which&#xA;allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as&#xA;quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your&#xA;containers up and down depending on demand.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cncf on</title><link>https://serverbooter.com/categories/cncf/</link><description>Recent content in Cncf on</description><generator>Hugo</generator><language>en-us</language><managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor><webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster><lastBuildDate>Thu, 14 Aug 2025 09:50:14 -1000</lastBuildDate><atom:link href="https://serverbooter.com/categories/cncf/index.xml" rel="self" type="application/rss+xml"/><item><title>Running Scylla in Kata Containers</title><link>https://serverbooter.com/post/scylla-in-kata-containers/</link><pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/post/scylla-in-kata-containers/</guid><description>&lt;p>The Kata community has been busy getting the first release out the door.&lt;/p>
+&lt;p>Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. VMware takes this step even further by providing things like Storage VMotion.&lt;/p></description></item><item><title>The Boom of Container Runtimes</title><link>https://serverbooter.com/post/container-runtimes-cncf/</link><pubDate>Sun, 04 Mar 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/post/container-runtimes-cncf/</guid><description>&lt;p>It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure.
+With that came a shift in cloud applications from monolithic to microservices. Containers
+made it easy for developers to deploy directly to production mostly caring about the scope of
+her/his microservice.&lt;/p>
+&lt;p>Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which
+allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as
+quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your
+containers up and down depending on demand.&lt;/p></description></item></channel></rss>

@@ -2,8 +2,8 @@
 title: "How To Create an Ansible Playbook to Configure HAProxy"
 description: "How To Create an Ansible Playbook to Configure HAProxy"
 tags: [ "haproxy" ]
-lastmod: 2013-10-21
-date: 2013-10-21
+lastmod: 2013-10-21T00:00:00Z
+date: 2013-10-21T00:00:00Z
 categories:
   - "haproxy"
 slug: "how-to-create-an-ansible-playbook-to-configure-haproxy"

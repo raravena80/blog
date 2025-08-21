@@ -1,7 +1,7 @@
 ---
 title: "Ansible Playbook for Scout on Ubuntu"
-date: 2013-10-22
-lastmod: 2013-10-22
+date: 2013-10-22T00:00:00Z
+lastmod: 2013-10-22T00:00:00Z
 comments: true
 tags: [ "ansible", "scout" ]
 categories:
