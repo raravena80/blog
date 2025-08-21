@@ -1,0 +1,27 @@
+/* Fix dark mode code readability */
+@media (prefers-color-scheme: dark) {
+  /* Inline code blocks */
+  code {
+    background-color: #2d3748 !important;
+    color: #e2e8f0 !important;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  
+  /* Code blocks in pre tags */
+  pre code {
+    background-color: #2d3748 !important;
+    color: #e2e8f0 !important;
+  }
+  
+  /* Pre blocks themselves */
+  pre {
+    background-color: #2d3748 !important;
+    border: 1px solid #4a5568;
+  }
+  
+  /* Syntax highlighting improvements */
+  .highlight pre {
+    background-color: #2d3748 !important;
+  }
+}
