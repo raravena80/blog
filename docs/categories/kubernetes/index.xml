@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Kubernetes on </title>
-    <link>http://localhost:1313/categories/kubernetes/</link>
+    <link>https://serverbooter.com/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Sat, 19 Apr 2025 14:17:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://serverbooter.com/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Ideas to Impact: Cloud Native AI and TOC Highlights Post-KubeCon EU 2025</title>
-      <link>http://localhost:1313/post/cncf-cloud-native-ai-and-toc-highlights-post-kubecon-eu-2-25/</link>
+      <link>https://serverbooter.com/post/cncf-cloud-native-ai-and-toc-highlights-post-kubecon-eu-2-25/</link>
       <pubDate>Sat, 19 Apr 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/post/cncf-cloud-native-ai-and-toc-highlights-post-kubecon-eu-2-25/</guid>
+      <guid>https://serverbooter.com/post/cncf-cloud-native-ai-and-toc-highlights-post-kubecon-eu-2-25/</guid>
       <description>&lt;h2 id=&#34;from-ideas-to-impact-cloud-native-ai-and-toc-highlights-post-kubecon-eu-2025&#34;&gt;&lt;strong&gt;From Ideas to Impact: Cloud Native AI and TOC Highlights Post-KubeCon EU 2025&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;p&gt;When &lt;a href=&#34;https://www.serverbooter.com/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/&#34;&gt;we previewed&lt;/a&gt; the CNCF Cloud Native AI Working Group&amp;rsquo;s efforts ahead of KubeCon EU 2025, the tone was of curiosity and anticipation. Some still viewed AI as an outlier in the cloud-native world. But if KubeCon EU proved anything, AI has now fully arrived—and the community is building it &lt;em&gt;in a cloud native way&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This year&amp;rsquo;s event didn&amp;rsquo;t just validate the momentum around AI; it showcased a CNCF community that&amp;rsquo;s actively rethinking its foundations—from how Technical Advisory Groups (TAGs) work to how the community serves end users to how projects grow and graduate. The CNCF Technical Oversight Committee (TOC) had a visible and influential role throughout the week, laying down a clear marker: the next wave of cloud native isn&amp;rsquo;t just about orchestration—it&amp;rsquo;s about intelligence, usability, and sustainable growth.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CNCF Cloud Native AI Working Group: Innovation from Edge to Core!</title>
-      <link>http://localhost:1313/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/</link>
+      <link>https://serverbooter.com/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/</link>
       <pubDate>Thu, 27 Mar 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/</guid>
+      <guid>https://serverbooter.com/post/cncf-cloud-native-ai-working-group-innovation-from-edge-to-core/</guid>
       <description>&lt;p&gt;Over the past six months, the Cloud Native Computing Foundation&amp;rsquo;s (CNCF) &lt;a href=&#34;https://docs.google.com/document/d/1tS6gL5qjGLaHDtAChssqJhBVm8BIpopUA3Ddzm9LHwg/edit?tab=t.0#heading=h.tprh9feizr4r&#34;&gt;Cloud Native AI (CNAI) Working Group&lt;/a&gt; has been at the forefront of integrating artificial intelligence (AI) and machine learning (ML) with cloud-native technologies. This is a moment to discuss the working group&amp;rsquo;s initiatives and opportunities for contributors and enthusiasts as we prepare for KubeCon Europe 2025 in London.&lt;/p&gt;&#xA;&lt;p&gt;The group has been making strides in galvanizing the community around the needs of AI/ML workloads on top of cloud native environments. A significant deliverable was the publication of the &amp;ldquo;Cloud Native AI&amp;rdquo; whitepaper in March 2024.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Fun Times at The Kubernetes Forum Seoul and Sydney 2019</title>
-      <link>http://localhost:1313/post/kubernetes-forum-seoul-sydney/</link>
+      <link>https://serverbooter.com/post/kubernetes-forum-seoul-sydney/</link>
       <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/post/kubernetes-forum-seoul-sydney/</guid>
+      <guid>https://serverbooter.com/post/kubernetes-forum-seoul-sydney/</guid>
       <description>&lt;p&gt;Hello everyone! I&amp;rsquo;m excited to write this post about my experience at the Kubernetes Forum Seoul and Sydney 2019. My journey started in San Francisco on Friday evening, December 6th, 2019, on a flight to Seoul.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/7659560/71111562-8f2e6600-217e-11ea-82b8-b5b0bad78d14.jpg&#34; alt=&#34;SFO-ICN&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://user-images.githubusercontent.com/7659560/71111890-3b704c80-217f-11ea-89b3-2214675f29c3.jpg&#34; alt=&#34;SFO-ICN-Map&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of time during the day to rest in the hotel at the venue, &lt;a href=&#34;https://www.seouldragoncity.com/&#34;&gt;The Seoul Dragon City&lt;/a&gt;. As speakers, we were invited along with the organizers and community leaders to an event dinner in the &lt;a href=&#34;https://sdc-club.com/en/convention/room-goguryeo.php&#34;&gt;Goguryeo room&lt;/a&gt;. During that time, we had a great start networking with fellow industry leaders with an opportunity to connect. In my opinion, the number of people was just right to talk to most of the guests at dinner.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Kubernetes on GCP</title>
-      <link>http://localhost:1313/post/kubernetes-on-gcp/</link>
+      <link>https://serverbooter.com/post/kubernetes-on-gcp/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/post/kubernetes-on-gcp/</guid>
-      <description>&lt;p&gt;Kubernetes has come a long way over the last 2 years and I was so excited to learn about during &lt;a href=&#34;http://localhost:1313/post/cloudnativecon-kubecon-europe/&#34;&gt;CloudNativeCon/Kubecon Berlin&lt;/a&gt; this year.&lt;/p&gt;&#xA;&lt;p&gt;As of Today &lt;a href=&#34;https://github.com/kubernetes/kops&#34;&gt;Kops&lt;/a&gt; the standard tool for installing Kubernetes on AWS doesn&amp;rsquo;t support GCP yet (it&amp;rsquo;s in the works). However you can still setup your cluster using good old &lt;a href=&#34;https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh&#34;&gt;kube-up.sh&lt;/a&gt;. There&amp;rsquo;s also a pretty good explanation on the &lt;a href=&#34;https://kubernetes.io/docs/getting-started-guides/gce/&#34;&gt;k8s docs&lt;/a&gt;. Make sure you install the &lt;a href=&#34;https://cloud.google.com/sdk/&#34;&gt;Google Cloud SDK&lt;/a&gt; with gcloud and all their utils.&lt;/p&gt;</description>
+      <guid>https://serverbooter.com/post/kubernetes-on-gcp/</guid>
+      <description>&lt;p&gt;Kubernetes has come a long way over the last 2 years and I was so excited to learn about during &lt;a href=&#34;https://serverbooter.com/post/cloudnativecon-kubecon-europe/&#34;&gt;CloudNativeCon/Kubecon Berlin&lt;/a&gt; this year.&lt;/p&gt;&#xA;&lt;p&gt;As of Today &lt;a href=&#34;https://github.com/kubernetes/kops&#34;&gt;Kops&lt;/a&gt; the standard tool for installing Kubernetes on AWS doesn&amp;rsquo;t support GCP yet (it&amp;rsquo;s in the works). However you can still setup your cluster using good old &lt;a href=&#34;https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh&#34;&gt;kube-up.sh&lt;/a&gt;. There&amp;rsquo;s also a pretty good explanation on the &lt;a href=&#34;https://kubernetes.io/docs/getting-started-guides/gce/&#34;&gt;k8s docs&lt;/a&gt;. Make sure you install the &lt;a href=&#34;https://cloud.google.com/sdk/&#34;&gt;Google Cloud SDK&lt;/a&gt; with gcloud and all their utils.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

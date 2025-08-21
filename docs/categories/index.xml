@@ -2,250 +2,250 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://serverbooter.com/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Sat, 19 Apr 2025 14:17:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://serverbooter.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ai</title>
-      <link>http://localhost:1313/categories/ai/</link>
+      <link>https://serverbooter.com/categories/ai/</link>
       <pubDate>Sat, 19 Apr 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/ai/</guid>
+      <guid>https://serverbooter.com/categories/ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Conferences</title>
-      <link>http://localhost:1313/categories/conferences/</link>
+      <link>https://serverbooter.com/categories/conferences/</link>
       <pubDate>Sat, 19 Apr 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/conferences/</guid>
+      <guid>https://serverbooter.com/categories/conferences/</guid>
       <description></description>
     </item>
     <item>
       <title>Kubernetes</title>
-      <link>http://localhost:1313/categories/kubernetes/</link>
+      <link>https://serverbooter.com/categories/kubernetes/</link>
       <pubDate>Sat, 19 Apr 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/kubernetes/</guid>
+      <guid>https://serverbooter.com/categories/kubernetes/</guid>
       <description></description>
     </item>
     <item>
       <title>Opensource</title>
-      <link>http://localhost:1313/categories/opensource/</link>
+      <link>https://serverbooter.com/categories/opensource/</link>
       <pubDate>Sat, 19 Apr 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/opensource/</guid>
+      <guid>https://serverbooter.com/categories/opensource/</guid>
       <description></description>
     </item>
     <item>
       <title>Technology</title>
-      <link>http://localhost:1313/categories/technology/</link>
+      <link>https://serverbooter.com/categories/technology/</link>
       <pubDate>Sat, 19 Apr 2025 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/technology/</guid>
+      <guid>https://serverbooter.com/categories/technology/</guid>
       <description></description>
     </item>
     <item>
       <title>Speaking</title>
-      <link>http://localhost:1313/categories/speaking/</link>
+      <link>https://serverbooter.com/categories/speaking/</link>
       <pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/speaking/</guid>
+      <guid>https://serverbooter.com/categories/speaking/</guid>
       <description></description>
     </item>
     <item>
       <title>Talks</title>
-      <link>http://localhost:1313/categories/talks/</link>
+      <link>https://serverbooter.com/categories/talks/</link>
       <pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/talks/</guid>
+      <guid>https://serverbooter.com/categories/talks/</guid>
       <description></description>
     </item>
     <item>
       <title>Cncf</title>
-      <link>http://localhost:1313/categories/cncf/</link>
+      <link>https://serverbooter.com/categories/cncf/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/cncf/</guid>
+      <guid>https://serverbooter.com/categories/cncf/</guid>
       <description></description>
     </item>
     <item>
       <title>Containers</title>
-      <link>http://localhost:1313/categories/containers/</link>
+      <link>https://serverbooter.com/categories/containers/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/containers/</guid>
+      <guid>https://serverbooter.com/categories/containers/</guid>
       <description></description>
     </item>
     <item>
       <title>Kata</title>
-      <link>http://localhost:1313/categories/kata/</link>
+      <link>https://serverbooter.com/categories/kata/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/kata/</guid>
+      <guid>https://serverbooter.com/categories/kata/</guid>
       <description></description>
     </item>
     <item>
       <title>Oci</title>
-      <link>http://localhost:1313/categories/oci/</link>
+      <link>https://serverbooter.com/categories/oci/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/oci/</guid>
+      <guid>https://serverbooter.com/categories/oci/</guid>
       <description></description>
     </item>
     <item>
       <title>Runtimes</title>
-      <link>http://localhost:1313/categories/runtimes/</link>
+      <link>https://serverbooter.com/categories/runtimes/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/runtimes/</guid>
+      <guid>https://serverbooter.com/categories/runtimes/</guid>
       <description></description>
     </item>
     <item>
       <title>Branch</title>
-      <link>http://localhost:1313/categories/branch/</link>
+      <link>https://serverbooter.com/categories/branch/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/branch/</guid>
+      <guid>https://serverbooter.com/categories/branch/</guid>
       <description></description>
     </item>
     <item>
       <title>Data</title>
-      <link>http://localhost:1313/categories/data/</link>
+      <link>https://serverbooter.com/categories/data/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/data/</guid>
+      <guid>https://serverbooter.com/categories/data/</guid>
       <description></description>
     </item>
     <item>
       <title>Infrastructure</title>
-      <link>http://localhost:1313/categories/infrastructure/</link>
+      <link>https://serverbooter.com/categories/infrastructure/</link>
       <pubDate>Wed, 04 Oct 2017 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/infrastructure/</guid>
+      <guid>https://serverbooter.com/categories/infrastructure/</guid>
       <description></description>
     </item>
     <item>
       <title>Gcp</title>
-      <link>http://localhost:1313/categories/gcp/</link>
+      <link>https://serverbooter.com/categories/gcp/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/gcp/</guid>
+      <guid>https://serverbooter.com/categories/gcp/</guid>
       <description></description>
     </item>
     <item>
       <title>Google</title>
-      <link>http://localhost:1313/categories/google/</link>
+      <link>https://serverbooter.com/categories/google/</link>
       <pubDate>Sat, 13 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/google/</guid>
+      <guid>https://serverbooter.com/categories/google/</guid>
       <description></description>
     </item>
     <item>
       <title>Dcos</title>
-      <link>http://localhost:1313/categories/dcos/</link>
+      <link>https://serverbooter.com/categories/dcos/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/dcos/</guid>
+      <guid>https://serverbooter.com/categories/dcos/</guid>
       <description></description>
     </item>
     <item>
       <title>Mesos</title>
-      <link>http://localhost:1313/categories/mesos/</link>
+      <link>https://serverbooter.com/categories/mesos/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/mesos/</guid>
+      <guid>https://serverbooter.com/categories/mesos/</guid>
       <description></description>
     </item>
     <item>
       <title>Gjson</title>
-      <link>http://localhost:1313/categories/gjson/</link>
+      <link>https://serverbooter.com/categories/gjson/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/gjson/</guid>
+      <guid>https://serverbooter.com/categories/gjson/</guid>
       <description></description>
     </item>
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/categories/go/</link>
+      <link>https://serverbooter.com/categories/go/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/go/</guid>
+      <guid>https://serverbooter.com/categories/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Json</title>
-      <link>http://localhost:1313/categories/json/</link>
+      <link>https://serverbooter.com/categories/json/</link>
       <pubDate>Fri, 28 Apr 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/json/</guid>
+      <guid>https://serverbooter.com/categories/json/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker</title>
-      <link>http://localhost:1313/categories/docker/</link>
+      <link>https://serverbooter.com/categories/docker/</link>
       <pubDate>Tue, 25 Apr 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/docker/</guid>
+      <guid>https://serverbooter.com/categories/docker/</guid>
       <description></description>
     </item>
     <item>
       <title>Lxc</title>
-      <link>http://localhost:1313/categories/lxc/</link>
+      <link>https://serverbooter.com/categories/lxc/</link>
       <pubDate>Sat, 29 Oct 2016 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/lxc/</guid>
+      <guid>https://serverbooter.com/categories/lxc/</guid>
       <description></description>
     </item>
     <item>
       <title>Ansible</title>
-      <link>http://localhost:1313/categories/ansible/</link>
+      <link>https://serverbooter.com/categories/ansible/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/ansible/</guid>
+      <guid>https://serverbooter.com/categories/ansible/</guid>
       <description></description>
     </item>
     <item>
       <title>Logging</title>
-      <link>http://localhost:1313/categories/logging/</link>
+      <link>https://serverbooter.com/categories/logging/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/logging/</guid>
+      <guid>https://serverbooter.com/categories/logging/</guid>
       <description></description>
     </item>
     <item>
       <title>Papertrailapp</title>
-      <link>http://localhost:1313/categories/papertrailapp/</link>
+      <link>https://serverbooter.com/categories/papertrailapp/</link>
       <pubDate>Tue, 29 Oct 2013 11:54:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/papertrailapp/</guid>
+      <guid>https://serverbooter.com/categories/papertrailapp/</guid>
       <description></description>
     </item>
     <item>
       <title>AWS</title>
-      <link>http://localhost:1313/categories/aws/</link>
+      <link>https://serverbooter.com/categories/aws/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/aws/</guid>
+      <guid>https://serverbooter.com/categories/aws/</guid>
       <description></description>
     </item>
     <item>
       <title>CloudFormation</title>
-      <link>http://localhost:1313/categories/cloudformation/</link>
+      <link>https://serverbooter.com/categories/cloudformation/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/cloudformation/</guid>
+      <guid>https://serverbooter.com/categories/cloudformation/</guid>
       <description></description>
     </item>
     <item>
       <title>Scout</title>
-      <link>http://localhost:1313/categories/scout/</link>
+      <link>https://serverbooter.com/categories/scout/</link>
       <pubDate>Tue, 22 Oct 2013 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/scout/</guid>
+      <guid>https://serverbooter.com/categories/scout/</guid>
       <description></description>
     </item>
     <item>
       <title>Chromebook</title>
-      <link>http://localhost:1313/categories/chromebook/</link>
+      <link>https://serverbooter.com/categories/chromebook/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/chromebook/</guid>
+      <guid>https://serverbooter.com/categories/chromebook/</guid>
       <description></description>
     </item>
     <item>
       <title>Kernel</title>
-      <link>http://localhost:1313/categories/kernel/</link>
+      <link>https://serverbooter.com/categories/kernel/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/kernel/</guid>
+      <guid>https://serverbooter.com/categories/kernel/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/categories/linux/</link>
+      <link>https://serverbooter.com/categories/linux/</link>
       <pubDate>Mon, 21 Oct 2013 22:15:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/linux/</guid>
+      <guid>https://serverbooter.com/categories/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Haproxy</title>
-      <link>http://localhost:1313/categories/haproxy/</link>
+      <link>https://serverbooter.com/categories/haproxy/</link>
       <pubDate>Mon, 21 Oct 2013 00:00:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/categories/haproxy/</guid>
+      <guid>https://serverbooter.com/categories/haproxy/</guid>
       <description></description>
     </item>
   </channel>

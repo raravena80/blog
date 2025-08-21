@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mesos on </title>
-    <link>http://localhost:1313/categories/mesos/</link>
+    <link>https://serverbooter.com/categories/mesos/</link>
     <description>Recent content in Mesos on </description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
     <lastBuildDate>Thu, 11 May 2017 16:28:29 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/mesos/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://serverbooter.com/categories/mesos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DC/OS on GCP</title>
-      <link>http://localhost:1313/post/dcos-on-gcp/</link>
+      <link>https://serverbooter.com/post/dcos-on-gcp/</link>
       <pubDate>Thu, 11 May 2017 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
-      <guid>http://localhost:1313/post/dcos-on-gcp/</guid>
+      <guid>https://serverbooter.com/post/dcos-on-gcp/</guid>
       <description>&lt;p&gt;DC/OS is the commercialized &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;Mesos&lt;/a&gt; distribution + extras maintained by Mesosphere. I found it very straight forward to setup in GCP with the out of the box &lt;a href=&#34;https://github.com/raravena80/dcos-gce&#34;&gt;Ansible scripts&lt;/a&gt; provided by Mesosphere.&lt;/p&gt;&#xA;&lt;p&gt;For starters I followed everything described in the &lt;a href=&#34;https://github.com/raravena80/dcos-gce/blob/master/README.md&#34;&gt;README&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Then, I had to modify the &lt;code&gt;group_vars/all&lt;/code&gt; file in the playbook&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---&#xA;project: &amp;lt;my-gcp-project-id&amp;gt;&#xA;subnet: default&#xA;login_name: &amp;lt;my-gcp-login-id-with-no-email&amp;gt;&#xA;bootstrap_public_ip: 10.128.0.10 # This IP need to match the network in the zone&#xA;zone: us-central1-c&#xA;&#xA;master_boot_disk_size: 200 # 200 is the recommended in GCP as of 05-2017&#xA;master_machine_type: n1-standard-1&#xA;master_boot_disk_type: pd-standard&#xA;&#xA;agent_boot_disk_size: 200&#xA;agent_machine_type: n1-standard-1&#xA;agent_boot_disk_type: pd-standard&#xA;agent_instance_type: &amp;#34;MIGRATE&amp;#34;&#xA;agent_type: private&#xA;start_id: 0001&#xA;end_id: 0001&#xA;&#xA;gcloudbin: gcloud&#xA;image: &amp;#39;centos-7-v20161027&amp;#39;&#xA;image_project: &amp;#39;centos-cloud&amp;#39;&#xA;bootstrap_public_port: 8080&#xA;cluster_name: cluster_name&#xA;scopes: &amp;#34;default=https://www.googleapis.com/auth/cloud-platform&amp;#34;&#xA;dcos_installer_filename: dcos_generate_config.sh&#xA;dcos_installer_download_path: &amp;#34;https://downloads.dcos.io/dcos/stable/{{ dcos_installer_filename }}&amp;#34;&#xA;home_directory: &amp;#34;/home/{{ login_name }}&amp;#34;&#xA;downloads_from_bootstrap: 2&#xA;dcos_bootstrap_container: dcosinstaller&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then to create the master I ran:&lt;/p&gt;</description>
     </item>
   </channel>
