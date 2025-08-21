@@ -3,7 +3,7 @@ title: "Simple Clouformation With Multiple AWS Accounts"
 date: 2013-10-24T16:28:29Z
 lastmod: 2013-10-24T16:28:29Z
 comments: true
-categories: 
+categories:
  - AWS
  - CloudFormation
  - JSON
@@ -21,7 +21,7 @@ having exact copies of the [EC2 AMIs](http://docs.aws.amazon.com/AWSEC2/latest/U
 on all the accounts and regions where we are deploying our stack.
 
 With the new features from AWS including the ability to link multiple accounts,
-many customers are starting to use accounts say for different departments or 
+many customers are starting to use accounts say for different departments or
 for different purposes say, production, QA, development, sales.  So, the motivation
 behind this script is the need for single JSON format that works
 across all accounts.

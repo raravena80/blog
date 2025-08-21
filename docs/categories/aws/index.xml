@@ -4,7 +4,7 @@
     <title>AWS on </title>
     <link>https://serverbooter.com/categories/aws/</link>
     <description>Recent content in AWS on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
@@ -15,7 +15,7 @@
       <link>https://serverbooter.com/post/simple-clouformation-with-multiple-aws-accounts/</link>
       <pubDate>Thu, 24 Oct 2013 16:28:29 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/post/simple-clouformation-with-multiple-aws-accounts/</guid>
-      <description>In this post I&amp;rsquo;ll describe how to create a simple AWS CloudFormation template so that we can deploy stack using multiple AWS accounts. In other words a common JSON CloudFormation template that can be use to bring up a stack in multiple accounts. The way we are able to do this is by having exact copies of the EC2 AMIs on all the accounts and regions where we are deploying our stack.</description>
+      <description>&lt;p&gt;In this post I&amp;rsquo;ll describe how to create a simple AWS CloudFormation template&#xA;so that we can deploy stack using multiple AWS accounts.  In other words a common&#xA;JSON CloudFormation template that can be use to bring&#xA;up a stack in multiple accounts. The way we are able to do this is by&#xA;having exact copies of the &lt;a href=&#34;http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html&#34;&gt;EC2 AMIs&lt;/a&gt;&#xA;on all the accounts and regions where we are deploying our stack.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

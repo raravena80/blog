@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" itemscope itemtype="http://schema.org/WebPage">
   <head>
-    
+
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
     "@context": "http://schema.org",
     "@type": "WebSite",
     "name": "",
-    
+
     "url": "https:\/\/serverbooter.com\/"
 }
 </script><script type="application/ld+json">
@@ -23,10 +23,10 @@
   "@type": "Organization",
   "name": "",
   "url": "https:\/\/serverbooter.com\/"
-  
-  
-  
-  
+
+
+
+
 }
 </script>
 <script type="application/ld+json">
@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.123.7">
+  <meta name="generator" content="Hugo 0.148.2">
   <link rel="alternate" href="https://serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -114,39 +114,39 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-        
-          
+
+
             <li>
               <a title="Blog" href="/">Blog</a>
             </li>
-          
-        
-          
+
+
+
             <li>
               <a title="Speaking" href="/page/speaking/">Speaking</a>
             </li>
-          
-        
-          
+
+
+
             <li>
               <a title="About" href="/page/about/">About</a>
             </li>
-          
-        
-          
+
+
+
             <li>
               <a title="Tags" href="/tags">Tags</a>
             </li>
-          
-        
 
-        
 
-        
+
+
+
+
       </ul>
     </div>
 
-    
+
 
   </div>
 </nav>
@@ -154,7 +154,7 @@
 
 
 
-    
+
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -162,23 +162,23 @@
 <div class="pswp__bg"></div>
 
 <div class="pswp__scroll-wrap">
-    
+
     <div class="pswp__container">
       <div class="pswp__item"></div>
       <div class="pswp__item"></div>
       <div class="pswp__item"></div>
     </div>
-    
+
     <div class="pswp__ui pswp__ui--hidden">
     <div class="pswp__top-bar">
-      
+
       <div class="pswp__counter"></div>
       <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
       <button class="pswp__button pswp__button--share" title="Share"></button>
       <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
       <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
+
+
       <div class="pswp__preloader">
         <div class="pswp__preloader__icn">
           <div class="pswp__preloader__cut">
@@ -202,47 +202,47 @@
 </div>
 
 
-  
-  
-  
 
 
 
 
 
 
-  
+
+
+
+
 
   <header class="header-section ">
-    
+
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              
+
                 <h1>Ansible Playbook for Scout on Ubuntu</h1>
-              
-              
-              
-              
+
+
+
+
                 <span class="post-meta">
-  
-  
+
+
   <i class="fas fa-calendar"></i>&nbsp;
-  
-  
-  
-  
-    
+
+
+
+
+
       &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena
-    
-  
-  
+
+
+
 </span>
 
 
-              
+
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@
   </header>
 
 
-    
+
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -264,182 +264,177 @@ It needs to be included in an ansible playbook.</p>
 describing an Ansible Playbook to setup an HAProxy system. This Ansible task can
 be included in the HAProxy playbook as well as any other playbooks with something
 like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">PLAYBOOK</span><span class="p">:</span><span class="w"> </span><span class="l">Install scout on Ubuntu</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">scout</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l">all</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l">user-with-sudo</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">sudo</span><span class="p">:</span><span class="w"> </span><span class="kc">True</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vars</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">scout_key</span><span class="p">:</span><span class="w"> </span><span class="l">YourScoutAPIKeyFromTheirWebsite</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">tasks</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="l">tasks/scout.yml</span><span class="w">
-</span></span></span></code></pre></div><p>We start by defining a &ldquo;task&rdquo; file:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># TASK: ScoutApp Monitoring (https://scoutapp.com) </span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># Separate task to install Ruby</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">include</span><span class="p">:</span><span class="w"> </span><span class="l">ruby.yml</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install scout + dependencies</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;
-</span></span></span><span class="line"><span class="cl"><span class="sd">    gem install scout scout_api --no-rdoc --no-ri</span><span class="w">    
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Create scout home directory</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">    dest=/root/.scout state=directory
-</span></span></span><span class="line"><span class="cl"><span class="sd">    owner=root group=root mode=0700</span><span class="w">    
-</span></span></span></code></pre></div><p>In the same file add the crontab entry
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">PLAYBOOK</span>: <span style="color:#ae81ff">Install scout on Ubuntu</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">scout</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hosts</span>: <span style="color:#ae81ff">all</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">user</span>: <span style="color:#ae81ff">user-with-sudo</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">sudo</span>: <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">vars</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">scout_key</span>: <span style="color:#ae81ff">YourScoutAPIKeyFromTheirWebsite</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tasks</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">include</span>: <span style="color:#ae81ff">tasks/scout.yml</span>
+</span></span></code></pre></div><p>We start by defining a &ldquo;task&rdquo; file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TASK: ScoutApp Monitoring (https://scoutapp.com)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Separate task to install Ruby</span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">include</span>: <span style="color:#ae81ff">ruby.yml</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install scout + dependencies</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">shell</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    executable=/bin/bash source /etc/profile.d/rvm.sh;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    gem install scout scout_api --no-rdoc --no-ri</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Create scout home directory</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">file</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    dest=/root/.scout state=directory
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    owner=root group=root mode=0700</span>
+</span></span></code></pre></div><p>In the same file add the crontab entry
 and logrotate entry for Scout.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Scout cron script crontab</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">    dest=/etc/cron.d/scout
-</span></span></span><span class="line"><span class="cl"><span class="sd">    src=../packages/templates/scout/scout-crontab.j2
-</span></span></span><span class="line"><span class="cl"><span class="sd">    owner=root group=root mode=0444</span><span class="w">    
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Scout cron script logrotate</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">copy</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">    dest=/etc/logrotate.d/scout
-</span></span></span><span class="line"><span class="cl"><span class="sd">    src=../packages/files/scout/scout-logrotate
-</span></span></span><span class="line"><span class="cl"><span class="sd">    owner=root group=root mode=0444</span><span class="w">    
-</span></span></span></code></pre></div><p>This is what scout-crontab.j2 looks like:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-jinja" data-lang="jinja"><span class="line"><span class="cl"><span class="x"># crontab for Scout monitoring run by root
-</span></span></span><span class="line"><span class="cl"><span class="x">* * * * * root /bin/bash -l -c &#39;scout -n &#34;</span><span class="cp">{{</span> <span class="nv">ansible_fqdn</span> <span class="cp">}}</span><span class="x">&#34; </span><span class="cp">{{</span> <span class="nv">scout_key</span> <span class="cp">}}</span><span class="x">&#39; &gt;&gt; /var/log/scout.log 2&gt;&amp;1
-</span></span></span></code></pre></div><p>And this is what scout-logrotate looks like:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">/var/log/admobius/scout.log
-</span></span><span class="line"><span class="cl">{
-</span></span><span class="line"><span class="cl">      rotate 7
-</span></span><span class="line"><span class="cl">      daily
-</span></span><span class="line"><span class="cl">      compress
-</span></span><span class="line"><span class="cl">      delaycompress
-</span></span><span class="line"><span class="cl">      missingok
-</span></span><span class="line"><span class="cl">      notifempty
-</span></span><span class="line"><span class="cl">}
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Scout cron script crontab</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">template</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    dest=/etc/cron.d/scout
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    src=../packages/templates/scout/scout-crontab.j2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    owner=root group=root mode=0444</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Scout cron script logrotate</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">copy</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    dest=/etc/logrotate.d/scout
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    src=../packages/files/scout/scout-logrotate
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    owner=root group=root mode=0444</span>
+</span></span></code></pre></div><p>This is what scout-crontab.j2 looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jinja" data-lang="jinja"><span style="display:flex;"><span># crontab for Scout monitoring run by root
+</span></span><span style="display:flex;"><span>* * * * * root /bin/bash -l -c &#39;scout -n &#34;<span style="color:#75715e">{{</span> ansible_fqdn <span style="color:#75715e">}}</span>&#34; <span style="color:#75715e">{{</span> scout_key <span style="color:#75715e">}}</span>&#39; &gt;&gt; /var/log/scout.log 2&gt;&amp;1
+</span></span></code></pre></div><p>And this is what scout-logrotate looks like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plain" data-lang="plain"><span style="display:flex;"><span>/var/log/admobius/scout.log
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>      rotate 7
+</span></span><span style="display:flex;"><span>      daily
+</span></span><span style="display:flex;"><span>      compress
+</span></span><span style="display:flex;"><span>      delaycompress
+</span></span><span style="display:flex;"><span>      missingok
+</span></span><span style="display:flex;"><span>      notifempty
+</span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Now to install ruby using RVM, if you don&rsquo;t want to use
 the system ruby (most of the times you don&rsquo;t).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># TASK: Install Ruby on Ubuntu</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install Ruby dependencies</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">apt</span><span class="p">:</span><span class="w"> </span><span class="l">pkg=$item state=latest install_recommends=no</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">with_items</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">autoconf</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">automake</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">bison</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">build-essential</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">curl</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libc6-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libgdbm-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libffi-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libncurses5-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libreadline6</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libreadline6-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libsqlite3-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libssl-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libtool</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libyaml-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libxml2-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">libxslt1-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">openssl</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">pkg-config</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">sqlite3</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">subversion</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">zlib1g</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">zlib1g-dev</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install RVM</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l">curl -L get.rvm.io | bash -s stable</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Install Ruby 2.0.0</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;
-</span></span></span><span class="line"><span class="cl"><span class="sd">    rvm install 2.0.0</span><span class="w">    
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Set default ruby version</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="p">&gt;</span><span class="sd">
-</span></span></span><span class="line"><span class="cl"><span class="sd">    executable=/bin/bash source /etc/profile.d/rvm.sh;
-</span></span></span><span class="line"><span class="cl"><span class="sd">    rvm --default use 2.0.0</span><span class="w">    
-</span></span></span></code></pre></div><p>and now run it.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TASK: Install Ruby on Ubuntu</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Ruby dependencies</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">apt</span>: <span style="color:#ae81ff">pkg=$item state=latest install_recommends=no</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">with_items</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">autoconf</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">automake</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">bison</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">build-essential</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">curl</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libc6-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libgdbm-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libffi-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libncurses5-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libreadline6</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libreadline6-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libsqlite3-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libssl-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libtool</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libyaml-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libxml2-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">libxslt1-dev</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">openssl</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">pkg-config</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">sqlite3</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">subversion</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">zlib1g</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">zlib1g-dev</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install RVM</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">shell</span>: <span style="color:#ae81ff">curl -L get.rvm.io | bash -s stable</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Install Ruby 2.0.0</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">shell</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    executable=/bin/bash source /etc/profile.d/rvm.sh;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    rvm install 2.0.0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Set default ruby version</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">shell</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    executable=/bin/bash source /etc/profile.d/rvm.sh;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    rvm --default use 2.0.0</span>
+</span></span></code></pre></div><p>and now run it.</p>
 <p><code>ansible-playbook -T 120 scout.yml</code></p>
 
 
-        
+
           <div class="blog-tags">
-            
+
               <a href="https://serverbooter.com//tags/ansible/">ansible</a>&nbsp;
-            
+
               <a href="https://serverbooter.com//tags/scout/">scout</a>&nbsp;
-            
+
           </div>
-        
 
-        
 
-        
+
+
+
       </article>
 
-      
+
         <ul class="pager blog-pager">
-          
+
             <li class="previous">
               <a href="https://serverbooter.com/post/upgrade-linux-kernel-on-chromebook/" data-toggle="tooltip" data-placement="top" title="Upgrade Linux Kernel on Chromebook">&larr; </a>
             </li>
-          
-          
+
+
             <li class="next">
               <a href="https://serverbooter.com/post/simple-clouformation-with-multiple-aws-accounts/" data-toggle="tooltip" data-placement="top" title="Simple Clouformation With Multiple AWS Accounts"> &rarr;</a>
             </li>
-          
+
         </ul>
-      
 
 
-      
-        
-          
+
+
+
+
           <div class="disqus-comments">
+
             <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "raravena80" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            <script>
+            var disqus_config = function () {
+                this.page.url = "https:\/\/serverbooter.com\/post\/ansible-playbook-for-scout-on-ubuntu\/";
+                this.page.identifier = "\/post\/ansible-playbook-for-scout-on-ubuntu\/";
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://raravena80.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+
           </div>
-          
-        
-        
-      
+
+
+
+
 
     </div>
   </div>
 </div>
 
-      
+
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
-          
+
               <li>
                 <a href="mailto:raravena80@gmail.com" title="Email me">
                   <span class="fa-stack fa-lg">
@@ -449,7 +444,7 @@ the system ruby (most of the times you don&rsquo;t).</p>
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                <a href="https://www.facebook.com/" title="Facebook">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
@@ -481,22 +476,14 @@ the system ruby (most of the times you don&rsquo;t).</p>
                 </a>
               </li>
               <li>
-                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                <a href="https://www.instagram.com/" title="Instagram">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
-          
+
           <li>
             <a href="" title="RSS">
               <span class="fa-stack fa-lg">
@@ -505,26 +492,26 @@ the system ruby (most of the times you don&rsquo;t).</p>
               </span>
             </a>
           </li>
-          
+
         </ul>
         <p class="credits copyright text-muted">
-          
-            
+
+
               Ricardo Aravena
-            
-          
+
+
 
           &nbsp;&bull;&nbsp;&copy;
-          
-            2025
-          
 
-          
+            2025
+
+
+
         </p>
-        
+
         <p class="credits theme-by text-muted">
-          
-          
+
+
         </p>
       </div>
     </div>
@@ -545,7 +532,7 @@ the system ruby (most of the times you don&rsquo;t).</p>
 
 
 
-    
+
   </body>
 </html>
 

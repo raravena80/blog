@@ -91,10 +91,10 @@ you can use 'yum' instead of 'apt'
   action: apt pkg=$item state=latest
   with_items:
     - haproxy
-  
+
 - name: Enable HAProxy service
   action: service name=haproxy enabled=yes
-  
+
 - name: Copy Ubuntu default file
   action: >
     copy dest=/etc/default/haproxy
@@ -172,7 +172,7 @@ The content of handlers/main.yml looks like this:
 
 - name: restart haproxy
   action: service name=haproxy state=restarted
-  
+
 - name: restart rsyslog
   action: service name=rsyslog state=restarted
 ```

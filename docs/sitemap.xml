@@ -5,10 +5,10 @@
     <loc>https://serverbooter.com/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/ai/</loc>
+    <loc>https://serverbooter.com/categories/ai/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/categories/ai/</loc>
+    <loc>https://serverbooter.com/tags/ai/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/</loc>
@@ -23,16 +23,16 @@
     <loc>https://serverbooter.com/post/cncf-cloud-native-ai-and-toc-highlights-post-kubecon-eu-2-25/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/kubernetes/</loc>
-    <lastmod>2025-04-19T14:17:00+00:00</lastmod>
-  </url><url>
     <loc>https://serverbooter.com/categories/kubernetes/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/opensource/</loc>
+    <loc>https://serverbooter.com/tags/kubernetes/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/opensource/</loc>
+    <lastmod>2025-04-19T14:17:00+00:00</lastmod>
+  </url><url>
+    <loc>https://serverbooter.com/tags/opensource/</loc>
     <lastmod>2025-04-19T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/</loc>
@@ -59,40 +59,40 @@
     <loc>https://serverbooter.com/page/</loc>
     <lastmod>2024-04-26T16:24:50+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/speaking/</loc>
-    <lastmod>2024-04-26T16:24:50+00:00</lastmod>
-  </url><url>
     <loc>https://serverbooter.com/page/speaking/</loc>
     <lastmod>2024-04-26T16:24:50+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/speaking/</loc>
     <lastmod>2019-11-30T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/talks/</loc>
+    <loc>https://serverbooter.com/tags/speaking/</loc>
     <lastmod>2024-04-26T16:24:50+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/talks/</loc>
     <lastmod>2024-04-26T16:24:50+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/technologies/</loc>
+    <loc>https://serverbooter.com/tags/talks/</loc>
     <lastmod>2024-04-26T16:24:50+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/cncf/</loc>
-    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+    <loc>https://serverbooter.com/tags/technologies/</loc>
+    <lastmod>2024-04-26T16:24:50+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/cncf/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/containers/</loc>
+    <loc>https://serverbooter.com/tags/cncf/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/kata/</loc>
+    <loc>https://serverbooter.com/tags/containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/kata/</loc>
+    <lastmod>2018-04-16T14:17:00+00:00</lastmod>
+  </url><url>
+    <loc>https://serverbooter.com/tags/kata/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/oci/</loc>
@@ -101,46 +101,46 @@
     <loc>https://serverbooter.com/post/scylla-in-kata-containers/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/runtimes/</loc>
+    <loc>https://serverbooter.com/categories/runtimes/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/categories/runtimes/</loc>
+    <loc>https://serverbooter.com/tags/runtimes/</loc>
     <lastmod>2018-04-16T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/container-runtimes-cncf/</loc>
     <lastmod>2018-03-04T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/branch/</loc>
-    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
-  </url><url>
     <loc>https://serverbooter.com/categories/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/data/</loc>
+    <loc>https://serverbooter.com/tags/branch/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/data/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/infrastructure/</loc>
+    <loc>https://serverbooter.com/tags/data/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/infrastructure/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/post/working-at-branch/</loc>
+    <loc>https://serverbooter.com/tags/infrastructure/</loc>
     <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/gcp/</loc>
-    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
+    <loc>https://serverbooter.com/post/working-at-branch/</loc>
+    <lastmod>2017-10-04T14:17:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/gcp/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/google/</loc>
+    <loc>https://serverbooter.com/tags/gcp/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/google/</loc>
+    <lastmod>2017-05-13T16:28:29+00:00</lastmod>
+  </url><url>
+    <loc>https://serverbooter.com/tags/google/</loc>
     <lastmod>2017-05-13T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/kubernetes-on-gcp/</loc>
@@ -149,34 +149,34 @@
     <loc>https://serverbooter.com/post/dcos-on-gcp/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/dcos/</loc>
-    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
-  </url><url>
     <loc>https://serverbooter.com/categories/dcos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/mesos/</loc>
+    <loc>https://serverbooter.com/tags/dcos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/mesos/</loc>
     <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/gjson/</loc>
-    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+    <loc>https://serverbooter.com/tags/mesos/</loc>
+    <lastmod>2017-05-11T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/go/</loc>
+    <loc>https://serverbooter.com/tags/gjson/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/go/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/json/</loc>
+    <loc>https://serverbooter.com/tags/go/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/json/</loc>
+    <lastmod>2017-04-28T16:28:29+00:00</lastmod>
+  </url><url>
+    <loc>https://serverbooter.com/tags/json/</loc>
     <lastmod>2017-04-28T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/parsing-nested-json-in-go/</loc>
@@ -194,10 +194,10 @@
     <loc>https://serverbooter.com/page/about/</loc>
     <lastmod>2020-01-01T16:24:50+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/lxc/</loc>
+    <loc>https://serverbooter.com/categories/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/categories/lxc/</loc>
+    <loc>https://serverbooter.com/tags/lxc/</loc>
     <lastmod>2016-10-29T16:28:29+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/lxc-playing/</loc>
@@ -209,25 +209,25 @@
     <loc>https://serverbooter.com/post/docker-first-impressions/</loc>
     <lastmod>2014-03-07T16:28:29+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/ansible/</loc>
+    <loc>https://serverbooter.com/categories/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/categories/ansible/</loc>
+    <loc>https://serverbooter.com/tags/ansible/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/logging/</loc>
-    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
-  </url><url>
     <loc>https://serverbooter.com/categories/logging/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/papertrailapp/</loc>
+    <loc>https://serverbooter.com/tags/logging/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/papertrailapp/</loc>
+    <lastmod>2013-10-29T11:54:00+00:00</lastmod>
+  </url><url>
+    <loc>https://serverbooter.com/tags/papertrailapp/</loc>
     <lastmod>2013-10-29T11:54:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/tags/ubuntu/</loc>
@@ -245,37 +245,37 @@
     <loc>https://serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/</loc>
     <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/scout/</loc>
-    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://serverbooter.com/categories/scout/</loc>
     <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/chromebook/</loc>
-    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+    <loc>https://serverbooter.com/tags/scout/</loc>
+    <lastmod>2013-10-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/kernel/</loc>
+    <loc>https://serverbooter.com/tags/chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/kernel/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/linux/</loc>
+    <loc>https://serverbooter.com/tags/kernel/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/categories/linux/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url><url>
+    <loc>https://serverbooter.com/tags/linux/</loc>
+    <lastmod>2013-10-21T22:15:00+00:00</lastmod>
+  </url><url>
     <loc>https://serverbooter.com/post/upgrade-linux-kernel-on-chromebook/</loc>
     <lastmod>2013-10-21T22:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/tags/haproxy/</loc>
+    <loc>https://serverbooter.com/categories/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://serverbooter.com/categories/haproxy/</loc>
+    <loc>https://serverbooter.com/tags/haproxy/</loc>
     <lastmod>2013-10-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://serverbooter.com/post/how-to-create-an-ansible-playbook-to-configure-haproxy/</loc>

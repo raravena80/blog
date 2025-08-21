@@ -25,7 +25,7 @@ focused on making working at Branch the best experience you've ever had
 in your career. There's also a very strong focus on diversity as the
 founding team puts it: The more diverse we are, the better we will
 be positioned in the long run. Being more diverse allow us to bring in
-different points of view and experiences that in the end help us 
+different points of view and experiences that in the end help us
 progress more efficiently. I can't say that there are many places like that.
 
 I work in the Data Platform team handling all the infrastructure

@@ -4,7 +4,7 @@
     <title>Containers on </title>
     <link>https://serverbooter.com/categories/containers/</link>
     <description>Recent content in Containers on </description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <managingEditor>raravena80@gmail.com (Ricardo Aravena)</managingEditor>
     <webMaster>raravena80@gmail.com (Ricardo Aravena)</webMaster>
@@ -15,14 +15,14 @@
       <link>https://serverbooter.com/post/scylla-in-kata-containers/</link>
       <pubDate>Mon, 16 Apr 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/post/scylla-in-kata-containers/</guid>
-      <description>The Kata community has been busy getting the first release out the door.&#xA;Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage.</description>
+      <description>&lt;p&gt;The Kata community has been busy getting the first release out the door.&lt;/p&gt;&#xA;&lt;p&gt;Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. VMware takes this step even further by providing things like Storage VMotion.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Boom of Container Runtimes</title>
       <link>https://serverbooter.com/post/container-runtimes-cncf/</link>
       <pubDate>Sun, 04 Mar 2018 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author>
       <guid>https://serverbooter.com/post/container-runtimes-cncf/</guid>
-      <description>It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure. With that came a shift in cloud applications from monolithic to microservices. Containers made it easy for developers to deploy directly to production mostly caring about the scope of her/his microservice.&#xA;Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your containers up and down depending on demand.</description>
+      <description>&lt;p&gt;It has been about 4 years since Docker exploded into the scene of Cloud Infrastructure.&#xA;With that came a shift in cloud applications from monolithic to microservices. Containers&#xA;made it easy for developers to deploy directly to production mostly caring about the scope of&#xA;her/his microservice.&lt;/p&gt;&#xA;&lt;p&gt;Enter container orchestration tools such as Kubernetes, Mesos, AWS ECS, GKE, Azure Container Service which&#xA;allow cloud operations to manage containers at scale. Setup these tools with a redundant masters as&#xA;quorum systems (k8s, mesos) and add hundreds of nodes or slaves and automatically scale your&#xA;containers up and down depending on demand.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

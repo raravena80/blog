@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us" itemscope itemtype="http://schema.org/WebPage">
   <head>
-    
+
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
     "@context": "http://schema.org",
     "@type": "WebSite",
     "name": "",
-    
+
     "url": "https:\/\/serverbooter.com\/"
 }
 </script><script type="application/ld+json">
@@ -23,10 +23,10 @@
   "@type": "Organization",
   "name": "",
   "url": "https:\/\/serverbooter.com\/"
-  
-  
-  
-  
+
+
+
+
 }
 </script>
 <script type="application/ld+json">
@@ -90,7 +90,7 @@
   <meta name="twitter:site" content="@raravena80" />
   <meta name="twitter:creator" content="@raravena80" />
   <link href='https://serverbooter.com/img/favicon.png' rel='icon' type='image/x-icon'/>
-  <meta name="generator" content="Hugo 0.123.7">
+  <meta name="generator" content="Hugo 0.148.2">
   <link rel="alternate" href="https://serverbooter.com/index.xml" type="application/rss+xml" title=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://serverbooter.com/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
@@ -114,39 +114,39 @@
 
     <div class="collapse navbar-collapse" id="main-navbar">
       <ul class="nav navbar-nav navbar-right">
-        
-          
+
+
             <li>
               <a title="Blog" href="/">Blog</a>
             </li>
-          
-        
-          
+
+
+
             <li>
               <a title="Speaking" href="/page/speaking/">Speaking</a>
             </li>
-          
-        
-          
+
+
+
             <li>
               <a title="About" href="/page/about/">About</a>
             </li>
-          
-        
-          
+
+
+
             <li>
               <a title="Tags" href="/tags">Tags</a>
             </li>
-          
-        
 
-        
 
-        
+
+
+
+
       </ul>
     </div>
 
-    
+
 
   </div>
 </nav>
@@ -154,7 +154,7 @@
 
 
 
-    
+
 
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -162,23 +162,23 @@
 <div class="pswp__bg"></div>
 
 <div class="pswp__scroll-wrap">
-    
+
     <div class="pswp__container">
       <div class="pswp__item"></div>
       <div class="pswp__item"></div>
       <div class="pswp__item"></div>
     </div>
-    
+
     <div class="pswp__ui pswp__ui--hidden">
     <div class="pswp__top-bar">
-      
+
       <div class="pswp__counter"></div>
       <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
       <button class="pswp__button pswp__button--share" title="Share"></button>
       <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
       <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-      
-      
+
+
       <div class="pswp__preloader">
         <div class="pswp__preloader__icn">
           <div class="pswp__preloader__cut">
@@ -202,47 +202,47 @@
 </div>
 
 
-  
-  
-  
 
 
 
 
 
 
-  
+
+
+
+
 
   <header class="header-section ">
-    
+
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="post-heading">
-              
+
                 <h1>Simple Clouformation With Multiple AWS Accounts</h1>
-              
-              
-              
-              
+
+
+
+
                 <span class="post-meta">
-  
-  
+
+
   <i class="fas fa-calendar"></i>&nbsp;
-  
-  
-  
-  
-    
+
+
+
+
+
       &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena
-    
-  
-  
+
+
+
 </span>
 
 
-              
+
             </div>
           </div>
         </div>
@@ -251,7 +251,7 @@
   </header>
 
 
-    
+
 <div class="container" role="main">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -270,448 +270,443 @@ across all accounts.</p>
 <p>For more information on CloudFormation you can visit the <a href="http://aws.amazon.com/cloudformation/">AWS Cloudformation Page</a> as
 well as the <a href="http://aws.amazon.com/documentation/cloudformation/">AWS Cloudformation documentation</a> page.</p>
 <p>First we ask for <code>parameters</code> in the CloudFormation template:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;AWSTemplateFormatVersion&#34;</span><span class="p">:</span><span class="s2">&#34;2010-09-09&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;Description&#34;</span><span class="p">:</span><span class="s2">&#34;My WebService&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&#34;Parameters&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;AwsAccount&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Description&#34;</span><span class="p">:</span><span class="s2">&#34;Account: Production, or Dev&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Default&#34;</span><span class="p">:</span><span class="s2">&#34;Production&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;MinLength&#34;</span><span class="p">:</span><span class="s2">&#34;1&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;MaxLength&#34;</span><span class="p">:</span><span class="s2">&#34;1&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;AllowedValues&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Production&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Dev&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">],</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;ConstraintDescription&#34;</span><span class="p">:</span><span class="s2">&#34;Must be either &#39;Production&#39;, or &#39;Dev&#39;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;InstanceType&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Description&#34;</span><span class="p">:</span><span class="s2">&#34;EC2 instnce type to launch&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Default&#34;</span><span class="p">:</span><span class="s2">&#34;m1.large&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;MinGroupSize&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Description&#34;</span><span class="p">:</span><span class="s2">&#34;Minimum number of servers to launch - Must match a multiple of avzones available in region&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;Number&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Default&#34;</span><span class="p">:</span><span class="s2">&#34;3&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;MaxGroupSize&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Description&#34;</span><span class="p">:</span><span class="s2">&#34;Maximum number of servers to launch - Must match a multiple of avzones available in region&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;Number&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Default&#34;</span><span class="p">:</span><span class="s2">&#34;30&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;AWSTemplateFormatVersion&#34;</span>:<span style="color:#e6db74">&#34;2010-09-09&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Description&#34;</span>:<span style="color:#e6db74">&#34;My WebService&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;Parameters&#34;</span>:{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;AwsAccount&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Description&#34;</span>:<span style="color:#e6db74">&#34;Account: Production, or Dev&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Default&#34;</span>:<span style="color:#e6db74">&#34;Production&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;MinLength&#34;</span>:<span style="color:#e6db74">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;MaxLength&#34;</span>:<span style="color:#e6db74">&#34;1&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;AllowedValues&#34;</span>:[
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Production&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Dev&#34;</span>
+</span></span><span style="display:flex;"><span>      ],
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;ConstraintDescription&#34;</span>:<span style="color:#e6db74">&#34;Must be either &#39;Production&#39;, or &#39;Dev&#39;&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;InstanceType&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Description&#34;</span>:<span style="color:#e6db74">&#34;EC2 instnce type to launch&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;String&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Default&#34;</span>:<span style="color:#e6db74">&#34;m1.large&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;MinGroupSize&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Description&#34;</span>:<span style="color:#e6db74">&#34;Minimum number of servers to launch - Must match a multiple of avzones available in region&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;Number&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Default&#34;</span>:<span style="color:#e6db74">&#34;3&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;MaxGroupSize&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Description&#34;</span>:<span style="color:#e6db74">&#34;Maximum number of servers to launch - Must match a multiple of avzones available in region&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;Number&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Default&#34;</span>:<span style="color:#e6db74">&#34;30&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  },
 </span></span></code></pre></div><p>Next up is the mappings definition, we have to define specific parameters for each account.
 Note the accountID variable is a generic one. You have to subsitute with your specific accountIds</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Mappings&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;AWSAccountInfo&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Production&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;accountId&#34;</span><span class="p">:</span> <span class="mi">123456789012</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;hostedZone&#34;</span><span class="p">:</span><span class="s2">&#34;production.mydomain.com.&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;keypair&#34;</span><span class="p">:</span><span class="s2">&#34;production&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;envName&#34;</span><span class="p">:</span><span class="s2">&#34;production&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Production&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Dev&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;accountId&#34;</span><span class="p">:</span> <span class="mi">123456789012</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;hostedZone&#34;</span><span class="p">:</span><span class="s2">&#34;dev.mydomain.com.&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;keypair&#34;</span><span class="p">:</span><span class="s2">&#34;dev&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;envName&#34;</span><span class="p">:</span><span class="s2">&#34;dev&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Dev&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Production&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;us-east-1&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ami&#34;</span><span class="p">:</span><span class="s2">&#34;ami-xxxxxxxx&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;us-west-1&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ami&#34;</span><span class="p">:</span><span class="s2">&#34;ami-xxxxxxxx&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;us-west-2&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ami&#34;</span><span class="p">:</span><span class="s2">&#34;ami-xxxxxxxx&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;Dev&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;us-east-1&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ami&#34;</span><span class="p">:</span><span class="s2">&#34;ami-xxxxxxxx&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;us-west-1&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ami&#34;</span><span class="p">:</span><span class="s2">&#34;ami-xxxxxxxx&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">},</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;us-west-2&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ami&#34;</span><span class="p">:</span><span class="s2">&#34;ami-xxxxxxxx&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span><span class="err">,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Mappings&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;AWSAccountInfo&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Production&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;accountId&#34;</span>: <span style="color:#ae81ff">123456789012</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hostedZone&#34;</span>:<span style="color:#e6db74">&#34;production.mydomain.com.&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;keypair&#34;</span>:<span style="color:#e6db74">&#34;production&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;envName&#34;</span>:<span style="color:#e6db74">&#34;production&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Production&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Dev&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;accountId&#34;</span>: <span style="color:#ae81ff">123456789012</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hostedZone&#34;</span>:<span style="color:#e6db74">&#34;dev.mydomain.com.&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;keypair&#34;</span>:<span style="color:#e6db74">&#34;dev&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;envName&#34;</span>:<span style="color:#e6db74">&#34;dev&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;name&#34;</span>:<span style="color:#e6db74">&#34;Dev&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Production&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;us-east-1&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ami&#34;</span>:<span style="color:#e6db74">&#34;ami-xxxxxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;us-west-1&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ami&#34;</span>:<span style="color:#e6db74">&#34;ami-xxxxxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;us-west-2&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ami&#34;</span>:<span style="color:#e6db74">&#34;ami-xxxxxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;Dev&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;us-east-1&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ami&#34;</span>:<span style="color:#e6db74">&#34;ami-xxxxxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;us-west-1&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ami&#34;</span>:<span style="color:#e6db74">&#34;ami-xxxxxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;us-west-2&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ami&#34;</span>:<span style="color:#e6db74">&#34;ami-xxxxxxxx&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }<span style="color:#960050;background-color:#1e0010">,</span>
 </span></span></code></pre></div><p>Now you want to setup your resources starting with the Autoscaling group.
 Notice how on the notification configuration we specify parameters
 that identify out account.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="s2">&#34;Resources&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ServerGroup&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::AutoScaling::AutoScalingGroup&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AvailabilityZones&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::GetAZs&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LaunchConfigurationName&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;LaunchConfig&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MinSize&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;MinGroupSize&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MaxSize&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;MaxGroupSize&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;LoadBalancerNames&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ElasticLoadBalancer&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Cooldown&#34;</span><span class="p">:</span><span class="s2">&#34;120&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Tags&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Key&#34;</span><span class="p">:</span><span class="s2">&#34;Name&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Value&#34;</span><span class="p">:</span><span class="s2">&#34;MyServerType&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;PropagateAtLaunch&#34;</span><span class="p">:</span><span class="s2">&#34;true&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">},</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Key&#34;</span><span class="p">:</span><span class="s2">&#34;User&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Value&#34;</span><span class="p">:</span><span class="s2">&#34;Customers&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;PropagateAtLaunch&#34;</span><span class="p">:</span><span class="s2">&#34;true&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;NotificationConfiguration&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;TopicARN&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Fn::Join&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">              <span class="s2">&#34;:&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="p">[</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;arn:aws:sns&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                  <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::Region&#34;</span>
-</span></span><span class="line"><span class="cl">                <span class="p">},</span>
-</span></span><span class="line"><span class="cl">                <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                  <span class="nt">&#34;Fn::FindInMap&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;AWSAccountInfo&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                      <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;AwsAccount&#34;</span>
-</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
-</span></span><span class="line"><span class="cl">                    <span class="s2">&#34;accountId&#34;</span>
-</span></span><span class="line"><span class="cl">                  <span class="p">]</span>
-</span></span><span class="line"><span class="cl">                <span class="p">},</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;notification&#34;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="p">]</span>
-</span></span><span class="line"><span class="cl">          <span class="p">},</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;NotificationTypes&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;autoscaling:EC2_INSTANCE_LAUNCH&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;autoscaling:EC2_INSTANCE_TERMINATE&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Resources&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;ServerGroup&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::AutoScaling::AutoScalingGroup&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AvailabilityZones&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::GetAZs&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;LaunchConfigurationName&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;LaunchConfig&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;MinSize&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;MinGroupSize&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;MaxSize&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;MaxGroupSize&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;LoadBalancerNames&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ElasticLoadBalancer&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Cooldown&#34;</span>:<span style="color:#e6db74">&#34;120&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Tags&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Key&#34;</span>:<span style="color:#e6db74">&#34;Name&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Value&#34;</span>:<span style="color:#e6db74">&#34;MyServerType&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;PropagateAtLaunch&#34;</span>:<span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Key&#34;</span>:<span style="color:#e6db74">&#34;User&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Value&#34;</span>:<span style="color:#e6db74">&#34;Customers&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;PropagateAtLaunch&#34;</span>:<span style="color:#e6db74">&#34;true&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;NotificationConfiguration&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;TopicARN&#34;</span>:{
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Fn::Join&#34;</span>:[
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;:&#34;</span>,
+</span></span><span style="display:flex;"><span>              [
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;arn:aws:sns&#34;</span>,
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;AWS::Region&#34;</span>
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                  <span style="color:#f92672">&#34;Fn::FindInMap&#34;</span>:[
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;AWSAccountInfo&#34;</span>,
+</span></span><span style="display:flex;"><span>                    {
+</span></span><span style="display:flex;"><span>                      <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;AwsAccount&#34;</span>
+</span></span><span style="display:flex;"><span>                    },
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;accountId&#34;</span>
+</span></span><span style="display:flex;"><span>                  ]
+</span></span><span style="display:flex;"><span>                },
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;notification&#34;</span>
+</span></span><span style="display:flex;"><span>              ]
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;NotificationTypes&#34;</span>:[
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;autoscaling:EC2_INSTANCE_LAUNCH&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;autoscaling:EC2_INSTANCE_LAUNCH_ERROR&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;autoscaling:EC2_INSTANCE_TERMINATE&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;autoscaling:EC2_INSTANCE_TERMINATE_ERROR&#34;</span>
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    },
 </span></span></code></pre></div><p>Next we define our launch configuration for our instance in our autoscaling group.
 Notice how we setup the environment in &ldquo;UserData&rdquo; to the one corresponding to the AWS account
 we are using.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">    <span class="s2">&#34;LaunchConfig&#34;</span><span class="err">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::AutoScaling::LaunchConfiguration&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;KeyName&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::FindInMap&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;AWSAccountInfo&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;AwsAccount&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;keypair&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ImageId&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::FindInMap&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;AwsAccount&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::Region&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;ami&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;SecurityGroups&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;InstanceSecurityGroup&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;InstanceType&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;InstanceType&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;IamInstanceProfile&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;DmpInstanceProfile&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;UserData&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::Base64&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">             <span class="nt">&#34;Fn::Join&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">                 <span class="s2">&#34;\n&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">[</span> <span class="s2">&#34;#!/bin/bash&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                   <span class="p">{</span> <span class="nt">&#34;Fn::Join&#34;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="p">[</span> <span class="s2">&#34;ENV=&#39;&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nt">&#34;Fn::FindInMap&#34;</span><span class="p">:[</span> <span class="s2">&#34;AWSAccountInfo&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;AwsAccount&#34;</span> <span class="p">},</span> <span class="s2">&#34;envName&#34;</span> <span class="p">]</span> <span class="p">},</span> <span class="s2">&#34;&#39;&#34;</span> <span class="p">]</span> <span class="p">]</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">                 <span class="p">]</span>
-</span></span><span class="line"><span class="cl">             <span class="p">]</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;LaunchConfig&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::AutoScaling::LaunchConfiguration&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;KeyName&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::FindInMap&#34;</span>: [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;AWSAccountInfo&#34;</span>,
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;AwsAccount&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;keypair&#34;</span>
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ImageId&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::FindInMap&#34;</span>:[
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;AwsAccount&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;AWS::Region&#34;</span>
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;ami&#34;</span>
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;SecurityGroups&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;InstanceSecurityGroup&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;InstanceType&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;InstanceType&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;IamInstanceProfile&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;DmpInstanceProfile&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;UserData&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::Base64&#34;</span>: {
+</span></span><span style="display:flex;"><span>             <span style="color:#f92672">&#34;Fn::Join&#34;</span>: [
+</span></span><span style="display:flex;"><span>                 <span style="color:#e6db74">&#34;\n&#34;</span>,
+</span></span><span style="display:flex;"><span>                 [ <span style="color:#e6db74">&#34;#!/bin/bash&#34;</span>,
+</span></span><span style="display:flex;"><span>                   { <span style="color:#f92672">&#34;Fn::Join&#34;</span>: [ <span style="color:#e6db74">&#34;&#34;</span>, [ <span style="color:#e6db74">&#34;ENV=&#39;&#34;</span>, { <span style="color:#f92672">&#34;Fn::FindInMap&#34;</span>:[ <span style="color:#e6db74">&#34;AWSAccountInfo&#34;</span>, { <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;AwsAccount&#34;</span> }, <span style="color:#e6db74">&#34;envName&#34;</span> ] }, <span style="color:#e6db74">&#34;&#39;&#34;</span> ] ] }
+</span></span><span style="display:flex;"><span>                 ]
+</span></span><span style="display:flex;"><span>             ]
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
 </span></span></code></pre></div><p>Next we define the server scale up and scale down policies for AWS Autoscale.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">    <span class="s2">&#34;ServerScaleUpPolicy&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::AutoScaling::ScalingPolicy&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AdjustmentType&#34;</span><span class="p">:</span><span class="s2">&#34;ChangeInCapacity&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AutoScalingGroupName&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ServerGroup&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Cooldown&#34;</span><span class="p">:</span><span class="s2">&#34;60&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ScalingAdjustment&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::Join&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">              <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;MinGroupSize&#34;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">]</span>
-</span></span><span class="line"><span class="cl">          <span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ServerScaleDownPolicy&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::AutoScaling::ScalingPolicy&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AdjustmentType&#34;</span><span class="p">:</span><span class="s2">&#34;ChangeInCapacity&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AutoScalingGroupName&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ServerGroup&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Cooldown&#34;</span><span class="p">:</span><span class="s2">&#34;60&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ScalingAdjustment&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::Join&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">              <span class="s2">&#34;-&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">              <span class="p">{</span>
-</span></span><span class="line"><span class="cl">                <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;MinGroupSize&#34;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">}</span>
-</span></span><span class="line"><span class="cl">            <span class="p">]</span>
-</span></span><span class="line"><span class="cl">          <span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ServerScaleUpPolicy&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::AutoScaling::ScalingPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AdjustmentType&#34;</span>:<span style="color:#e6db74">&#34;ChangeInCapacity&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AutoScalingGroupName&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ServerGroup&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Cooldown&#34;</span>:<span style="color:#e6db74">&#34;60&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ScalingAdjustment&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::Join&#34;</span>:[
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;&#34;</span>, [
+</span></span><span style="display:flex;"><span>              {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;MinGroupSize&#34;</span>
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ServerScaleDownPolicy&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::AutoScaling::ScalingPolicy&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AdjustmentType&#34;</span>:<span style="color:#e6db74">&#34;ChangeInCapacity&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AutoScalingGroupName&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ServerGroup&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Cooldown&#34;</span>:<span style="color:#e6db74">&#34;60&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ScalingAdjustment&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::Join&#34;</span>:[
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;&#34;</span>, [
+</span></span><span style="display:flex;"><span>              <span style="color:#e6db74">&#34;-&#34;</span>,
+</span></span><span style="display:flex;"><span>              {
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;MinGroupSize&#34;</span>
+</span></span><span style="display:flex;"><span>              }
+</span></span><span style="display:flex;"><span>            ]
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
 </span></span></code></pre></div><p>Then we define some alarms.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">    <span class="s2">&#34;CPUAlarmHigh&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::CloudWatch::Alarm&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AlarmDescription&#34;</span><span class="p">:</span><span class="s2">&#34;Scale-up if CPU &gt; 80% for 5 minutes&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MetricName&#34;</span><span class="p">:</span><span class="s2">&#34;CPUUtilization&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Namespace&#34;</span><span class="p">:</span><span class="s2">&#34;AWS/EC2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Statistic&#34;</span><span class="p">:</span><span class="s2">&#34;Average&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Period&#34;</span><span class="p">:</span><span class="s2">&#34;300&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;EvaluationPeriods&#34;</span><span class="p">:</span><span class="s2">&#34;2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Threshold&#34;</span><span class="p">:</span><span class="s2">&#34;70&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AlarmActions&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ServerScaleUpPolicy&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Dimensions&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Name&#34;</span><span class="p">:</span><span class="s2">&#34;AutoScalingGroupName&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Value&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ServerGroup&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ComparisonOperator&#34;</span><span class="p">:</span><span class="s2">&#34;GreaterThanThreshold&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;CPUAlarmLow&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::CloudWatch::Alarm&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AlarmDescription&#34;</span><span class="p">:</span><span class="s2">&#34;Scale-down if CPU &lt; 20% for 20 minutes&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;MetricName&#34;</span><span class="p">:</span><span class="s2">&#34;CPUUtilization&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Namespace&#34;</span><span class="p">:</span><span class="s2">&#34;AWS/EC2&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Statistic&#34;</span><span class="p">:</span><span class="s2">&#34;Average&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Period&#34;</span><span class="p">:</span><span class="s2">&#34;300&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;EvaluationPeriods&#34;</span><span class="p">:</span><span class="s2">&#34;4&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Threshold&#34;</span><span class="p">:</span><span class="s2">&#34;20&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AlarmActions&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ServerScaleDownPolicy&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Dimensions&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Name&#34;</span><span class="p">:</span><span class="s2">&#34;AutoScalingGroupName&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Value&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;ServerGroup&#34;</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ComparisonOperator&#34;</span><span class="p">:</span><span class="s2">&#34;LessThanThreshold&#34;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;CPUAlarmHigh&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::CloudWatch::Alarm&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AlarmDescription&#34;</span>:<span style="color:#e6db74">&#34;Scale-up if CPU &gt; 80% for 5 minutes&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;MetricName&#34;</span>:<span style="color:#e6db74">&#34;CPUUtilization&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Namespace&#34;</span>:<span style="color:#e6db74">&#34;AWS/EC2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Statistic&#34;</span>:<span style="color:#e6db74">&#34;Average&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Period&#34;</span>:<span style="color:#e6db74">&#34;300&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;EvaluationPeriods&#34;</span>:<span style="color:#e6db74">&#34;2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Threshold&#34;</span>:<span style="color:#e6db74">&#34;70&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AlarmActions&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ServerScaleUpPolicy&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Dimensions&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Name&#34;</span>:<span style="color:#e6db74">&#34;AutoScalingGroupName&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Value&#34;</span>:{
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ServerGroup&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ComparisonOperator&#34;</span>:<span style="color:#e6db74">&#34;GreaterThanThreshold&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;CPUAlarmLow&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::CloudWatch::Alarm&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AlarmDescription&#34;</span>:<span style="color:#e6db74">&#34;Scale-down if CPU &lt; 20% for 20 minutes&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;MetricName&#34;</span>:<span style="color:#e6db74">&#34;CPUUtilization&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Namespace&#34;</span>:<span style="color:#e6db74">&#34;AWS/EC2&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Statistic&#34;</span>:<span style="color:#e6db74">&#34;Average&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Period&#34;</span>:<span style="color:#e6db74">&#34;300&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;EvaluationPeriods&#34;</span>:<span style="color:#e6db74">&#34;4&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Threshold&#34;</span>:<span style="color:#e6db74">&#34;20&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AlarmActions&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ServerScaleDownPolicy&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Dimensions&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Name&#34;</span>:<span style="color:#e6db74">&#34;AutoScalingGroupName&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Value&#34;</span>:{
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;ServerGroup&#34;</span>
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;ComparisonOperator&#34;</span>:<span style="color:#e6db74">&#34;LessThanThreshold&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
 </span></span></code></pre></div><p>Now we define a Load Balancer.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">    <span class="s2">&#34;ElasticLoadBalancer&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::ElasticLoadBalancing::LoadBalancer&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;AvailabilityZones&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Fn::GetAZs&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Listeners&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;LoadBalancerPort&#34;</span><span class="p">:</span><span class="s2">&#34;80&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;InstancePort&#34;</span><span class="p">:</span><span class="s2">&#34;80&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Protocol&#34;</span><span class="p">:</span><span class="s2">&#34;HTTP&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;HealthCheck&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Target&#34;</span><span class="p">:</span><span class="s2">&#34;HTTP:80/status&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;HealthyThreshold&#34;</span><span class="p">:</span><span class="s2">&#34;3&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;UnhealthyThreshold&#34;</span><span class="p">:</span><span class="s2">&#34;3&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Interval&#34;</span><span class="p">:</span><span class="s2">&#34;30&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Timeout&#34;</span><span class="p">:</span><span class="s2">&#34;5&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ElasticLoadBalancer&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::ElasticLoadBalancing::LoadBalancer&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;AvailabilityZones&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Fn::GetAZs&#34;</span>:<span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Listeners&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;LoadBalancerPort&#34;</span>:<span style="color:#e6db74">&#34;80&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;InstancePort&#34;</span>:<span style="color:#e6db74">&#34;80&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;Protocol&#34;</span>:<span style="color:#e6db74">&#34;HTTP&#34;</span>
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;HealthCheck&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Target&#34;</span>:<span style="color:#e6db74">&#34;HTTP:80/status&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;HealthyThreshold&#34;</span>:<span style="color:#e6db74">&#34;3&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;UnhealthyThreshold&#34;</span>:<span style="color:#e6db74">&#34;3&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Interval&#34;</span>:<span style="color:#e6db74">&#34;30&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Timeout&#34;</span>:<span style="color:#e6db74">&#34;5&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
 </span></span></code></pre></div><p>Now Security Groups and Security Policies.
 Notice the security group policy for the the
 RDS backend DB.
 An RDS instance can also be added to this template.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">    <span class="s2">&#34;InstanceSecurityGroup&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::EC2::SecurityGroup&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;GroupDescription&#34;</span><span class="p">:</span><span class="s2">&#34;Server access&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;SecurityGroupIngress&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;IpProtocol&#34;</span><span class="p">:</span><span class="s2">&#34;tcp&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;FromPort&#34;</span><span class="p">:</span><span class="s2">&#34;22&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;ToPort&#34;</span><span class="p">:</span><span class="s2">&#34;22&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;CidrIp&#34;</span><span class="p">:</span><span class="s2">&#34;0.0.0.0/0&#34;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">},</span>
-</span></span><span class="line"><span class="cl">          <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;IpProtocol&#34;</span><span class="p">:</span><span class="s2">&#34;tcp&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;FromPort&#34;</span><span class="p">:</span><span class="s2">&#34;80&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;ToPort&#34;</span><span class="p">:</span><span class="s2">&#34;80&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;SourceSecurityGroupOwnerId&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Fn::GetAtt&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;ElasticLoadBalancer&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;SourceSecurityGroup.OwnerAlias&#34;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="nt">&#34;SourceSecurityGroupName&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Fn::GetAtt&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;ElasticLoadBalancer&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;SourceSecurityGroup.GroupName&#34;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;RdsIngress&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Type&#34;</span><span class="p">:</span><span class="s2">&#34;AWS::RDS::DBSecurityGroupIngress&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Properties&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;DBSecurityGroupName&#34;</span><span class="p">:</span><span class="s2">&#34;web-dbbackend&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;EC2SecurityGroupName&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&#34;Ref&#34;</span><span class="p">:</span><span class="s2">&#34;InstanceSecurityGroup&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;InstanceSecurityGroup&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::EC2::SecurityGroup&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;GroupDescription&#34;</span>:<span style="color:#e6db74">&#34;Server access&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;SecurityGroupIngress&#34;</span>:[
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;IpProtocol&#34;</span>:<span style="color:#e6db74">&#34;tcp&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;FromPort&#34;</span>:<span style="color:#e6db74">&#34;22&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ToPort&#34;</span>:<span style="color:#e6db74">&#34;22&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;CidrIp&#34;</span>:<span style="color:#e6db74">&#34;0.0.0.0/0&#34;</span>
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;IpProtocol&#34;</span>:<span style="color:#e6db74">&#34;tcp&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;FromPort&#34;</span>:<span style="color:#e6db74">&#34;80&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;ToPort&#34;</span>:<span style="color:#e6db74">&#34;80&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;SourceSecurityGroupOwnerId&#34;</span>:{
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Fn::GetAtt&#34;</span>:[
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ElasticLoadBalancer&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;SourceSecurityGroup.OwnerAlias&#34;</span>
+</span></span><span style="display:flex;"><span>              ]
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&#34;SourceSecurityGroupName&#34;</span>:{
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Fn::GetAtt&#34;</span>:[
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ElasticLoadBalancer&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;SourceSecurityGroup.GroupName&#34;</span>
+</span></span><span style="display:flex;"><span>              ]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          }
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;RdsIngress&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Type&#34;</span>:<span style="color:#e6db74">&#34;AWS::RDS::DBSecurityGroupIngress&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Properties&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;DBSecurityGroupName&#34;</span>:<span style="color:#e6db74">&#34;web-dbbackend&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;EC2SecurityGroupName&#34;</span>:{
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">&#34;Ref&#34;</span>:<span style="color:#e6db74">&#34;InstanceSecurityGroup&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><p>Finally some outputs.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="err">},</span>
-</span></span><span class="line"><span class="cl">  <span class="s2">&#34;Outputs&#34;</span><span class="err">:</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&#34;URL&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Description&#34;</span><span class="p">:</span><span class="s2">&#34;The URL of the ELB&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&#34;Value&#34;</span><span class="p">:{</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Fn::Join&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">          <span class="s2">&#34;&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">          <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;http://&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span>
-</span></span><span class="line"><span class="cl">              <span class="nt">&#34;Fn::GetAtt&#34;</span><span class="p">:[</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;ElasticLoadBalancer&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">                <span class="s2">&#34;DNSName&#34;</span>
-</span></span><span class="line"><span class="cl">              <span class="p">]</span>
-</span></span><span class="line"><span class="cl">            <span class="p">}</span>
-</span></span><span class="line"><span class="cl">          <span class="p">]</span>
-</span></span><span class="line"><span class="cl">        <span class="p">]</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="err">}</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>  <span style="color:#960050;background-color:#1e0010">},</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;Outputs&#34;</span><span style="color:#960050;background-color:#1e0010">:</span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;URL&#34;</span>:{
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Description&#34;</span>:<span style="color:#e6db74">&#34;The URL of the ELB&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&#34;Value&#34;</span>:{
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;Fn::Join&#34;</span>:[
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>          [
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;http://&#34;</span>,
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>              <span style="color:#f92672">&#34;Fn::GetAtt&#34;</span>:[
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;ElasticLoadBalancer&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;DNSName&#34;</span>
+</span></span><span style="display:flex;"><span>              ]
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>          ]
+</span></span><span style="display:flex;"><span>        ]
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">}</span>
 </span></span></code></pre></div><p>To verify that syntax of your JSON script, save the full file to something
 like <code>cf.json</code> and run: <code>cat cf.json | python -mjson.tool</code></p>
 
 
-        
 
-        
 
-        
+
+
+
       </article>
 
-      
+
         <ul class="pager blog-pager">
-          
+
             <li class="previous">
               <a href="https://serverbooter.com/post/ansible-playbook-for-scout-on-ubuntu/" data-toggle="tooltip" data-placement="top" title="Ansible Playbook for Scout on Ubuntu">&larr; </a>
             </li>
-          
-          
+
+
             <li class="next">
               <a href="https://serverbooter.com/post/ansible-playbook-for-papertrail-on-ubuntu/" data-toggle="tooltip" data-placement="top" title="Ansible Playbook for PaperTrail on Ubuntu"> &rarr;</a>
             </li>
-          
+
         </ul>
-      
 
 
-      
-        
-          
+
+
+
+
           <div class="disqus-comments">
+
             <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "raravena80" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            <script>
+            var disqus_config = function () {
+                this.page.url = "https:\/\/serverbooter.com\/post\/simple-clouformation-with-multiple-aws-accounts\/";
+                this.page.identifier = "\/post\/simple-clouformation-with-multiple-aws-accounts\/";
+            };
+            (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://raravena80.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+
           </div>
-          
-        
-        
-      
+
+
+
+
 
     </div>
   </div>
 </div>
 
-      
+
 <footer>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <ul class="list-inline text-center footer-links">
-          
+
               <li>
                 <a href="mailto:raravena80@gmail.com" title="Email me">
                   <span class="fa-stack fa-lg">
@@ -721,7 +716,7 @@ like <code>cf.json</code> and run: <code>cat cf.json | python -mjson.tool</code>
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/raravena80" title="Facebook">
+                <a href="https://www.facebook.com/" title="Facebook">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
@@ -753,22 +748,14 @@ like <code>cf.json</code> and run: <code>cat cf.json | python -mjson.tool</code>
                 </a>
               </li>
               <li>
-                <a href="https://stackoverflow.com/users/2989261/rico" title="StackOverflow">
-                  <span class="fa-stack fa-lg">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/raravena80" title="Instagram">
+                <a href="https://www.instagram.com/" title="Instagram">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
                   </span>
                 </a>
               </li>
-          
+
           <li>
             <a href="" title="RSS">
               <span class="fa-stack fa-lg">
@@ -777,26 +764,26 @@ like <code>cf.json</code> and run: <code>cat cf.json | python -mjson.tool</code>
               </span>
             </a>
           </li>
-          
+
         </ul>
         <p class="credits copyright text-muted">
-          
-            
+
+
               Ricardo Aravena
-            
-          
+
+
 
           &nbsp;&bull;&nbsp;&copy;
-          
-            2025
-          
 
-          
+            2025
+
+
+
         </p>
-        
+
         <p class="credits theme-by text-muted">
-          
-          
+
+
         </p>
       </div>
     </div>
@@ -817,7 +804,7 @@ like <code>cf.json</code> and run: <code>cat cf.json | python -mjson.tool</code>
 
 
 
-    
+
   </body>
 </html>
 

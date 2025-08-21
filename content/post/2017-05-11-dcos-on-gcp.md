@@ -3,7 +3,7 @@ title: "DC/OS on GCP"
 date: 2017-05-11T16:28:29Z
 lastmod: 2017-05-11T16:28:29Z
 comments: true
-categories: 
+categories:
  - gcp
  - dcos
  - mesos
@@ -81,7 +81,7 @@ Easy...
 
 Then you can hit the DC/OS UI with the master's IP address over HTTPS (Make sure you open up port 443 to your IP address).
 
-![dcosui](/img/2017-05-11-dcos-on-gcp/dcosui.jpg "DC/OS UI") 
+![dcosui](/img/2017-05-11-dcos-on-gcp/dcosui.jpg "DC/OS UI")
 
 More to come...
 

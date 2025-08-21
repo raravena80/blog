@@ -3,7 +3,7 @@ title: "Kubernetes on GCP"
 date: 2017-05-13T16:28:29Z
 lastmod: 2017-05-13T16:28:29Z
 comments: true
-categories: 
+categories:
  - gcp
  - kubernetes
  - google
@@ -18,7 +18,7 @@ Kubernetes has come a long way over the last 2 years and I was so excited to lea
 
 As of Today [Kops](https://github.com/kubernetes/kops) the standard tool for installing Kubernetes on AWS doesn't support GCP yet (it's in the works). However you can still setup your cluster using good old [kube-up.sh](https://github.com/kubernetes/kubernetes/blob/master/cluster/kube-up.sh). There's also a pretty good explanation on the [k8s docs](https://kubernetes.io/docs/getting-started-guides/gce/). Make sure you install the [Google Cloud SDK](https://cloud.google.com/sdk/) with gcloud and all their utils.
 
-First download the kube tar.gz release of your choice from here: https://github.com/kubernetes/kubernetes/releases. For example: 
+First download the kube tar.gz release of your choice from here: https://github.com/kubernetes/kubernetes/releases. For example:
 ```
 curl -0 https://github.com/kubernetes/kubernetes/releases/download/v1.6.3/kubernetes.tar.gz | tar -zx
 ```
@@ -82,7 +82,7 @@ $ cd kubernetes/cluster && ./kube-up.sh
 
 and voilà:
 
-![gcp_kubernetes](/img/2017-05-13-kubernetes-on-gcp/gcp_kubernetes.jpg "Kubernetes on GCP") 
+![gcp_kubernetes](/img/2017-05-13-kubernetes-on-gcp/gcp_kubernetes.jpg "Kubernetes on GCP")
 
 Then you can install `kubectl` (Cube Cuttle). The config will already be setup by `kube-up.sh`. But you can inspect if if you like under `~/.kube/`
 
@@ -110,4 +110,4 @@ my-nginx                 10.0.190.149   <none>          80/TCP         4d
 my-nginx-858393261       10.0.129.225   35.188.28.43    80:31120/TCP   4d
 ```
 
-![nginx](/img/2017-05-13-kubernetes-on-gcp/nginx.jpg "Nginx") 
+![nginx](/img/2017-05-13-kubernetes-on-gcp/nginx.jpg "Nginx")

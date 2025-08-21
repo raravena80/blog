@@ -22,7 +22,7 @@ This year's event didn't just validate the momentum around AI; it showcased a CN
 
 ![Image1](https://i.imgur.com/QDCJsYc.jpeg)
 
-### 
+###
 
 ### **AI: From Experiments to Ecosystems**
 
@@ -32,24 +32,24 @@ Talks like "Balancing Cost and Efficiency: Day 2 Optimization of Multicluster AI
 
 In a CNCF strategy session, there was a strong emphasis on the importance of reference architectures and real-world case studies to accelerate community contributions and drive adoption. The discussion also explored how AI is becoming both a key differentiator and a stress test for open source governance. One participant noted, "We're seeing a convergence of innovation—but now we have to make it usable for everyone, not just cloud providers or hyperscalers."
 
-### 
+###
 
 ### **The Maintainer Summit: A Community in Sync**
 
 ![Image2](https://i.imgur.com/iwjHCJB.jpeg)
 
-KubeCon EU started with the CNCF Maintainer Summit on March 31 at Excel London. Led in part by CNCF TOC, the summit began with a "Welcome to your TOC" keynote that helped demystify the TOC's role and reinforced its commitment to community transparency.  
+KubeCon EU started with the CNCF Maintainer Summit on March 31 at Excel London. Led in part by CNCF TOC, the summit began with a "Welcome to your TOC" keynote that helped demystify the TOC's role and reinforced its commitment to community transparency.
 
 ![Image3](https://i.imgur.com/YDX1AMZ.jpeg)
 
 But the real energy came from the roundtables.
 
-[One session](https://sched.co/1uSN7) focused on the TAG reboot initiative, which brought dozens of maintainers together to explore how CNCF's technical advisory groups could evolve. The winning idea? A proposal for "Centralized Resource Management and Transparency"—a service catalogue model that abstracts project resource provisioning complexity. It's a small idea with enormous potential, especially for smaller or newer projects struggling to scale consistently.  
+[One session](https://sched.co/1uSN7) focused on the TAG reboot initiative, which brought dozens of maintainers together to explore how CNCF's technical advisory groups could evolve. The winning idea? A proposal for "Centralized Resource Management and Transparency"—a service catalogue model that abstracts project resource provisioning complexity. It's a small idea with enormous potential, especially for smaller or newer projects struggling to scale consistently.
 "It's about reducing the operational tax," one participant shared. "If we want more innovation, we must remove friction from the path to maturity."
 
 ![Image4](https://i.imgur.com/UwKThj8.jpeg)
 
-### 
+###
 
 ### **Developer Experience and Platform Engineering Take Center Stage**
 
@@ -69,7 +69,7 @@ The week's creative highlight was the storytelling-driven live demo, *"Izzy Save
 
 The recurring theme was that DevEx isn't fluff. Whether you're enabling researchers training LLMs or developers deploying edge-native apps, the experience you create for internal teams shapes your velocity, cost, and resilience.
 
-### 
+###
 
 ### **Keynotes that Told a Story**
 
@@ -83,15 +83,15 @@ Day 3 featured a [standout session](https://sched.co/1vUfo) titled "221B Cloud N
 
 ![Image8](https://i.imgur.com/z7OO86c.jpeg)
 
-### 
+###
 
 ### **TOC Sessions: From Quantum to Service Mesh**
 
 Beyond the keynotes, TOC members delivered deep-dive talks across a wide range of topics:
 
-* [Quantum-Ready Kubernetes](https://sched.co/1tx7l)  
-* [Stateful Workloads at Scale](https://sched.co/1txEs)  
-* [Sidecar-less Service Mesh at The New York Times](https://sched.co/1txEX)  
+* [Quantum-Ready Kubernetes](https://sched.co/1tx7l)
+* [Stateful Workloads at Scale](https://sched.co/1txEs)
+* [Sidecar-less Service Mesh at The New York Times](https://sched.co/1txEX)
 * [TAG Runtime's AI to Edge Vision](https://sched.co/1tgwS)
 
 The [TOC Public meeting](https://sched.co/1uFzl) on the final day drew various community members. Attendees asked tough questions about the TAG reboot's potential to slow down project progression—but TOC members clarified that the reboot's purpose is to accelerate maturity, not gatekeep it. Focusing TAGs on actionable technical guidance and consistent evaluation criteria aims to set projects up for success in the next ten-plus years.
@@ -100,12 +100,12 @@ The [TOC Public meeting](https://sched.co/1uFzl) on the final day drew various c
 
 KubeCon EU 2025 didn't just highlight cool demos or announce new projects. It clarified where the CNCF is driving the ecosystem:
 
-* **AI is no longer adjacent**. It's a core use case driving change across orchestration, infrastructure provisioning, and security.  
-* **Multicluster and cost optimization** are now table stakes—not bonus features.  
-* **Project maturity** needs stronger scaffolding—standardization, reference materials, and aligned incentives.  
+* **AI is no longer adjacent**. It's a core use case driving change across orchestration, infrastructure provisioning, and security.
+* **Multicluster and cost optimization** are now table stakes—not bonus features.
+* **Project maturity** needs stronger scaffolding—standardization, reference materials, and aligned incentives.
 * **End users want a seat at the table**—and the TOC is starting to make room.
 
-The CNCF community is evolving and maturing. Thanks to the collaborative work of TOC members, maintainers, and contributors, the conversations at KubeCon EU weren't just loud—they were focused, future-oriented, and deeply grounded in real needs.  
+The CNCF community is evolving and maturing. Thanks to the collaborative work of TOC members, maintainers, and contributors, the conversations at KubeCon EU weren't just loud—they were focused, future-oriented, and deeply grounded in real needs.
 The journey from edge to core, AI to observability, and sandbox to graduation is becoming more navigable daily.
 
 ![Image9](https://i.imgur.com/X4wSDLw.jpeg)
@@ -116,9 +116,9 @@ And we're just getting started.
 
 Whether you're a seasoned contributor or just curious about getting started, now’s the perfect time to jump in. Join the conversation, bring your ideas, collaborate on new initiatives, and help shape the future of open source. The community is buzzing—be part of it, and join any of the following groups\!
 
-* [CNCF Cloud Native AI Working Group](https://docs.google.com/document/d/1tS6gL5qjGLaHDtAChssqJhBVm8BIpopUA3Ddzm9LHwg/edit?tab=t.0#heading=h.tprh9feizr4r)  
-* [CNCF TOC](https://www.cncf.io/people/technical-oversight-committee/)  
-* [PyTorch Foundation TAC](https://pytorch.org/tac)  
+* [CNCF Cloud Native AI Working Group](https://docs.google.com/document/d/1tS6gL5qjGLaHDtAChssqJhBVm8BIpopUA3Ddzm9LHwg/edit?tab=t.0#heading=h.tprh9feizr4r)
+* [CNCF TOC](https://www.cncf.io/people/technical-oversight-committee/)
+* [PyTorch Foundation TAC](https://pytorch.org/tac)
 * [LF AI & Data TAC](https://lf-aidata.atlassian.net/wiki/spaces/DL/pages/14090318/Technical+Advisory+Council+TAC)
 
 *Images credits: [https://www.flickr.com/photos/143247548@N03/albums/72177720324566471](https://www.flickr.com/photos/143247548@N03/albums/72177720324566471)*
