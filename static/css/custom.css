@@ -198,6 +198,20 @@ body:not([data-theme="dark"]) {
   border-color: #ddd !important;
 }
 
+/* Light mode: footer containers and rows */
+[data-theme="light"] footer .container,
+[data-theme="light"] footer .row,
+[data-theme="light"] footer .col-lg-8,
+[data-theme="light"] footer .col-lg-offset-2,
+[data-theme="light"] footer .col-md-10,
+[data-theme="light"] footer .col-md-offset-1,
+[data-theme="light"] footer div,
+[data-theme="light"] .footer .container,
+[data-theme="light"] .footer .row,
+[data-theme="light"] .footer div {
+  background-color: #f8f9fa !important;
+}
+
 /* Light mode: meta information */
 [data-theme="light"] .meta,
 [data-theme="light"] .post-meta,
@@ -205,6 +219,29 @@ body:not([data-theme="dark"]) {
 [data-theme="light"] .author,
 [data-theme="light"] small,
 [data-theme="light"] .small {
+  color: #666666 !important;
+}
+
+/* Light mode: footer social icons and links */
+[data-theme="light"] .footer-links li a,
+[data-theme="light"] .footer-links .fa-stack,
+[data-theme="light"] .footer-links .fas,
+[data-theme="light"] .footer-links .fab {
+  color: #666666 !important;
+}
+
+[data-theme="light"] .footer-links .fa-circle {
+  color: #666666 !important;
+}
+
+[data-theme="light"] .footer-links .fa-inverse {
+  color: #f8f9fa !important;
+}
+
+/* Light mode: footer copyright and credits */
+[data-theme="light"] .credits,
+[data-theme="light"] .copyright,
+[data-theme="light"] .theme-by {
   color: #666666 !important;
 }
 
@@ -299,6 +336,20 @@ body:not([data-theme="dark"]) {
   color: #a0aec0 !important;
 }
 
+/* Dark mode: footer containers and rows */
+[data-theme="dark"] footer .container,
+[data-theme="dark"] footer .row,
+[data-theme="dark"] footer .col-lg-8,
+[data-theme="dark"] footer .col-lg-offset-2,
+[data-theme="dark"] footer .col-md-10,
+[data-theme="dark"] footer .col-md-offset-1,
+[data-theme="dark"] footer div,
+[data-theme="dark"] .footer .container,
+[data-theme="dark"] .footer .row,
+[data-theme="dark"] .footer div {
+  background-color: #2d3748 !important;
+}
+
 /* Main content and body elements */
 [data-theme="dark"] body {
   background-color: #1a1a1a !important;
@@ -389,5 +440,28 @@ body:not([data-theme="dark"]) {
 [data-theme="dark"] .author,
 [data-theme="dark"] small,
 [data-theme="dark"] .small {
+  color: #a0aec0 !important;
+}
+
+/* Dark mode: footer social icons and links */
+[data-theme="dark"] .footer-links li a,
+[data-theme="dark"] .footer-links .fa-stack,
+[data-theme="dark"] .footer-links .fas,
+[data-theme="dark"] .footer-links .fab {
+  color: #a0aec0 !important;
+}
+
+[data-theme="dark"] .footer-links .fa-circle {
+  color: #a0aec0 !important;
+}
+
+[data-theme="dark"] .footer-links .fa-inverse {
+  color: #2d3748 !important;
+}
+
+/* Dark mode: footer copyright and credits */
+[data-theme="dark"] .credits,
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .theme-by {
   color: #a0aec0 !important;
 }
