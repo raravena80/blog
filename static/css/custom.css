@@ -486,3 +486,81 @@ html.theme-dark {
 [data-theme="dark"] .theme-by {
   color: #a0aec0 !important;
 }
+
+/* Disqus comments styling - make wider than blog content */
+.disqus-comments {
+  margin-top: 40px;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 20px 15px;
+}
+
+/* For larger screens, extend even further beyond blog content */
+@media (min-width: 992px) {
+  .disqus-comments {
+    margin-left: -60px;
+    margin-right: -60px;
+    padding: 30px 60px;
+  }
+}
+
+/* Dark mode styling for Disqus container */
+[data-theme="dark"] .disqus-comments,
+.theme-dark .disqus-comments {
+  background-color: #1a1a1a !important;
+  border-color: #4a5568 !important;
+}
+
+/* Light mode styling for Disqus container */
+[data-theme="light"] .disqus-comments,
+.theme-light .disqus-comments {
+  background-color: #ffffff !important;
+  border-color: #ddd !important;
+}
+
+/* Disqus iframe styling for dark mode */
+[data-theme="dark"] .disqus-comments iframe,
+[data-theme="dark"] #disqus_thread iframe,
+.theme-dark .disqus-comments iframe,
+.theme-dark #disqus_thread iframe {
+  background-color: #1a1a1a !important;
+  color-scheme: dark !important;
+}
+
+/* Light mode pager styling */
+[data-theme="light"] .pager li > a,
+[data-theme="light"] .blog-pager li > a,
+.theme-light .pager li > a,
+.theme-light .blog-pager li > a {
+  background-color: #ffffff !important;
+  color: #0085a1 !important;
+  border-color: #ddd !important;
+}
+
+[data-theme="light"] .pager li > a:hover,
+[data-theme="light"] .blog-pager li > a:hover,
+.theme-light .pager li > a:hover,
+.theme-light .blog-pager li > a:hover {
+  background-color: #f8f9fa !important;
+  color: #0085a1 !important;
+  border-color: #ddd !important;
+}
+
+/* Dark mode pager styling */
+[data-theme="dark"] .pager li > a,
+[data-theme="dark"] .blog-pager li > a,
+.theme-dark .pager li > a,
+.theme-dark .blog-pager li > a {
+  background-color: #2d3748 !important;
+  color: #4dabf7 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .pager li > a:hover,
+[data-theme="dark"] .blog-pager li > a:hover,
+.theme-dark .pager li > a:hover,
+.theme-dark .blog-pager li > a:hover {
+  background-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
