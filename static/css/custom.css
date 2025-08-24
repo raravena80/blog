@@ -487,38 +487,30 @@ html.theme-dark {
   color: #a0aec0 !important;
 }
 
-/* Disqus comments styling - make wider than blog content */
+/* Disqus comments styling - break out of grid completely */
 .disqus-comments {
+  position: relative;
   margin-top: 40px;
-  margin-left: -50px;
-  margin-right: -50px;
-  padding: 30px 20px;
-  border-radius: 8px;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 30px 5%;
+  border-radius: 0;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* For larger screens, extend even further beyond blog content */
-@media (min-width: 768px) {
+/* Add some constraints for very wide screens */
+@media (min-width: 1400px) {
   .disqus-comments {
-    margin-left: -80px;
-    margin-right: -80px;
-    padding: 40px 40px;
-  }
-}
-
-@media (min-width: 992px) {
-  .disqus-comments {
-    margin-left: -120px;
-    margin-right: -120px;
-    padding: 50px 60px;
-  }
-}
-
-/* Break out of parent container completely on larger screens */
-@media (min-width: 1200px) {
-  .disqus-comments {
-    margin-left: -200px;
-    margin-right: -200px;
+    max-width: 1200px;
+    margin-left: calc(-600px + 50%);
+    margin-right: calc(-600px + 50%);
+    width: 1200px;
+    left: auto;
+    right: auto;
+    border-radius: 8px;
     padding: 50px 80px;
   }
 }
@@ -539,18 +531,22 @@ html.theme-dark {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
 
-/* Force Disqus to use dark mode when available */
+/* Disqus dark mode - limited control over iframe content */
 [data-theme="dark"] #disqus_thread {
   color-scheme: dark !important;
 }
 
-[data-theme="dark"] #disqus_thread iframe {
-  filter: invert(1) hue-rotate(180deg) !important;
-}
-
-/* Disable the filter on images within Disqus to prevent double inversion */
-[data-theme="dark"] #disqus_thread iframe img {
-  filter: invert(1) hue-rotate(180deg) !important;
+/* Add a dark overlay effect for better integration */
+[data-theme="dark"] .disqus-comments::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.1);
+  pointer-events: none;
+  border-radius: inherit;
 }
 
 /* Light mode pager styling */
