@@ -490,41 +490,67 @@ html.theme-dark {
 /* Disqus comments styling - make wider than blog content */
 .disqus-comments {
   margin-top: 40px;
-  margin-left: -15px;
-  margin-right: -15px;
-  padding: 20px 15px;
+  margin-left: -50px;
+  margin-right: -50px;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* For larger screens, extend even further beyond blog content */
+@media (min-width: 768px) {
+  .disqus-comments {
+    margin-left: -80px;
+    margin-right: -80px;
+    padding: 40px 40px;
+  }
+}
+
 @media (min-width: 992px) {
   .disqus-comments {
-    margin-left: -60px;
-    margin-right: -60px;
-    padding: 30px 60px;
+    margin-left: -120px;
+    margin-right: -120px;
+    padding: 50px 60px;
+  }
+}
+
+/* Break out of parent container completely on larger screens */
+@media (min-width: 1200px) {
+  .disqus-comments {
+    margin-left: -200px;
+    margin-right: -200px;
+    padding: 50px 80px;
   }
 }
 
 /* Dark mode styling for Disqus container */
 [data-theme="dark"] .disqus-comments,
 .theme-dark .disqus-comments {
-  background-color: #1a1a1a !important;
-  border-color: #4a5568 !important;
+  background-color: #2d3748 !important;
+  border: 1px solid #4a5568 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
 }
 
 /* Light mode styling for Disqus container */
 [data-theme="light"] .disqus-comments,
 .theme-light .disqus-comments {
-  background-color: #ffffff !important;
-  border-color: #ddd !important;
+  background-color: #f8f9fa !important;
+  border: 1px solid #e9ecef !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
 
-/* Disqus iframe styling for dark mode */
-[data-theme="dark"] .disqus-comments iframe,
-[data-theme="dark"] #disqus_thread iframe,
-.theme-dark .disqus-comments iframe,
-.theme-dark #disqus_thread iframe {
-  background-color: #1a1a1a !important;
+/* Force Disqus to use dark mode when available */
+[data-theme="dark"] #disqus_thread {
   color-scheme: dark !important;
+}
+
+[data-theme="dark"] #disqus_thread iframe {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Disable the filter on images within Disqus to prevent double inversion */
+[data-theme="dark"] #disqus_thread iframe img {
+  filter: invert(1) hue-rotate(180deg) !important;
 }
 
 /* Light mode pager styling */
