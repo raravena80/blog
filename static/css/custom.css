@@ -1,11 +1,13 @@
 /* Clean dark mode CSS implementation */
 
 /* Prevent flash of unstyled content during theme initialization */
-html:not([data-theme]) {
+html:not([data-theme]):not(.theme-light):not(.theme-dark) {
   visibility: hidden;
 }
 
-html[data-theme] {
+html[data-theme],
+html.theme-light,
+html.theme-dark {
   visibility: visible;
 }
 
@@ -71,7 +73,7 @@ html[data-theme] {
 
 /* Explicit light mode styles to override system dark theme */
 [data-theme="light"] body,
-body:not([data-theme="dark"]) {
+.theme-light body {
   background-color: #ffffff !important;
   color: #333333 !important;
 }
@@ -82,7 +84,14 @@ body:not([data-theme="dark"]) {
 [data-theme="light"] article,
 [data-theme="light"] .article,
 [data-theme="light"] .post,
-[data-theme="light"] .post-content {
+[data-theme="light"] .post-content,
+.theme-light .container,
+.theme-light .main,
+.theme-light .content,
+.theme-light article,
+.theme-light .article,
+.theme-light .post,
+.theme-light .post-content {
   background-color: #ffffff !important;
   color: #333333 !important;
 }
@@ -111,7 +120,9 @@ body:not([data-theme="dark"]) {
 }
 
 [data-theme="light"] .navbar-default,
-[data-theme="light"] .navbar-custom {
+[data-theme="light"] .navbar-custom,
+.theme-light .navbar-default,
+.theme-light .navbar-custom {
   background-color: #f1f3f4 !important;
   border-color: #dee2e6 !important;
   transition: none !important;
@@ -274,7 +285,9 @@ body:not([data-theme="dark"]) {
 
 /* Apply dark mode to key elements */
 [data-theme="dark"] .navbar-default,
-[data-theme="dark"] .navbar-custom {
+[data-theme="dark"] .navbar-custom,
+.theme-dark .navbar-default,
+.theme-dark .navbar-custom {
   background-color: #2d3748 !important;
   border-color: #4a5568 !important;
   transition: none !important;
@@ -351,7 +364,8 @@ body:not([data-theme="dark"]) {
 }
 
 /* Main content and body elements */
-[data-theme="dark"] body {
+[data-theme="dark"] body,
+.theme-dark body {
   background-color: #1a1a1a !important;
   color: #e2e8f0 !important;
 }
@@ -362,7 +376,14 @@ body:not([data-theme="dark"]) {
 [data-theme="dark"] article,
 [data-theme="dark"] .article,
 [data-theme="dark"] .post,
-[data-theme="dark"] .post-content {
+[data-theme="dark"] .post-content,
+.theme-dark .container,
+.theme-dark .main,
+.theme-dark .content,
+.theme-dark article,
+.theme-dark .article,
+.theme-dark .post,
+.theme-dark .post-content {
   background-color: #1a1a1a !important;
   color: #e2e8f0 !important;
 }

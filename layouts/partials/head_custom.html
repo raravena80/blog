@@ -1,18 +1,35 @@
+<!-- Prevent browser from overriding our theme -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+
 <script>
 // Initialize theme immediately to prevent flash
 (function() {
+  const html = document.documentElement;
   const savedTheme = localStorage.getItem('theme');
+
   if (savedTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
+    html.setAttribute('data-theme', 'dark');
+    // Add fallback class for Samsung Internet
+    html.classList.add('theme-dark');
+    html.classList.remove('theme-light');
   } else if (savedTheme === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
+    html.setAttribute('data-theme', 'light');
+    // Add fallback class for Samsung Internet
+    html.classList.add('theme-light');
+    html.classList.remove('theme-dark');
   } else {
     // No saved preference - detect system preference and set explicit theme
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     if (prefersDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
+      html.setAttribute('data-theme', 'dark');
+      html.classList.add('theme-dark');
+      html.classList.remove('theme-light');
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
+      html.setAttribute('data-theme', 'light');
+      html.classList.add('theme-light');
+      html.classList.remove('theme-dark');
     }
   }
 })();
@@ -24,10 +41,14 @@ function toggleTheme() {
   if (isDark) {
     // Switch to light mode
     html.setAttribute('data-theme', 'light');
+    html.classList.add('theme-light');
+    html.classList.remove('theme-dark');
     localStorage.setItem('theme', 'light');
   } else {
     // Switch to dark mode  
     html.setAttribute('data-theme', 'dark');
+    html.classList.add('theme-dark');
+    html.classList.remove('theme-light');
     localStorage.setItem('theme', 'dark');
   }
 }
