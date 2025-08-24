@@ -1,0 +1,50 @@
+<div id="disqus_thread"></div>
+<script>
+window.disqus_config = function () {
+    this.page.url = '{{ trim .Permalink "/" }}';
+    this.page.identifier = '{{ .RelPermalink }}';
+    
+    // Configure Disqus dark mode based on current theme
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const isSystemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (currentTheme === 'dark' || (currentTheme === null && isSystemDark)) {
+        this.colorScheme = 'dark';
+    } else {
+        this.colorScheme = 'light';
+    }
+    
+    // Listen for theme changes and reload Disqus
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
+                const newTheme = document.documentElement.getAttribute('data-theme');
+                if (window.DISQUS) {
+                    window.DISQUS.reset({
+                        reload: true,
+                        config: function () {
+                            this.page.url = '{{ trim .Permalink "/" }}';
+                            this.page.identifier = '{{ .RelPermalink }}';
+                            this.colorScheme = newTheme === 'dark' ? 'dark' : 'light';
+                        }
+                    });
+                }
+            }
+        });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+};
+
+(function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+        document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+        return;
+    }
+    var d = document, s = d.createElement('script');
+    s.async = true;
+    s.src = '//' + {{ .Site.Config.Services.Disqus.Shortname }} + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
