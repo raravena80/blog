@@ -4,27 +4,15 @@
 &lt;p>The group has been making strides in galvanizing the community around the needs of AI/ML workloads on top of cloud native environments. A significant deliverable was the publication of the &amp;ldquo;Cloud Native AI&amp;rdquo; whitepaper in March 2024.&lt;/p></description></item><item><title>Fun Times at The Kubernetes Forum Seoul and Sydney 2019</title><link>https://serverbooter.com/post/kubernetes-forum-seoul-sydney/</link><pubDate>Wed, 18 Dec 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/post/kubernetes-forum-seoul-sydney/</guid><description>&lt;p>Hello everyone! I&amp;rsquo;m excited to write this post about my experience at the Kubernetes Forum Seoul and Sydney 2019. My journey started in San Francisco on Friday evening, December 6th, 2019, on a flight to Seoul.&lt;/p>
 &lt;p>&lt;img src="https://user-images.githubusercontent.com/7659560/71111562-8f2e6600-217e-11ea-82b8-b5b0bad78d14.jpg" alt="SFO-ICN">&lt;/p>
 &lt;p>&lt;img src="https://user-images.githubusercontent.com/7659560/71111890-3b704c80-217f-11ea-89b3-2214675f29c3.jpg" alt="SFO-ICN-Map">&lt;/p>
-&lt;p>I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of time during the day to rest in the hotel at the venue, &lt;a href="https://www.seouldragoncity.com/">The Seoul Dragon City&lt;/a>. As speakers, we were invited along with the organizers and community leaders to an event dinner in the &lt;a href="https://sdc-club.com/en/convention/room-goguryeo.php">Goguryeo room&lt;/a>. During that time, we had a great start networking with fellow industry leaders with an opportunity to connect. In my opinion, the number of people was just right to talk to most of the guests at dinner.&lt;/p></description></item><item><title>Speaking</title><link>https://serverbooter.com/page/speaking/</link><pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/page/speaking/</guid><description>&lt;p>This is a list of the talks I&amp;rsquo;ve given 2018-2024&lt;/p>
-&lt;p>&lt;strong>What&amp;rsquo;s Up With All The Different Container Runtimes?&lt;/strong>
-KubeCon/CloudNativeCon EU Copenhagen Denmark 2018
-&lt;a href="https://youtu.be/lHv0LVEIPk8">Video&lt;/a>
-&lt;a href="https://sched.co/Dqtw">Link&lt;/a>
-&lt;a href="https://static.sched.com/hosted_files/kccnceu18/08/What%E2%80%99s%20Up%20With%20All%20the%20Container%20Runtimes.pdf">Slides&lt;/a>&lt;/p>
-&lt;p>&lt;strong>Spice Up Your Workloads with Kata Containers&lt;/strong>
-Open Source Summit NA Vancouver Canada 2018
-&lt;a href="https://sched.co/FAP8">Link&lt;/a>
-&lt;a href="https://static.sched.com/hosted_files/ossna18/56/Spice%20Up%20Your%20Workloads%20With%20Kata%20Containers.pdf">Slides&lt;/a>&lt;/p>
-&lt;p>&lt;strong>Container Security &amp;amp; Multi-Tenancy Tales from Kata &amp;amp; Nabla&lt;/strong>
-KubeCon/CloudNativeCon NA Seattle Washington 2018
-&lt;a href="https://youtu.be/AgHMRJ16RAA">Video&lt;/a>
-&lt;a href="https://sched.co/GrZH">Link&lt;/a>
-&lt;a href="https://static.sched.com/hosted_files/kccna18/20/Container%20Security%20and%20Multi-Tenancy%20Tales%20from%20Kata%20and%20Nabla.pdf">Slides&lt;/a>&lt;/p>
-&lt;p>&lt;strong>Kubernetes and The GitOps Face-Off&lt;/strong>
-KubeCon/CloudNativeCon NA Seattle Washington 2018
-&lt;a href="https://youtu.be/9qGqx_jdxQg">Video&lt;/a>
-&lt;a href="https://sched.co/GrSe">Link&lt;/a>
-&lt;a href="https://static.sched.com/hosted_files/kccna18/74/KubeCon-2018.pdf">Slides&lt;/a>&lt;/p>
-&lt;p>&lt;strong>Enhancing Your Workload Security with Kata Containers&lt;/strong>
-Container World Santa Clara California 2019
-&lt;a href="https://tmt.knect365.com/container-world/speakers/ricardo-aravena#security_enhancing-your-workload-security-with-kata-containers">Link&lt;/a>
-&lt;a href="https://docs.google.com/presentation/d/12yQFigHChzjXyRVflZsE8e4dC7Jy-cbudys5W7BLahU/edit?usp=sharing">Slides&lt;/a>&lt;/p></description></item><item><title>Speaking</title><link>https://serverbooter.com/post/speaking/</link><pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/post/speaking/</guid><description>&lt;p>&lt;a href="https://serverbooter.com/page/speaking/">This page has been moved&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>I arrived in Seoul on Sunday, December 8th, in the morning and had plenty of time during the day to rest in the hotel at the venue, &lt;a href="https://www.seouldragoncity.com/">The Seoul Dragon City&lt;/a>. As speakers, we were invited along with the organizers and community leaders to an event dinner in the &lt;a href="https://sdc-club.com/en/convention/room-goguryeo.php">Goguryeo room&lt;/a>. During that time, we had a great start networking with fellow industry leaders with an opportunity to connect. In my opinion, the number of people was just right to talk to most of the guests at dinner.&lt;/p></description></item><item><title>Speaking</title><link>https://serverbooter.com/page/speaking/</link><pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/page/speaking/</guid><description>&lt;h1 id="speaking-engagements">Speaking Engagements&lt;/h1>
+&lt;p>A curated collection of talks and presentations I&amp;rsquo;ve given from 2018-2025, covering cloud-native technologies, container runtimes, security, and AI infrastructure.&lt;/p>
+&lt;hr>
+&lt;h2 id="2025">2025&lt;/h2>
+&lt;h3 id="discover-cncf-tag-runtime-advancing-cloud-native-innovation-from-ai-to-edge">&lt;strong>Discover CNCF TAG Runtime: Advancing Cloud-Native Innovation from AI to Edge&lt;/strong>&lt;/h3>
+&lt;p>📅 &lt;em>KubeCon + CloudNativeCon EU 2025&lt;/em> | London, UK&lt;br>
+🎥 &lt;a href="https://youtu.be/-yOKr2DOJ_o">Video&lt;/a> | 🔗 &lt;a href="https://sched.co/1tgwS">Event Details&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="2024">2024&lt;/h2>
+&lt;h3 id="discover-cncf-tag-runtime-from-ai-wasm-os-edge-to-workloads-in-the-heart-of-salt-lake-city">&lt;strong>Discover CNCF TAG Runtime: From AI, WASM, OS, Edge to Workloads in the Heart of Salt Lake City&lt;/strong>&lt;/h3>
+&lt;p>📅 &lt;em>KubeCon + CloudNativeCon NA 2024&lt;/em> | Salt Lake City, Utah&lt;br>
+🎥 &lt;a href="https://youtu.be/pF2r6VfTXPU">Video&lt;/a> | 🔗 &lt;a href="https://sched.co/1hoyM">Event Details&lt;/a>&lt;/p></description></item><item><title>Speaking</title><link>https://serverbooter.com/post/speaking/</link><pubDate>Sat, 30 Nov 2019 14:17:00 +0000</pubDate><author>raravena80@gmail.com (Ricardo Aravena)</author><guid>https://serverbooter.com/post/speaking/</guid><description>&lt;p>&lt;a href="https://serverbooter.com/page/speaking/">This page has been moved&lt;/a>&lt;/p></description></item></channel></rss>
