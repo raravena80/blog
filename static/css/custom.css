@@ -1,0 +1,642 @@
+/* Clean dark mode CSS implementation */
+
+/* Prevent flash of unstyled content during theme initialization */
+html:not([data-theme]):not(.theme-light):not(.theme-dark) {
+  visibility: hidden;
+}
+
+html[data-theme],
+html.theme-light,
+html.theme-dark {
+  visibility: visible;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  z-index: 1050;
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Show/hide icons based on theme */
+.theme-toggle .sun-icon {
+  display: none;
+}
+
+.theme-toggle .moon-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: #2d3748;
+  border-color: #4a5568;
+}
+
+[data-theme="dark"] .theme-toggle .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] .theme-toggle .moon-icon {
+  display: none;
+}
+
+/* Basic dark mode styles using CSS variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #0085a1;
+}
+
+[data-theme="dark"] {
+  --bg-color: rgb(42, 42, 42);
+  --text-color: #e2e8f0;
+  --link-color: #4dabf7;
+}
+
+/* Explicit light mode styles to override system dark theme */
+[data-theme="light"] body,
+.theme-light body {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+[data-theme="light"] .container,
+[data-theme="light"] .main,
+[data-theme="light"] .content,
+[data-theme="light"] article,
+[data-theme="light"] .article,
+[data-theme="light"] .post,
+[data-theme="light"] .post-content,
+.theme-light .container,
+.theme-light .main,
+.theme-light .content,
+.theme-light article,
+.theme-light .article,
+.theme-light .post,
+.theme-light .post-content {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] li,
+[data-theme="light"] span,
+[data-theme="light"] div,
+[data-theme="light"] .text,
+[data-theme="light"] .description {
+  color: #333333 !important;
+}
+
+[data-theme="light"] h1,
+[data-theme="light"] h2,
+[data-theme="light"] h3,
+[data-theme="light"] h4,
+[data-theme="light"] h5,
+[data-theme="light"] h6,
+[data-theme="light"] .post-title {
+  color: #333333 !important;
+}
+
+[data-theme="light"] a {
+  color: #0085a1 !important;
+}
+
+[data-theme="light"] .navbar-default,
+[data-theme="light"] .navbar-custom,
+.theme-light .navbar-default,
+.theme-light .navbar-custom {
+  background-color: #f1f3f4 !important;
+  border-color: #dee2e6 !important;
+  transition: none !important;
+}
+
+[data-theme="light"] .navbar-default .navbar-nav > li > a,
+[data-theme="light"] .navbar-custom .navbar-nav > li > a {
+  color: #333333 !important;
+}
+
+[data-theme="light"] .navbar-default .navbar-nav > li > a:hover,
+[data-theme="light"] .navbar-custom .navbar-nav > li > a:hover {
+  color: #0085a1 !important;
+}
+
+/* Light mode: navbar collapsed background */
+[data-theme="light"] .navbar-collapse {
+  background-color: #f1f3f4 !important;
+  border-color: #dee2e6 !important;
+  transition: none !important;
+}
+
+/* Light mode: cards, panels, and containers */
+[data-theme="light"] .card,
+[data-theme="light"] .panel,
+[data-theme="light"] .well,
+[data-theme="light"] .jumbotron {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border-color: #ddd !important;
+}
+
+/* Light mode: forms */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select,
+[data-theme="light"] .form-control {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border-color: #ddd !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+  color: #999999 !important;
+}
+
+/* Light mode: tables */
+[data-theme="light"] table,
+[data-theme="light"] .table {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+[data-theme="light"] table th,
+[data-theme="light"] table td,
+[data-theme="light"] .table th,
+[data-theme="light"] .table td {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  border-color: #ddd !important;
+}
+
+/* Light mode: blockquotes */
+[data-theme="light"] blockquote {
+  background-color: #f8f9fa !important;
+  color: #333333 !important;
+  border-left-color: #0085a1 !important;
+}
+
+/* Light mode: code blocks */
+[data-theme="light"] code,
+[data-theme="light"] pre {
+  background-color: #f8f9fa !important;
+  color: #333333 !important;
+  border-color: #ddd !important;
+}
+
+/* Light mode: footer */
+[data-theme="light"] footer,
+[data-theme="light"] .footer {
+  background-color: #f8f9fa !important;
+  color: #666666 !important;
+  border-color: #ddd !important;
+}
+
+/* Light mode: footer containers and rows */
+[data-theme="light"] footer .container,
+[data-theme="light"] footer .row,
+[data-theme="light"] footer .col-lg-8,
+[data-theme="light"] footer .col-lg-offset-2,
+[data-theme="light"] footer .col-md-10,
+[data-theme="light"] footer .col-md-offset-1,
+[data-theme="light"] footer div,
+[data-theme="light"] .footer .container,
+[data-theme="light"] .footer .row,
+[data-theme="light"] .footer div {
+  background-color: #f8f9fa !important;
+}
+
+/* Light mode: meta information */
+[data-theme="light"] .meta,
+[data-theme="light"] .post-meta,
+[data-theme="light"] .date,
+[data-theme="light"] .author,
+[data-theme="light"] small,
+[data-theme="light"] .small {
+  color: #666666 !important;
+}
+
+/* Light mode: footer social icons and links */
+[data-theme="light"] .footer-links li a,
+[data-theme="light"] .footer-links .fa-stack,
+[data-theme="light"] .footer-links .fas,
+[data-theme="light"] .footer-links .fab {
+  color: #666666 !important;
+}
+
+[data-theme="light"] .footer-links .fa-circle {
+  color: #666666 !important;
+}
+
+[data-theme="light"] .footer-links .fa-inverse {
+  color: #f8f9fa !important;
+}
+
+/* Light mode: footer copyright and credits */
+[data-theme="light"] .credits,
+[data-theme="light"] .copyright,
+[data-theme="light"] .theme-by {
+  color: #666666 !important;
+}
+
+/* Light mode: sidebar and navigation */
+[data-theme="light"] .sidebar,
+[data-theme="light"] .side-nav,
+[data-theme="light"] .menu {
+  background-color: #f8f9fa !important;
+  color: #333333 !important;
+  border-color: #ddd !important;
+}
+
+/* Light mode: ensure all major container elements have proper backgrounds */
+[data-theme="light"] #main,
+[data-theme="light"] .main-content,
+[data-theme="light"] .page-content,
+[data-theme="light"] .site-content,
+[data-theme="light"] .wrapper,
+[data-theme="light"] section {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+}
+
+/* Light mode: theme toggle button styling */
+[data-theme="light"] .theme-toggle {
+  background: #ffffff !important;
+  border-color: #ddd !important;
+  color: #333333 !important;
+}
+
+/* Apply dark mode to key elements */
+[data-theme="dark"] .navbar-default,
+[data-theme="dark"] .navbar-custom,
+.theme-dark .navbar-default,
+.theme-dark .navbar-custom {
+  background-color: #2d3748 !important;
+  border-color: #4a5568 !important;
+  transition: none !important;
+}
+
+/* Fix collapsed navbar background */
+[data-theme="dark"] .navbar-collapse {
+  background-color: #2d3748 !important;
+  border-color: #4a5568 !important;
+  transition: none !important;
+}
+
+/* Style all navbar links */
+[data-theme="dark"] .navbar-default .navbar-nav > li > a,
+[data-theme="dark"] .navbar-custom .navbar-nav > li > a,
+[data-theme="dark"] .navbar-collapse .navbar-nav > li > a {
+  color: #a0aec0 !important;
+}
+
+[data-theme="dark"] .navbar-default .navbar-nav > li > a:hover,
+[data-theme="dark"] .navbar-custom .navbar-nav > li > a:hover,
+[data-theme="dark"] .navbar-collapse .navbar-nav > li > a:hover {
+  color: #e2e8f0 !important;
+}
+
+/* Mobile hamburger icon styling */
+[data-theme="dark"] .navbar-toggle {
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .navbar-toggle .icon-bar {
+  background-color: #a0aec0 !important;
+}
+
+[data-theme="dark"] a {
+  color: #4dabf7 !important;
+}
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6,
+[data-theme="dark"] .post-title {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] code,
+[data-theme="dark"] pre {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] footer,
+[data-theme="dark"] .footer {
+  background-color: #2d3748 !important;
+  color: #a0aec0 !important;
+}
+
+/* Dark mode: footer containers and rows */
+[data-theme="dark"] footer .container,
+[data-theme="dark"] footer .row,
+[data-theme="dark"] footer .col-lg-8,
+[data-theme="dark"] footer .col-lg-offset-2,
+[data-theme="dark"] footer .col-md-10,
+[data-theme="dark"] footer .col-md-offset-1,
+[data-theme="dark"] footer div,
+[data-theme="dark"] .footer .container,
+[data-theme="dark"] .footer .row,
+[data-theme="dark"] .footer div {
+  background-color: #2d3748 !important;
+}
+
+/* Main content and body elements */
+[data-theme="dark"] body,
+.theme-dark body {
+  background-color: rgb(42, 42, 42) !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .container,
+[data-theme="dark"] .main,
+[data-theme="dark"] .content,
+[data-theme="dark"] article,
+[data-theme="dark"] .article,
+[data-theme="dark"] .post,
+[data-theme="dark"] .post-content,
+.theme-dark .container,
+.theme-dark .main,
+.theme-dark .content,
+.theme-dark article,
+.theme-dark .article,
+.theme-dark .post,
+.theme-dark .post-content {
+  background-color: rgb(42, 42, 42) !important;
+  color: #e2e8f0 !important;
+}
+
+/* Paragraphs and text elements */
+[data-theme="dark"] p,
+[data-theme="dark"] li,
+[data-theme="dark"] span,
+[data-theme="dark"] div,
+[data-theme="dark"] .text,
+[data-theme="dark"] .description {
+  color: #e2e8f0 !important;
+}
+
+/* Sidebar and navigation elements */
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .side-nav,
+[data-theme="dark"] .menu {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+
+/* Cards and panels */
+[data-theme="dark"] .card,
+[data-theme="dark"] .panel,
+[data-theme="dark"] .well,
+[data-theme="dark"] .jumbotron {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
+
+/* Forms */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select,
+[data-theme="dark"] .form-control {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #a0aec0 !important;
+}
+
+/* Tables */
+[data-theme="dark"] table,
+[data-theme="dark"] .table {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] table th,
+[data-theme="dark"] table td,
+[data-theme="dark"] .table th,
+[data-theme="dark"] .table td {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}
+
+/* Blockquotes */
+[data-theme="dark"] blockquote {
+  background-color: #2d3748 !important;
+  color: #e2e8f0 !important;
+  border-left-color: #4dabf7 !important;
+}
+
+/* Meta information and small text */
+[data-theme="dark"] .meta,
+[data-theme="dark"] .post-meta,
+[data-theme="dark"] .date,
+[data-theme="dark"] .author,
+[data-theme="dark"] small,
+[data-theme="dark"] .small {
+  color: #a0aec0 !important;
+}
+
+/* Dark mode: footer social icons and links */
+[data-theme="dark"] .footer-links li a,
+[data-theme="dark"] .footer-links .fa-stack,
+[data-theme="dark"] .footer-links .fas,
+[data-theme="dark"] .footer-links .fab {
+  color: #a0aec0 !important;
+}
+
+[data-theme="dark"] .footer-links .fa-circle {
+  color: #a0aec0 !important;
+}
+
+[data-theme="dark"] .footer-links .fa-inverse {
+  color: #2d3748 !important;
+}
+
+/* Dark mode: footer copyright and credits */
+[data-theme="dark"] .credits,
+[data-theme="dark"] .copyright,
+[data-theme="dark"] .theme-by {
+  color: #a0aec0 !important;
+}
+
+/* Disqus comments styling - break out of grid completely */
+.disqus-comments {
+  position: relative;
+  margin-top: 40px;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Add some constraints for very wide screens */
+@media (min-width: 1400px) {
+  .disqus-comments {
+    max-width: 1200px;
+    margin-left: calc(-600px + 50%);
+    margin-right: calc(-600px + 50%);
+    width: 1200px;
+    left: auto;
+    right: auto;
+    border-radius: 8px;
+    padding: 0;
+  }
+}
+
+/* Disqus parent container styling - add padding as recommended by Disqus docs */
+.disqus-comments {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 20px 30px !important;
+}
+
+/* Dark mode: match main page background */
+[data-theme="dark"] .disqus-comments,
+.theme-dark .disqus-comments {
+  background-color: rgb(42, 42, 42) !important;
+}
+
+/* Light mode: keep transparent */
+[data-theme="light"] .disqus-comments,
+.theme-light .disqus-comments {
+  background: transparent !important;
+}
+
+/* Responsive padding for larger screens */
+@media (min-width: 768px) {
+  .disqus-comments {
+    padding: 30px 50px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .disqus-comments {
+    padding: 40px 80px !important;
+  }
+}
+
+/* Simple Disqus iframe width fix */
+#disqus_thread iframe {
+  width: 1px !important;
+  min-width: 100% !important;
+}
+
+/* Let Disqus handle its own styling and spacing */
+#disqus_thread {
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Force white background for Disqus comments container */
+.disqus-comments .comments {
+  background: white !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
+}
+
+/* Add subtle shadow and border in dark mode */
+[data-theme="dark"] .disqus-comments .comments,
+.theme-dark .disqus-comments .comments {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid #444 !important;
+}
+
+/* Also target the disqus-comments wrapper */
+[data-theme="dark"] .disqus-comments,
+.theme-dark .disqus-comments {
+  background: transparent !important;
+}
+
+/* No filters anywhere */
+#disqus_thread iframe {
+  filter: none !important;
+}
+
+/* Clean styling - let Disqus handle everything */
+#disqus_thread {
+  background: transparent !important;
+}
+
+/* Ensure light mode has no filter and transparent background */
+[data-theme="light"] #disqus_thread iframe,
+.theme-light #disqus_thread iframe {
+  filter: none !important;
+  background-color: transparent !important;
+}
+
+[data-theme="light"] #disqus_thread,
+.theme-light #disqus_thread {
+  background-color: transparent !important;
+}
+
+/* Light mode pager styling */
+[data-theme="light"] .pager li > a,
+[data-theme="light"] .blog-pager li > a,
+.theme-light .pager li > a,
+.theme-light .blog-pager li > a {
+  background-color: #ffffff !important;
+  color: #0085a1 !important;
+  border-color: #ddd !important;
+}
+
+[data-theme="light"] .pager li > a:hover,
+[data-theme="light"] .blog-pager li > a:hover,
+.theme-light .pager li > a:hover,
+.theme-light .blog-pager li > a:hover {
+  background-color: #f8f9fa !important;
+  color: #0085a1 !important;
+  border-color: #ddd !important;
+}
+
+/* Dark mode pager styling */
+[data-theme="dark"] .pager li > a,
+[data-theme="dark"] .blog-pager li > a,
+.theme-dark .pager li > a,
+.theme-dark .blog-pager li > a {
+  background-color: #2d3748 !important;
+  color: #4dabf7 !important;
+  border-color: #4a5568 !important;
+}
+
+[data-theme="dark"] .pager li > a:hover,
+[data-theme="dark"] .blog-pager li > a:hover,
+.theme-dark .pager li > a:hover,
+.theme-dark .blog-pager li > a:hover {
+  background-color: #4a5568 !important;
+  color: #e2e8f0 !important;
+  border-color: #4a5568 !important;
+}

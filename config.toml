@@ -1,0 +1,98 @@
+baseurl = "https://serverbooter.com"
+languageCode = 'en-us'
+DefaultContentLanguage = 'en'
+disableLanguages = []
+#title = "Rico's Blog"
+theme = "beautifulhugo"
+#theme = "hugo_theme_pickles"
+metaDataFormat = "yaml"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+disqusShortname = "raravena80"
+ignoreLogs = ['warning-goldmark-raw-html']
+#googleAnalytics = "XXX"
+publishDir = "docs"
+
+# Enable automatic lastmod dates for better SEO
+enableGitInfo = true
+
+# Minify output to remove whitespace
+[minify]
+  disableHTML = false
+  disableCSS = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepDefaultAttrVals = false
+      keepDocumentTags = true
+      keepEndTags = true
+      keepQuotes = false
+      keepWhitespace = false
+
+[Params]
+  #subtitle = "Blogging for DevOps Nerds"
+  #logo = "img/avatar-icon.png"
+  favicon = "img/favicon.png"
+  dateFormat = "January 2, 2006"
+  dateformat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+[Params.Author]
+  name = "Ricardo Aravena"
+  email = "raravena80@gmail.com"
+  github = "raravena80"
+  twitter = "raravena80"
+  linkedin = "raravena"
+  facebook = ""
+  instagram = ""
+
+#[[Params.bigimg]]
+#  src = "img/triangle.jpg"
+#  desc = "Triangle"
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+#[[Params.bigimg]]
+#  src = "img/hexagon.jpg"
+#  desc = "Hexagon"
+
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+#[[menu.main]]
+#    identifier = "samples"
+#    name = "Samples"
+#    weight = 2
+
+#[[menu.main]]
+#    parent = "samples"
+#    name = "Big Image Sample"
+#    url = "/post/2017-03-07-bigimg-sample"
+#    weight = 1
+
+#[[menu.main]]
+#    parent = "samples"
+#    name = "Math Sample"
+#    url = "/post/2017-03-05-math-sample"
+#    weight = 2
+
+#[[menu.main]]
+#    parent = "samples"
+#    name = "Code Sample"
+#    url = "/post/2016-03-08-code-sample"
+#    weight = 3
+
+[[menu.main]]
+    name = "Tags"
+    url = "/tags"
+    weight = 2

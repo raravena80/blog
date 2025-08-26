@@ -1,0 +1,76 @@
+<!-- Prevent browser from overriding our theme -->
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+
+<script>
+// Initialize theme immediately to prevent flash
+(function() {
+  const html = document.documentElement;
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme === 'dark') {
+    html.setAttribute('data-theme', 'dark');
+    // Add fallback class for Samsung Internet
+    html.classList.add('theme-dark');
+    html.classList.remove('theme-light');
+  } else if (savedTheme === 'light') {
+    html.setAttribute('data-theme', 'light');
+    // Add fallback class for Samsung Internet
+    html.classList.add('theme-light');
+    html.classList.remove('theme-dark');
+  } else {
+    // No saved preference - detect system preference and set explicit theme
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (prefersDark) {
+      html.setAttribute('data-theme', 'dark');
+      html.classList.add('theme-dark');
+      html.classList.remove('theme-light');
+    } else {
+      html.setAttribute('data-theme', 'light');
+      html.classList.add('theme-light');
+      html.classList.remove('theme-dark');
+    }
+  }
+})();
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  
+  if (isDark) {
+    // Switch to light mode
+    html.setAttribute('data-theme', 'light');
+    html.classList.add('theme-light');
+    html.classList.remove('theme-dark');
+    localStorage.setItem('theme', 'light');
+  } else {
+    // Switch to dark mode  
+    html.setAttribute('data-theme', 'dark');
+    html.classList.add('theme-dark');
+    html.classList.remove('theme-light');
+    localStorage.setItem('theme', 'dark');
+  }
+  
+  // Force Disqus to reload and re-detect theme
+  setTimeout(() => {
+    if (typeof DISQUS !== 'undefined') {
+      DISQUS.reset({
+        reload: true,
+        config: function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+        }
+      });
+    }
+  }, 100);
+}
+</script>
+
+<link rel="stylesheet" href="{{ "css/custom.css" | absURL }}">
+
+<!-- Dark mode toggle button -->
+<button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark/light mode">
+  <span class="sun-icon">☀️</span>
+  <span class="moon-icon">🌙</span>
+</button>

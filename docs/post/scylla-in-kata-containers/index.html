@@ -1,0 +1,206 @@
+<!doctype html><html lang=en-us itemscope itemtype=http://schema.org/WebPage><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1"><title>Running Scylla in Kata Containers -</title><meta name=description content="Running Scylla in Kata Containers with some benchmarks"><meta name=author content="Ricardo Aravena"><script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","name":"","url":"https:\/\/serverbooter.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Organization","name":"","url":"https:\/\/serverbooter.com\/"}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/serverbooter.com\/","name":"home"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/serverbooter.com\/post\/scylla-in-kata-containers\/","name":"Running scylla in kata containers"}}]}</script><script type=application/ld+json>{"@context":"http://schema.org","@type":"Article","author":{"name":"Ricardo Aravena"},"headline":"Running Scylla in Kata Containers","description":"Running Scylla in Kata Containers with some benchmarks","inLanguage":"en-us","wordCount":2044,"datePublished":"2018-04-16T14:17:00\u002b00:00","dateModified":"2025-08-14T09:50:14-10:00","image":"https:\/\/serverbooter.com\/","keywords":["containers, runtimes, cncf, kata"],"mainEntityOfPage":"https:\/\/serverbooter.com\/post\/scylla-in-kata-containers\/","publisher":{"@type":"Organization","name":"https:\/\/serverbooter.com\/","logo":{"@type":"ImageObject","url":"https:\/\/serverbooter.com\/","height":60,"width":60}}}</script><meta property="og:title" content="Running Scylla in Kata Containers"><meta property="og:description" content="Running Scylla in Kata Containers with some benchmarks"><meta property="og:url" content="https://serverbooter.com/post/scylla-in-kata-containers/"><meta property="og:type" content="website"><meta property="og:site_name" content><meta name=twitter:title content="Running Scylla in Kata Containers"><meta name=twitter:description content="Running Scylla in Kata Containers with some benchmarks"><meta name=twitter:card content="summary_large_image"><meta name=twitter:site content="@raravena80"><meta name=twitter:creator content="@raravena80"><link href=https://serverbooter.com/img/favicon.png rel=icon type=image/x-icon><meta name=generator content="Hugo 0.148.2"><link rel=alternate href=https://serverbooter.com/index.xml type=application/rss+xml title><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.css integrity=sha384-3UiQGuEI4TTMaFmGIZumfRPtfKQ3trwQE2JgosJxCnGmQpL/lJdjpcHkaaFwHlcI crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v6.6.0/css/all.css integrity=sha384-h/hnnw1Bi4nbpD6kE7nYfCXzovi622sY5WBxww8ARKwpdLj5kUWjRuyiXaD1U2JT crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css integrity=sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu crossorigin=anonymous><link rel=stylesheet href=https://serverbooter.com/css/main.css><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"><link rel=stylesheet href=https://serverbooter.com/css/syntax.css><link rel=stylesheet href=https://serverbooter.com/css/codeblock.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css integrity=sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh crossorigin=anonymous><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css integrity=sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R crossorigin=anonymous><meta name=color-scheme content="light dark"><meta name=theme-color content="#ffffff" media="(prefers-color-scheme: light)"><meta name=theme-color content="#1a1a1a" media="(prefers-color-scheme: dark)"><script>(function(){const e=document.documentElement,t=localStorage.getItem("theme");if(t==="dark")e.setAttribute("data-theme","dark"),e.classList.add("theme-dark"),e.classList.remove("theme-light");else if(t==="light")e.setAttribute("data-theme","light"),e.classList.add("theme-light"),e.classList.remove("theme-dark");else{const t=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;t?(e.setAttribute("data-theme","dark"),e.classList.add("theme-dark"),e.classList.remove("theme-light")):(e.setAttribute("data-theme","light"),e.classList.add("theme-light"),e.classList.remove("theme-dark"))}})();function toggleTheme(){const e=document.documentElement,t=e.getAttribute("data-theme")==="dark";t?(e.setAttribute("data-theme","light"),e.classList.add("theme-light"),e.classList.remove("theme-dark"),localStorage.setItem("theme","light")):(e.setAttribute("data-theme","dark"),e.classList.add("theme-dark"),e.classList.remove("theme-light"),localStorage.setItem("theme","dark")),setTimeout(()=>{typeof DISQUS!="undefined"&&DISQUS.reset({reload:!0,config:function(){this.page.url=window.location.href,this.page.identifier=window.location.pathname}})},100)}</script><link rel=stylesheet href=https://serverbooter.com/css/custom.css><button class=theme-toggle onclick=toggleTheme() title="Toggle dark/light mode">
+<span class=sun-icon>☀️</span>
+<span class=moon-icon>🌙</span></button></head><body><nav class="navbar navbar-default navbar-fixed-top navbar-custom"><div class=container-fluid><div class=navbar-header><button type=button class=navbar-toggle data-toggle=collapse data-target=#main-navbar>
+<span class=sr-only></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://serverbooter.com/></a></div><div class="collapse navbar-collapse" id=main-navbar><ul class="nav navbar-nav navbar-right"><li><a title=Blog href=/>Blog</a></li><li><a title=Speaking href=/page/speaking/>Speaking</a></li><li><a title=About href=/page/about/>About</a></li><li><a title=Tags href=/tags>Tags</a></li></ul></div></div></nav><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button><div class=pswp__preloader><div class=pswp__preloader__icn><div class=pswp__preloader__cut><div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"><div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button><div class=pswp__caption><div class=pswp__caption__center></div></div></div></div></div><header class=header-section><div class="intro-header no-img"><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><div class=post-heading><h1>Running Scylla in Kata Containers</h1><span class=post-meta><i class="fas fa-calendar"></i>&nbsp;April 16, 2018
+&nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Ricardo Aravena</span></div></div></div></div></div></header><div class=container role=main><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><article role=main class=blog-post><p>The Kata community has been busy getting the first release out the door.</p><p>Virtual Machines have been around in the industry for over 20 years. One of the most attractive features of Kata is that it runs containers in VMs and VMs are very stable and provide very good isolation of your compute resources hardware. Furthermore, virtualization systems like KVM, Xen and VMware provide multiple ways to attach to dedicated storage. VMware takes this step even further by providing things like Storage VMotion.</p><p>With that, I set about running a two node ScyllaDB cluster in Kata Containers and running some simple benchmarks. Scylla is a high-performance Cassandra clone written from scratch in C++. The folks that started ScyllaDB are the same folks that started the KVM project that eventually made it into the Linux Kernel.</p><p>I used a single C2S bare metal machine from <a href=https://www.scaleway.com>ScaleWay</a></p><p>The specs are these:</p><ul><li>4 Dedicated x86 64bit Cores</li><li>8GB Memory</li><li>50GB SSD Disk</li></ul><p>I started with the Kata developer instructions <a href=https://github.com/kata-containers/documentation/blob/master/Developer-Guide.md>here</a></p><p>One minor change that I had to make was the configuration for QEMU under <code>/usr/share/defaults/kata-containers/configuration.toml</code>. Instead of QEMU, Kata runs under <a href=https://github.com/intel/qemu-lite>qemu-lite</a> which is part of the <a href=https://clearlinux.org/documentation/clear-containers/architecture-overview>Clear Containers</a> project at Intel</p><pre tabindex=0><code># /usr/share/defaults/kata-containers/configuration.toml
+[hypervisor.qemu]
+# Change this
+# path = &#34;/usr/bin/qemu-system-x86_64&#34;
+# to this
+path = &#34;/usr/bin/qemu-lite-system-x86_64&#34;
+</code></pre><p>Then I ran some performance benchmarks that were previously run with Scylla by the IBM team. Note that the IBM benchmarks are comparing x86 with Power8 processors and these benchmarks are simply to establish a baseline and demonstrate that we can run Scylla in Kata Containers. The idea is to get some baseline and see how Scylla performs in Kata.</p><p>You can read more about the IBM tests <a href=https://www.ibm.com/developerworks/library/l-performance-scylla/>here</a></p><p>In this case, each node is running in its Kata container (running in separate qemu-lite VMs). I followed some of the instructions in the <a href=https://hub.docker.com/r/scylladb/scylla/>docker hub Scylla page to setup my cluster</a>. I just provided the <code>--runtime kata-runtime</code> parameter for each container and the <code>-p 9042:9042</code> parameter so that I could connect to Scylla from my bare-metal machine.</p><p>My commands:</p><pre tabindex=0><code># docker run --runtime kata-runtime --name my-scylla -p 9042:9042 -d scylladb/scylla
+# docker run --runtime kata-runtime --name my-scylla2 -d scylladb/scylla --seeds=&#34;$(docker inspect --format=&#39;{{ .NetworkSettings.IPAddress }}&#39; my-scylla)&#34;
+</code></pre><p>Checked the Scylla cluster:</p><pre tabindex=0><code># docker exec -it my-scylla nodetool status
+Datacenter: datacenter1
+=======================
+Status=Up/Down
+|/ State=Normal/Leaving/Joining/Moving
+--  Address     Load       Tokens       Owns (effective)  Host ID                               Rack
+UN  172.17.0.3  110.42 KB  256          100.0%            22fec874-49e2-4a1f-b1b0-890a54f39142  rack1
+UN  172.17.0.2  117.56 KB  256          100.0%            7ee27713-194b-4cef-a8ca-ac47c7c90063  rack1
+
+#
+</code></pre><p>Then I ran the <code>cassandra-stress</code> test provided in the <a href=http://cassandra.apache.org/download/>cassandra distribution</a>:</p><p>Write test:</p><pre tabindex=0><code># cassandra-stress write no-warmup n=2500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX
+...
+Results:
+Op rate                   :    3,594 op/s  [WRITE: 3,594 op/s]
+Partition rate            :    3,594 pk/s  [WRITE: 3,594 pk/s]
+Row rate                  :    3,594 row/s [WRITE: 3,594 row/s]
+Latency mean              :   55.6 ms [WRITE: 55.6 ms]
+Latency median            :   48.7 ms [WRITE: 48.7 ms]
+Latency 95th percentile   :  124.3 ms [WRITE: 124.3 ms]
+Latency 99th percentile   :  146.8 ms [WRITE: 146.8 ms]
+Latency 99.9th percentile :  189.9 ms [WRITE: 189.9 ms]
+Latency max               :  435.4 ms [WRITE: 435.4 ms]
+Total partitions          :  2,500,000 [WRITE: 2,500,000]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:11:35
+</code></pre><p>Read test:</p><pre tabindex=0><code># cassandra-stress read no-warmup n=2500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX
+...
+Results:
+Op rate                   :    1,453 op/s  [READ: 1,453 op/s]
+Partition rate            :    1,453 pk/s  [READ: 1,453 pk/s]
+Row rate                  :    1,453 row/s [READ: 1,453 row/s]
+Latency mean              :  137.5 ms [READ: 137.5 ms]
+Latency median            :  135.4 ms [READ: 135.4 ms]
+Latency 95th percentile   :  280.5 ms [READ: 280.5 ms]
+Latency 99th percentile   :  315.6 ms [READ: 315.6 ms]
+Latency 99.9th percentile :  364.6 ms [READ: 364.6 ms]
+Latency max               :  563.1 ms [READ: 563.1 ms]
+Total partitions          :  2,500,000 [READ: 2,500,000]
+Total errors              :          0 [READ: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:28:40
+</code></pre><p>Then I ran the same tests on the same machine without Kata Containers.</p><p>Write test:</p><pre tabindex=0><code>...
+Results:
+Op rate                   :    8,793 op/s  [WRITE: 8,824 op/s]
+Partition rate            :    8,793 pk/s  [WRITE: 8,824 pk/s]
+Row rate                  :    8,793 row/s [WRITE: 8,824 row/s]
+Latency mean              :   22.6 ms [WRITE: 22.6 ms]
+Latency median            :   20.4 ms [WRITE: 20.4 ms]
+Latency 95th percentile   :   44.3 ms [WRITE: 44.3 ms]
+Latency 99th percentile   :   64.4 ms [WRITE: 64.4 ms]
+Latency 99.9th percentile :  125.8 ms [WRITE: 125.8 ms]
+Latency max               :  463.5 ms [WRITE: 463.5 ms]
+Total partitions          :  2,500,000 [WRITE: 2,500,000]
+Total errors              :          0 [WRITE: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:04:44
+</code></pre><p>Read test:</p><pre tabindex=0><code>...
+Results:
+Op rate                   :    7,039 op/s  [READ: 7,059 op/s]
+Partition rate            :    7,039 pk/s  [READ: 7,059 pk/s]
+Row rate                  :    7,039 row/s [READ: 7,059 row/s]
+Latency mean              :   28.3 ms [READ: 28.3 ms]
+Latency median            :   22.3 ms [READ: 22.3 ms]
+Latency 95th percentile   :   73.4 ms [READ: 73.4 ms]
+Latency 99th percentile   :  107.7 ms [READ: 107.7 ms]
+Latency 99.9th percentile :  157.9 ms [READ: 157.9 ms]
+Latency max               :  582.5 ms [READ: 582.5 ms]
+Total partitions          :  2,500,000 [READ: 2,500,000]
+Total errors              :          0 [READ: 0]
+Total GC count            : 0
+Total GC memory           : 0.000 KiB
+Total GC time             :    0.0 seconds
+Avg GC time               :    NaN ms
+StdDev GC time            :    0.0 ms
+Total operation time      : 00:05:55
+</code></pre><p><img src=https://user-images.githubusercontent.com/7659560/38760120-62c86ac2-3f2e-11e8-9013-30e17695ce66.png alt=oprate>
+<img src=https://user-images.githubusercontent.com/7659560/38760803-fa10540e-3f32-11e8-99a2-f0be37bd0eab.png alt=meanlatency>
+<img src=https://user-images.githubusercontent.com/7659560/38760128-6c4bd37c-3f2e-11e8-996b-810ed3220a80.png alt=99thlatency></p><p>If we look at Ops per second, results show that our 2 node Scylla cluster on the same machine running in 2 Kata Containers is about 40% slower for writes and 80% slower for reads than running Scylla on 2 containers on bare metal. Other metrics such as latency show similar patterns in where it&rsquo;s higher for Kata Containers. This makes sense since virtualization adds an extra layer and the filesystem I/O is going through the 9p protocol between the host and VM.</p><p>Read performance overall is slower in both cases since Scylla was not started with any tuning and both nodes are running on the same machine.</p><h2 id=tuning>Tuning</h2><p>If we tune the following parameters in the <code>/usr/share/defaults/kata-containers/configuration.toml</code> Kata config file:</p><pre tabindex=0><code>default_vcpus = 4
+default_memory = 3072
+enable_iothreads = true
+</code></pre><p>Also changing the number of operations from <code>2500000</code> to <code>500000</code> and using
+the devicemapper configs in Docker with an external <code>/var/lib/scylla</code> volume
+where the file system traffic stil goes through 9pfs.</p><p>Results:</p><pre tabindex=0><code>kata_write_9pfs
+---------------------------------------
+op rate                    : 3,335 op/s [WRITE: 3,358 op/s]
+partition rate             : 3,335 pk/s [WRITE: 3,358 pk/s]
+row rate                   : 3,335 row/s [WRITE: 3,358 row/s]
+latency mean               : 59.4 ms [WRITE: 59.4 ms]
+latency median             : 43.8 ms [WRITE: 43.8 ms]
+latency 95th percentile    : 163.3 ms [WRITE: 163.3 ms]
+latency 99th percentile    : 261.4 ms [WRITE: 261.4 ms]
+latency 99.9th percentile  : 439.1 ms [WRITE: 439.1 ms]
+latency max                : 901.3 ms [WRITE: 901.3 ms]
+total gc count             : 0
+total gc memory            : 0.000 KiB
+total gc time              : 0.0 seconds
+avg gc time                : NaN ms
+stddev gc time             : 0.0 ms
+Total operation time       : 00:02:29
+cmd: write no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile revision=kata_write_9pfs title=Kata_Write_9pfs
+</code></pre><p><img src=https://user-images.githubusercontent.com/7659560/38696326-b4bcedbc-3e43-11e8-95d2-22177e2e1a60.png alt="screen shot 2018-04-12 at 11 20 51 am"></p><pre tabindex=0><code>kata_read_9pfs
+---------------------------------------
+op rate                    : 2,704 op/s [READ: 2,704 op/s]
+partition rate             : 2,704 pk/s [READ: 2,704 pk/s]
+row rate                   : 2,704 row/s [READ: 2,704 row/s]
+latency mean               : 73.5 ms [READ: 73.5 ms]
+latency median             : 31.5 ms [READ: 31.5 ms]
+latency 95th percentile    : 379.6 ms [READ: 379.6 ms]
+latency 99th percentile    : 552.1 ms [READ: 552.1 ms]
+latency 99.9th percentile  : 665.3 ms [READ: 665.3 ms]
+latency max                : 828.9 ms [READ: 828.9 ms]
+total gc count             : 0
+total gc memory            : 0.000 KiB
+total gc time              : 0.0 seconds
+avg gc time                : NaN ms
+stddev gc time             : 0.0 ms
+Total operation time       : 00:03:04
+cmd: read no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile revision=kata_read_9pfs title=Kata_9pfs
+</code></pre><p><img src=https://user-images.githubusercontent.com/7659560/38696345-bc22321a-3e43-11e8-92e1-ef3fb640a353.png alt="screen shot 2018-04-12 at 11 20 37 am"></p><p>Complete results can be downloaded <a href=https://github.com/kata-containers/runtime/files/1904448/graphfile_9pfs.gz>here</a>. (gunzip and open on your browser)</p><p>Now with an internal /var/lib/scylla which is running in the VM and the traffic doesn&rsquo;t go through
+9pfs.</p><p>Results:</p><pre tabindex=0><code>kata_write_local
+---------------------------------------
+op rate                    : 3,336 op/s [WRITE: 3,336 op/s]
+partition rate             : 3,336 pk/s [WRITE: 3,336 pk/s]
+row rate                   : 3,336 row/s [WRITE: 3,336 row/s]
+latency mean               : 59.5 ms [WRITE: 59.5 ms]
+latency median             : 44.9 ms [WRITE: 44.9 ms]
+latency 95th percentile    : 161.2 ms [WRITE: 161.2 ms]
+latency 99th percentile    : 276.6 ms [WRITE: 276.6 ms]
+latency 99.9th percentile  : 440.7 ms [WRITE: 440.7 ms]
+latency max                : 1226.8 ms [WRITE: 1,226.8 ms]
+total gc count             : 0
+total gc memory            : 0.000 KiB
+total gc time              : 0.0 seconds
+avg gc time                : NaN ms
+stddev gc time             : 0.0 ms
+Total operation time       : 00:02:29
+cmd: write no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile_local revision=kata_write_local title=Kata_Local
+</code></pre><p><img src=https://user-images.githubusercontent.com/7659560/38699536-2068404e-3e4d-11e8-9aed-f28f32821160.png alt="screen shot 2018-04-12 at 12 28 42 pm"></p><pre tabindex=0><code>kata_read_local
+---------------------------------------
+op rate                    : 2,864 op/s [READ: 2,864 op/s]
+partition rate             : 2,864 pk/s [READ: 2,864 pk/s]
+row rate                   : 2,864 row/s [READ: 2,864 row/s]
+latency mean               : 69.5 ms [READ: 69.5 ms]
+latency median             : 35.7 ms [READ: 35.7 ms]
+latency 95th percentile    : 309.6 ms [READ: 309.6 ms]
+latency 99th percentile    : 432.8 ms [READ: 432.8 ms]
+latency 99.9th percentile  : 519.6 ms [READ: 519.6 ms]
+latency max                : 1139.8 ms [READ: 1,139.8 ms]
+total gc count             : 0
+total gc memory            : 0.000 KiB
+total gc time              : 0.0 seconds
+avg gc time                : NaN ms
+stddev gc time             : 0.0 ms
+Total operation time       : 00:02:54
+cmd: read no-warmup n=500000 -node 127.0.0.1 -rate threads=200 -mode native cql3 -schema keyspace=ksX -graph file=graphfile_local revision=kata_read_local title=Kata_Local
+</code></pre><p><img src=https://user-images.githubusercontent.com/7659560/38699541-249224a0-3e4d-11e8-85d9-f07118ec161b.png alt="screen shot 2018-04-12 at 12 28 56 pm"></p><p>Complete results can be downloaded <a href=https://github.com/kata-containers/runtime/files/1904676/graphfile_local.gz>here</a>. (gunzip and open on your browser)</p><p>Charting and comparing the op rate and the mean latency for each run:</p><p><img src=https://user-images.githubusercontent.com/7659560/38758081-41353c5a-3f24-11e8-9f98-8942054287c8.png alt=oprate>
+<img src=https://user-images.githubusercontent.com/7659560/38758087-4465f068-3f24-11e8-9b4f-5e91326685fd.png alt=latency></p><p>We see that the Op rate is slightly better for a local filesystem compared to a filesystem going through 9p.
+Similar behavior for latency, in this case, the latency is lower for the local fs compared to a filesystem
+going through 9p. Overall, we see less discrepancy between reads and writes compared to
+what we saw initially without tuning. This is mainly attributed to change in VM CPUs and default memory.</p><p>We conclude that tweaking the VM settings in terms of CPUs and memory can give better performance with Kata. In the case of raw containers we still see the better performance but this is also partly given that in the raw container case each container has access to all the machine resources and has more direct access to the machine&rsquo;s hardware.</p><p>I expect these numbers to get better as the Kata team continues to tune the QEMU parameters and establishes best practices for Kata Containers as well as some of the vendors making it easier to improve performance and security such as Intel and AMD. For example, in real-world applications, you would make sure that your VM is talking directly to the hardware and in most cases, you would want to run your Scylla nodes on separate metal.</p><p>Due to privacy concerns, compliance requirements such as <a href=https://en.wikipedia.org/wiki/General_Data_Protection_Regulation>GDPR</a>, and bugs such as <a href=https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>Spectre</a> and <a href=https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)>Meltdown</a>, more organizations will continue to adopt running containers in a secure way. Although we are very early in the Kata project, I&rsquo;m pretty excited about its ability to run reliable and secure workloads. The performance will only get better with support for more applications with different types of memory, storage and networking requirements. Also, as the team continues to add resources we&rsquo;ll be doing more benchmarks with hardware and more machines in different cluster configurations, so stay tuned.</p><p>It&rsquo;s worth mentioning that there&rsquo;s also another interesting <a href=https://www.scylladb.com/2018/03/29/scylla-kubernetes-overview/>blog</a> explaining how to run Scylla in Kubernetes. So you can also run Scylla in Kata Containers on top of Kubernetes using Stateful sets.</p><p>Go Kata!</p><p>For more information about the Kata Containers project you can visit <a href=https://katacontainers.io>https://katacontainers.io</a>.</p><div class=blog-tags><a href=https://serverbooter.com/tags/containers/>containers</a>&nbsp;
+<a href=https://serverbooter.com/tags/runtimes/>runtimes</a>&nbsp;
+<a href=https://serverbooter.com/tags/cncf/>cncf</a>&nbsp;
+<a href=https://serverbooter.com/tags/kata/>kata</a>&nbsp;</div></article><ul class="pager blog-pager"><li class=previous><a href=https://serverbooter.com/post/container-runtimes-cncf/ data-toggle=tooltip data-placement=top title="The Boom of Container Runtimes">&larr;</a></li><li class=next><a href=https://serverbooter.com/post/speaking/ data-toggle=tooltip data-placement=top title=Speaking>&rarr;</a></li></ul><div class=disqus-comments><div class=comments><div class=comments><div id=disqus_thread></div><script>window.disqus_config=function(){this.page.url="https://serverbooter.com/post/scylla-in-kata-containers",this.page.identifier="/post/scylla-in-kata-containers/"},function(){var t=document,e=t.createElement("script");e.async=!0,e.src="//raravena80.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript></div></div></div></div></div></div><footer><div class=container><div class=row><div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"><ul class="list-inline text-center footer-links"><li><a href=mailto:raravena80@gmail.com title="Email me"><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fas fa-envelope fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://www.facebook.com/ title=Facebook><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-facebook fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://github.com/raravena80 title=GitHub><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-github fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://twitter.com/raravena80 title=Twitter><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-x-twitter fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://linkedin.com/in/raravena title=LinkedIn><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></span></a></li><li><a href=https://www.instagram.com/ title=Instagram><span class="fa-stack fa-lg"><i class="fas fa-circle fa-stack-2x"></i>
+<i class="fab fa-instagram fa-stack-1x fa-inverse"></i></span></a></li></ul><p class="credits copyright text-muted">Ricardo Aravena
+&nbsp;&bull;&nbsp;&copy;
+2025</p><p class="credits theme-by text-muted">&nbsp;&bull;&nbsp;[<a href=false816b0587b05bdfcb834fd4efc35d6f3156409b4b>816b0587</a>]</p></div></div></div></footer><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/katex.min.js integrity=sha384-G0zcxDFp5LWZtDuRMnBkk3EphCK1lhEf4UEyEM693ka574TZGwo4IWwS6QLzM/2t crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.7/dist/contrib/auto-render.min.js integrity=sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05 crossorigin=anonymous onload=renderMathInElement(document.body)></script><script src=https://code.jquery.com/jquery-3.7.0.slim.min.js integrity=sha384-w5y/xIeYixWvfM+A1cEbmHPURnvyqmVg5eVENruEdDjcyRLUSNej7512JQGspFUr crossorigin=anonymous></script><script src=https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js integrity=sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd crossorigin=anonymous></script><script src=https://serverbooter.com/js/main.js></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js integrity=sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy crossorigin=anonymous></script><script src=https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js integrity=sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q crossorigin=anonymous></script><script src=https://serverbooter.com/js/load-photoswipe.js></script></body></html>
