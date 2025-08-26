@@ -561,47 +561,34 @@ html.theme-dark {
   padding: 0 !important;
 }
 
-/* CSS-based dark mode since Disqus API doesn't support dark theme */
-[data-theme="dark"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe {
-  filter: invert(0.92) hue-rotate(180deg) contrast(0.85) brightness(1.15) !important;
-  background: rgb(42, 42, 42) !important;
-  background-color: rgb(42, 42, 42) !important;
+/* Force white background for Disqus comments container */
+.disqus-comments .comments {
+  background: white !important;
+  padding: 20px !important;
+  border-radius: 8px !important;
 }
 
-/* Force dark background for all Disqus elements in dark mode */
-[data-theme="dark"] #disqus_thread,
+/* Add subtle shadow and border in dark mode */
+[data-theme="dark"] .disqus-comments .comments,
+.theme-dark .disqus-comments .comments {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid #444 !important;
+}
+
+/* Also target the disqus-comments wrapper */
 [data-theme="dark"] .disqus-comments,
-.theme-dark #disqus_thread,
 .theme-dark .disqus-comments {
-  background: rgb(42, 42, 42) !important;
-  background-color: rgb(42, 42, 42) !important;
+  background: transparent !important;
 }
 
-/* More aggressive iframe background forcing */
-[data-theme="dark"] #disqus_thread iframe,
-.theme-dark #disqus_thread iframe {
-  background: rgb(42, 42, 42) !important;
-  background-color: rgb(42, 42, 42) !important;
+/* No filters anywhere */
+#disqus_thread iframe {
+  filter: none !important;
 }
 
-/* Add dark background behind the iframe */
-[data-theme="dark"] #disqus_thread::before,
-.theme-dark #disqus_thread::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgb(42, 42, 42) !important;
-  z-index: -1;
-}
-
-/* Make sure the thread container has relative positioning */
-[data-theme="dark"] #disqus_thread,
-.theme-dark #disqus_thread {
-  position: relative;
+/* Clean styling - let Disqus handle everything */
+#disqus_thread {
+  background: transparent !important;
 }
 
 /* Ensure light mode has no filter and transparent background */

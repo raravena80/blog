@@ -51,6 +51,19 @@ function toggleTheme() {
     html.classList.remove('theme-light');
     localStorage.setItem('theme', 'dark');
   }
+  
+  // Force Disqus to reload and re-detect theme
+  setTimeout(() => {
+    if (typeof DISQUS !== 'undefined') {
+      DISQUS.reset({
+        reload: true,
+        config: function () {
+          this.page.url = window.location.href;
+          this.page.identifier = window.location.pathname;
+        }
+      });
+    }
+  }, 100);
 }
 </script>
 
