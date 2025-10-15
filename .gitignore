@@ -1,4 +1,22 @@
+# Hugo build directories
 /docs/
 /public/
+/resources/
+
+# Hugo lock file
+.hugo_build.lock
+
+# OS files
 .DS_Store
 Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if using npm for theme development)
+node_modules/
+package-lock.json

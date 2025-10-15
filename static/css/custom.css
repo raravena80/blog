@@ -640,3 +640,103 @@ html.theme-dark {
   color: #e2e8f0 !important;
   border-color: #4a5568 !important;
 }
+/* Callout shortcode */
+.callout {
+  border-left: 4px solid #0085a1;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 6px;
+  background: rgba(0, 133, 161, 0.08);
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.callout .callout-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.callout .callout-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.callout .callout-body > :last-child {
+  margin-bottom: 0;
+}
+
+.callout-danger {
+  border-color: #e53e3e;
+  background: rgba(229, 62, 62, 0.08);
+}
+
+.callout-warning {
+  border-color: #dd6b20;
+  background: rgba(221, 107, 32, 0.08);
+}
+
+.callout-success {
+  border-color: #38a169;
+  background: rgba(56, 161, 105, 0.08);
+}
+
+.callout-tip {
+  border-color: #805ad5;
+  background: rgba(128, 90, 213, 0.08);
+}
+
+[data-theme="dark"] .callout,
+.theme-dark .callout {
+  background: rgba(77, 171, 247, 0.1);
+  border-color: #4dabf7;
+}
+
+[data-theme="dark"] .callout-danger,
+.theme-dark .callout-danger {
+  background: rgba(229, 62, 62, 0.18);
+  border-color: #fc8181;
+}
+
+[data-theme="dark"] .callout-warning,
+.theme-dark .callout-warning {
+  background: rgba(221, 107, 32, 0.18);
+  border-color: #f6ad55;
+}
+
+[data-theme="dark"] .callout-success,
+.theme-dark .callout-success {
+  background: rgba(56, 161, 105, 0.18);
+  border-color: #68d391;
+}
+
+[data-theme="dark"] .callout-tip,
+.theme-dark .callout-tip {
+  background: rgba(128, 90, 213, 0.18);
+  border-color: #b794f4;
+}
+
+/* Responsive video embeds */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin: 1.5rem 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+[data-theme="dark"] .video-container,
+.theme-dark .video-container {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
