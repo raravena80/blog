@@ -1,7 +1,7 @@
 ---
 title: "Speaking"
 date: 2019-11-30T14:17:00Z
-lastmod: 2025-01-26T16:24:50Z
+lastmod: 2026-02-09T17:30:00Z
 comments: false
 categories:
  - talks
@@ -16,14 +16,37 @@ slug: speaking
 
 # Speaking Engagements
 
-A curated collection of talks and presentations I've given from 2018-2025, covering cloud-native technologies, container runtimes, security, and AI infrastructure.
+A curated collection of talks and presentations I've given from 2018-2026, covering cloud-native technologies, container runtimes, security, and AI infrastructure.
+
+---
+
+## Upcoming Talks
+
+### **Observing Chaos: Real-Time Monitoring of AI-Driven Kubernetes Destruction**
+📅 *KubeCon + CloudNativeCon EU 2026* | Amsterdam, Netherlands
+🎤 *with Josh Halley, Cisco*
+🔗 [Event Details](https://sched.co/2CW1T)
 
 ---
 
 ## 2025
 
+### **In AI We Trust? Securing the Future, One Agent at a Time**
+📅 *KubeCon + CloudNativeCon NA 2025* | Atlanta, Georgia
+🎤 *Panel Discussion*
+🎥 [Video](https://youtu.be/AWajuymQH-A) | 🔗 [Event Details](https://sched.co/27FWu)
+
+### **In AI We Trust? Securing the Future, One Agent at a Time**
+📅 *CNCF-hosted Co-located Events NA 2025* | Atlanta, Georgia
+🎤 *Panel Discussion*
+🎥 [Video](https://youtu.be/QpXIFkZKmUY) | 🔗 [Event Details](https://sched.co/28D3F)
+
+### **Unlocking Scalable Distributed Training With Arrow Data Cache on Kubernetes**
+📅 *AI_dev: Open Source GenAI & ML Summit Europe 2025* | Amsterdam, Netherlands
+🎥 [Video](https://youtu.be/Ou14GsR2gkA) | 🔗 [Event Details](https://sched.co/25TtI)
+
 ### **Discover CNCF TAG Runtime: Advancing Cloud-Native Innovation from AI to Edge**
-📅 *KubeCon + CloudNativeCon EU 2025* | London, UK  
+📅 *KubeCon + CloudNativeCon EU 2025* | London, UK
 🎥 [Video](https://youtu.be/-yOKr2DOJ_o) | 🔗 [Event Details](https://sched.co/1tgwS)
 
 ---
