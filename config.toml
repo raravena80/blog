@@ -102,6 +102,11 @@ enableGitInfo = true
 #    weight = 3
 
 [[menu.main]]
+    name = "Consulting"
+    url = "/page/consulting/"
+    weight = 4
+
+[[menu.main]]
     name = "Tags"
     url = "/tags"
-    weight = 3
+    weight = 5
