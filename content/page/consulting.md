@@ -15,7 +15,7 @@ slug: consulting
 
 # Consulting Services
 
-I offer specialized consulting services for organizations looking to build, optimize, and scale their GPU infrastructure on Kubernetes. With my experience leading GPU infrastructure teams at NVIDIA and product management for Kubernetes at Google Cloud, I bring deep technical expertise and practical insights to help you succeed.
+I offer specialized consulting services for organizations looking to build, optimize, and scale their GPU infrastructure on Kubernetes. With my experience as Engineering Lead at Snowflake, Cloud Native Lead at Truera, and Senior Engineering Kubernetes Manager at Rakuten, I bring deep technical expertise and practical insights to help you succeed.
 
 ---
 
@@ -86,11 +86,12 @@ Design scalable distributed systems for data-intensive applications:
 
 ### Proven Track Record
 
-- **Senior Engineering Manager at NVIDIA** | Leading MIG * AI Kubernetes team
+- **Engineering Lead at Snowflake** | Leading GPU infrastructure and Kubernetes platform teams
+- **Senior Engineering Kubernetes Manager at Rakuten** | Managing Kubernetes infrastructure at scale
+- **Cloud Native Lead at Truera** | Building cloud native AI/ML platforms
 - **CNCF Technical Oversight Committee (TOC)** | Governing cloud native infrastructure projects
 - **PyTorch Technical Advisory Council (TAC)** | Shaping PyTorch Foundation direction (2025)
 - **CNCF TAG-Runtime Co-Chair** | Shaping container runtime standards
-- **Google Cloud Senior Product Manager** | Kubernetes/GKE product leadership
 - **Multi-Cloud Expertise** | Deep experience across GCP, AWS, and Microsoft Azure
 
 ### Deep Technical Expertise
