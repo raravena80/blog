@@ -1,7 +1,7 @@
 ---
 title: "Speaking"
 date: 2019-11-30T14:17:00Z
-lastmod: 2026-02-09T17:30:00Z
+lastmod: 2026-09-21T17:00:00Z
 comments: false
 categories:
  - talks
@@ -20,12 +20,12 @@ A curated collection of talks and presentations I've given from 2018-2026, cover
 
 ---
 
-## Upcoming Talks
+## 2026
 
 ### **Observing Chaos: Real-Time Monitoring of AI-Driven Kubernetes Destruction**
 📅 *KubeCon + CloudNativeCon EU 2026* | Amsterdam, Netherlands
 🎤 *with Josh Halley, Cisco*
-🔗 [Event Details](https://sched.co/2CW1T)
+🎥 [Video](https://youtu.be/KOM-PQNpcjk) | 🔗 [Event Details](https://sched.co/2CW1T)
 
 ---
 
